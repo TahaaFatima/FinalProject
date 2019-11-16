@@ -1,9 +1,17 @@
-<nav>
-    <ul>
-        <li><a href="<?php echo site_url("Home_page")?>">Home</a></li>
-        <li><a href="<?php echo site_url("About_us")?>">About Us</a></li>
-        <li><a href="<?php echo site_url("Our_services")?>">Our Services</a></li>
-        <li><a href="<?php echo site_url("Contact_us")?>">Contact Us</a></li>
-        <li><a href="<?php echo site_url("Database")?>">User</a></li>
-    </ul>
-</nav>
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<?php include_once('head.php'); ?>
+
+<body>
+        <!-- header -->
+        <header>
+            
+            <?php include_once('navbar.php'); ?>
+
+        </header>

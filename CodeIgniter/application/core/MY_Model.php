@@ -17,6 +17,11 @@
                 return $data;
             }
         }
+        
+        public function get_user_login($email){
+            $query = $this->db->get_where($this->table_name, ['email_address' => $email]);
+            return $query->row_array();
+        }
 
         function deleting(int $id){
             $forError = $this->db->delete($this->table_name,['id'=>$id]);
