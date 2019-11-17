@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class KoiController extends MY_Controller {
+class KoiController_Patient extends MY_Controller {
     function index(){
-        $data['view'] = 'Koi_Controller_View';
+        $data['view'] = 'Patient_Controller_View';
         $this->load->view('Layout', $data);
     }
 }

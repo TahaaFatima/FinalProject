@@ -5,10 +5,15 @@ class Patient_Login_Control extends MY_Controller {
     function __construct()
     {
         parent::__construct();
-        // $this->pt_id = $this->session->userdata('pt_id');
-        // if(!empty($this->pt_id)){
-        //     redirect('chatbox');
-        // }
+        $role_id = $this->session->userdata('role_id');
+        if(!empty($role_id)){
+            if($role_id == 1){
+                redirect('KoiController_Doctor');
+            }
+            elseif($role_id == 2){
+                redirect('KoiController_Patient');
+            }
+        }
     }
 
     function index(){
@@ -44,10 +49,10 @@ class Patient_Login_Control extends MY_Controller {
                 
                 if(count($pt_data) > 0){
                     if(password_verify($_POST['Password'],$pt_data[0]->password)){
-                        $this->session->set_userdata('pt_id', $pt_data[0]->patient_id);
+                        $this->session->set_userdata('role_id', $pt_data[0]->role_id);
                         $this->session->set_flashdata('signed_in','Sign In Successful');
                         $this->session->set_userdata('emailAddress', $email_address);
-                        redirect('KoiController');
+                        redirect('KoiController_Patient');
                     }else{
                         $this->session->set_flashdata('incorrectPassword','Incorrect Password');
                     }

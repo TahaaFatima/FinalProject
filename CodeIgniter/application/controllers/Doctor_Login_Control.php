@@ -5,10 +5,15 @@ class Doctor_Login_Control extends MY_Controller {
     function __construct()
     {
         parent::__construct();
-        // $this->pt_id = $this->session->userdata('pt_id');
-        // if(!empty($this->pt_id)){
-        //     redirect('chatbox');
-        // }
+        $role_id = $this->session->userdata('role_id');
+        if(!empty($role_id)){
+            if($role_id == 1){
+                redirect('KoiController_Doctor');
+            }
+            elseif($role_id == 2){
+                redirect('KoiController_Patient');
+            }
+        }
     }
 
     function index(){
@@ -41,14 +46,13 @@ class Doctor_Login_Control extends MY_Controller {
                 $email_address = $_POST['Email_Address'];
                 $where = ['email' => $email_address];
                 $dr_data = $this->User_Model->retrieving($where);
-                //var_dump($dr_data);die;
                 
                 if(count($dr_data) > 0){
                     if(password_verify($_POST['Password'],$dr_data[0]->password)){
-                        $this->session->set_userdata('dr_id', $dr_data[0]->doctors_id);
+                        $this->session->set_userdata('role_id', $dr_data[0]->role_id);
                         $this->session->set_flashdata('signed_in','Sign In Successful');
                         $this->session->set_userdata('emailAddress', $email_address);
-                        redirect('KoiController');
+                        redirect('KoiController_Doctor');
                     }else{
                         $this->session->set_flashdata('incorrectPassword','Incorrect Password');
                     }
