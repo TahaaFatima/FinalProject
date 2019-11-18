@@ -4,13 +4,22 @@
 		<div class="container">
 			<div class="row py-5">
 				<!-- footer grid1 -->
-				<div class="col-lg-3 col-sm-6 fv5-contact">
+				<div class="col-lg-4 col-sm-6 fv5-contact margin-foot">
+					<h2 class="mb-4">
+						<a class="navbar-brand text-white" href="index.html">
+						Revitalize
+						</a>
+					</h2>
+						<div class="fv3-contact mt-3">
+							<p>
+							Book appointments with the best Doctors and Specialists in Karachi conveniently.
+							</p>
+						</div>
+				</div>
+				<!-- //footer grid1 -->
+				<!-- footer grid1 -->
+				<div class="col-lg-3 col-sm-6 fv5-contact margin-foot">
 					<h2 class="mb-4">Contact Us</h2>
-					<div class="fv3-contact mt-3">
-					
-						<span class="fas fa-home mr-2"></span>
-						<p>90 Street, City, State 34789.</p>
-					</div>
 					<div class="fv3-contact mt-3">
 						<span class="fas fa-phone-volume mr-2"></span>
 						<p>+456 123 7890</p>
@@ -21,25 +30,9 @@
 					</div>
 				</div>
 				<!-- //footer grid1 -->
+				
 				<!-- footer grid2 -->
-				<div class="col-lg-3  col-sm-6 footv3-left text-lg-center my-sm-0 mt-5">
-					<h3 class="mb-4">Opening Hours</h3>
-					<ul class="list-agileits">
-						<li>
-							Mon – Fri ------- 09:00-17:00
-						</li>
-						<li class="my-3">
-							Saturday -------- 09:30-17:00</a>
-						</li>
-						<li class="mb-3">
-							Sunday ---------- 10:30-18:00
-						</li>
-						
-					</ul>
-				</div>
-				<!-- //footer grid2 -->
-				<!-- footer grid3 -->
-				<div class="col-lg-3  col-sm-6 footv3-left text-lg-center my-lg-0 mt-sm-5 mt-5">
+				<div class="col-lg-3  col-sm-6 footv3-left text-lg-center my-lg-0 mt-sm-5 mt-5 margin-foot">
 					<h3 class="mb-4">Navigation</h3>
 					<ul class="list-agileits">
 						<li>
@@ -64,25 +57,12 @@
 						</li>
 					</ul>
 				</div>
-				<!-- //footer grid3 -->
-				<!-- footer grid4  -->
-				<div class="col-lg-3  col-sm-6 footv3-left my-lg-0 mt-5">
-					<h3 class="mb-4">subscribe to newsletter</h3>
-					<form action="#" method="post">
-						<div class="form-group">
-							<input type="email" class="form-control  bg-dark border-0" id="email" placeholder="Enter email" name="email" required>
-						</div>
-						<div class="form-group">
-							<input type="Submit" class="form-control bg-secondary text-white border-0" id="sub" value="submit" name="sub">
-						</div>
-					</form>
-				</div>
-				<!-- //footer grid4 -->
+				<!-- //footer grid2 -->
 			</div>
 			<div class="cpy-right text-center  pt-3">
 				
 				<div class="copyrightbottom">
-					<p class="text-secondary">© 2018 Alleviating. All rights reserved | Design by
+					<p class="text-secondary">© 2018 Revitalize. All rights reserved | Design by
 						<a href="http://w3layouts.com" class="text-white"> W3layouts.</a>
 					</p>
 				</div>

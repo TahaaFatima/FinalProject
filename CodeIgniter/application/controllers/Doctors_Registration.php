@@ -116,10 +116,7 @@ class Doctors_Registration extends MY_Controller {
             $this->load->model('Get_Area');
             $area_ids = [];
             $area_table = $this->Get_Area->retrieving();
-            foreach($area_table as $object){
-                $area_ids[] = $object->area_id;
-            }
-
+             
             $this->load->model('Get_Department');
             $department_ids = [];
             $department_table = $this->Get_Department->retrieving();
@@ -129,7 +126,7 @@ class Doctors_Registration extends MY_Controller {
 
             $data['view'] = 'Doctors_Registration';
             $data['page_title'] = 'Doctors_Registration';
-            $data['area_ids'] = $area_ids;
+            $data['areas'] = $area_table;
             $data['department_ids'] = $department_ids;
             $this->load->view('layout',$data);
         }

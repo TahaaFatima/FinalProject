@@ -139,34 +139,44 @@
           <div class="col-sm-6 p-0 sec-img hidden-xs"></div>
           <div class="col-sm-6 sec-text">
               <div class="p-40 ">
-                  <h3 class="w3l-sub">Why Ring a Doctor</h3>
-                  <div class="iconlist-2">
-                      <div class="icon dark"><i class="fa fa-check text-primary" aria-hidden="true"></i></div>
-                      <div class="text sub-title py-3">We offer comfortable and convenient 24/7 <br> healthcare</div>
+                  <h3 class="w3l-sub">Why Revitalize?</h3>
+                  <div class="iconlist-2 mt-3">
+                      <div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+                      <div class="text">
+							<p class="sub-title">
+								We offer comfortable and convenient 24/7 healthcare
+							</p>
+						</div>
                   </div>
                   <!--end item-->
                   
-                  <div class="iconlist-2">
-                      <div class="icon dark"><i class="fa fa-check text-primary" aria-hidden="true"></i></div>
-                      <div class="text sub-title py-3">We save time  - No waiting room, no road travel</div>
+                  <div class="iconlist-2 mt-3">
+                      <div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+                      <div class="text">
+							<p>
+								We save time  - No waiting room, no road travel
+							</p>	  
+						</div>
                   </div>
                   <!--end item-->
                   
-                  <div class="iconlist-2">
-                      <div class="icon dark"><i class="fa fa-check text-primary" aria-hidden="true"></i></div>
-                      <div class="text sub-title py-3">We offer a wide variety of doctors to choose from</div>
-                  </div>
-                  <!--end item-->
-                  
-                  <div class="iconlist-2">
-                      <div class="icon dark"><i class="fa fa-check text-primary" aria-hidden="true"></i></div>
-                      <div class="text sub-title py-3">Ring a Doctor is cheaper than your average ER <br> visit. Its even cheaper with our Prepaid Packages </div>
+                  <div class="iconlist-2 mt-3">
+                      <div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+                      <div class="text">
+						  <p>
+								We offer a wide variety of doctors to choose from
+						  </p>
+						</div>
                   </div>
                   <!--end item-->
 
-                  <div class="iconlist-2">
-                          <div class="icon dark"><i class="fa fa-check text-primary" aria-hidden="true"></i></div>
-                          <div class="text sub-title py-3">Ring a Doctor comes with consultaions, EMR, <br> appointment booking, homecare and prescriptions</div>
+                  <div class="iconlist-2 mt-3">
+                          <div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+                          <div class="text">
+							<p>
+								Revitalize comes with consultaions, EMR, appointment booking, homecare and prescriptions
+							</p>	
+						  </div>  
                       </div>
                       <!--end item-->
                   <div class="clearfix"></div>
@@ -183,10 +193,33 @@
 				<div class="row inner_w3l_agile_grids-1 ">
 					<div class="col-lg-7 w3layouts_choose_left_grid1">
 						<div class="choose_top">
-							<h3 class="w3l_header text-white">Still Have Questions?</h3>
-							<h4 class="mb-3 mt-3 text-white">Feel Free to Contact About Clinic Directly</h4>
-							<p class="text-white">Nulla pellentesque mi non laoreet eleifend. Integer porttitor mollisar lorem, at molestie arcu pulvinar ut. Proin ac fermentum est. Cras mi ipsum, consectetur ac ipsum in, egestas vestibulum tellus.</p>
-							<a href="about.html" class="btn btn-primary mt-3">Read More</a>
+							<h3 class="w3l_header text-white">Are you a five star doctor?</h3>
+							<h4 class="mb-3 mt-3 text-white">Sign-up to reach millions of patients</h4>
+							<div class="iconlist-2 mt-3">
+								<div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+								<div class="text text-white">
+										<p class="text-white">
+											Get more appointments through online bookings
+										</p>	  
+									</div>
+							</div>
+							<div class="iconlist-2 mt-3">
+								<div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+								<div class="text text-white">
+										<p class="text-white">
+										Create and view patient records from anywhere
+										</p>	  
+									</div>
+							</div>
+							<div class="iconlist-2 mt-3">
+								<div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+								<div class="text text-white">
+										<p class="text-white">
+										Manage your schedule efficiently
+										</p>	  
+									</div>
+							</div>
+							<a href="about.html" class="btn btn-primary mt-3">Sign Up</a>
 						</div>
 					</div>
 				</div>
@@ -195,74 +228,6 @@
 </section>
 <!-- //choose -->
 
-<!-- case studies -->
-	<section class="case_w3ls  py-lg-5">
-		<div class="container py-5">
-			<div class="text-center wthree-title pb-sm-5 pb-3">
-				<h3 class="w3l-sub">Medical Services</h4>
-				<h4 class="sub-title py-3">Donec consequat sapien ut leo cursus rhoncus.</h5>
-			</div>
-			<!-- case studies row -->
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="img1 img-grid  d-flex align-items-end justify-content-center p-3">
-						<div class="img_text_w3ls">
-							<h4>Emergency Help</h4>
-							<span> </span>
-							<p>Sed porttitor lectus nibh ras ultricies ligula sed magna dictum porta. </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 my-md-0 mt-4">
-					<div class="img1 img2 img-grid  d-flex align-items-end justify-content-center p-3">
-						<div class="img_text_w3ls">
-							<h4>Heart Surgery</h4>
-							<span> </span>
-							<p>Sed porttitor lectus nibh ras ultricies ligula sed magna dictum porta. </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 my-lg-0 mt-4">
-					<div class="img1 img3 img-grid  d-flex align-items-end justify-content-center p-3">
-						<div class="img_text_w3ls">
-							<h4>Emergency Care</h4>
-							<span> </span>
-							<p>Sed porttitor lectus nibh ras ultricies ligula sed magna dictum porta. </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 mt-4">
-					<div class="img1 img5 img-grid  d-flex align-items-end justify-content-center p-3">
-						<div class="img_text_w3ls">
-							<h4>Dental Care</h4>
-							<span> </span>
-							<p>Sed porttitor lectus nibh ras ultricies ligula sed magna dictum porta. </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6  mt-4">
-					<div class="img1 img4 img-grid  d-flex align-items-end justify-content-center p-3">
-						<div class="img_text_w3ls">
-							<h4>Individual Approach</h4>
-							<span> </span>
-							<p>Sed porttitor lectus nibh ras ultricies ligula sed magna dictum porta. </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 mt-4">
-					<div class="img1 img6 img-grid  d-flex align-items-end justify-content-center p-3">
-						<div class="img_text_w3ls">
-							<h4>Qualified Doctors</h4>
-							<span> </span>
-							<p>Sed porttitor lectus nibh ras ultricies ligula sed magna dictum porta. </p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- //case studies row -->
-		</div>
-	</section>
-	<!-- //case studies -->
 	<!-- login  -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
