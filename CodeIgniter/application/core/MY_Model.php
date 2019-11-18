@@ -5,7 +5,7 @@
 
         public $table_name ;
 
-        function retrieving(array $patient_data){
+        function retrieving(array $patient_data=[]){
             if(count($patient_data) > 0){
                 $forError = $this->db->where($patient_data);
             }

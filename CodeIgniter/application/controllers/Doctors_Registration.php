@@ -11,8 +11,7 @@ class Doctors_Registration extends MY_Controller {
 
         $this->load->helper('form');
         $this->load->library('form_validation');
-       /*  // $error = true; */
-
+       
             $validation = [
                 [
                     'field' => 'Name',
@@ -42,12 +41,17 @@ class Doctors_Registration extends MY_Controller {
                 [
                     'field' => 'Type',
                     'label' => 'Type',
-                    'rules' => 'trim|required'
+                    'rules' => 'required'
                 ],
                 [
                     'field' => 'Location',
                     'label' => 'Location',
-                    'rules' => 'trim|required'
+                    'rules' => 'required'
+                ],
+                [
+                    'field' => 'Department',
+                    'label' => 'Department',
+                    'rules' => 'required'
                 ],
                 [
                     'field' => 'Email_Address',
@@ -85,6 +89,7 @@ class Doctors_Registration extends MY_Controller {
                         'father_name'       => $_POST['FatherName'],
                         'dr_type'           => $_POST['Type'],
                         'area_id'           => $_POST['Location'],
+                        'department_id'     => $_POST['Department'],
                         'email'             => $_POST['Email_Address'],
                         'password'          => $password
                     ];
@@ -93,10 +98,39 @@ class Doctors_Registration extends MY_Controller {
                     $result  = $this->Doctor_registration_model->inserting($data);
                    // echo $result;
                 }
+
+                // function select_validate($abcd){
+                // // 'none' is the first option that is default "-------Choose City-------"
+                //     if($abcd=="none"){
+                //         $this->form_validation->set_message('select_validate', 'Please Select Your City.');
+                //     return false;
+                //     }
+                //     else{
+                //         // User picked something.
+                //         return true;
+                //     }
+                // }
+
+            }
+
+            $this->load->model('Get_Area');
+            $area_ids = [];
+            $area_table = $this->Get_Area->retrieving();
+            foreach($area_table as $object){
+                $area_ids[] = $object->area_id;
+            }
+
+            $this->load->model('Get_Department');
+            $department_ids = [];
+            $department_table = $this->Get_Department->retrieving();
+            foreach($department_table as $object){
+                $department_ids[] = $object->department_id;
             }
 
             $data['view'] = 'Doctors_Registration';
             $data['page_title'] = 'Doctors_Registration';
+            $data['area_ids'] = $area_ids;
+            $data['department_ids'] = $department_ids;
             $this->load->view('layout',$data);
         }
     }

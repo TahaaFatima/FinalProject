@@ -76,8 +76,8 @@
 		<div class="departments-1 py-lg-5">
 			<div class="container py-5">
 				<div class="text-center wthree-title pb-sm-5 pb-3">
-					<h3 class="w3l-sub text-white">Departments</h4>
-					<h4 class="sub-title py-3 text-white">Donec consequat sapien ut leo cursus rhoncus.</h5>
+					<h3 class="w3l-sub text-white">DEPARTMENTS</h4>
+					<h4 class="sub-title py-3 text-white">Find doctor by health concern!</h5>
 				</div>
 					<div class="row py-lg-5">
 								<div class="col-sm-4 w3-ab">
@@ -123,8 +123,8 @@
 								<div class="col-sm-4 mt-4 w3-ab">
 									<div class="w3-ab-grid text-center">
 										<div class="w3-aicon p-4">
-											<i class="fa fa-ambulance" aria-hidden="true"></i>
-											<h4 class="my-3 text-capitalize text-white">pediatrics</h4>
+											<i class="fas fa-search" aria-hidden="true"></i>
+											<h4 class="my-3 text-capitalize text-white">Explore</h4>
 										</div>
 									</div>
 								</div>
@@ -134,119 +134,46 @@
 	</section>
 
 	<!-- testimonials -->
-	<div class="testimonials py-lg-5">
-		<div class="container py-5">
-			<div class="text-center wthree-title pb-sm-5 pb-3">
-				<h3 class="w3l-sub">What Our Clients Say</h4>
-				<h4 class="sub-title py-3">Donec consequat sapien ut leo cursus rhoncus.</h5>
-			</div>
-			<div class="w3_testimonials_grids">
-				<section class="slider">
-					<div class="flexslider">
-						<ul class="slides">
-							<li>
-								<div class="w3_testimonials_grid">
-									<p>"Nam Cumque nihil impedit quo minuslibero tempore, nihil impedit quo minus id quod possimus, Nam Cumque nihil impedit
-										quo minuslibero tempore, cum soluta nobis est eligendi optio cumque nihil impedit omnis voluptas".</p>
-									<ul class="testi-w3ls-rate mt-4">
-										<li>
-											<i class="fas fa-star"></i>
-										</li>
-										<li class="mx-2">
-											<i class="fas fa-star"></i>
-										</li>
-										<li>
-											<i class="fas fa-star"></i>
-										</li>
-										<li class="mx-2">
-											<i class="fas fa-star"></i>
-										</li>
-										<li>
-											<i class="fas fa-star"></i>
-										</li>
-									</ul>
-									<div class="row person-w3ls-testi mt-5">
-										<div class="col-6 agile-left-test text-right">
-											<img src="images/te1.jpg" alt=" " class="img-fluid rounded-circle" />
-										</div>
-										<div class="col-6 agile-right-test text-left mt-4">
-											<h5>John Frank</h5>
-											<p>Tempore Quo</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="w3_testimonials_grid">
-									<p>"Nam Cumque nihil impedit quo minuslibero tempore, nihil impedit quo minus id quod possimus, Nam Cumque nihil impedit
-										quo minuslibero tempore, cum soluta nobis est eligendi optio cumque nihil impedit omnis voluptas".</p>
-									<ul class="testi-w3ls-rate mt-4">
-										<li>
-											<i class="fas fa-star"></i>
-										</li>
-										<li class="mx-2">
-											<i class="fas fa-star"></i>
-										</li>
-										<li>
-											<i class="fas fa-star"></i>
-										</li>
-										<li class="mx-2">
-											<i class="fas fa-star"></i>
-										</li>
-										<li>
-											<i class="fas fa-star"></i>
-										</li>
-									</ul>
-									<div class="row person-w3ls-testi mt-5">
-										<div class="col-6 agile-left-test text-right">
-											<img src="images/te2.jpg" alt=" " class="img-fluid rounded-circle" />
-										</div>
-										<div class="col-6 agile-right-test text-left mt-4">
-											<h5>John Lara</h5>
-											<p>Tempore Quo</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="w3_testimonials_grid">
-									<p>"Nam Cumque nihil impedit quo minuslibero tempore, nihil impedit quo minus id quod possimus, Nam Cumque nihil impedit
-										quo minuslibero tempore, cum soluta nobis est eligendi optio cumque nihil impedit omnis voluptas".</p>
-									<ul class="testi-w3ls-rate mt-4">
-										<li>
-											<i class="fas fa-star"></i>
-										</li>
-										<li class="mx-2">
-											<i class="fas fa-star"></i>
-										</li>
-										<li>
-											<i class="fas fa-star"></i>
-										</li>
-										<li class="mx-2">
-											<i class="fas fa-star"></i>
-										</li>
-										<li>
-											<i class="fas fa-star"></i>
-										</li>
-									</ul>
-									<div class="row person-w3ls-testi mt-5">
-										<div class="col-6 agile-left-test text-right">
-											<img src="images/te3.jpg" alt=" " class="img-fluid rounded-circle" />
-										</div>
-										<div class="col-6 agile-right-test text-left mt-4">
-											<h5>Frank John </h5>
-											<p>Tempore Quo</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</section>
+	<section class="section-whyRaD ng-scope">
+      <div class="row mx-0">
+          <div class="col-sm-6 p-0 sec-img hidden-xs"></div>
+          <div class="col-sm-6 sec-text">
+              <div class="p-40 ">
+                  <h3 class="w3l-sub">Why Ring a Doctor</h3>
+                  <div class="iconlist-2">
+                      <div class="icon dark"><i class="fa fa-check text-primary" aria-hidden="true"></i></div>
+                      <div class="text sub-title py-3">We offer comfortable and convenient 24/7 <br> healthcare</div>
+                  </div>
+                  <!--end item-->
+                  
+                  <div class="iconlist-2">
+                      <div class="icon dark"><i class="fa fa-check text-primary" aria-hidden="true"></i></div>
+                      <div class="text sub-title py-3">We save time  - No waiting room, no road travel</div>
+                  </div>
+                  <!--end item-->
+                  
+                  <div class="iconlist-2">
+                      <div class="icon dark"><i class="fa fa-check text-primary" aria-hidden="true"></i></div>
+                      <div class="text sub-title py-3">We offer a wide variety of doctors to choose from</div>
+                  </div>
+                  <!--end item-->
+                  
+                  <div class="iconlist-2">
+                      <div class="icon dark"><i class="fa fa-check text-primary" aria-hidden="true"></i></div>
+                      <div class="text sub-title py-3">Ring a Doctor is cheaper than your average ER <br> visit. Its even cheaper with our Prepaid Packages </div>
+                  </div>
+                  <!--end item-->
 
-			</div>
-		</div>
-	</div>
+                  <div class="iconlist-2">
+                          <div class="icon dark"><i class="fa fa-check text-primary" aria-hidden="true"></i></div>
+                          <div class="text sub-title py-3">Ring a Doctor comes with consultaions, EMR, <br> appointment booking, homecare and prescriptions</div>
+                      </div>
+                      <!--end item-->
+                  <div class="clearfix"></div>
+              </div>
+          </div>
+      </div>
+  </section>
 	<!-- //testimonials -->
 
 <!-- choose -->
@@ -346,7 +273,7 @@
 							<h5 class="modal-title" id="exampleModalLabel">Sign up as a</h5>
 						</div>
 						<div class="icon">
-							<a href="<?php echo site_url('/Doctors_Registration'); ?>"><i class="far fa-user-injured"></i></a>
+							<a href="<?php echo site_url('/Doctors_Registration'); ?>"><i class="fas fa-user-injured"></i></a>
 						</div>
 						<div>
 							<h2 class="modal-title" id="exampleModalLabel">DOCTOR</h2>
@@ -357,7 +284,7 @@
 							<a><h5 class="modal-title" id="exampleModalLabel">Sign up as a</h5></a>
 						</div>
 						<div class="icon">
-							<a href="<?php echo site_url('/Patient_Registration'); ?>"><i class="far fa-user-injured"></i></a>
+							<a href="<?php echo site_url('/Patient_Registration'); ?>"><i class="fas fa-user-injured"></i></a>
 						</div>
 						<div>
 							<h2 class="modal-title" id="exampleModalLabel">PATIENT</h2>

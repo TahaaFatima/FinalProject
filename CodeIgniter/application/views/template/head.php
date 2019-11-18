@@ -17,6 +17,7 @@
     <!-- Custom Theme files -->
     <link href="assets/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="assets/css/revitalize.css" type="text/css" rel="stylesheet" media="all">
     <!-- font-awesome icons -->
     <link href="assets/css/fontawesome-all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/jquery-ui.css" />
