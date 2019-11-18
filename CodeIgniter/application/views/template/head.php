@@ -12,19 +12,18 @@
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
-       // SITE_URL = "<?php // echo site_url()?>";
     </script>
     <!-- Custom Theme files -->
-    <link href="assets/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="all">
-    <link href="assets/css/revitalize.css" type="text/css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="<?php echo base_url(); ?>assets/css/style.css " type="text/css" rel="stylesheet" media="all">
     <!-- font-awesome icons -->
-    <link href="assets/css/fontawesome-all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link href="<?php echo base_url(); ?>assets/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/jquery-ui.css" rel="stylesheet" />
     <!-- //Custom Theme files -->
-	<link href="assets/css/minimal-slider.css" rel='stylesheet' type='text/css' />
-	<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" property="" />
+	<link href="<?php echo base_url(); ?>assets/css/minimal-slider.css" rel='stylesheet' type='text/css' />
+	<link  href="<?php echo base_url(); ?>assets/css/flexslider.css" type="text/css" media="screen" rel="stylesheet" property="" />
     <!-- online-fonts -->
 	<link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet"><!-- //online-fonts -->
+    <link href="<?php echo base_url(); ?>assets/css/mycss.css" rel='stylesheet' type='text/css' />
 </head>
