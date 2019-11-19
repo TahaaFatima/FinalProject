@@ -7,7 +7,7 @@
             $data['page_title'] = 'Logout';
             $data['view'] = 'Logout';
             $this->load->view('layout', $data);
-            if(){
+            if(!empty($this->session->userdata('role_id'))){
                 $this->session->unset_userdata('role_id');
             }
             redirect('Login');
