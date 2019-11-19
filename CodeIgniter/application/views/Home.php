@@ -102,7 +102,7 @@
 	</section>
 
 	<!-- testimonials -->
-	<section class="section-whyRaD ng-scope">
+	<section class="section-whyRaD ng-scope set-div">
       <div class="row mx-0">
           <div class="col-sm-6 p-0 sec-img hidden-xs"></div>
           <div class="col-sm-6 sec-text">

@@ -5,12 +5,25 @@
 
         public $table_name ;
 
-        function retrieving(array $patient_data=[]){
-            if(count($patient_data) > 0){
-                $forError = $this->db->where($patient_data);
+        function retrieving(array $whereCondition=[], bool $multiple = true, bool $is_arr = false ){
+            if(count($whereCondition) > 0){
+                $forError = $this->db->where($whereCondition);
             }
             $forError = $this->db->get($this->table_name);
-            $data     = $forError->result();
+            if($multiple){
+                if($is_arr){
+                    $data     = $forError->result_array();
+                }else{
+                    $data     = $forError->result();
+                }  
+            }
+            else{
+                if($is_arr){
+                    $data     = $forError->row_array();
+                }else{
+                    $data     = $forError->row();
+                } 
+            }
             if(!$forError){
                 return $this->db->error();
             }else{

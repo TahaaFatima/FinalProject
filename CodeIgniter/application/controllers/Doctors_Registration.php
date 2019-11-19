@@ -96,21 +96,7 @@ class Doctors_Registration extends MY_Controller {
 
                     $this->load->model('Doctor_registration_model');
                     $result  = $this->Doctor_registration_model->inserting($data);
-                   // echo $result;
                 }
-
-                // function select_validate($abcd){
-                // // 'none' is the first option that is default "-------Choose City-------"
-                //     if($abcd=="none"){
-                //         $this->form_validation->set_message('select_validate', 'Please Select Your City.');
-                //     return false;
-                //     }
-                //     else{
-                //         // User picked something.
-                //         return true;
-                //     }
-                // }
-
             }
 
             $this->load->model('Get_Area');
@@ -119,11 +105,14 @@ class Doctors_Registration extends MY_Controller {
             $this->load->model('Get_Department');
             $department_table = $this->Get_Department->retrieving();
 
+            $this->load->model('Get_Price');
+            $price_table = $this->Get_Price->retrieving();
 
             $data['view'] = 'Doctors_Registration';
             $data['page_title'] = 'Doctors_Registration';
             $data['areas'] = $area_table;
-            $data['department_ids'] = $department_table;
+            $data['departments'] = $department_table;
+            $data['prices'] = $price_table;
             $this->load->view('layout',$data);
         }
     }

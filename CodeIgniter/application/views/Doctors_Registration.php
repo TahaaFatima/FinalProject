@@ -56,15 +56,30 @@
             <select class="form-control" name="Department">
                 <option value="none">Choose Department</option>
                 <?php 
-                    foreach($department_ids as $departments)
+                    foreach($departments as $department)
                         { 
                 ?>
-                        <option value="<?php echo $departments->department_id ?>"><?php echo $departments->department ?></option>
+                        <option value="<?php echo $department->department_id ?>"><?php echo $department->department ?></option>
             <?php
                         }
                 ?>
             </select>
             <?php echo form_error('Department'); ?>
+        </div>
+        <div class="form-group">
+            <label class="col-form-label" for="Price">Price</label>
+            <select class="form-control" name="Price">
+                <option value="none">Choose Price</option>
+                <?php 
+                    foreach($prices as $price)
+                        { 
+                ?>
+                        <option value="<?php echo $price->price_id ?>"><?php echo $price->price ?></option>
+            <?php
+                        }
+                ?>
+            </select>
+            <?php echo form_error('Price'); ?>
         </div>
         <div class="form-group">
             <label class="col-form-label" for="Email">Email Address</label>
@@ -87,6 +102,6 @@
     </form>
     </div>
     <div class="reg-form-div">
-        <a href="<?php echo site_url('Login_View') ?>">Log in</a>
+        <a href="<?php echo site_url('Login') ?>">Log in</a>
     </div>
 </section>
