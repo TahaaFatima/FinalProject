@@ -1,12 +1,11 @@
-/* 
-.container.sec-tpadding-4.sec-bpadding-4 {
-    width: 100%;
+*{
+    margin: 0px;
     padding: 0px;
-    margin: 0 auto;
-} */
-/* .container {
-    max-width: 100%;
-} */
+    font-family: 'Montserrat', sans-serif;
+}
+.revitalize-logo{
+    color: white;
+}
 .navbar-light{
     background:#02646fb3 ;
 }
@@ -19,52 +18,6 @@
     margin: a;
     left: 0px;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-/* Taha */
-.section-whyRaD .sec-img {
-    background: url(../images/webRaD.png);
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-}
-.p-40 {
-    padding: 40px;
-}
-.iconlist-2 {
-    width: 100%;
-    padding: 0px;
-    margin: 0px 0px 10px 0px;
-    float: left;
-}
-.iconlist-2 .icon {
-    width: 18px;
-    height: 18px;
-    padding: 0px;
-    margin: 3px 0px 0px 0px;
-    float: left;
-    font-size: 14px;
-    text-align: center;
-    line-height: 15px;
-    border-radius: 100%;
-}
-.iconlist-2 .text {
-    padding: 0px 0 0 28px;
-    margin: 0px;
-    display: block;
-}
-.text > p{
-    font-size: 1rem !important;
-}
-.text-awesome{
-    color:#ffab67;
-}
-.margin-foot{
-    margin-left: auto !important;
-}
-/* Taha */
-=======
 a.btn.ml-lg-2.w3ls-btn {
     color: black;
     -webkit-appearance: none;
@@ -108,11 +61,6 @@ button.btn.ml-lg-2.w3ls-btn {
 }
 .main-heading > h2 {
     color: white;
-}
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Montserrat', sans-serif;
 }
 .row.animate.wow.fadeInRight.animated {
     display: flex;
@@ -173,8 +121,48 @@ button.btn.ml-lg-2.w3ls-btn {
     padding: 9px 13px 11px 129px;
 }
 .col-sm-4.w3-ab {
-    padding: 24px 0px;
+    padding: 42px 0px;
 }
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
+/* Taha */
+.section-whyRaD .sec-img {
+    background: url(../images/webRaD.png);
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+.p-40 {
+    padding: 40px;
+}
+.iconlist-2 {
+    width: 100%;
+    padding: 0px;
+    margin: 0px 0px 10px 0px;
+    float: left;
+}
+.iconlist-2 .icon {
+    width: 18px;
+    height: 18px;
+    padding: 0px;
+    margin: 3px 0px 0px 0px;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 100%;
+}
+.iconlist-2 .text {
+    padding: 0px 0 0 28px;
+    margin: 0px;
+    display: block;
+}
+.text > p{
+    font-size: 1rem !important;
+}
+.text-awesome{
+    color:#ffab67;
+}
+.margin-foot{
+    margin-left: auto !important;
+}
+/* Taha */

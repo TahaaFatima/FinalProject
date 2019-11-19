@@ -1,11 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-gradient-secondary">
-<<<<<<< Updated upstream
-                <div class="main-heading">
+                <div class="revitalize-logo">
                     <h2>REVITALIZE</h2>
-=======
-                <div>
-                    <img class="logo" alt="revitalize-logo" src="../assets/images/revitalize-logo.png">
->>>>>>> Stashed changes
                 </div>
                 <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +14,7 @@
                             </a>
                         </li>
                         <li class="nav-item  mr-3 mt-lg-0 mt-3">
-                            <a class="nav-link" href=<?php echo site_url('/Department'); ?>>Departments</a>
+                            <a class="nav-link" href=<?php echo site_url('/Department'); ?>>Department</a>
                         </li>
                         <li class="nav-item dropdown mr-3 mt-lg-0 mt-3">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
