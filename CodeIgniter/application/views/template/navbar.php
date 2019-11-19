@@ -14,7 +14,7 @@
                             </a>
                         </li>
                         <li class="nav-item  mr-3 mt-lg-0 mt-3">
-                            <a class="nav-link" href=<?php echo site_url('/Department'); ?>>Department</a>
+                            <a class="nav-link" href=<?php echo site_url('/Department'); ?>>Departments</a>
                         </li>
                         <li class="nav-item dropdown mr-3 mt-lg-0 mt-3">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -34,7 +34,11 @@
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li>
+<<<<<<< Updated upstream
                             <a href="<?php echo site_url('/Login')?>" type="button" class="btn  ml-lg-2 w3ls-btn">
+=======
+                            <a href="<?php echo site_url('/Login_View')?>" type="button" class="btn  ml-lg-2 w3ls-btn">
+>>>>>>> Stashed changes
                                 Login</a>
                         </li>
                         <li>

@@ -62,6 +62,14 @@ button.btn.ml-lg-2.w3ls-btn {
 .main-heading > h2 {
     color: white;
 }
+<<<<<<< Updated upstream
+=======
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+>>>>>>> Stashed changes
 .row.animate.wow.fadeInRight.animated {
     display: flex;
 }
@@ -121,6 +129,7 @@ button.btn.ml-lg-2.w3ls-btn {
     padding: 9px 13px 11px 129px;
 }
 .col-sm-4.w3-ab {
+<<<<<<< Updated upstream
     padding: 42px 0px;
 }
 .reg-form {
@@ -273,3 +282,7 @@ input.form-radio {
     padding: 73px 0px;
 }
 /* Taha */
+=======
+    padding: 24px 0px;
+}
+>>>>>>> Stashed changes
