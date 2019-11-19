@@ -62,14 +62,11 @@ button.btn.ml-lg-2.w3ls-btn {
 .main-heading > h2 {
     color: white;
 }
-<<<<<<< Updated upstream
-=======
 *{
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
 }
->>>>>>> Stashed changes
 .row.animate.wow.fadeInRight.animated {
     display: flex;
 }
@@ -129,7 +126,6 @@ button.btn.ml-lg-2.w3ls-btn {
     padding: 9px 13px 11px 129px;
 }
 .col-sm-4.w3-ab {
-<<<<<<< Updated upstream
     padding: 42px 0px;
 }
 .reg-form {
@@ -227,11 +223,9 @@ input.form-radio {
     font-size: 20px;
     color: white;
 }
-.contact-submit {
-    padding-bottom: 150px;
-}
+
 .contact-form {
-    padding: 34px 0px;
+    margin-bottom: 140px;
 }
 /* .white-color{
     color: white;
@@ -282,7 +276,158 @@ input.form-radio {
     padding: 73px 0px;
 }
 /* Taha */
-=======
-    padding: 24px 0px;
+    
+
+/* Tehzeeb */
+
+*{
+    margin: 0;
+    padding: 0;
 }
->>>>>>> Stashed changes
+:root{
+    --primary-color:#02646f;
+    --secondary-color:whitesmoke;
+    /* --secondary:'Dancing Script', cursive;
+    --primary:'Catamaran', sans-serif; */
+}
+.login-body{
+    background-image: url(../images/login-bg.jpg);
+}
+h1{
+    color: var(--primary-color);
+    padding: 30px 216px 0px 245px;
+    display: inline-block;
+}
+.login-section{
+    width: 100%;
+    height: auto;
+    /* margin-top: 100px; */
+    padding: 112px 3px;
+    background: #000000a8;
+}
+.left-section{
+    width: 22.01%;
+    height: 400px;
+    display: inline-block;
+    margin-left: 209px;
+}
+.left-div{
+    background-color: var(--primary-color);
+    height: 200px;
+}
+.left-div :hover{
+    background-color:whitesmoke ;
+}
+h3{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 22px;
+  
+}
+.icon-heading > p{
+    font-size: medium;
+}
+.right-section{
+    width: 49.59%;
+    background-color: var(--secondary-color);
+    height: 400px;
+    /* display: inline-block; */
+    float: right;
+    /* padding-right: 10px; */
+    margin-right: 214px;
+    padding: 0 5px;
+}
+form{
+    /* color: var(--green); */
+    color: black;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    margin: 36px auto;
+    background-color: whitesmoke;
+}
+/* .labelEmail{
+    font-size: x-large;
+}
+.labelPassword{
+    font-size: x-large;
+    padding-right: 50px;
+} */
+.radio-doctor{
+    display: inline-flex;
+    margin: 5px 0 5px 64px;
+}
+.radio-doctor > p{
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 5px;
+    
+}
+.radio-patient{
+    display: inline-flex;
+    margin: 5px 5px 5px 16px;
+}
+.radio-patient > p{
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 5px;
+}
+.user-input{
+    width: 100%;
+    height: 30px;
+    padding-left: 7px;
+}
+.user-radio{
+    height: 30px;
+    padding-left: 10px;
+}
+.fields-div{
+    padding: 10px 32px;
+    margin: 0px 32px;
+}
+.fields-div > a{
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+.user-submit{
+    font-size: 16px;
+    padding: 8px 30px;
+    background: #36b1af;
+    outline: none;
+    border: none;
+    display: inline-block;
+    letter-spacing: 2px;
+    border-radius: 0.25rem;
+}
+.signup{
+    font-size: 16px;
+    padding: 8px 30px;
+    background: #36b1af;
+    outline: none;
+    border: none;
+    display: inline-block;
+    letter-spacing: 2px;
+    border-radius: 0.25rem;
+}
+
+/* Tehzeeb */
+
+
+.icon-heading > h3 {
+    font-size: 24px;
+    color:#ffab67 ;
+}
+
+.img > i {
+    font-size: 70px;
+    color: white;
+}
+.img > i:hover {
+    color:#ffab67 ;
+}
+
+.img {
+    text-align: center;
+    padding: 43px;
+}
