@@ -1,20 +1,20 @@
 <!-- js -->
-<script src="assets/js/jquery-2.2.3.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery-2.2.3.min.js"></script>
 <!-- //js -->
-<script src="assets/js/minimal-slider.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/minimal-slider.js"></script>
 <!-- flexSlider (for testimonials) -->
 <!-- Calendar -->
 
 <script src="https://kit.fontawesome.com/200033bf0c.js" crossorigin="anonymous"></script>
-<script src="assets/js/jquery-ui.js"></script>
-<script>
+<script src="<?php echo base_url(); ?>assets/js/jquery-ui.js"></script>
+        <script>
 						  $(function() {
 							$( "#datepicker" ).datepicker();
 						  });
 				  </script>
 				<!-- //Calendar -->
                 
-                <script defer src="assets/js/jquery.flexslider.js"></script>
+                <script defer src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
                 <script>
 		$(window).load(function () {
 			$('.flexslider').flexslider({
@@ -46,8 +46,8 @@
     </script>
     <!-- script for password match -->
     <!-- start-smooth-scrolling -->
-    <script src="assets/js/move-top.js"></script>
-    <script src="assets/js/easing.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/move-top.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/easing.js"></script>
     <script>
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
@@ -78,9 +78,9 @@
 
         });
     </script>
-    <script src="assets/js/SmoothScroll.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/SmoothScroll.min.js"></script>
     <!-- //smooth-scrolling-of-move-up -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/bootstrap.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>

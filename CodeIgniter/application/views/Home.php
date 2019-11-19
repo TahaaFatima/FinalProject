@@ -1,35 +1,3 @@
- <!-- main image slider container -->
-        <div class="slide-window">
-            <div class="slide-wrapper" style="width:300%;">
-                <div class="slide">
-                    <div class="slide-caption text-center">
-                       <h3 class="text-uppercase">A range of programs for women’s <span>healthcare</span></h3>
-                    </div>
-                </div>
-                <div class="slide slide2">
-                    <div class="slide-caption text-center">
-                        <h3 class="text-uppercase">Individual approach to <span>Each Patient </span></h3>
-                    </div>
-                </div>
-                <div class="slide slide3">
-                    <div class="slide-caption text-center">
-                        <h3 class="text-uppercase">Committed to excellence <span>Medical Clinic</span></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="slide-controller">
-                <div class="slide-control-left">
-                    <div class="slide-control-line"></div>
-                    <div class="slide-control-line"></div>
-                </div>
-                <div class="slide-control-right">
-                    <div class="slide-control-line"></div>
-                    <div class="slide-control-line"></div>
-                </div>
-            </div>
-        </div>
-        <!-- main image slider container -->
-    <!-- end of main image slider container -->
 		<!--about-->
 	<div class="about">
 	<div class="abt-layer">
@@ -238,7 +206,7 @@
 							<h5 class="modal-title" id="exampleModalLabel">Sign up as a</h5>
 						</div>
 						<div class="icon">
-							<a href="<?php echo site_url('/Doctors_Registration'); ?>"><i class="fas fa-user-injured"></i></a>
+							<a href="<?php echo site_url('/Doctors_Registration'); ?>"><i class="fas fa-user-md"></i></a>
 						</div>
 						<div>
 							<h2 class="modal-title" id="exampleModalLabel">DOCTOR</h2>
@@ -255,7 +223,7 @@
 							<h2 class="modal-title" id="exampleModalLabel">PATIENT</h2>
 						</div>				
 					</div>
-					<div class="modal-header">
+					<div class="modal-cancel">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
