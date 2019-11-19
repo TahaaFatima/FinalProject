@@ -245,34 +245,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="login px-4 mx-auto mw-100">
-                        <h5 class="modal-title text-center text-dark mb-4">REGISTER NOW</h5>
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <label class="col-form-label">First name</label>
-
-                                <input type="text" class="form-control" id="validationDefault01" placeholder="" required="">
-                            </div>
-                            <div class="form-group">
-                                <label class="col-form-label">Last name</label>
-                                <input type="text" class="form-control" id="validationDefault02" placeholder="" required="">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="mb-2 col-form-label">Password</label>
-                                <input type="password" class="form-control" id="password1" placeholder="" required="">
-                            </div>
-                            <div class="form-group">
-                                <label class="col-form-label">Confirm Password</label>
-                                <input type="password" class="form-control" id="password2" placeholder="" required="">
-                            </div>
-							<div class="reg-w3l">
-								<button type="submit" class="form-control submit mb-4">Register</button>
-                           </div>
-						   <p class="text-center pb-4">
-                                <a href="#" class="text-secondary">By clicking Register, I agree to your terms</a>
-                            </p>
-                        </form>
-                    </div>
+                       
                 </div>
             </div>
         </div>

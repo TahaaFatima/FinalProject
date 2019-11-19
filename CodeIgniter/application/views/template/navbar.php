@@ -34,7 +34,7 @@
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li>
-                            <a href="<?php echo site_url('/Login_View')?>" type="button" class="btn  ml-lg-2 w3ls-btn">
+                            <a href="<?php echo site_url('/Login')?>" type="button" class="btn  ml-lg-2 w3ls-btn">
                                 Login</a>
                         </li>
                         <li>

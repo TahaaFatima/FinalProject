@@ -123,6 +123,33 @@ button.btn.ml-lg-2.w3ls-btn {
 .col-sm-4.w3-ab {
     padding: 42px 0px;
 }
+.reg-form {
+    width: 50%;
+    margin: 0% 25%;
+    display: inline-block;
+    color: #02646f;
+}
+label.col-form-label.radio-label {
+    padding: 0px 37px 0px 0px;
+}
+
+input.form-radio {
+    /* padding: 0px 0px 0px 0px; */
+    margin: 0px 0px 0px 9px;
+}
+.button {
+    background: #02646f;
+    color: #ffab67;
+}
+.text-dark {
+    color: #02646f !important;
+    padding-top: 48px;
+    font-size: 34px;
+}
+.button-submit {
+    padding: 27px 0px;
+}
+
 
 /* Taha */
 .section-whyRaD .sec-img {
