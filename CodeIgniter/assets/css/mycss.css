@@ -149,7 +149,84 @@ input.form-radio {
 .button-submit {
     padding: 27px 0px;
 }
+.top-image > img {
+    width: 50%;
+    height: 250px;
+}
 
+.top-image {
+    text-align: center;
+}
+.contact-section{
+    background-image: url(../images/contactus-img-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-us-head {
+    text-align: center;
+    position: absolute;
+    /* width: 100%; */
+    margin: 0px 374px;
+    padding: 73px 214px;
+    background: #02646f9c;
+}
+
+.contact-us-heading > h2 {
+    color: white;
+    font-size: 37px;
+}
+
+.contact-us-para > p {
+    font-size: 20px;
+    color: white;
+    padding: 11px 0px;
+}
+.contact-us-head {
+    position: absolute;
+    z-index: 999;
+    padding: 64px 0px;
+    width: 50%;
+    background: #02646f7a;
+    text-align: center;
+    margin: 0px 375px;
+}
+.contact-parentdiv {
+    background: #ffffffa3;
+}
+
+.contact-us-top {
+    padding-top: 154px;
+}
+
+.top-image {
+    text-align: center;
+}
+
+.top-image > img {
+    width: 50%;
+    height: 250px;
+}
+
+.contact-us-heading > h2 {
+    font-size: 36px;
+    padding: 0px 0px 17px 0px;
+    color: white;
+}
+
+.contact-us-para > p {
+    font-size: 20px;
+    color: white;
+}
+.contact-submit {
+    padding-bottom: 150px;
+}
+.contact-form {
+    padding: 34px 0px;
+}
+/* .white-color{
+    color: white;
+} */
 
 /* Taha */
 .section-whyRaD .sec-img {
