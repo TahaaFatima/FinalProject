@@ -129,6 +129,7 @@ button.btn.ml-lg-2.w3ls-btn {
     padding: 42px 0px;
 }
 .reg-form {
+    padding: 22px 49px;
     width: 50%;
     margin: 0% 25%;
     display: inline-block;
@@ -445,4 +446,7 @@ form{
 .img {
     text-align: center;
     padding: 43px;
+}
+section.profile-section {
+    padding-bottom: 70px;
 }
