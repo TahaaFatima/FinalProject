@@ -1,3 +1,6 @@
+<?php 	include_once('modal.php');
+ 
+?>
 
 <!-- footer -->
 <footer class="py-sm-5">
@@ -33,7 +36,7 @@
 				
 				<!-- footer grid2 -->
 				<div class="col-lg-3  col-sm-6 footv3-left text-lg-center my-lg-0 mt-sm-5 mt-5 margin-foot">
-					<h3 class="mb-4">Navigation</h3>
+					<h3 class="mb-4 remove-padding">Navigation</h3>
 					<ul class="list-agileits">
 						<li>
 							<a href="index.html">

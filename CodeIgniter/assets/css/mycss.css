@@ -275,6 +275,21 @@ input.form-radio {
 .set-div {
     padding: 73px 0px;
 }
+.remove-padding{
+    padding: 0px;
+}
+.search-bar {
+    display: flex;
+    margin-top: 46px;
+}
+
+.form-mine {
+    margin: 12px;
+}
+.submit_search {
+    height: 38px;
+    margin-top: 12px;
+}
 /* Taha */
     
 
