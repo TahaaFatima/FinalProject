@@ -1,15 +1,22 @@
 // $(document).ready(function(){
-//     $('.submit_chat').on('click',function(e){
+//     $('.search_form').on('submit',function(e){
 //         e.preventDefault();
+//         selected_opt = [];
 
-//         chat_msgs = $('.message_sent').val();
+//              $(this).find('option:selected').each(function(i,v){
+//                 // if($(this).is(":selected")){ 
+//                     selected_opt.push($(this).attr('value'));
+//                 // }
+//              });
+//              console.log(selected_opt);
 
-//         $.ajax({
-//             url : SITE_URL+'/Chatbox/insert_messages',
+//          $.ajax({
+//             url : SITE_URL+'/Search/searching',
 //             type: "post",
-//             data: {message_sent:chat_msgs}
-//         })
+//             data: {values_selected:selected_opt}
+//          })
 //     })
+// })
 
 //     setInterval(function(){
 //         $.ajax({

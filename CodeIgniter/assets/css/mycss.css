@@ -255,7 +255,7 @@ input.form-radio {
 .remove-padding{
     padding: 0px;
 }
-.search-bar {
+.search-form {
     display: flex;
     margin-top: 46px;
 }
@@ -266,6 +266,19 @@ input.form-radio {
 .submit_search {
     height: 38px;
     margin-top: 12px;
+    background: #02646f;
+    color: #ffab67;
+}
+.profile-picture{
+    height: 162px;
+}
+.rating {
+    margin: 0px 87px;
+    margin-top: 16px;
+}
+.selection{
+    display: flex;
+    justify-content: space-evenly;
 }
 /* Taha */
     

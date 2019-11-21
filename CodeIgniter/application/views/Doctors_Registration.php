@@ -39,7 +39,7 @@
         <div class="form-group">
             <label class="col-form-label" for="Location">Location</label>
             <select class="form-control"  name="Location">
-                <option value="none">Choose City</option>
+                <option value="none">Choose Area</option>
                 <?php 
                     foreach($areas as $area)
                     {    

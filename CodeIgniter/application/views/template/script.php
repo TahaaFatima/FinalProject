@@ -3,18 +3,28 @@
 <!-- //js -->
 <script src="<?php echo base_url(); ?>assets/js/minimal-slider.js"></script>
 <!-- flexSlider (for testimonials) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 <!-- Calendar -->
 <script src="https://kit.fontawesome.com/200033bf0c.js" crossorigin="anonymous"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery-ui.js"></script>
         <script>
-						  $(function() {
-							$( "#datepicker" ).datepicker();
-						  });
-				  </script>
+			$(function() {
+			$( "#datepicker" ).datepicker();
+            });
+	  </script>
 				<!-- //Calendar -->
                 
                 <script defer src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
-                <script>
+                    <script>
+                        $(function () {
+                            
+                            $(".rateYo").rateYo({
+                                starWidth: "30px"
+                            });
+    
+                        });
+                    </script>
+        <script>
 		$(window).load(function () {
 			$('.flexslider').flexslider({
 				animation: "slide",
@@ -28,10 +38,10 @@
     
     <!-- script for password match -->
     <script>
-        window.onload = function () {
-            document.getElementById("password1").onchange = validatePassword;
-            document.getElementById("password2").onchange = validatePassword;
-        }
+        // window.onload = function () {
+        //     document.getElementById("password1").onchange = validatePassword;
+        //     document.getElementById("password2").onchange = validatePassword;
+        // }
 
         function validatePassword() {
             var pass2 = document.getElementById("password2").value;
@@ -83,3 +93,5 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
+    
+    <script src="<?php echo base_url(); ?>assets/js/script.js"></script>
