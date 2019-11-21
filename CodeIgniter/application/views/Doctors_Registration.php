@@ -67,6 +67,21 @@
             <?php echo form_error('Department'); ?>
         </div>
         <div class="form-group">
+            <label class="col-form-label" for="Clinic">Clinic Name</label>
+            <select class="form-control" name="Clinic">
+                <option value="none">Choose Clinic</option>
+                <?php 
+                    foreach($clinic as $clinics)
+                        { 
+                ?>
+                        <option value="<?php echo $clinics->clinic_id ?>"><?php echo $clinics->clinics?></option>
+            <?php
+                        }
+                ?>
+            </select>
+            <?php echo form_error('Clinic'); ?>
+        </div>
+        <div class="form-group">
             <label class="col-form-label" for="Price">Price</label>
             <select class="form-control" name="Price">
                 <option value="none">Choose Price</option>
@@ -99,9 +114,9 @@
         <div class="button-submit">
             <input class="form-control button" type="submit" name="Submit" value="Submit">
         </div>
+        <div class="login-link">
+            <span class="login-span">Already on Revitalize ? </span><a href="<?php echo site_url('Login') ?>">Log in</a>
+        </div>
     </form>
-    </div>
-    <div class="reg-form-div">
-        <a href="<?php echo site_url('Login') ?>">Log in</a>
     </div>
 </section>

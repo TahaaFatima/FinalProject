@@ -33,15 +33,32 @@
                         <li class="nav-item">
                             <a class="nav-link" href=<?php echo site_url('/Contact_Us'); ?>>Contact</a>
                         </li>
-                        <li>
-                            <a href="<?php echo site_url('/Login')?>" type="button" class="btn  ml-lg-2 w3ls-btn">
-                                Login</a>
-                        </li>
-                        <li>
-                            <button type="button" class="btn  ml-lg-2 w3ls-btn" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">
-                                Sign Up
-                            </button>
-                        </li>
+                        <?php
+                            if($this->session->userdata('role_id')){
+                        ?>
+                            <li>
+                                <a href="<?php echo site_url('/Logout')?>" type="button" class="btn  ml-lg-2 w3ls-btn">
+                                    Logout</a>
+                            </li>
+                            <li>
+                                <img class="navbar-img" src="../assets/images/doctors-profile.png" alt="profile">
+                            </li>
+
+                        <?php           
+                            }else{
+                        ?>
+                            <li>
+                                <a href="<?php echo site_url('/Login')?>" type="button" class="btn  ml-lg-2 w3ls-btn">
+                                    Login</a>
+                            </li>
+                            <li>
+                                <button type="button" class="btn  ml-lg-2 w3ls-btn" data-toggle="modal" aria-pressed="false" data-target="#exampleModal">
+                                    Sign Up
+                                </button>
+                            </li>
+                        <?php
+                            }
+                        ?>
                     </ul>
                 </div>
             </nav>

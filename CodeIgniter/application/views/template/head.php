@@ -4,15 +4,15 @@
     <meta charset="utf-8" />
     <meta name="keywords" content="Alleviating Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
+    <!-- <script>
+        // addEventListener("load", function () {
+        //     setTimeout(hideURLbar, 0);
+        // }, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
+        // function hideURLbar() {
+        //     window.scrollTo(0, 1);
+        // }
+    </script> -->
     <!-- Custom Theme files -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="<?php echo base_url(); ?>assets/css/style.css " type="text/css" rel="stylesheet" media="all">
@@ -25,5 +25,5 @@
     <!-- online-fonts -->
 	<link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet"><!-- //online-fonts -->
-    <link href="<?php echo base_url(); ?>assets/css/mycss.css" rel='stylesheet' type='text/css' />
+    <link href="<?php echo base_url(); ?>assets/css/mycss.css?v1" rel='stylesheet' type='text/css' />
 </head>

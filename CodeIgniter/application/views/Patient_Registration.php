@@ -43,9 +43,9 @@
             <div class="button-submit">
                 <input class="form-control button" type="submit" name="Submit" value="Submit">
             </div>
+            <div class="login-link">
+                <span class="login-span">Already on Revitalize ? </span><a href="<?php echo site_url('Login') ?>">Log in</a>
+            </div>
         </form>    
-    </div>
-    <div class="reg-form-div">
-        <a href="<?php echo site_url('Login_View') ?>">Log in</a>
     </div>
 </section>    

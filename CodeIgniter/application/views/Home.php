@@ -4,38 +4,28 @@
 		<div class="container">
 			<div class="about-main">
 				<div class="about-right">
-					<h3 class="subheading-w3-agile">Make an Appointment</h3>
+					<h3 class="subheading-w3-agile">Book appointments in 3 easy steps</h3>
 					<!-- stats -->
 					<div class="stats">
 						<div class="stats_inner">
-							<form action="#" method="post">
-								<select class="form-control mb-3">
-									<option value="2">Neurology</option>
-									<option value="3">Dentistry</option>
-									<option value="4">Cardiology</option>
-									<option value="5">Pediatrics</option>
-									<option value="6">Pulmonology</option>
-									<option value="7">Ophthalmology</option>
-									<option value="8">Diagnostics</option>
-								 </select>
-								 <input class="form-control mb-3" type="text" placeholder="Name" name="name" required="">
-								<select class="form-control mb-3">
-									<option value="2">Gender</option>
-									<option value="3">Male</option>
-									<option value="4">Female</option>
-								</select>
-								<input class="form-control mb-3" type="text" placeholder="Phone" name="phone" required="">
-								<input class="form-control mb-3" type="email" placeholder="E-mail" name="email" required="">
-								<input class="form-control date mb-3" id="datepicker" name="Text" placeholder="Select Date"  type="text" required="">
-								<button type="submit" class="btn btn-agile btn-block w-100">Make An Appointment</button>
-							</form>
+							<div class="steps-of-app">
+								<ul class="steps-ul">
+									<div class="li-div-step">
+										<li>Search for doctors by specialty, hospital</li>
+									</div>
+									<div class="li-div-step">	
+										<li>Select based on Experience & Fee </li>
+									</div>
+									<div class="li-div-step">
+										<li>Book a Confirmed Appointment</li>
+									</div>
+								</ul>
+							</div>
 						</div>
 					</div>
 					<!-- //stats -->
-
 				</div>
 			</div>
-			
 		</div>
 		</div>
 	</div>

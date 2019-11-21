@@ -4,7 +4,6 @@
 <script src="<?php echo base_url(); ?>assets/js/minimal-slider.js"></script>
 <!-- flexSlider (for testimonials) -->
 <!-- Calendar -->
-
 <script src="https://kit.fontawesome.com/200033bf0c.js" crossorigin="anonymous"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery-ui.js"></script>
         <script>

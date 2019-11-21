@@ -31,6 +31,11 @@
             }
         }
         
+        public function get_doctors_info($id){
+            $query = $this->db->get_where($this->table_name, ['doctors_id' => $id]);
+            return $query->row_array();
+        }
+
         public function get_user_login($email){
             $query = $this->db->get_where($this->table_name, ['email_address' => $email]);
             return $query->row_array();

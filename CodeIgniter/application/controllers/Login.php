@@ -9,9 +9,9 @@ class Login extends MY_Controller
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 1) {
-                redirect('KoiController_Doctor');
+                redirect('Doctors_Profile');
             } elseif ($role_id == 2) {
-                redirect('KoiController_Patient');
+                redirect('Patients_Profile');
             }
         }
     }
@@ -56,16 +56,16 @@ class Login extends MY_Controller
                 }
                 $where = ['email' => $email_address];
                 $data_set = $this->User_Model->retrieving($where, false);
-
                 if (count($data_set)) {
                     if (password_verify($_POST['Password'], $data_set->password)) {
                         $this->session->set_userdata('role_id', $data_set->role_id);
+                        $this->session->set_userdata('user_id', $data_set->doctors_id);
                         $this->session->set_flashdata('signed_in', 'Sign In Successful');
                         $this->session->set_userdata('emailAddress', $email_address);
                         if ($data_set->role_id == 1) {
-                            return redirect('KoiController_Doctor');
+                            return redirect('Doctors_Profile');
                         } else if ($data_set->role_id == 2) {
-                            return redirect('KoiController_Patient');
+                            return redirect('Patients_Profile');
                         }
                     } else {
                         $this->session->set_flashdata('incorrectPassword', 'Incorrect Password');

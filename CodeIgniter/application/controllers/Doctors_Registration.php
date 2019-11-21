@@ -105,6 +105,12 @@ class Doctors_Registration extends MY_Controller {
             $this->load->model('Get_Department');
             $department_table = $this->Get_Department->retrieving();
 
+            $this->load->model('Get_Clinic');
+            $clinic_table = $this->Get_Clinic->retrieving();
+
+            $this->load->model('Get_Price');
+            $price_table = $this->Get_Price->retrieving();
+
             $this->load->model('Get_Price');
             $price_table = $this->Get_Price->retrieving();
 
@@ -112,7 +118,9 @@ class Doctors_Registration extends MY_Controller {
             $data['page_title'] = 'Doctors_Registration';
             $data['areas'] = $area_table;
             $data['departments'] = $department_table;
+            $data['clinic'] = $clinic_table;
             $data['prices'] = $price_table;
+
             $this->load->view('layout',$data);
         }
     }

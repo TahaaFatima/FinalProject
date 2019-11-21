@@ -7,11 +7,11 @@
     color: white;
 }
 .navbar-light{
-    background:#02646fb3 ;
+    background:#02646fcf ;
 }
 .slide-window .slide-wrapper .slide .slide-caption {
     color: #fff;
-    background: #02646fb3;
+    background: #02646fcf;
     top: 9.23%;
     padding: 280px 374px 414px 374px;
     width: 100%;
@@ -85,7 +85,7 @@ button.btn.ml-lg-2.w3ls-btn {
     color: #ffab67;
 }
 .text-blue {
-    color: #02646f;
+    color: var(--primary-color);
 }
 .text-gray {
     color: #888484;
@@ -116,6 +116,7 @@ button.btn.ml-lg-2.w3ls-btn {
 }
 .how-it-work-text > h3 {
     padding: 103px 0px 23px 129px;
+    text-align: justify;
 }
 .how-it-work-text > h2 {
     padding: 10px 28px 17px 129px;
@@ -130,10 +131,10 @@ button.btn.ml-lg-2.w3ls-btn {
 }
 .reg-form {
     padding: 22px 49px;
-    width: 50%;
-    margin: 0% 25%;
+    width: 100%;
+    margin: 0% 33%;
     display: inline-block;
-    color: #02646f;
+    color: var(--primary-color);
 }
 label.col-form-label.radio-label {
     padding: 0px 37px 0px 0px;
@@ -144,11 +145,11 @@ input.form-radio {
     margin: 0px 0px 0px 9px;
 }
 .button {
-    background: #02646f;
+    background: var(--primary-color);
     color: #ffab67;
 }
 .text-dark {
-    color: #02646f !important;
+    color: var(--primary-color) !important;
     padding-top: 48px;
     font-size: 34px;
 }
@@ -156,7 +157,7 @@ input.form-radio {
     padding: 27px 0px;
 }
 .top-image > img {
-    width: 50%;
+    width: 59.23%;
     height: 250px;
 }
 
@@ -168,21 +169,10 @@ input.form-radio {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-.contact-us-head {
-    text-align: center;
-    position: absolute;
-    /* width: 100%; */
-    margin: 0px 374px;
-    padding: 73px 214px;
-    background: #02646f9c;
-}
-
 .contact-us-heading > h2 {
     color: white;
     font-size: 37px;
 }
-
 .contact-us-para > p {
     font-size: 20px;
     color: white;
@@ -191,47 +181,33 @@ input.form-radio {
 .contact-us-head {
     position: absolute;
     z-index: 999;
-    padding: 64px 0px;
-    width: 50%;
-    background: #02646f7a;
+    padding: 64px 0;
+    width: 59.35%;
+    background: #02646fad;
     text-align: center;
-    margin: 0px 375px;
+    margin: 0px 305px;
 }
 .contact-parentdiv {
     background: #ffffffa3;
 }
-
 .contact-us-top {
     padding-top: 154px;
 }
-
 .top-image {
     text-align: center;
 }
-
-.top-image > img {
-    width: 50%;
-    height: 250px;
-}
-
 .contact-us-heading > h2 {
     font-size: 36px;
     padding: 0px 0px 17px 0px;
     color: white;
 }
-
 .contact-us-para > p {
     font-size: 20px;
     color: white;
 }
-
 .contact-form {
     margin-bottom: 140px;
 }
-/* .white-color{
-    color: white;
-} */
-
 /* Taha */
 .section-whyRaD .sec-img {
     background: url(../images/webRaD.png);
@@ -301,7 +277,8 @@ input.form-radio {
     padding: 0;
 }
 :root{
-    --primary-color:#02646f;
+    --primary-color:#02646f
+;
     --secondary-color:whitesmoke;
     /* --secondary:'Dancing Script', cursive;
     --primary:'Catamaran', sans-serif; */
@@ -331,9 +308,7 @@ h1{
     background-color: var(--primary-color);
     height: 200px;
 }
-.left-div :hover{
-    background-color:whitesmoke ;
-}
+
 h3{
     font-size: 20px;
     text-align: center;
@@ -369,64 +344,6 @@ form{
     font-size: x-large;
     padding-right: 50px;
 } */
-.radio-doctor{
-    display: inline-flex;
-    margin: 5px 0 5px 64px;
-}
-.radio-doctor > p{
-    font-size: 20px;
-    display: inline-block;
-    padding-left: 5px;
-    
-}
-.radio-patient{
-    display: inline-flex;
-    margin: 5px 5px 5px 16px;
-}
-.radio-patient > p{
-    font-size: 20px;
-    display: inline-block;
-    padding-left: 5px;
-}
-.user-input{
-    width: 100%;
-    height: 30px;
-    padding-left: 7px;
-}
-.user-radio{
-    height: 30px;
-    padding-left: 10px;
-}
-.fields-div{
-    padding: 10px 32px;
-    margin: 0px 32px;
-}
-.fields-div > a{
-    text-decoration: none;
-    font-size: 16px;
-    color: black;
-}
-.user-submit{
-    font-size: 16px;
-    padding: 8px 30px;
-    background: #36b1af;
-    outline: none;
-    border: none;
-    display: inline-block;
-    letter-spacing: 2px;
-    border-radius: 0.25rem;
-}
-.signup{
-    font-size: 16px;
-    padding: 8px 30px;
-    background: #36b1af;
-    outline: none;
-    border: none;
-    display: inline-block;
-    letter-spacing: 2px;
-    border-radius: 0.25rem;
-}
-
 /* Tehzeeb */
 
 
@@ -439,14 +356,159 @@ form{
     font-size: 70px;
     color: white;
 }
-.img > i:hover {
-    color:#ffab67 ;
-}
-
 .img {
     text-align: center;
     padding: 43px;
 }
 section.profile-section {
     padding-bottom: 70px;
+}
+.profile-pat {
+    display: flex;
+}
+.my-details {
+    width: 60%;
+}
+
+.my-details-links {
+    width: 24%;
+    margin-left: 350px;
+}
+
+form.form-patient-pro {
+    margin: 0px;
+}
+div.li-a-div-pt > a {
+    background: var(--primary-color);
+    color: white;
+    padding: 11px 30px 11px;
+}
+li.li-pt {
+    width: 91%;
+    background: var(--primary-color);
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 26px;
+    text-align: center;
+}
+.links-heading {
+    padding: 31px 0px 9px 29px;
+    background: whitesmoke;
+}
+.doctors-my-detals {
+    width: 100%;
+    display: flex;
+}
+.doctors-profile {
+    margin-top: 34px;
+}
+.reg-form-div {
+    width: 60%;
+}
+.doctors-detail {
+    width: 20%;
+    text-align: center;
+    background: whitesmoke;
+    margin-left: 18%;
+}
+form.reg-detail-pt {
+    margin: 0px;
+    width: 75%;
+}
+.doctors-name > p, .doctors-speciality > p, .doctors-clinic > p {
+    font-size: 20px;
+    color: #026673;
+    background: #e9ecef;
+    border-radius: 3px;
+    width: 76%;
+    margin: 10px 0px 0px;
+    display: inline-block;
+}
+.doctors-clinic > p > a {
+    color: #026673;
+}
+.doctors-links > p > a {
+    color: white;
+    padding: 13px 70px;
+    /* background: #e9ecef; */
+    border-radius: 3px;
+}
+.doctors-links > p {
+    font-size: 20px;
+    margin: 10px 35px;
+    background: var(--primary-color);
+    width: 76%;
+    border-radius: 4px;
+}
+.login-link {
+    text-align: center;
+}
+form.reg-form.login-form {
+    margin: 0px;
+}
+.radio-doctor > label {
+    padding: 9px 17px 1px 3px;
+}
+.login-link-2{
+    padding: 22px 0px 0px;
+}
+.navbar-img{
+    width: 35px;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+.div-dc-li {
+    display: flex;
+    width: 57%;
+    margin-left: 22%;
+    padding: 21px 24px 19px 23px;
+    background: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.pl-4 {
+    padding-top: 5px;
+}
+
+.pl-4 > h2 {
+    color: var(--primary-color);
+}
+
+.pl-4 > p {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+ul.grid-list-half.pl-4 {
+    padding: 28px 28px;
+    /* color: var(--primary-color); */
+    margin-left: 97px;
+}
+
+ul.grid-list-half.pl-4 > li> i {
+    color: #ffab67;
+}
+
+ul.grid-list-half.pl-4 > li {
+    color: var(--primary-color);
+}
+.doc-11.doc-12-sm > a {
+    padding: 12px;
+    border-radius: 3px;
+    color: white;
+    background: var(--primary-color);
+}
+
+.doc-11.doc-12-sm {
+    margin: 18px 24px;
+}
+.li-div-step {
+    color: #02646f;
+    list-style: circle;
+    list-style-position: inside;
+    padding: 4px 0px 3px 9px;
+    background: #f5f5f5;
+    font-size: 19px;
+    margin: 11px 0px;
+    border-radius: 3px;
 }
