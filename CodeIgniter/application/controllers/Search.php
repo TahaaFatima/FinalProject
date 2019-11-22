@@ -8,26 +8,31 @@
             //$this->load->model('Doctor_registration_model');
         }
         public function index(){
+                if(isset($_POST['submit_search'])){
+                    $department_search = $_POST['search_departments'];
+                    $price_search      = $_POST['search_area'];
+                    $area_search       = $_POST['search_price'];
+                }
+            
+                // $this->load->model('Get_Area');
+                // $area_table = $this->Get_Area->retrieving();
                 
-                $this->load->model('Get_Area');
-                $area_table = $this->Get_Area->retrieving();
-                
-                $this->load->model('Get_Department');
-                $department_table = $this->Get_Department->retrieving();
+                // $this->load->model('Get_Department');
+                // $department_table = $this->Get_Department->retrieving();
 
-                $this->load->model('Get_Price');
-                $price_table = $this->Get_Price->retrieving();
+                // $this->load->model('Get_Price');
+                // $price_table = $this->Get_Price->retrieving();
 
-                $this->load->model('Doctor_registration_model');
-                $doctors = $this->Doctor_registration_model->retrieving();
+                // $this->load->model('Doctor_registration_model');
+                // $doctors = $this->Doctor_registration_model->retrieving();
 
-                $data['page_title'] = 'Our Doctors';
-                $data['view'] = 'Doctors_List';
-                $data['areas'] = $area_table;
-                $data['departments'] = $department_table;
-                $data['prices'] = $price_table;
-                $data['doctors'] = $doctors;
-                $this->load->view('layout',$data);
+                // $data['page_title'] = 'Our Doctors';
+                // $data['view'] = 'Doctors_List';
+                // $data['areas'] = $area_table;
+                // $data['departments'] = $department_table;
+                // $data['prices'] = $price_table;
+                // $data['doctors'] = $doctors;
+                // $this->load->view('layout',$data);
         }
         public function searching(){
             //$to_search = [];
@@ -42,10 +47,10 @@
             //     $to_search['price_id'] = $_POST['Price']; 
             // }
 
-            $data = $this->inner_joins->inner_joins();
-            var_dump($data);die;
-            $data['page_title'] = 'Our Doctors';
-            $data['view'] = 'Doctors_List';
-            $this->load->view('layout', $data);
+            // $data = $this->inner_joins->inner_joins();
+            // var_dump($data);die;
+            // $data['page_title'] = 'Our Doctors';
+            // $data['view'] = 'Doctors_List';
+            // $this->load->view('layout', $data);
         }
     }

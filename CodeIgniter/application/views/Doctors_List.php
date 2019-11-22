@@ -1,7 +1,7 @@
 <div class="container">
     <div class="search-bar">
-        <form class="search_form" method="get" action="Search">
-            <select class="form-control form-mine search_ing" name="Department">
+        <form class="search_form" method="post" action="Search">
+            <select class="form-control form-mine search_departments" name="Department">
                 <option value="none">Department</option>
                 <?php 
                     foreach($departments as $department)
@@ -12,7 +12,7 @@
                             }
                 ?>
                 </select>
-                <select class="form-control form-mine search_ing"  name="Location">
+                <select class="form-control form-mine search_area"  name="Location">
                     <option value="none">Area</option>
                     <?php 
                         foreach($areas as $area)
@@ -23,7 +23,7 @@
                         }
                     ?>
                 </select>
-                <select class="form-control form-mine search_ing" name="Price">
+                <select class="form-control form-mine search_price" name="Price">
                     <option value="none">Price</option>
                     <?php 
                         foreach($prices as $price)

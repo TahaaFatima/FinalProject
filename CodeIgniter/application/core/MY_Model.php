@@ -5,7 +5,7 @@
 
         public $table_name ;
 
-        function retrieving(array $whereCondition=[], bool $multiple = true, bool $is_arr = false ){
+        public function retrieving(array $whereCondition=[], bool $multiple = true, bool $is_arr = false ){
             if(count($whereCondition) > 0){
                 $forError = $this->db->where($whereCondition);
             }
@@ -41,7 +41,7 @@
             return $query->row_array();
         }
 
-        function deleting(int $id){
+        public function deleting(int $id){
             $forError = $this->db->delete($this->table_name,['id'=>$id]);
             if(!$forError){
                 return $this->db->error();
@@ -50,7 +50,7 @@
             }
         }
 
-        function updating(array $data, int $id){
+        public function updating(array $data, int $id){
             if(!empty($data) && !empty($id)){
                 $forError = $this->db->update($this->table_name, $data, ['id'=>$id]);
                 if(!$forError){
@@ -61,13 +61,25 @@
             }
         }
 
-        function inserting(array $data){
+        public function inserting(array $data){
             $forError = $this->db->insert($this->table_name,$data);
             if(!$forError){
                 return $this->db->error();
             }else{
                 return "Inserted";
             }
+        }
+        public function search_join(array $join_retrieve, $select = '*' ){
+            // $to_retrieve_columns = ['area_id','price_id','department_id'];
+            
+            $this->db->select($select);
+            $this->db->from($this->table_name);
+            foreach($join_retrieve as $retrieved){
+                $this->db->join($retrieved['table_name'],$retrieved['column_with']);
+            }
+            $result = $this->db->get()->result();
+
+            var_dump($result);die;
         }
 
     }
