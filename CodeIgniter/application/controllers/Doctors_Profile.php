@@ -6,7 +6,7 @@ class Doctors_Profile extends MY_Controller {
 	public function index()
 	{
 
-            $doctors_id  = $this->session->userdata('doctors_id');
+            $doctors_id  = $this->session->userdata('user_id');
             $where = ['doctors_id' => $doctors_id];
             $this->load->model('Doctor_registration_model');
             $doc_info = $this->Doctor_registration_model->retrieving($where, false);

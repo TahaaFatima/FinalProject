@@ -111,8 +111,6 @@ class Doctors_Registration extends MY_Controller {
             $this->load->model('Get_Price');
             $price_table = $this->Get_Price->retrieving();
 
-            $this->load->model('Get_Price');
-            $price_table = $this->Get_Price->retrieving();
 
             $data['view'] = 'Doctors_Registration';
             $data['page_title'] = 'Doctors_Registration';
