@@ -14,8 +14,18 @@
                         <p>Email address </p>
                     </div>
                     <div class="appointmnet">
-                        <div class="doc-11 doc-12-sm">                           								
-                            <a href=""><i class="fa fa-phone"></i> Book Appointment</a>											 
+                        <div class="doc-11 doc-12-sm">        
+                            <?php 
+                                if($this->session->userdata('role_id')){
+                            ?>
+                                <a href="#"><i class="fa fa-phone"></i> Book Appointment</a>											 
+                            <?php
+                                }else{
+                            ?>
+                                <a href="<?php echo site_url('Login')?>"><i class="fa fa-phone"></i> Book Appointment</a>
+                            <?php
+                                }
+                            ?>                   								
                         </div>
                     </div>
                 </div>

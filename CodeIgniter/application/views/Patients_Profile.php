@@ -31,7 +31,7 @@
                          <div class="li-div-pt">
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
-                                    <a href="#">SHIT</a>
+                                    <a href="<?php echo site_url('Update_pat_profile'); ?>">Edit</a>
                                 </div>
                             </li>
                         </div>
@@ -44,11 +44,11 @@
                 <form class="reg-form form-patient-pro" method="post">
                     <div>
                         <label class="col-form-label" for="Name">Name</label>
-                        <input class="form-control" type="text" name="Name" value="<?php echo 'Name' ?>" readonly>
+                        <input class="form-control" type="text" name="Name" value="<?php echo $patients_info->full_name;  ?>" readonly>
                     </div>
                     <div>
                         <label class="col-form-label" for="Age">Age</label>
-                        <input class="form-control" type="text" name="Age" value="<?php echo 'Age' ?>" readonly>
+                        <input class="form-control" type="text" name="Age" value="<?php echo $patients_info->full_name;  ?>" readonly>
                     </div>
                     <div>
                         <label class="col-form-label" for="Gender">Gender</label>
@@ -57,15 +57,15 @@
                     </div>
                     <div>
                         <label class="col-form-label" for="Phone_Number">Phone Number</label>
-                        <input class="form-control" type="number" name="Phone_Number" value="<?php echo '01254784' ?>" readonly>
+                        <input class="form-control" type="number" name="Phone_Number" value="<?php echo $patients_info->full_name;  ?>" readonly>
                     </div>
                     <div>
                         <label class="col-form-label" for="Email">Email Address</label>
-                        <input class="form-control" type="email" name="Email_Address" value="<?php echo 'Email_Address' ?>" readonly>
+                        <input class="form-control" type="email" name="Email_Address" value="<?php echo $patients_info->full_name;  ?>" readonly>
                     </div>
                     <div>
                         <label class="col-form-label" for="Password">Password</label>
-                        <input class="form-control" type="password" name="Password" value="<?php echo 'Password' ?>" readonly>
+                        <input class="form-control" type="password" name="Password" value="<?php echo $patients_info->full_name;  ?>" readonly>
                     </div>
                 </form>
             </div>
