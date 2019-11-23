@@ -5,12 +5,10 @@ class Doctors_Profile extends MY_Controller {
 
 	public function index()
 	{
-
-        $this->load->model('Doctor_registration_model');
-        $doctors_id  = $this->session->userdata('user_id');
-        $where = ['doctors_id' => $doctors_id];
-        $doc_info = $this->Doctor_registration_model->retrieving($where, false);
-        var_dump($doc_info);die;
+            $doctors_id  = $this->session->userdata('doc_id');
+            $where = ['doctors_id' => $doctors_id];
+            $this->load->model('Doctor_registration_model');
+            $doc_info = $this->Doctor_registration_model->retrieving($where, false);
 
         $data['doctors_info'] = $doc_info;
         $data['view'] = 'Doctors_Profile';

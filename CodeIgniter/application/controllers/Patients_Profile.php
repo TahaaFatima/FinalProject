@@ -9,7 +9,7 @@ class Patients_Profile extends MY_Controller {
         $where = ['patient_id' => $patients_id];
         $this->load->model('Patient_registration_model');
         $pat_info = $this->Patient_registration_model->retrieving($where, false);
-       // var_dump($pat_info);die;
+ 
         $data['patients_info'] = $pat_info;
         $data['view'] = 'Patients_Profile';
         $data['page_title'] = 'Patients_Profile';

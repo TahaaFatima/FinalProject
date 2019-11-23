@@ -55,6 +55,7 @@ class Login extends MY_Controller
                 }
                 $where = ['email' => $email_address];
                 $data_set = $this->User_Model->retrieving($where, false);
+          
                 if (count($data_set)) {
                     if (password_verify($_POST['Password'], $data_set->password)) {
                         $this->session->set_userdata('doc_id', $data_set->doctors_id);
