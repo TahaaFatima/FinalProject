@@ -6,11 +6,11 @@
         <form class="reg-form" method="post">
             <div>
                 <label class="col-form-label" for="Name">Name</label>
-                <input class="form-control" type="text" name="Name" value="<?php echo 'Name'; ?>">
+                <input class="form-control" type="text" name="Name" value="<?php echo $patients_info->full_name;  ?>">
             </div>
             <div>
                 <label class="col-form-label" for="Age">Age</label>
-                <input class="form-control" type="text" name="Age" value="<?php echo 'Age' ?>">
+                <input class="form-control" type="text" name="Age" value="<?php echo $patients_info->age;  ?>">
             </div>
             <div>
                 <label class="col-form-label" for="Gender">Gender</label>
@@ -19,11 +19,7 @@
             </div>
             <div>
                 <label class="col-form-label" for="Phone_Number">Phone Number</label>
-                <input class="form-control" type="number" name="Phone_Number" value="<?php echo 'Phone_Number' ?>">
-            </div>
-            <div>
-                <label class="col-form-label" for="Email">Email Address</label>
-                <input class="form-control" type="email" name="Email_Address" value="<?php echo 'Email_Address' ?>">
+                <input class="form-control" type="number" name="Phone_Number" value="<?php echo $patients_info->phone_number;  ?>">
             </div>
             <div class="button-submit">
                 <input class="form-control button" type="submit" name="edit" value="Edit">

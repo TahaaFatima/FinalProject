@@ -50,9 +50,9 @@
             }
         }
 
-        public function updating(array $data, int $id){
-            if(!empty($data) && !empty($id)){
-                $forError = $this->db->update($this->table_name, $data, ['id'=>$id]);
+        public function updating(array $data ,  array $where){
+            if(!empty($data) && !empty($where)){
+                $forError = $this->db->update($this->table_name, $data, $where);
                 if(!$forError){
                     return $this->db->error();
                 }else{

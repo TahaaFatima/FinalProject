@@ -63,13 +63,8 @@
                         <label class="col-form-label" for="Email">Email Address</label>
                         <input class="form-control" type="email" name="Email_Address" value="<?php echo $patients_info->email;  ?>" readonly>
                     </div>
-                    <div>
-                        <label class="col-form-label" for="Password">Password</label>
-                        <input class="form-control" type="password" name="Password" value="<?php echo $patients_info->full_name;  ?>" readonly>
-                    </div>
                 </form>
             </div>
         </div>
     </div>
-    <a href="logout">logout</a>
 </section>

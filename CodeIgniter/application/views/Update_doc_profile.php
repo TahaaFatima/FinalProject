@@ -81,7 +81,7 @@
                         { 
                 ?>
                         <option value="<?php echo $price->price_id ?>"><?php echo $price->price ?></option>
-            <?php
+                <?php
                         }
                 ?>
             </select>

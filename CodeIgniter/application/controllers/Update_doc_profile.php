@@ -14,7 +14,7 @@ class Update_doc_profile extends MY_Controller {
         $this->load->model('Doctor_registration_model');
         $doc_info = $this->Doctor_registration_model->retrieving($where, false);
 
-        $data['doctors_info'] = $doc_info;
+
 
         if(isset($_POST['Update'])){
             
@@ -28,9 +28,9 @@ class Update_doc_profile extends MY_Controller {
                     'area_id'           => $_POST['Location'],
                     'department_id'     => $_POST['Department'],
                 ];
-                $id = $this->session->userdata('user_id');
+ 
                 $this->load->model('Doctor_registration_model');
-                $this->Doctor_registration_model->updating($data , $id);
+                $this->Doctor_registration_model->updating ( $data  ,$where );
             }
 
         $this->load->model('Area_Model');
@@ -45,7 +45,7 @@ class Update_doc_profile extends MY_Controller {
         $this->load->model('Price_Model');
         $price_table = $this->Price_Model->retrieving();
 
-
+        $data['doctors_info'] = $doc_info;
         $data['areas'] = $area_table;
         $data['departments'] =  $department_table;
         $data['clinic'] = $clinic_table;
