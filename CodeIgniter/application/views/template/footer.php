@@ -20,7 +20,7 @@
 						</div>
 				</div>
 				<!-- //footer grid1 -->
-				<!-- footer grid1 -->
+				<!-- footer grid2 -->
 				<div class="col-lg-3 col-sm-6 fv5-contact margin-foot">
 					<h2 class="mb-4">Contact Us</h2>
 					<div class="fv3-contact mt-3">
@@ -32,9 +32,9 @@
 						<a href="mailto:example@email.com" class="text-secondary">info@example.com</a>
 					</div>
 				</div>
-				<!-- //footer grid1 -->
+				<!-- //footer grid2 -->
 				
-				<!-- footer grid2 -->
+				<!-- footer grid3 -->
 				<div class="col-lg-3  col-sm-6 footv3-left text-lg-center my-lg-0 mt-sm-5 mt-5 margin-foot">
 					<h3 class="mb-4 remove-padding">Navigation</h3>
 					<ul class="list-agileits">
@@ -60,7 +60,7 @@
 						</li>
 					</ul>
 				</div>
-				<!-- //footer grid2 -->
+				<!-- //footer grid3 -->
 			</div>
 			<div class="cpy-right text-center  pt-3">
 				

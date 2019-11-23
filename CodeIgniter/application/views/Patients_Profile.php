@@ -48,7 +48,7 @@
                     </div>
                     <div>
                         <label class="col-form-label" for="Age">Age</label>
-                        <input class="form-control" type="text" name="Age" value="<?php echo $patients_info->full_name;  ?>" readonly>
+                        <input class="form-control" type="text" name="Age" value="<?php echo $patients_info->age;  ?>" readonly>
                     </div>
                     <div>
                         <label class="col-form-label" for="Gender">Gender</label>
@@ -57,11 +57,11 @@
                     </div>
                     <div>
                         <label class="col-form-label" for="Phone_Number">Phone Number</label>
-                        <input class="form-control" type="number" name="Phone_Number" value="<?php echo $patients_info->full_name;  ?>" readonly>
+                        <input class="form-control" type="number" name="Phone_Number" value="<?php echo $patients_info->phone_number;  ?>" readonly>
                     </div>
                     <div>
                         <label class="col-form-label" for="Email">Email Address</label>
-                        <input class="form-control" type="email" name="Email_Address" value="<?php echo $patients_info->full_name;  ?>" readonly>
+                        <input class="form-control" type="email" name="Email_Address" value="<?php echo $patients_info->email;  ?>" readonly>
                     </div>
                     <div>
                         <label class="col-form-label" for="Password">Password</label>

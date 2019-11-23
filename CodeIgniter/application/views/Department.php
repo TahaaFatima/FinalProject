@@ -13,7 +13,9 @@
                             <div class="w3-ab-grid text-center">
                                 <div class="w3-aicon p-4">
                                     <i class="fas fa-notes-medical" aria-hidden="true"></i>
-                                    <h4 class="my-3 text-capitalize text-white"><?php echo $department->department;  ?></h4>
+                                    <a href="<?php echo site_url('/Doctors_List');?>?deprtment='<?php echo $department->department?>'">
+                                        <h4 class="my-3 text-capitalize text-white"><?php echo $department->department;  ?></h4>
+                                    </a>
                                 </div>
                             </div>
                         </div>		

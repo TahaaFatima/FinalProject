@@ -5,8 +5,8 @@ class Department extends MY_Controller {
 
 	public function index()
 	{
-            $this->load->model('Get_Department'); 
-            $department_table = $this->Get_Department->retrieving();
+            $this->load->model('DepartmentM'); 
+            $department_table = $this->DepartmentM->retrieving();
 
             $data['department_ids'] = $department_table;
             $data['view'] = 'Department';

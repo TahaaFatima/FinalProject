@@ -20,9 +20,8 @@ class Login extends MY_Controller
     {
         $this->load->helper('form');
         $this->load->library('form_validation');
-
-
         if (isset($_POST['submit_login'])) {
+    
             $check_data = [
                 [
                     'field' => 'Email_Address',
@@ -58,7 +57,8 @@ class Login extends MY_Controller
                 $data_set = $this->User_Model->retrieving($where, false);
                 if (count($data_set)) {
                     if (password_verify($_POST['Password'], $data_set->password)) {
-                        $this->session->set_userdata('user_id', $data_set->doctors_id);
+                        $this->session->set_userdata('doc_id', $data_set->doctors_id);
+                        $this->session->set_userdata('pt_id', $data_set->patient_id);
                         $this->session->set_userdata('role_id', $data_set->role_id);
                         $this->session->set_flashdata('signed_in', 'Sign In Successful');
                         $this->session->set_userdata('emailAddress', $email_address);

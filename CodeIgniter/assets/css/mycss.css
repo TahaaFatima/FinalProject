@@ -256,7 +256,7 @@ input.form-radio {
     padding: 0px;
 }
 .search-form {
-    display: flex;
+    display: flex !important;
     margin-top: 46px;
 }
 
@@ -279,6 +279,31 @@ input.form-radio {
 .selection{
     display: flex;
     justify-content: space-evenly;
+}
+.navbar-brand{
+    font-size: 1em !important;
+}
+.b-appt{
+    background: #02646f;
+    color: white;
+    padding: 12px 9px;
+    border-radius: 5px;
+}
+.list-pg{
+    font-size: 20px !important;
+}
+.list-appt{
+    margin-top: 12px;
+}
+.to-view-doc{
+    margin-top: 13px;
+}
+.grid-list {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-gap: 5px;
+    padding-left: 0;
+    margin-top: 5px;
 }
 /* Taha */
     

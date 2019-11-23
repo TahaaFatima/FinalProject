@@ -11,7 +11,9 @@ class Doctors_Registration extends MY_Controller {
 
         $this->load->helper('form');
         $this->load->library('form_validation');
-       
+        if(isset($_POST['Submit'])){
+
+           
             $validation = [
                 [
                     'field' => 'Name',
@@ -69,17 +71,16 @@ class Doctors_Registration extends MY_Controller {
                     'rules' => 'trim|required|matches[Password]'
                 ]
             ];
-        
-            $this->form_validation->set_rules($validation);
             
-            if(isset($_POST['Submit'])){
+                $this->form_validation->set_rules($validation);
                 if (!$this->form_validation->run())
                 {
-                
+                    $data['view'] = 'Doctors_Registration';
+                    $data['page_title'] = 'Doctors_Registration';
+                    return $this->load->view('layout',$data);
                 }
                 else
                 {
-                 /*    $error = false; */
                     $password = password_hash($_POST['Password'],PASSWORD_DEFAULT);
                     $data =[
                         'full_name'         => $_POST['Name'],
@@ -97,13 +98,13 @@ class Doctors_Registration extends MY_Controller {
                     $this->load->model('Doctor_registration_model');
                     $result  = $this->Doctor_registration_model->inserting($data);
                 }
-            }
+        }
 
             $this->load->model('Get_Area');
             $area_table = $this->Get_Area->retrieving();
              
-            $this->load->model('Get_Department');
-            $department_table = $this->Get_Department->retrieving();
+            $this->load->model('DepartmentM');
+            $department_table = $this->DepartmentM->retrieving();
 
             $this->load->model('Get_Clinic');
             $clinic_table = $this->Get_Clinic->retrieving();
@@ -120,5 +121,5 @@ class Doctors_Registration extends MY_Controller {
             $data['prices'] = $price_table;
 
             $this->load->view('layout',$data);
-        }
     }
+}

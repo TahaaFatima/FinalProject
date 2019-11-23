@@ -9,48 +9,48 @@
         }
         public function index(){
                 if(isset($_POST['submit_search'])){
-                    $department_search = $_POST['search_departments'];
-                    $price_search      = $_POST['search_area'];
-                    $area_search       = $_POST['search_price'];
-                }
-            
-                // $this->load->model('Get_Area');
-                // $area_table = $this->Get_Area->retrieving();
+                        $this->load->model('Inner_joins');
+                        $this->Inner_joins->table_name = 'doctors_registration';
+                        
+                        if($_POST['Department'] != 'none'){
+                            $to_search['doctors_registration.department_id'] = $_POST['Department']; 
+                        }
+                        if($_POST['Location'] != 'none'){
+                            $to_search['doctors_registration.area_id'] = $_POST['Location'];
+                            // doctors_registration.area_id = 2 
+                        }
+                        if($_POST['Price'] != 'none'){
+                            $to_search['doctors_registration.price_id'] = $_POST['Price']; 
+                        }
+
+                        $join_retrieve[] = [
+                            'table_name'=>'price',
+                            'column_with'=>'doctors_registration.price_id = price.price_id'];
+                        $join_retrieve[] = [
+                            'table_name'=>'department',
+                            'column_with'=>'doctors_registration.department_id = department.department_id'];
+                        $join_retrieve[] = [
+                            'table_name'=>'area',
+                            'column_with'=>'doctors_registration.area_id = area.area_id'];
+                            
+                        $doc_joins = $this->Inner_joins->search_join($to_search,$join_retrieve);
+                        
+                        $this->load->model('Area');
+                        $area_table = $this->Area->retrieving();
+                         
+                        $this->load->model('DepartmentM');
+                        $department_table = $this->DepartmentM->retrieving();
                 
-                // $this->load->model('Get_Department');
-                // $department_table = $this->Get_Department->retrieving();
+                        $this->load->model('Price');
+                        $price_table = $this->Price->retrieving();
 
-                // $this->load->model('Get_Price');
-                // $price_table = $this->Get_Price->retrieving();
-
-                // $this->load->model('Doctor_registration_model');
-                // $doctors = $this->Doctor_registration_model->retrieving();
-
-                // $data['page_title'] = 'Our Doctors';
-                // $data['view'] = 'Doctors_List';
-                // $data['areas'] = $area_table;
-                // $data['departments'] = $department_table;
-                // $data['prices'] = $price_table;
-                // $data['doctors'] = $doctors;
-                // $this->load->view('layout',$data);
-        }
-        public function searching(){
-            //$to_search = [];
-
-            // if(!empty($_POST['Department'])){
-            //     $to_search['department_id'] = $_POST['Department']; 
-            // }
-            // if(!empty($_POST['Location'])){
-            //     $to_search['area_id'] = $_POST['Location']; 
-            // }
-            // if(!empty($_POST['Price'])){
-            //     $to_search['price_id'] = $_POST['Price']; 
-            // }
-
-            // $data = $this->inner_joins->inner_joins();
-            // var_dump($data);die;
-            // $data['page_title'] = 'Our Doctors';
-            // $data['view'] = 'Doctors_List';
-            // $this->load->view('layout', $data);
-        }
+                        $data['page_title'] = 'Our Doctors';
+                        $data['view'] = 'Doctors_List';
+                        $data['areas'] = $area_table;
+                        $data['departments'] = $department_table;
+                        $data['prices'] = $price_table;
+                        $data['doctors'] = $doc_joins;
+                        $this->load->view('layout',$data);
+                }
+            }
     }

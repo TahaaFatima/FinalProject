@@ -10,10 +10,10 @@
             setTimeout(hideURLbar, 0);
         }, false);
 
-        // function hideURLbar() {
-        //     window.scrollTo(0, 1);
-        // }
-    </script> -->
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
     <!-- Custom Theme files -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="<?php echo base_url(); ?>assets/css/style.css " type="text/css" rel="stylesheet" media="all">

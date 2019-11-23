@@ -69,17 +69,17 @@
                 return "Inserted";
             }
         }
-        public function search_join(array $join_retrieve, $select = '*' ){
-            // $to_retrieve_columns = ['area_id','price_id','department_id'];
-            
+        public function search_join(array $where=[], array $join_retrieve, $select = '*'){
+                        
             $this->db->select($select);
             $this->db->from($this->table_name);
             foreach($join_retrieve as $retrieved){
                 $this->db->join($retrieved['table_name'],$retrieved['column_with']);
             }
-            $result = $this->db->get()->result();
-
-            var_dump($result);die;
+            if(count($where) > 0){
+                $this->db->where($where);
+            }
+            return $this->db->get()->result();
         }
 
     }

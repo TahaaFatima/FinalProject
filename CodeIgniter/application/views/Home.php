@@ -82,7 +82,9 @@
 									<div class="w3-ab-grid text-center">
 										<div class="w3-aicon p-4">
 											<i class="fas fa-search" aria-hidden="true"></i>
-											<h4 class="my-3 text-capitalize text-white">Explore</h4>
+											<a href="<?php echo site_url('/Department'); ?>">
+												<h4 class="my-3 text-capitalize text-white">Explore</h4>
+											</a>
 										</div>
 									</div>
 								</div>

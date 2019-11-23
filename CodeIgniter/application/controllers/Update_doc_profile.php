@@ -9,7 +9,7 @@ class Update_doc_profile extends MY_Controller {
     }
     public function index(){
 
-        $doctors_id  = $this->session->userdata('user_id');
+        $doctors_id  = $this->session->userdata('doc_id');
         $where = ['doctors_id' => $doctors_id];
         $this->load->model('Doctor_registration_model');
         $doc_info = $this->Doctor_registration_model->retrieving($where, false);
@@ -28,7 +28,7 @@ class Update_doc_profile extends MY_Controller {
                     'area_id'           => $_POST['Location'],
                     'department_id'     => $_POST['Department'],
                 ];
-                $id = $this->session->userdata('user_id');
+                $id = $this->session->userdata('doc_id');
                 $this->load->model('Doctor_registration_model');
                 $this->Doctor_registration_model->updating($data , $id);
             }
@@ -36,8 +36,8 @@ class Update_doc_profile extends MY_Controller {
         $this->load->model('Get_Area');
         $area_table = $this->Get_Area->retrieving();
             
-        $this->load->model('Get_Department');
-        $department_table = $this->Get_Department->retrieving();
+        $this->load->model('DepartmentM');
+        $department_table = $this->DepartmentM->retrieving();
 
         $this->load->model('Get_Clinic');
         $clinic_table = $this->Get_Clinic->retrieving();

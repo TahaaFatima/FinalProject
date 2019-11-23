@@ -1,7 +1,7 @@
 <div class="container">
     <div class="search-bar">
         <form class="search_form" method="post" action="Search">
-            <select class="form-control form-mine search_departments" name="Department">
+            <select class="form-control form-mine" name="Department">
                 <option value="none">Department</option>
                 <?php 
                     foreach($departments as $department)
@@ -12,7 +12,7 @@
                             }
                 ?>
                 </select>
-                <select class="form-control form-mine search_area"  name="Location">
+                <select class="form-control form-mine"  name="Location">
                     <option value="none">Area</option>
                     <?php 
                         foreach($areas as $area)
@@ -23,7 +23,7 @@
                         }
                     ?>
                 </select>
-                <select class="form-control form-mine search_price" name="Price">
+                <select class="form-control form-mine" name="Price">
                     <option value="none">Price</option>
                     <?php 
                         foreach($prices as $price)
@@ -55,310 +55,40 @@
                         <h3><?php echo $doctor->full_name?></h3>
                     </div>
                     <div class="padding speciality">
-                        <h5>Department</h5>
+                        <h5><?php echo $doctor->department?></h5>
                     </div>
-                    <div class="clinic-name">
-                        <p>Clinic Name</p>
-                    </div>
+                    <!-- <div class="clinic-name">
+                        <p><?php echo $doctor->clinic?></p>
+                    </div> -->
                     <div class="area">
-                        <p>Area</p>
+                        <p><?php echo $doctor->area?></p>
                     </div>
                     <div>
                         <p>Time Slot</p>
                     </div>
                     <div class="selection">
-                        <div>
-                            <a href="#">Book Appointment</a>
+                        <div class="appointmnet">
+                        <div class="list-appt">        
+                            <?php 
+                                if($this->session->userdata('role_id')){
+                            ?>
+                                <a class="b-appt" href="#"><i class="list-pg fa fa-phone"></i> Book Appointment</a>											 
+                            <?php
+                                }else{
+                            ?>
+                                <a class="b-appt" href="<?php echo site_url('Login')?>"><i class="list-pg fa fa-phone"></i> Book Appointment</a>
+                            <?php
+                                }
+                            ?>                   								
                         </div>
-                        <div>
-                            <a href="#">View Doctor</a>
+                    </div>
+                        <div class="to-view-doc">
+                            <a class="b-appt" href="#">View Doctor</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
             <?php } ?>
-        <div class="col-sm-4 w3-ab">
-            <div class="w3-ab-grid text-center">
-                <div class="w3-aicon p-4">
-                    <div>
-                        <img class="profile-picture" src="../assets/images/profile_male.jpg" alt="profile-picture">
-                    </div>
-                    <div class="rating-star">
-                        <div class="rateYo rating"></div>
-                    </div>
-                    <div class="padding doc-name">
-                        <h3>Doctor's Name</h3>
-                    </div>
-                    <div class="padding speciality">
-                        <h5>Department</h5>
-                    </div>
-                    <div class="clinic-name">
-                        <p>Clinic Name</p>
-                    </div>
-                    <div class="area">
-                        <p>Area</p>
-                    </div>
-                    <div>
-                        <p>Time Slot</p>
-                    </div>
-                    <div class="selection">
-                        <div>
-                            <a href="#">Book Appointment</a>
-                        </div>
-                        <div>
-                            <a href="#">View Doctor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 w3-ab">
-            <div class="w3-ab-grid text-center">
-                <div class="w3-aicon p-4">
-                    <div>
-                        <img class="profile-picture" src="../assets/images/profile_male.jpg" alt="profile-picture">
-                    </div>
-                    <div class="rating-star">
-                        <div class="rateYo rating"></div>
-                    </div>
-                    <div class="padding doc-name">
-                        <h3>Doctor's Name</h3>
-                    </div>
-                    <div class="padding speciality">
-                        <h5>Department</h5>
-                    </div>
-                    <div class="clinic-name">
-                        <p>Clinic Name</p>
-                    </div>
-                    <div class="area">
-                        <p>Area</p>
-                    </div>
-                    <div>
-                        <p>Time Slot</p>
-                    </div>
-                    <div class="selection">
-                        <div>
-                            <a href="#">Book Appointment</a>
-                        </div>
-                        <div>
-                            <a href="#">View Doctor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 w3-ab">
-            <div class="w3-ab-grid text-center">
-                <div class="w3-aicon p-4">
-                    <div>
-                        <img class="profile-picture" src="../assets/images/profile_male.jpg" alt="profile-picture">
-                    </div>
-                    <div class="rating-star">
-                        <div class="rateYo rating"></div>
-                    </div>
-                    <div class="padding doc-name">
-                        <h3>Doctor's Name</h3>
-                    </div>
-                    <div class="padding speciality">
-                        <h5>Department</h5>
-                    </div>
-                    <div class="clinic-name">
-                        <p>Clinic Name</p>
-                    </div>
-                    <div class="area">
-                        <p>Area</p>
-                    </div>
-                    <div>
-                        <p>Time Slot</p>
-                    </div>
-                    <div class="selection">
-                        <div>
-                            <a href="#">Book Appointment</a>
-                        </div>
-                        <div>
-                            <a href="#">View Doctor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 w3-ab">
-            <div class="w3-ab-grid text-center">
-                <div class="w3-aicon p-4">
-                    <div>
-                        <img class="profile-picture" src="../assets/images/profile_male.jpg" alt="profile-picture">
-                    </div>
-                    <div class="rating-star">
-                        <div class="rateYo rating"></div>
-                    </div>
-                    <div class="padding doc-name">
-                        <h3>Doctor's Name</h3>
-                    </div>
-                    <div class="padding speciality">
-                        <h5>Department</h5>
-                    </div>
-                    <div class="clinic-name">
-                        <p>Clinic Name</p>
-                    </div>
-                    <div class="area">
-                        <p>Area</p>
-                    </div>
-                    <div>
-                        <p>Time Slot</p>
-                    </div>
-                    <div class="selection">
-                        <div>
-                            <a href="#">Book Appointment</a>
-                        </div>
-                        <div>
-                            <a href="#">View Doctor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 w3-ab">
-            <div class="w3-ab-grid text-center">
-                <div class="w3-aicon p-4">
-                    <div>
-                        <img class="profile-picture" src="../assets/images/profile_male.jpg" alt="profile-picture">
-                    </div>
-                    <div class="rating-star">
-                        <div class="rateYo rating"></div>
-                    </div>
-                    <div class="padding doc-name">
-                        <h3>Doctor's Name</h3>
-                    </div>
-                    <div class="padding speciality">
-                        <h5>Department</h5>
-                    </div>
-                    <div class="clinic-name">
-                        <p>Clinic Name</p>
-                    </div>
-                    <div class="area">
-                        <p>Area</p>
-                    </div>
-                    <div>
-                        <p>Time Slot</p>
-                    </div>
-                    <div class="selection">
-                        <div>
-                            <a href="#">Book Appointment</a>
-                        </div>
-                        <div>
-                            <a href="#">View Doctor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 w3-ab">
-            <div class="w3-ab-grid text-center">
-                <div class="w3-aicon p-4">
-                    <div>
-                        <img class="profile-picture" src="../assets/images/profile_male.jpg" alt="profile-picture">
-                    </div>
-                    <div class="rating-star">
-                        <div class="rateYo rating"></div>
-                    </div>
-                    <div class="padding doc-name">
-                        <h3>Doctor's Name</h3>
-                    </div>
-                    <div class="padding speciality">
-                        <h5>Department</h5>
-                    </div>
-                    <div class="clinic-name">
-                        <p>Clinic Name</p>
-                    </div>
-                    <div class="area">
-                        <p>Area</p>
-                    </div>
-                    <div>
-                        <p>Time Slot</p>
-                    </div>
-                    <div class="selection">
-                        <div>
-                            <a href="#">Book Appointment</a>
-                        </div>
-                        <div>
-                            <a href="#">View Doctor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 w3-ab">
-            <div class="w3-ab-grid text-center">
-                <div class="w3-aicon p-4">
-                    <div>
-                        <img class="profile-picture" src="../assets/images/profile_male.jpg" alt="profile-picture">
-                    </div>
-                    <div class="rating-star">
-                        <div class="rateYo rating"></div>
-                    </div>
-                    <div class="padding doc-name">
-                        <h3>Doctor's Name</h3>
-                    </div>
-                    <div class="padding speciality">
-                        <h5>Department</h5>
-                    </div>
-                    <div class="clinic-name">
-                        <p>Clinic Name</p>
-                    </div>
-                    <div class="area">
-                        <p>Area</p>
-                    </div>
-                    <div>
-                        <p>Time Slot</p>
-                    </div>
-                    <div class="selection">
-                        <div>
-                            <a href="#">Book Appointment</a>
-                        </div>
-                        <div>
-                            <a href="#">View Doctor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 w3-ab">
-            <div class="w3-ab-grid text-center">
-                <div class="w3-aicon p-4">
-                    <div>
-                        <img class="profile-picture" src="../assets/images/profile_male.jpg" alt="profile-picture">
-                    </div>
-                    <div class="rating-star">
-                        <div class="rateYo rating"></div>
-                    </div>
-                    <div class="padding doc-name">
-                        <h3>Doctor's Name</h3>
-                    </div>
-                    <div class="padding speciality">
-                        <h5>Department</h5>
-                    </div>
-                    <div class="clinic-name">
-                        <p>Clinic Name</p>
-                    </div>
-                    <div class="area">
-                        <p>Area</p>
-                    </div>
-                    <div>
-                        <p>Time Slot</p>
-                    </div>
-                    <div class="selection">
-                        <div>
-                            <a href="#">Book Appointment</a>
-                        </div>
-                        <div>
-                            <a href="#">View Doctor</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
     </div>
 </div>
