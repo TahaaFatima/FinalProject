@@ -9,7 +9,7 @@ class Update_doc_profile extends MY_Controller {
     }
     public function index(){
 
-        $doctors_id  = $this->session->userdata('doc_id');
+        $doctors_id  = $this->session->userdata('user_id');
         $where = ['doctors_id' => $doctors_id];
         $this->load->model('Doctor_registration_model');
         $doc_info = $this->Doctor_registration_model->retrieving($where, false);
@@ -28,22 +28,22 @@ class Update_doc_profile extends MY_Controller {
                     'area_id'           => $_POST['Location'],
                     'department_id'     => $_POST['Department'],
                 ];
-                $id = $this->session->userdata('doc_id');
+                $id = $this->session->userdata('user_id');
                 $this->load->model('Doctor_registration_model');
                 $this->Doctor_registration_model->updating($data , $id);
             }
 
-        $this->load->model('Get_Area');
-        $area_table = $this->Get_Area->retrieving();
+        $this->load->model('Area_Model');
+        $area_table = $this->Area_Model->retrieving();
             
-        $this->load->model('DepartmentM');
-        $department_table = $this->DepartmentM->retrieving();
+        $this->load->model('Department_Model');
+        $department_table = $this->Department_Model->retrieving();
 
-        $this->load->model('Get_Clinic');
-        $clinic_table = $this->Get_Clinic->retrieving();
+        $this->load->model('Clinic_Model');
+        $clinic_table = $this->Clinic_Model->retrieving();
 
-        $this->load->model('Get_Price');
-        $price_table = $this->Get_Price->retrieving();
+        $this->load->model('Price_Model');
+        $price_table = $this->Price_Model->retrieving();
 
 
         $data['areas'] = $area_table;

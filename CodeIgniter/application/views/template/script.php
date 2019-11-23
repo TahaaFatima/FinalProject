@@ -4,6 +4,8 @@
 <script src="<?php echo base_url(); ?>assets/js/minimal-slider.js"></script>
 <!-- flexSlider (for testimonials) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+<!-- Time Picker -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 <!-- Calendar -->
 <script src="https://kit.fontawesome.com/200033bf0c.js" crossorigin="anonymous"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery-ui.js"></script>
@@ -11,7 +13,11 @@
 			$(function() {
 			$( "#datepicker" ).datepicker();
             });
-	  </script>
+            $(document).ready(function(){
+                $('input.timepicker').timepicker({});
+            });
+        </script>
+      
 				<!-- //Calendar -->
                 
                 <script defer src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>

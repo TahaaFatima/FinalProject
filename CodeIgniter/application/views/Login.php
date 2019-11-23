@@ -54,7 +54,7 @@
                                 <?php echo form_error('Password'); ?>                        
                             </div>
                             <div class="radio-doctor">
-                                <input class="user-radio" type="radio" name="Role" value="Doctor"> <label for="Role">Doctor</label>
+                                <input class="user-radio" type="radio" name="Role" value="Doctor" checked="checked"> <label for="Role">Doctor</label>
                                 <input class="user-radio" type="radio" name="Role" value="Patient"> <label for="Role">Patient</label>
                             </div>
                             <div class="login-submit">

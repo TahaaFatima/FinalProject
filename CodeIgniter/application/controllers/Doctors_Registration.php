@@ -11,9 +11,9 @@ class Doctors_Registration extends MY_Controller {
 
         $this->load->helper('form');
         $this->load->library('form_validation');
+        
         if(isset($_POST['Submit'])){
 
-           
             $validation = [
                 [
                     'field' => 'Name',
@@ -56,6 +56,16 @@ class Doctors_Registration extends MY_Controller {
                     'rules' => 'required'
                 ],
                 [
+                    'field' => 'time_form',
+                    'label' => 'Time From',
+                    'rules' => 'required'
+                ],
+                [
+                    'field' => 'time_to',
+                    'label' => 'Time To',
+                    'rules' => 'required'
+                ],
+                [
                     'field' => 'Email_Address',
                     'label' => 'email address',
                     'rules' => 'trim|required|valid_email'
@@ -81,7 +91,9 @@ class Doctors_Registration extends MY_Controller {
                 }
                 else
                 {
+                    $this->load->model('Doctor_registration_model');
                     $password = password_hash($_POST['Password'],PASSWORD_DEFAULT);
+
                     $data =[
                         'full_name'         => $_POST['Name'],
                         'age'               => $_POST['Age'],
@@ -94,27 +106,32 @@ class Doctors_Registration extends MY_Controller {
                         'email'             => $_POST['Email_Address'],
                         'password'          => $password
                     ];
-
-                    $this->load->model('Doctor_registration_model');
                     $result  = $this->Doctor_registration_model->inserting($data);
+                    $this->load->model('Doctor_Timeslot_Model'); 
+                    $time_data = [
+                        'doctors_id' => $result,
+                        'time_in' => $_POST['time_form'],
+                        'time_out' => $_POST['time_to']
+                    ];
+                    $this->Doctor_Timeslot_Model->inserting($time_data); 
                 }
         }
 
-            $this->load->model('Get_Area');
-            $area_table = $this->Get_Area->retrieving();
+            $this->load->model('Area_Model');
+            $area_table = $this->Area_Model->retrieving();
              
-            $this->load->model('DepartmentM');
-            $department_table = $this->DepartmentM->retrieving();
+            $this->load->model('Department_Model');
+            $department_table = $this->Department_Model->retrieving();
 
-            $this->load->model('Get_Clinic');
-            $clinic_table = $this->Get_Clinic->retrieving();
+            $this->load->model('Clinic_Model');
+            $clinic_table = $this->Clinic_Model->retrieving();
 
-            $this->load->model('Get_Price');
-            $price_table = $this->Get_Price->retrieving();
-
+            $this->load->model('Price_Model');
+            $price_table = $this->Price_Model->retrieving();
 
             $data['view'] = 'Doctors_Registration';
             $data['page_title'] = 'Doctors_Registration';
+            //$data['result'] = $result;
             $data['areas'] = $area_table;
             $data['departments'] = $department_table;
             $data['clinic'] = $clinic_table;

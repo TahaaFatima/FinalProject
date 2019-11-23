@@ -66,7 +66,7 @@
             if(!$forError){
                 return $this->db->error();
             }else{
-                return "Inserted";
+                return $this->db->insert_id();
             }
         }
         public function search_join(array $where=[], array $join_retrieve, $select = '*'){

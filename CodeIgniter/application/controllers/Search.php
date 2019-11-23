@@ -35,14 +35,14 @@
                             
                         $doc_joins = $this->Inner_joins->search_join($to_search,$join_retrieve);
                         
-                        $this->load->model('Area');
-                        $area_table = $this->Area->retrieving();
+                        $this->load->model('Area_Model');
+                        $area_table = $this->Area_Model->retrieving();
                          
-                        $this->load->model('DepartmentM');
-                        $department_table = $this->DepartmentM->retrieving();
+                        $this->load->model('Department_Model');
+                        $department_table = $this->Department_Model->retrieving();
                 
-                        $this->load->model('Price');
-                        $price_table = $this->Price->retrieving();
+                        $this->load->model('Price_Model');
+                        $price_table = $this->Price_Model->retrieving();
 
                         $data['page_title'] = 'Our Doctors';
                         $data['view'] = 'Doctors_List';

@@ -2,7 +2,7 @@
 
     defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Area extends MY_Model{
+    class Area_Model extends MY_Model{
         function __construct()
         {
             parent::__construct();

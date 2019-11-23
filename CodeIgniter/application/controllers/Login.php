@@ -55,11 +55,16 @@ class Login extends MY_Controller
                 }
                 $where = ['email' => $email_address];
                 $data_set = $this->User_Model->retrieving($where, false);
-          
-                if (count($data_set)) {
+                if (!empty($data_set)) {
                     if (password_verify($_POST['Password'], $data_set->password)) {
-                        $this->session->set_userdata('doc_id', $data_set->doctors_id);
-                        $this->session->set_userdata('pt_id', $data_set->patient_id);
+                        if(isset($data_set->doctors_id))
+                        {
+                            $this->session->set_userdata('user_id', $data_set->doctors_id);
+                        }
+                        if(isset($data_set->patient_id))
+                        {
+                            $this->session->set_userdata('user_id', $data_set->patient_id);
+                        }
                         $this->session->set_userdata('role_id', $data_set->role_id);
                         $this->session->set_flashdata('signed_in', 'Sign In Successful');
                         $this->session->set_userdata('emailAddress', $email_address);

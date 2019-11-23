@@ -97,6 +97,15 @@
             <?php echo form_error('Price'); ?>
         </div>
         <div class="form-group">
+            <label class="col-form-label" for="Time_Picker">Select Your Available Time:</label>
+            <div>
+            <label class="col-form-label" for="Time_Picker">From : </label>
+            <input type="text" name="time_form" class="timepicker">
+            <label class="col-form-label" for="Time_Picker">To : </label>
+            <input type="text" name="time_to" class="timepicker">
+            </div>
+        </div>
+        <div class="form-group">
             <label class="col-form-label" for="Email">Email Address</label>
             <input class="form-control" type="email" name="Email_Address" value="<?php echo set_value('Email_Address'); ?>">
             <?php echo form_error('Email_Address'); ?>    

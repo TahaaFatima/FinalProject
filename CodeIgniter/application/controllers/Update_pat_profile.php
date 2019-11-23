@@ -8,8 +8,7 @@ class Update_pat_profile extends MY_Controller {
         parent::__construct();
     }
     public function index(){
-
-        $patients_id  = $this->session->userdata('pt_id');
+        $patients_id = $this->session->userdata('user_id');
         $where = ['patient_id' => $patients_id];
         $this->load->model('Patient_Registration_model');
         $pat_info = $this->Patient_Registration_model->retrieving($where, false);
@@ -25,7 +24,7 @@ class Update_pat_profile extends MY_Controller {
                 'email'             => $_POST['Email_Address'],
             ];
             
-            $id = $this->session->userdata('pt_id');
+            $id = $this->session->userdata('user_id');
             $this->load->model('Patient_Registration_model');
 
             $this->Patient_Registration_model->updating($data , $id);
