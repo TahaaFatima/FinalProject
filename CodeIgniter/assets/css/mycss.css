@@ -338,7 +338,6 @@ h1{
 }
 .left-section{
     width: 22.01%;
-    height: 400px;
     display: inline-block;
     margin-left: 209px;
 }
@@ -549,4 +548,10 @@ ul.grid-list-half.pl-4 > li {
     font-size: 19px;
     margin: 11px 0px;
     border-radius: 3px;
+}
+.time-slots-div {
+    display: flex;
+}
+label.col-form-label {
+    padding-right: 10px;
 }

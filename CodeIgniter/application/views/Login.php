@@ -50,7 +50,7 @@
                             </div>
                             <div class="fields-div">
                                 <label class="col-form-label" for="Password">Password</label>
-                                <input class="form-control" type="text" name="Password">
+                                <input class="form-control" type="password" name="Password">
                                 <?php echo form_error('Password'); ?>                        
                             </div>
                             <div class="radio-doctor">

@@ -98,11 +98,11 @@
         </div>
         <div class="form-group">
             <label class="col-form-label" for="Time_Picker">Select Your Available Time:</label>
-            <div>
-            <label class="col-form-label" for="Time_Picker">From : </label>
-            <input type="text" name="time_form" class="timepicker">
-            <label class="col-form-label" for="Time_Picker">To : </label>
-            <input type="text" name="time_to" class="timepicker">
+            <div class="time-slots-div">
+            <label class="col-form-label" for="Time_Picker">From</label>
+            <input class="form-control time-slot" type="text" name="time_form" class="timepicker">
+            <label class="col-form-label" for="Time_Picker">To</label>
+            <input class="form-control time-slot" type="text" name="time_to" class="timepicker">
             </div>
         </div>
         <div class="form-group">
