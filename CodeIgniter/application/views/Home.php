@@ -179,7 +179,7 @@
 										</p>	  
 									</div>
 							</div>
-							<a href="about.html" class="btn btn-primary mt-3">Sign Up</a>
+							<a href="#" data-toggle="modal" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary mt-3">Sign Up</a>
 						</div>
 					</div>
 				</div>

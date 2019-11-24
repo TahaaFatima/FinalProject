@@ -555,3 +555,6 @@ ul.grid-list-half.pl-4 > li {
 label.col-form-label {
     padding-right: 10px;
 }
+.error{
+    color: red;
+}

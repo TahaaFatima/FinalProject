@@ -91,8 +91,8 @@ class Doctors_Registration extends MY_Controller {
                     'rules' => 'trim|required|matches[Password]'
                 ]
             ];
-            
                 $this->form_validation->set_rules($validation);
+                $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
                 if (!$this->form_validation->run())
                 {
                     $data['view'] = 'Doctors_Registration';
@@ -117,7 +117,6 @@ class Doctors_Registration extends MY_Controller {
                         'price_id'          => $_POST['Price'],
                         'role_id'           => 1,
                         'email'             => $_POST['Email_Address'],
-                        'role_id'           => '1',
                         'password'          => $password
                     ];
                     $result  = $this->Doctor_registration_model->inserting($data);
@@ -144,7 +143,6 @@ class Doctors_Registration extends MY_Controller {
             $this->load->model('Price_Model');
             $price_table = $this->Price_Model->retrieving();
 
-<<<<<<< Updated upstream
             $data['view']        = 'Doctors_Registration';
             $data['page_title']  = 'Doctors_Registration';
             $data['areas']       = $area_table;
@@ -152,14 +150,6 @@ class Doctors_Registration extends MY_Controller {
             $data['clinic']      = $clinic_table;
             $data['prices']      = $price_table;
 
-=======
-            $data['view'] = 'Doctors_Registration';
-            $data['page_title'] = 'Doctors_Registration';
-            $data['areas'] = $area_table;
-            $data['departments'] = $department_table;
-            $data['clinic'] = $clinic_table;
-            $data['prices'] = $price_table;
->>>>>>> Stashed changes
             $this->load->view('layout',$data);
     }
 }

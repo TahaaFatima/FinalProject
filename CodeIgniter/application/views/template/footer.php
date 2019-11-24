@@ -39,22 +39,27 @@
 					<h3 class="mb-4 remove-padding">Navigation</h3>
 					<ul class="list-agileits">
 						<li>
-							<a href="index.html">
+							<a href="<?php echo site_url('/Home');?>">
 								Home
 							</a>
 						</li>
 						<li class="my-3">
-							<a href="about.html">
-								About Us
+							<a href="<?php echo site_url('/Department');?>">
+								Departments
 							</a>
 						</li>
 						<li class="mb-3">
-							<a href="services.html">
-								Services
+							<a href="<?php echo site_url('/For_Patient');?>">
+								How It Works (For Patients)
+							</a>
+						</li>
+						<li class="mb-3">
+							<a href="<?php echo site_url('/For_Doctor');?>">
+									How It Works (For Doctors)
 							</a>
 						</li>
 						<li>
-							<a href="contact.html">
+							<a href="<?php echo site_url('/Contact_Us');?>">
 								Contact Us
 							</a>
 						</li>

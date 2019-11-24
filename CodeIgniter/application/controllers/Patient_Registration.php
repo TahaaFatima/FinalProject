@@ -51,7 +51,7 @@ class Patient_Registration extends MY_Controller {
             ];
         
             $this->form_validation->set_rules($validation);
-            
+            $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
             if(isset($_POST['Submit'])){
                 if (!$this->form_validation->run())
                 {
@@ -66,12 +66,13 @@ class Patient_Registration extends MY_Controller {
                         'gender'            => $_POST['Gender'],
                         'phone_number'      => $_POST['Phone_Number'],
                         'email'             => $_POST['Email_Address'],
+                        'role_id'           => 1,
                         'password'          => $password
                     ];
 
                     $this->load->model('Patient_registration_model');
                     $result  = $this->Patient_registration_model->inserting($data);
-                   // echo $result;
+                    redirect('Login'); 
                 }
             }
 

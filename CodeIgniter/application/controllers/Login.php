@@ -40,6 +40,8 @@ class Login extends MY_Controller
             ];
 
             $this->form_validation->set_rules($check_data);
+            $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+            
             if (!$this->form_validation->run()) {
                 $data['page_title'] = 'Login';
                 $data['view'] = 'Login';
