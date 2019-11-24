@@ -101,9 +101,9 @@
             <label class="col-form-label" for="Time_Picker">Select Your Available Time:</label>
             <div class="time-slots-div">
                 <label class="col-form-label" for="Time_Picker">From</label>
-                <input class="form-control time-slot" type="text" name="time_form" class="timepicker">
+                <input class="form-control time-slot timepicker" type="text" name="time_form" >
                 <label class="col-form-label" for="Time_Picker"> To</label>
-                <input class="form-control time-slot" type="text" name="time_to" class="timepicker">
+                <input class="form-control time-slot timepicker" type="text" name="time_to">
             </div>
         </div>
         <div class="form-group">
