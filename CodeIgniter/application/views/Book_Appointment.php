@@ -1,95 +1,67 @@
-<div class="why-book-revitalize">
-    <div>
-        <h3>Why book an appointment through revitalize?</h3>
-    </div>
-    <div>
-        <ul class="row">
-            <li class="col-12-sm col-6">
-                <div class="dark">
-                    <i class="fa text-awesome fa-check" aria-hidden="true"></i>
+<section class="doc-det-pt-section">
+    <div class=" mt-2 bg-white padding">
+        <div class="doc-12">
+            <div class="div-dc-li">
+                <?php foreach($doctors as $doctor){?>
+                <div class="img-doct">
+                    <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
                 </div>
-                <div>
-                    <p>
-                        Save time, just book online
-                    </p>
+                <div class="doc-info">
+                    <div class="pl-4">
+                        <h2><?php echo $doctor->full_name?></h2>
+                        <p><?php echo $doctor->department?></p>
+                        <p><?php echo $doctor->gender?></p>
+                        <p><?php echo $doctor->area?></p>
+                    </div>
+                    <p>Select Date to Book Appointment</p>
+                    <div>
+                        <div>
+                            <input class="datepicker" type="text">
+                        </div>
+                    </div>
+                    <p>Select Appointment Time</p>
+                    <div>
+                        <div>
+                            <label for="time_to_appt">To : </label>
+                        </div>
+                        <div>
+                            <input class="timepicker" type="text">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="time_from_appt">From : </label>
+                        </div>
+                        <div>
+                            <input class="timepicker" type="text">
+                        </div>
+                    </div>
+                    <div>
+                    <div class="appointmnet">
+                        <div class="doc-11 doc-12-sm">        
+                            <?php 
+                                if($this->session->userdata('role_id')){
+                            ?>
+                                <a href="<?php echo site_url('Book_Appointment') ?>?Doc_id=<?php echo $doctor->doctors_id?>"><i class="fa fa-phone"></i> Book Appointment</a>											 
+                            <?php
+                                }else{
+                            ?>
+                                <a href="<?php echo site_url('Login')?>"><i class="fa fa-phone"></i> Book Appointment</a>
+                            <?php
+                                }
+                            ?>                   								
+                        </div>
+                    </div>
+                    </div>
+                <div class="doc-3">
+                    <ul class="grid-list-half pl-4">
+                        <li><i class="fa fa-credit-card green-text"></i><?php echo $doctor->price?></li>
+                        <li><i class="fa fa-circle"></i> Availability</li>
+                        <li><i class="fa fa-circle"></i> Clinic Name</li>
+                    </ul>
                 </div>
-            </li>
-            <li class="col-12-sm col-6">
-                <div class="dark">
-                    <i class="fa text-awesome fa-check" aria-hidden="true"></i>
-                </div>
-                <div>
-                    <p>
-                        Direct Appointment from doctor
-                    </p>
-                </div>
-            </li>
-            <li class="col-12-sm col-6">
-                <div class="dark">
-                    <i class="fa text-awesome fa-check" aria-hidden="true"></i>
-                </div>
-                <div>
-                    <p>
-                        100% updated information
-                    </p>
-                </div>
-            </li>
-            <li class="col-12-sm col-6">
-                <div class="dark">
-                    <i class="fa text-awesome fa-check" aria-hidden="true"></i>
-                </div>
-                <div>
-                    <p>
-                        100% updated information
-                    </p>
-                </div>
-            </li>
-        </ul>
+                <?php } ?>
+            </div>
+        </div>
     </div>
-</div>
-<div>
-    <div>
-        <p>
-            Book appointment with "Doctor Name"
-        </p>
-    </div>
-    <div>
-        <p>
-            Book Appointment in "Clinic Name"
-        </p>
-    </div>
-    <div>
-        <p>
-            Book Appointment in "Clinic Name"
-        </p>
-    </div>
-    <div>
-        <p>
-            Area
-        </p>
-    </div>
-    <div>
-        <ul class="grid-list">
-            <li>Fee: 2000</li>
-            <li>Mon, Tue, Wed, Thu, Fri, Sat</li>
-            <li>06:00 PM - 09:00 PM</li>
-        </ul>
-    </div>
-    <div>
-        <p>Select Date to Book Appointment</p>
-    </div>
-    <div>
-        <p>Select Appointment Time</p>
-    </div>
-    <div>
-        <input type="text" class="timepicker-appointment">
-    </div>
-    <div>
-        <?php
-            $start = strtotime('09:00 AM');
-            $end   = strtotime('11:00 AM');
-
-            for($i = $start ; $i <= $end ; $i += 30)
-        ?>
-    </div>
-</div>
+</section>

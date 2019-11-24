@@ -2,23 +2,24 @@
     <div class=" mt-2 bg-white padding">
         <div class="doc-12">
             <div class="div-dc-li">
+                <?php foreach($doctors as $doctor){?>
                 <div class="img-doct">
                     <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
                 </div>
                 <div class="doc-info">
                     <div class="pl-4">
-                        <h2>Doctor's Name </h2>
-                        <p>Department </p>
-                        <p>Gender </p>
-                        <p>Location </p>
-                        <p>Email address </p>
+                        <h2><?php echo $doctor->full_name?></h2>
+                        <p><?php echo $doctor->department?></p>
+                        <p><?php echo $doctor->gender?></p>
+                        <p><?php echo $doctor->area?></p>
+                        <p><?php echo $doctor->email?></p>
                     </div>
                     <div class="appointmnet">
                         <div class="doc-11 doc-12-sm">        
                             <?php 
                                 if($this->session->userdata('role_id')){
                             ?>
-                                <a href="#"><i class="fa fa-phone"></i> Book Appointment</a>											 
+                                <a href="<?php echo site_url('Book_Appointment') ?>?Doc_id=<?php echo $doctor->doctors_id?>"><i class="fa fa-phone"></i> Book Appointment</a>											 
                             <?php
                                 }else{
                             ?>
@@ -32,166 +33,12 @@
                 <div class="doc-3">
                     <ul class="grid-list-half pl-4">
                         <li><i class="fa fa-comment"></i> Patient Reviews</li>
-                        <li><i class="fa fa-credit-card green-text"></i> Fee</li>
+                        <li><i class="fa fa-credit-card green-text"></i><?php echo $doctor->price?></li>
                         <li><i class="fa fa-circle"></i> Availability</li>
                         <li><i class="fa fa-circle"></i> Clinic Name</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class=" mt-2 bg-white padding">
-        <div class="doc-12">
-            <div class="div-dc-li">
-                <div class="img-doct">
-                    <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
-                </div>
-                <div class="doc-info">
-                    <div class="pl-4">
-                        <h2>Doctor's Name </h2>
-                        <p>Department </p>
-                        <p>Gender </p>
-                        <p>Location </p>
-                        <p>Email address </p>
-                    </div>
-                    <div class="appointmnet">
-                        <div class="doc-11 doc-12-sm">                           								
-                            <a href=""><i class="fa fa-phone"></i> Book Appointment</a>											 
-                        </div>
-                    </div>
-                </div>
-                <div class="doc-3">
-                    <ul class="grid-list-half pl-4">
-                        <li><i class="fa fa-comment"></i> Patient Reviews</li>
-                        <li><i class="fa fa-credit-card green-text"></i> Fee</li>
-                        <li><i class="fa fa-circle"></i> Availability</li>
-                        <li><i class="fa fa-circle"></i> Clinic Name</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class=" mt-2 bg-white padding">
-        <div class="doc-12">
-            <div class="div-dc-li">
-                <div class="img-doct">
-                    <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
-                </div>
-                <div class="doc-info">
-                    <div class="pl-4">
-                        <h2>Doctor's Name </h2>
-                        <p>Department </p>
-                        <p>Gender </p>
-                        <p>Location </p>
-                        <p>Email address </p>
-                    </div>
-                    <div class="appointmnet">
-                        <div class="doc-11 doc-12-sm">                           								
-                            <a href=""><i class="fa fa-phone"></i> Book Appointment</a>											 
-                        </div>
-                    </div>
-                </div>
-                <div class="doc-3">
-                    <ul class="grid-list-half pl-4">
-                        <li><i class="fa fa-comment"></i> Patient Reviews</li>
-                        <li><i class="fa fa-credit-card green-text"></i> Fee</li>
-                        <li><i class="fa fa-circle"></i> Availability</li>
-                        <li><i class="fa fa-circle"></i> Clinic Name</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class=" mt-2 bg-white padding">
-        <div class="doc-12">
-            <div class="div-dc-li">
-                <div class="img-doct">
-                    <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
-                </div>
-                <div class="doc-info">
-                    <div class="pl-4">
-                        <h2>Doctor's Name </h2>
-                        <p>Department </p>
-                        <p>Gender </p>
-                        <p>Location </p>
-                        <p>Email address </p>
-                    </div>
-                    <div class="appointmnet">
-                        <div class="doc-11 doc-12-sm">                           								
-                            <a href=""><i class="fa fa-phone"></i> Book Appointment</a>											 
-                        </div>
-                    </div>
-                </div>
-                <div class="doc-3">
-                    <ul class="grid-list-half pl-4">
-                        <li><i class="fa fa-comment"></i> Patient Reviews</li>
-                        <li><i class="fa fa-credit-card green-text"></i> Fee</li>
-                        <li><i class="fa fa-circle"></i> Availability</li>
-                        <li><i class="fa fa-circle"></i> Clinic Name</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class=" mt-2 bg-white padding">
-        <div class="doc-12">
-            <div class="div-dc-li">
-                <div class="img-doct">
-                    <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
-                </div>
-                <div class="doc-info">
-                    <div class="pl-4">
-                        <h2>Doctor's Name </h2>
-                        <p>Department </p>
-                        <p>Gender </p>
-                        <p>Location </p>
-                        <p>Email address </p>
-                    </div>
-                    <div class="appointmnet">
-                        <div class="doc-11 doc-12-sm">                           								
-                            <a href=""><i class="fa fa-phone"></i> Book Appointment</a>											 
-                        </div>
-                    </div>
-                </div>
-                <div class="doc-3">
-                    <ul class="grid-list-half pl-4">
-                        <li><i class="fa fa-comment"></i> Patient Reviews</li>
-                        <li><i class="fa fa-credit-card green-text"></i> Fee</li>
-                        <li><i class="fa fa-circle"></i> Availability</li>
-                        <li><i class="fa fa-circle"></i> Clinic Name</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class=" mt-2 bg-white padding">
-        <div class="doc-12">
-            <div class="div-dc-li">
-                <div class="img-doct">
-                    <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
-                </div>
-                <div class="doc-info">
-                    <div class="pl-4">
-                        <h2>Doctor's Name </h2>
-                        <p>Department </p>
-                        <p>Gender </p>
-                        <p>Location </p>
-                        <p>Email address </p>
-                    </div>
-                    <div class="appointmnet">
-                        <div class="doc-11 doc-12-sm">                           								
-                            <a href=""><i class="fa fa-phone"></i> Book Appointment</a>											 
-                        </div>
-                    </div>
-                </div>
-                <div class="doc-3">
-                    <ul class="grid-list-half pl-4">
-                        <li><i class="fa fa-comment"></i> Patient Reviews</li>
-                        <li><i class="fa fa-credit-card green-text"></i> Fee</li>
-                        <li><i class="fa fa-circle"></i> Availability</li>
-                        <li><i class="fa fa-circle"></i> Clinic Name</li>
-                    </ul>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>

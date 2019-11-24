@@ -17,10 +17,9 @@ class Doctors_List extends MY_Controller {
         $this->load->model('Price_Model');
         $price_table = $this->Price_Model->retrieving();
         
-        // $this->load->model('Doctor_registration_model');
-        // $doctors = $this->Doctor_registration_model->retrieving();
-        
+
         $this->load->model('Doctor_registration_model');
+        $to_search = [];
         if(isset($_GET['departmentSelector'])){
             $to_search['doctors_registration.department_id'] = $_GET['departmentSelector']; 
         }

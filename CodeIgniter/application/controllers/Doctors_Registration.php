@@ -28,7 +28,7 @@ class Doctors_Registration extends MY_Controller {
                 [
                     'field' => 'Gender',
                     'label' => 'gender',
-                    'rules' => 'trim|required'
+                    'rules' => 'required'
                 ],
                 [
                     'field' => 'FatherName',

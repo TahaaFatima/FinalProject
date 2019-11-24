@@ -83,7 +83,7 @@
                         </div>
                     </div>
                         <div class="to-view-doc">
-                            <a class="b-appt" href="#">View Doctor</a>
+                            <a class="b-appt" href="<?php echo site_url('Doctors_Detail_Pt')?>?Doc_id=<?php echo $doctor->doctors_id?>">View Doctor</a>
                         </div>
                     </div>
                 </div>

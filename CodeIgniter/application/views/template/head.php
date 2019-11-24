@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
     <!-- Time Picker -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css">
     <!-- //Custom Theme files -->
 	<link href="<?php echo base_url(); ?>assets/css/minimal-slider.css" rel='stylesheet' type='text/css' />
 	<link  href="<?php echo base_url(); ?>assets/css/flexslider.css" type="text/css" media="screen" rel="stylesheet" property="" />

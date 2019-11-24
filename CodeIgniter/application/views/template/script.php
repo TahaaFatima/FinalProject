@@ -6,12 +6,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 <!-- Time Picker -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<!-- Date Picker -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script>
 <!-- Calendar -->
 <script src="https://kit.fontawesome.com/200033bf0c.js" crossorigin="anonymous"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery-ui.js"></script>
         <script>
-			$(function() {
-			$( "#datepicker" ).datepicker();
+            $(document).ready(function(){
+                $('input.datepicker').datepicker({
+                });
             });
             $(document).ready(function(){
                 $('input.timepicker').timepicker({});

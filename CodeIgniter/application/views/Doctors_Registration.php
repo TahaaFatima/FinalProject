@@ -39,7 +39,7 @@
         <div class="form-group">
             <label class="col-form-label" for="Location">Location</label>
             <select class="form-control"  name="Location">
-                <option value="none">Choose Area</option>
+                <option value="">Choose Area</option>
                 <?php 
                     foreach($areas as $area)
                     {    
@@ -90,7 +90,7 @@
                     foreach($prices as $price)
                         { 
                 ?>
-                        <option value="<?php echo $price->price_id ?>"<?php echo(isset($doctors_info->price_id) && $price->price_id == $doctors_info->$price_id ? 'selected = "selected"' : "" ) ?>> <?php echo $price->price ?></option>
+                        <option value="<?php echo $price->price_id ?>" <?php echo(isset($doctors_info->price_id) && $price->price_id == $doctors_info->$price_id ? 'selected = "selected"' : "" ) ?>> <?php echo $price->price ?></option>
                 <?php
                         }
                 ?>

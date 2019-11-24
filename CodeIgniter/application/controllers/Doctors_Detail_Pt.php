@@ -2,11 +2,29 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Doctors_Detail_Pt extends MY_Controller {
-
-	public function index()
+    
+    public function index()
 	{
-            $data['view'] = 'Doctors_Detail_Pt';
-            $data['page_title'] = 'Doctors_Detail_Pt';
-            $this->load->view('Layout',$data);
+        $this->load->model('Doctor_registration_model');
+        $to_search = [];
+        if(isset($_GET['Doc_id'])){
+            $to_search['doctors_registration.doctors_id'] = $_GET['Doc_id'];
+        }
+        $join_retrieve[] = [
+                            'table_name'=>'price',
+                            'column_with'=>'doctors_registration.price_id = price.price_id'];
+        $join_retrieve[] = [
+                            'table_name'=>'department',
+                            'column_with'=>'doctors_registration.department_id = department.department_id'];
+        $join_retrieve[] = [
+                            'table_name'=>'area',
+                            'column_with'=>'doctors_registration.area_id = area.area_id'];
+
+        $doc_joins = $this->Doctor_registration_model->search_join($to_search,$join_retrieve);
+
+        $data['doctors'] = $doc_joins;
+        $data['page_title'] = 'Doctor Details';
+        $data['view'] = 'Doctors_Detail_Pt';
+        $this->load->view('Layout',$data);
 	}
 }
