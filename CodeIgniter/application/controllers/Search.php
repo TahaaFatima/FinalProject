@@ -11,7 +11,7 @@
                 if(isset($_POST['submit_search'])){
                         $this->load->model('Inner_joins');
                         $this->Inner_joins->table_name = 'doctors_registration';
-                        
+                        $to_search = [];
                         if($_POST['Department'] != 'none'){
                             $to_search['doctors_registration.department_id'] = $_POST['Department']; 
                         }

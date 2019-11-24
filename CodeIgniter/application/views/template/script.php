@@ -16,6 +16,9 @@
             $(document).ready(function(){
                 $('input.timepicker').timepicker({});
             });
+            $(document).ready(function(){
+                $('input.timepicker-appointment').timepicker({});
+            });
         </script>
       
 				<!-- //Calendar -->

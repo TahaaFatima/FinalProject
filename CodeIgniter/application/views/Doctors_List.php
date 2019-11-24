@@ -7,7 +7,7 @@
                     foreach($departments as $department)
                         { 
                 ?>
-                <option value="<?php echo $department->department_id ?>"><?php echo $department->department ?></option>
+                <option <?php echo isset($_GET['departmentSelector']) && $_GET['departmentSelector'] == $department->department_id ? 'selected':'';?> value="<?php echo $department->department_id ?>"><?php echo $department->department ?></option>
                 <?php
                             }
                 ?>

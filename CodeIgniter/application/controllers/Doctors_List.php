@@ -22,6 +22,9 @@ class Doctors_List extends MY_Controller {
         
         $this->load->model('Inner_joins');
         $this->Inner_joins->table_name = 'doctors_registration';
+        if(isset($_GET['departmentSelector'])){
+            $to_search['doctors_registration.department_id'] = $_GET['departmentSelector']; 
+        }
         $join_retrieve[] = [
                             'table_name'=>'price',
                             'column_with'=>'doctors_registration.price_id = price.price_id'];
@@ -32,7 +35,7 @@ class Doctors_List extends MY_Controller {
                             'table_name'=>'area',
                             'column_with'=>'doctors_registration.area_id = area.area_id'];
 
-        $doc_joins = $this->Inner_joins->search_join([],$join_retrieve);
+        $doc_joins = $this->Inner_joins->search_join($to_search,$join_retrieve);
 
         $data['page_title'] = 'Our Doctors';
         $data['view'] = 'Doctors_List';

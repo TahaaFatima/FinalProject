@@ -82,6 +82,9 @@
         <p>Select Appointment Time</p>
     </div>
     <div>
+        <input type="text" class="timepicker-appointment">
+    </div>
+    <div>
         <?php
             $start = strtotime('09:00 AM');
             $end   = strtotime('11:00 AM');
