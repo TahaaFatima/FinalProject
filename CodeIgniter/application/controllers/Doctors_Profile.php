@@ -5,8 +5,7 @@ class Doctors_Profile extends MY_Controller {
 
 	public function index()
 	{
-        $this->load->model('Inner_joins');
-        $this->Inner_joins->table_name = 'doctors_registration';
+        $this->load->model('Doctor_registration_model');
         $doctors_id  = $this->session->userdata('user_id');
         $where = ['doctors_registration.doctors_id' => $doctors_id];
         $join_retrieve[] = [
@@ -27,7 +26,7 @@ class Doctors_Profile extends MY_Controller {
                         ];
                         
 
-        $doc_info = $this->Inner_joins->search_join($where,$join_retrieve);
+        $doc_info = $this->Doctor_registration_model->search_join($where,$join_retrieve);
         $data['doctors_info'] = $doc_info;
         $data['view'] = 'Doctors_Profile';
         $data['page_title'] = 'Doctors_Profile';

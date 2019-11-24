@@ -9,8 +9,7 @@
         }
         public function index(){
                 if(isset($_POST['submit_search'])){
-                        $this->load->model('Inner_joins');
-                        $this->Inner_joins->table_name = 'doctors_registration';
+                        $this->load->model('Doctor_registration_model');
                         $to_search = [];
                         if($_POST['Department'] != 'none'){
                             $to_search['doctors_registration.department_id'] = $_POST['Department']; 
@@ -33,7 +32,7 @@
                             'table_name'=>'area',
                             'column_with'=>'doctors_registration.area_id = area.area_id'];
                             
-                        $doc_joins = $this->Inner_joins->search_join($to_search,$join_retrieve);
+                        $doc_joins = $this->Doctor_registration_model->search_join($to_search,$join_retrieve);
                         
                         $this->load->model('Area_Model');
                         $area_table = $this->Area_Model->retrieving();

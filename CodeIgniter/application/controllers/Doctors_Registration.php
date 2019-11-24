@@ -23,7 +23,7 @@ class Doctors_Registration extends MY_Controller {
                 [
                     'field' => 'Age',
                     'label' => 'age',
-                    'rules' => 'trim|required'
+                    'rules' => 'required'
                 ],
                 [
                     'field' => 'Gender',

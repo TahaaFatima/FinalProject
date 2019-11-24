@@ -21,7 +21,6 @@ class Login extends MY_Controller
         $this->load->helper('form');
         $this->load->library('form_validation');
         if (isset($_POST['submit_login'])) {
-    
             $check_data = [
                 [
                     'field' => 'Email_Address',

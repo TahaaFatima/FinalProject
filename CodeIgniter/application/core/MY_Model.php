@@ -69,8 +69,7 @@
                 return $this->db->insert_id();
             }
         }
-        public function search_join(array $where=[], array $join_retrieve, $select = '*'){
-                        
+        public function search_join(array $where=[], array $join_retrieve, $select = '*'){              
             $this->db->select($select);
             $this->db->from($this->table_name);
             foreach($join_retrieve as $retrieved){
