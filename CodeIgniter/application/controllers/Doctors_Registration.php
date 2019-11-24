@@ -56,6 +56,16 @@ class Doctors_Registration extends MY_Controller {
                     'rules' => 'required'
                 ],
                 [
+                    'field' => 'Clinic',
+                    'label' => 'Clinic',
+                    'rules' => 'required'
+                ],
+                [
+                    'field' => 'Price',
+                    'label' => 'Price',
+                    'rules' => 'required'
+                ],
+                [
                     'field' => 'time_form',
                     'label' => 'Time From',
                     'rules' => 'required'
@@ -103,6 +113,9 @@ class Doctors_Registration extends MY_Controller {
                         'dr_type'           => $_POST['Type'],
                         'area_id'           => $_POST['Location'],
                         'department_id'     => $_POST['Department'],
+                        'clinic_id'         => $_POST['Clinic'],
+                        'price_id'          => $_POST['Price'],
+                        'role_id'           => 1,
                         'email'             => $_POST['Email_Address'],
                         'password'          => $password
                     ];
@@ -113,7 +126,7 @@ class Doctors_Registration extends MY_Controller {
                         'time_in' => $_POST['time_form'],
                         'time_out' => $_POST['time_to']
                     ];
-                    $this->Doctor_Timeslot_Model->inserting($time_data); 
+                    $this->Doctor_Timeslot_Model->inserting($time_data);
                 }
         }
 
@@ -129,13 +142,12 @@ class Doctors_Registration extends MY_Controller {
             $this->load->model('Price_Model');
             $price_table = $this->Price_Model->retrieving();
 
-            $data['view'] = 'Doctors_Registration';
-            $data['page_title'] = 'Doctors_Registration';
-            //$data['result'] = $result;
-            $data['areas'] = $area_table;
+            $data['view']        = 'Doctors_Registration';
+            $data['page_title']  = 'Doctors_Registration';
+            $data['areas']       = $area_table;
             $data['departments'] = $department_table;
-            $data['clinic'] = $clinic_table;
-            $data['prices'] = $price_table;
+            $data['clinic']      = $clinic_table;
+            $data['prices']      = $price_table;
 
             $this->load->view('layout',$data);
     }
