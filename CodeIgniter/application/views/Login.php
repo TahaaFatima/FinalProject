@@ -1,7 +1,3 @@
-<?php
-    echo $this->session->flashdata('incorrectEmail');
-    echo $this->session->flashdata('incorrectPassword');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,11 +43,17 @@
                                 <label class="col-form-label" for="Email_Address">Email Address</label>
                                 <input class="form-control" type="text" name="Email_Address">
                                 <?php echo form_error('Email_Address', '<div class="error">', '</div>'); ?>
+                                <div class="error">
+                                    <?php echo $this->session->flashdata('incorrectEmail'); ?>
+                                </div>
                             </div>
                             <div class="fields-div">
                                 <label class="col-form-label" for="Password">Password</label>
                                 <input class="form-control" type="password" name="Password">
-                                <?php echo form_error('Password', '<div class="error">', '</div>'); ?>                        
+                                <?php echo form_error('Password', '<div class="error">', '</div>'); ?> 
+                                <div class="error">
+                                    <?php echo $this->session->flashdata('incorrectPassword'); ?>    
+                                </div>            
                             </div>
                             <div class="radio-doctor">
                                 <input class="user-radio" type="radio" name="Role" value="Doctor" checked="checked"> <label for="Role">Doctor</label>
