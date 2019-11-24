@@ -142,7 +142,7 @@ label.col-form-label.radio-label {
 
 input.form-radio {
     /* padding: 0px 0px 0px 0px; */
-    margin: 0px 0px 0px 9px;
+    margin: 0px 14px 0px 21px;
 }
 .button {
     background: var(--primary-color);
@@ -554,6 +554,7 @@ ul.grid-list-half.pl-4 > li {
 }
 label.col-form-label {
     padding-right: 10px;
+    display: block;
 }
 .error{
     color: red;
