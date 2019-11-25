@@ -84,7 +84,7 @@
                 <?php echo form_error('other_details', '<div class="error">', '</div>'); ?>
             </div>
             <div class="button-submit">
-                <input class="form-control button" type="submit" name="Submit" value="Submit">
+                <input class="form-control button" type="submit" name="assess_submit" value="Submit">
             </div>
             <div class="login-link">
                 <span class="login-span">Already on Revitalize ? </span><a href="<?php echo site_url('Login') ?>">Log in</a>
