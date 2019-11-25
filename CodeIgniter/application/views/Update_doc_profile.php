@@ -14,8 +14,8 @@
         </div>
         <div class="form-group">
             <label class="col-form-label" for="Gender">Gender</label>
-            <input class="form-radio" type="radio" name="Gender" value="female" <?php echo (isset($_POST['Location'] ) && !empty($_POST['Location']) ? ( $_POST['Location'] == "female" ? 'checked="checked"' : '' )    :  ( $doctors_info->gender == "female" ? 'checked="checked"' : '' )  ) ?> > Female
-            <input class="form-radio" type="radio" name="Gender" value="male" <?php echo (isset($_POST['Location'] ) && !empty($_POST['Location']) ? ( $_POST['Location'] == "male" ? 'checked="checked"' : '' )    :  ( $doctors_info->gender == "male" ? 'checked="checked"' : '' )  ) ?>> Male
+            <input class="form-radio" type="radio" name="Gender" value="female" <?php echo (isset($_POST['Gender'] ) && !empty($_POST['Gender']) ? ( $_POST['Gender'] == "female" ? 'checked="checked"' : '' )    :  ( $doctors_info->gender == "female" ? 'checked="checked"' : '' )  ) ?> > Female
+            <input class="form-radio" type="radio" name="Gender" value="male" <?php echo (isset($_POST['Gender'] ) && !empty($_POST['Gender']) ? ( $_POST['Gender'] == "male" ? 'checked="checked"' : '' )    :  ( $doctors_info->gender == "male" ? 'checked="checked"' : '' )  ) ?>> Male
         </div>
         <div class="form-group">
             <label class="col-form-label" for="FatherName">Father Name</label>
@@ -27,8 +27,10 @@
         </div>
         <div class="form-group">
             <label class="col-form-label" for="Type">Type</label>
-            <input class="form-radio" type="radio" name="Type" value="Medical">Medical 
-            <input class="form-radio" type="radio" name="Type" value="Dental">Dental 
+
+            <input class="form-radio" type="radio" name="Type" value="Medical" <?php echo (isset($_POST['Type'] ) && !empty($_POST['Type']) ? ( $_POST['Type'] == "Medical" ? 'checked="checked"' : '' )    :  ( $doctors_info->dr_type == "Medical" ? 'checked="checked"' : '' )  ) ?> >Medical
+
+            <input class="form-radio" type="radio" name="Type" value="Dental" <?php echo (isset($_POST['Type'] ) && !empty($_POST['Type']) ? ( $_POST['Type'] == "Dental" ? 'checked="checked"' : '' )    :  ( $doctors_info->dr_type == "Dental" ? 'checked="checked"' : '' )  ) ?>>Dental 
         </div>
         <div class="form-group">
             <label class="col-form-label" for="Location">Location</label>
@@ -45,12 +47,12 @@
         <div class="form-group">
             <label class="col-form-label" for="Department">Department</label>
             <select class="form-control" name="Department">
-                <option value="none"><?php echo $doctors_info->department_id; ?></option>
                 <?php 
                     foreach($departments as $department)
                         { 
                 ?>
-                        <option value="<?php echo $department->department_id ?>"><?php echo $department->department ?></option>
+                  <option value="<?php echo $department->department_id ?>" <?php echo (isset($_POST['Department'] ) && !empty($_POST['Department']) ? ( $_POST['Department'] == $department->department_id ? 'selected="selected"' : '' )    :  ( $doctors_info->department_id == $department->department_id ? 'selected="selected"' : '' )  ) ?> ><?php echo $department->department ?></option>
+
             <?php
                         }
                 ?>
@@ -59,12 +61,11 @@
         <div class="form-group">
             <label class="col-form-label" for="Clinic">Clinic Name</label>
             <select class="form-control" name="Clinic">
-                <option value="none"><?php echo $doctors_info->clinic_id; ?></option>
                 <?php 
                     foreach($clinic as $clinics)
                         { 
-                ?>
-                        <option value="<?php echo $clinics->clinic_id ?>"><?php echo $clinics->clinics?></option>
+                ?>      
+                        <option value="<?php echo $clinics->clinic_id ?>" <?php echo (isset($_POST['Clinic'] ) && !empty($_POST['Clinic']) ? ( $_POST['Clinic'] == $clinics->clinic_id ? 'selected="selected"' : '' )    :  ( $doctors_info->clinic_id == $clinics->clinic_id ? 'selected="selected"' : '' )  ) ?> ><?php echo $clinics->clinics ?></option>
             <?php
                         }
                 ?>
@@ -73,12 +74,11 @@
         <div class="form-group">
             <label class="col-form-label" for="Price">Price</label>
             <select class="form-control" name="Price">
-                <option value="none"><?php echo $doctors_info->price_id; ?></option>
                 <?php 
                     foreach($prices as $price)
                         { 
                 ?>
-                        <option value="<?php echo $price->price_id ?>"><?php echo $price->price ?></option>
+                        <option value="<?php echo $price->price_id ?>" <?php echo (isset($_POST['Price'] ) && !empty($_POST['Price']) ? ( $_POST['Price'] == $price->price_id ? 'selected="selected"' : '' )    :  ( $doctors_info->price_id == $price->price_id ? 'selected="selected"' : '' )  ) ?> ><?php echo $price->price ?></option>
                 <?php
                         }
                 ?>

@@ -18,8 +18,9 @@
                         foreach($areas as $area)
                         {    
                         ?>
-                        <option value="<?php echo $area->area_id ?>"><?php echo $area->area ?></option>
-                <?php
+                        <option <?php echo isset($_GET['Location']) && $_GET['Location'] == $area->area_id ? 'selected':'';?> value="<?php echo $area->area_id ?>"><?php echo $area->area ?></option>
+
+                    <?php
                         }
                     ?>
                 </select>
@@ -29,8 +30,19 @@
                         foreach($prices as $price)
                             { 
                     ?>
-                            <option value="<?php echo $price->price_id ?>"><?php echo $price->price ?></option>
-                <?php
+                        <option <?php echo isset($_GET['Price']) && $_GET['Price'] == $price->price_id ? 'selected':'';?> value="<?php echo $price->price_id ?>"><?php echo $price->price ?></option>
+                    <?php
+                            }
+                    ?>
+                </select>
+                <select class="form-control form-mine" name="Clinic">
+                    <option value="none">Clinic</option>
+                    <?php 
+                        foreach($clinics as $clinic)
+                            { 
+                    ?>
+                        <option <?php echo isset($_GET['Clinic']) && $_GET['Clinic'] == $clinic->clinic_id ? 'selected':'';?> value="<?php echo $clinic->clinic_id ?>"><?php echo $clinic->clinics ?></option>
+                    <?php
                             }
                     ?>
                 </select>
@@ -57,14 +69,18 @@
                     <div class="padding speciality">
                         <h5><?php echo $doctor->department?></h5>
                     </div>
-                    <!-- <div class="clinic-name">
-                        <p><?php echo $doctor->clinic?></p>
-                    </div> -->
+                    <div class="clinic-name">
+                        <p><?php echo $doctor->clinics ?></p>
+                    </div>
                     <div class="area">
                         <p><?php echo $doctor->area?></p>
                     </div>
+
                     <div>
-                        <p>Time Slot</p>
+                        <p><?php echo $doctor->time_in.' - '.$doctor->time_out ?></p>
+                    </div>
+                    <div class="price">
+                        <p><?php echo $doctor->price?></p>
                     </div>
                     <div class="selection">
                         <div class="appointmnet">

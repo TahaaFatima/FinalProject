@@ -703,3 +703,6 @@ ul.ul-pt-app {
     display: flex;
     margin: 20px 0px;
 }
+form.search_form {
+    padding-right: 22px;
+}

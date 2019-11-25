@@ -32,5 +32,5 @@
     <!-- online-fonts -->
 	<link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet"><!-- //online-fonts -->
-    <link href="<?php echo base_url(); ?>assets/css/mycss.css" rel='stylesheet' type='text/css' />
+    <link href="<?php echo base_url(); ?>assets/css/mycss.css?v1" rel='stylesheet' type='text/css' />
 </head>

@@ -27,6 +27,8 @@ class Update_doc_profile extends MY_Controller {
                     'dr_type'           => $_POST['Type'],
                     'area_id'           => $_POST['Location'],
                     'department_id'     => $_POST['Department'],
+                    'clinic_id'         => $_POST['Clinic'],
+                    'price_id'          => $_POST['Price'],
                 ];
  
                 $this->load->model('Doctor_registration_model');
