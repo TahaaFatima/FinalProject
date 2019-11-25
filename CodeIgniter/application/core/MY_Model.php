@@ -49,7 +49,6 @@
                 return "Deleted";
             }
         }
-
         public function updating(array $data ,  array $where){
             if(!empty($data) && !empty($where)){
                 $forError = $this->db->update($this->table_name, $data, $where);
@@ -61,14 +60,18 @@
             }
         }
 
-        public function inserting(array $data){
-            $forError = $this->db->insert($this->table_name,$data);
+        public function inserting(array $data)
+        { 
+            //$forError = $this->db->insert('chats',$data);//chat
+
+           $forError = $this->db->insert($this->table_name,$data);
             if(!$forError){
                 return $this->db->error();
             }else{
                 return $this->db->insert_id();
             }
         }
+
         public function search_join(array $where=[], array $join_retrieve, $select = '*'){              
             $this->db->select($select);
             $this->db->from($this->table_name);
@@ -80,5 +83,12 @@
             }
             return $this->db->get()->result();
         }
-
+        public function offset_retrieving($offset= 0 ,$limit = 100000000000){
+            $arr = ['patient_id ' => 5, 'doctors_id' => 6];
+            return $this->db->where($arr)->limit($limit,$offset)->get('chats')->result();
+        }
+        public function reviews(){
+    
+            //return $this->db->get('reviews')->result();
+        }
     }

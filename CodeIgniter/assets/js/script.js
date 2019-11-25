@@ -27,3 +27,47 @@
 //         })    
 //     },1000)
 // })
+$(document).ready(function(){
+     $('.send').on('click',function(e){
+        e.preventDefault();
+         msg = $('input[name=message]').val();
+          
+         data = {msg:msg}; 
+            $.ajax({
+                url:SITE_URL+"/chatbox/insert_messages",
+                data:data,
+                success:function(){
+                    $('input[name=message]').val('')
+                }
+            })
+     });
+    });
+      console.log(SITE_URL)
+     setInterval(function(){
+        li_length = $('.chatbox-listing > li').length;
+        data = {offset:li_length}
+        $.ajax({
+            url:SITE_URL+"/chatbox/get_messages",
+            data:data,
+            success:function(data){
+                $('.chatbox-listing').append(data);
+            }
+        }) 
+     }, 2000);
+
+
+// $(document).ready(function(){
+//     $('.send').on('click', function(e){
+//         e.preventDefault();
+//         reviews = $('input[name=yourReview]').val();
+
+//         data = {reviews:reviews};
+//         $.ajax({
+//             url:SITE_URL+"/Reviews/insertReviews",
+//             data:data,
+//             success:function(){
+//                 $('input[name=yourReview]').val('')
+//             }
+//         })
+//     })
+// })

@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'remotemysql.com',
-	'username' => 'wjZ56fGZ3l',
-	'password' => 'lcJvGr7JNM',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'wjZ56fGZ3l',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
