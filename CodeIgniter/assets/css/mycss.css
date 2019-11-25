@@ -680,3 +680,26 @@ label.col-form-label {
 .error{
     color: red;
 }
+.detail-div-1 , .time-div-app , .links-appoinment{
+    display: flex;
+}
+.patent-details {
+    width: 66%;
+    margin: 0px;
+}
+.detail-child {
+    padding-right: 9px;
+}
+.li-pt-app{
+    width: 50%;
+}
+ul.ul-pt-app {
+    margin: 14%;
+}
+.links-appoinment {
+    margin: 29px 0px 0px 200px;
+}
+.appointment-divs{
+    display: flex;
+    margin: 20px 0px;
+}

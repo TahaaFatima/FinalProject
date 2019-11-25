@@ -96,7 +96,7 @@ class Book_Appointment extends MY_Controller {
                     'time_in'=>$_POST['time_from_appt'],
                     'time_out'=>$_POST['time_to_appt'],
                     'appointment_date'=>$date_appt,
-                     'appointment_status'=>'Pending'
+                    'appointment_status'=>'Pending'
                     ];
 
             $this->load->model('appt_booking_model');
