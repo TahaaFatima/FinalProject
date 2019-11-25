@@ -8,7 +8,8 @@ class Patient_assessment_form extends MY_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
         
-        $appt_slot = $this->session->flashdata('appt_slot');
+        $appt_slot = $this->session->userdata('appt_slot');
+
 
         if(isset($_POST['assess_submit'])){
             $validation = [
@@ -95,10 +96,10 @@ class Patient_assessment_form extends MY_Controller {
                             $result  = $this->Patients_assessment_model->inserting($data);
 
                             $this->load->model('Patient_Registration_model');
-                            $this->Patients_assessment_model->updating($result,['patient_id'=>$this->session->userdata('user_id')]);
-
+                            $this->Patient_Registration_model->updating(['asses_id'=>$result],['patient_id'=>$this->session->userdata('user_id')]);
                             $this->load->model('appt_booking_model');
-                            $this->appt_booking_model->inserting($appt_slot);
+                            $id_returned = $this->appt_booking_model->inserting($appt_slot);
+
                         }
                 }
         $data['view'] = 'Patient_assessment_form';

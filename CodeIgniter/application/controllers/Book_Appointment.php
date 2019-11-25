@@ -38,7 +38,7 @@ class Book_Appointment extends MY_Controller {
                 $date_appt = arrangeDate($_POST['date_of_appt']);
 
                 $appt_slot =['patient_id'=>$this->session->userdata('user_id'), 'doctors_id'=>$_GET['Doc_id'], 'time_in'=>$_POST['time_from_appt'],'time_out'=>$_POST['time_to_appt'],'appointment_date'=>$date_appt, 'appointment_status'=>'Pending'];
-                $this->session->set_flashdata('appt_slot',$appt_slot);
+                $this->session->set_userdata('appt_slot',$appt_slot);
                 redirect('Patient_assessment_form');
             }
         }
