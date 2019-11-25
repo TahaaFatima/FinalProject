@@ -14,8 +14,8 @@
         </div>
         <div class="form-group">
             <label class="col-form-label" for="Gender">Gender</label>
-            <input class="form-radio" type="radio" name="Gender" value="female"> Female
-            <input class="form-radio" type="radio" name="Gender" value="male"> Male
+            <input class="form-radio" type="radio" name="Gender" value="female" <?php echo (isset($_POST['Location'] ) && !empty($_POST['Location']) ? ( $_POST['Location'] == "female" ? 'checked="checked"' : '' )    :  ( $doctors_info->gender == "female" ? 'checked="checked"' : '' )  ) ?> > Female
+            <input class="form-radio" type="radio" name="Gender" value="male" <?php echo (isset($_POST['Location'] ) && !empty($_POST['Location']) ? ( $_POST['Location'] == "male" ? 'checked="checked"' : '' )    :  ( $doctors_info->gender == "male" ? 'checked="checked"' : '' )  ) ?>> Male
         </div>
         <div class="form-group">
             <label class="col-form-label" for="FatherName">Father Name</label>
@@ -33,12 +33,10 @@
         <div class="form-group">
             <label class="col-form-label" for="Location">Location</label>
             <select class="form-control"  name="Location">
-                <option value="none"><?php echo $doctors_info->area_id; ?></option>
                 <?php 
                     foreach($areas as $area)
-                    {    
-                    ?>
-                    <option value="<?php echo $area->area_id ?>"><?php echo $area->area ?></option>
+                    {    ?>
+                    <option value="<?php echo $area->area_id ?>" <?php echo (isset($_POST['Location'] ) && !empty($_POST['Location']) ? ( $_POST['Location'] == $area->area_id ? 'selected="selected"' : '' )    :  ( $doctors_info->area_id == $area->area_id ? 'selected="selected"' : '' )  ) ?> ><?php echo $area->area ?></option>
             <?php
                     }
                 ?>

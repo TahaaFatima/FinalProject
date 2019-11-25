@@ -8,18 +8,19 @@
             //$this->load->model('Doctor_registration_model');
         }
         public function index(){
-                if(isset($_POST['submit_search'])){
+                $to_search = [];
+                if(isset($_REQUEST['submit_search']) ||isset($_REQUEST['departmentSelector']) ){
                         $this->load->model('Doctor_registration_model');
                         $to_search = [];
-                        if($_POST['Department'] != 'none'){
-                            $to_search['doctors_registration.department_id'] = $_POST['Department']; 
+                        if( isset($_REQUEST['departmentSelector']) && ($_REQUEST['departmentSelector'] != 'none')){
+                            $to_search['doctors_registration.department_id'] = $_REQUEST['departmentSelector']; 
                         }
-                        if($_POST['Location'] != 'none'){
-                            $to_search['doctors_registration.area_id'] = $_POST['Location'];
+                        if(  isset($_REQUEST['Location']) && ($_REQUEST['Location'] != 'none')){
+                            $to_search['doctors_registration.area_id'] = $_REQUEST['Location'];
                             // doctors_registration.area_id = 2 
                         }
-                        if($_POST['Price'] != 'none'){
-                            $to_search['doctors_registration.price_id'] = $_POST['Price']; 
+                        if(isset($_REQUEST['Price']) &&  ($_REQUEST['Price'] != 'none')){
+                            $to_search['doctors_registration.price_id'] = $_REQUEST['Price']; 
                         }
 
                         $join_retrieve[] = [
@@ -31,7 +32,7 @@
                         $join_retrieve[] = [
                             'table_name'=>'area',
                             'column_with'=>'doctors_registration.area_id = area.area_id'];
-                            
+                        } 
                         $doc_joins = $this->Doctor_registration_model->search_join($to_search,$join_retrieve);
                         
                         $this->load->model('Area_Model');
@@ -50,6 +51,6 @@
                         $data['prices'] = $price_table;
                         $data['doctors'] = $doc_joins;
                         $this->load->view('layout',$data);
-                }
+               
             }
     }

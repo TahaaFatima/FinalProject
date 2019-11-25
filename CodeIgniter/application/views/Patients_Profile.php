@@ -10,7 +10,7 @@
                         <div class="li-div-pt">
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
-                                    <a href="#">Appointment</a>
+                                    <a href="<?php echo site_url('Appointment_Listing_Patient')?>">Appointment</a>
                                 </div>
                             </li>
                         </div>

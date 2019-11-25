@@ -54,7 +54,7 @@
         <div class="form-group">
             <label class="col-form-label" for="Department">Department</label>
             <select class="form-control" name="Department">
-                <option value="none">Choose Department</option>
+                <option value="">Choose Department</option>
                 <?php 
                     foreach($departments as $department)
                         { 
@@ -69,7 +69,7 @@
         <div class="form-group">
             <label class="col-form-label" for="Clinic">Clinic Name</label>
             <select class="form-control" name="Clinic">
-                <option value="none">Choose Clinic</option>
+                <option value="">Choose Clinic</option>
                 <?php 
                     foreach($clinic as $clinics)
                         { 
@@ -84,7 +84,7 @@
         <div class="form-group">
             <label class="col-form-label" for="Price">Price</label>
             <select class="form-control" name="Price">
-            <option>Choose Price</option>
+            <option value="">Choose Price</option>
 
                 <?php 
                     foreach($prices as $price)

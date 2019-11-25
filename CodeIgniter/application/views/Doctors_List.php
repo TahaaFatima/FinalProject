@@ -1,7 +1,7 @@
 <div class="container">
     <div class="search-bar">
-        <form class="search_form" method="post" action="Search">
-            <select class="form-control form-mine" name="Department">
+        <form class="search_form" >
+            <select class="form-control form-mine" name="departmentSelector">
                 <option value="none">Department</option>
                 <?php 
                     foreach($departments as $department)
