@@ -70,36 +70,8 @@
 			<div class="cpy-right text-center  pt-3">
 				
 				<div class="copyrightbottom">
-					<p class="text-secondary">© 2018 Revitalize. All rights reserved | Design by
-						<a href="http://w3layouts.com" class="text-white"> W3layouts.</a>
+					<p class="text-secondary">© 2018 Revitalize. All rights reserved 
 					</p>
-				</div>
-				<div class="copyrighttop">
-					<ul>
-						<li>
-							<h4>Follow us on:</h4>
-						</li>
-						<li>
-							<a class="facebook" href="#">
-								<i class="fab fa-facebook-f"></i>
-							</a>
-						</li>
-						<li>
-							<a class="facebook" href="#">
-								<i class="fab fa-twitter"></i>
-							</a>
-						</li>
-						<li>
-							<a class="facebook" href="#">
-								<i class="fab fa-google-plus-g"></i>
-							</a>
-						</li>
-						<li>
-							<a class="facebook" href="#">
-								<i class="fab fa-pinterest-p"></i>
-							</a>
-						</li>
-					</ul>
 				</div>
 				<div class="clearfix"></div>
 			</div>

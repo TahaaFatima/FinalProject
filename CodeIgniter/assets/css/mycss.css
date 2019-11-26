@@ -8,7 +8,7 @@
 }
 .navbar-light{
     background:#02646fcf ;
-    padding: 15px 78px 0px;
+    padding: 15px 78px 17px;
 }
 .slide-window .slide-wrapper .slide .slide-caption {
     color: #fff;
@@ -136,7 +136,10 @@ button.btn.ml-lg-2.w3ls-btn {
     margin: 0% 33%;
     display: inline-block;
     color: var(--primary-color);
+    background: whitesmoke;
+
 }
+
 label.col-form-label.radio-label {
     padding: 0px 37px 0px 0px;
 }
@@ -657,6 +660,13 @@ ul.grid-list-half.pl-4 > li {
     color: white;
     background: var(--primary-color);
 }
+.links-pt > a {
+    padding: 12px;
+    border-radius: 3px;
+    color: white;
+    background: var(--primary-color);
+    margin-right: 15px;
+}
 
 .doc-11.doc-12-sm {
     margin: 18px 24px;
@@ -750,14 +760,22 @@ section.prescription-section {
     margin: 35px 0px;
     text-align: center;
 }
-ul.navbar-nav.ml-lg-auto.text-center {
-    width: 85%;
+li.nav-item.dropdown.mr-3.mt-lg-0.mt-3 {
+    width: 322%;
 }
-
-li.nav-item.active.mr-3.mt-lg-0.mt-3 {
-    margin-right: 0px !important; 
-}
-
 .div-tab {
     margin: 5px 27px 12px 34px;
+}
+form.reg-form.form-patient-pro {
+    margin: 0px;
+}
+.links {
+    width: 100%;
+    display: flex;
+    padding-top:  32px;
+}
+
+.detail-links {
+    width: 100%;
+    /* display: flex; */
 }

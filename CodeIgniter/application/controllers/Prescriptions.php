@@ -27,7 +27,7 @@ class Prescriptions extends MY_Controller {
                 
                 $data = [
                     'prescription'      => $_REQUEST['prescritions'],
-                    'appointment_id'    => $_REQUEST['priscription_id'],
+                    'appointment_id'    => $_REQUEST['prescription_id'],
                 ];
                 
                 $this->Prescriptions_Model->inserting($data);

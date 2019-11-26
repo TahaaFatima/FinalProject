@@ -14,17 +14,10 @@
                                 </div>
                             </li>
                         </div>
-                         <div class="li-div-pt">
+                        <div class="li-div-pt">
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
-                                    <a href="#">WHAT EVER</a>
-                                </div>
-                            </li>
-                        </div>
-                         <div class="li-div-pt">
-                            <li class="li-pt">
-                                <div class="li-a-div-pt">
-                                    <a href="#">BLAA BLAA</a>
+                                    <a href="<?php echo site_url('Book_Appointment')?>">Book Appointment</a>
                                 </div>
                             </li>
                         </div>
@@ -32,6 +25,13 @@
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
                                     <a href="<?php echo site_url('Update_pat_profile'); ?>">Edit</a>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="li-div-pt">
+                            <li class="li-pt">
+                                <div class="li-a-div-pt">
+                                    <a href="<?php echo site_url('Logout'); ?>">Logout</a>
                                 </div>
                             </li>
                         </div>

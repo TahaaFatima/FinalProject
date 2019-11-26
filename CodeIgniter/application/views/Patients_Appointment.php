@@ -61,7 +61,7 @@
                                                 <a href="<?php echo site_url('Reviews') ?>?doc_rev_id=<?php echo $patients_app->doctors_id?>&pat_rev_id=<?php echo $patients_app->patient_id?>" >Review</a>
                                             </div>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Prescriptions') ?>?priscription_id=<?php echo $patients_app->appointment_id?>" >Prescriptions</a>
+                                                <a href="<?php echo site_url('Prescriptions_show') ?>" >Prescriptions</a>
                                             </div>
                                         <?php 
                                         }else{

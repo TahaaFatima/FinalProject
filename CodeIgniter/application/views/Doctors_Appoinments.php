@@ -5,6 +5,7 @@
     <div class="profile-pat">
     <?php 
         foreach($doctors_App_data as $doctor_app){
+      //      var_dump($doctors_App_data);die;
     ?>
         <div class="my-details-links">
             <div class="links-heading">
@@ -75,12 +76,17 @@
                             <label class="col-form-label" for="Status">Status</label>
                             <input class="form-control" type="text" name="Status" value="<?php echo $doctor_app->appointment_status ?>" readonly>
                         </div>   
-                        <div class="links-appoinment">
-                            <div class="doc-11 doc-12-sm">
+                    </div>       
+                    <div class="detail-links">
+                        <div class="links">
+                            <div class="links-pt">
                                 <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Patients Assessment</a>
                             </div>
+                            <div class="links-pt">
+                                <a href="<?php echo site_url('Prescriptions') ?>?prescription_id=<?php echo $doctor_app->appointment_id?>" >Prescriptions</a>
+                            </div>
                         </div>
-                    </div>              
+                    </div>       
                 </form>
             </div>
         </div>
