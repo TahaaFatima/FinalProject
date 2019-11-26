@@ -28,6 +28,10 @@
 //     },1000)
 // })
 $(document).ready(function(){
+    $( function() {
+        $( "#tabs" ).tabs();
+      } );
+    
      $('.send').on('click',function(e){
         e.preventDefault();
          msg = $('input[name=message]').val();

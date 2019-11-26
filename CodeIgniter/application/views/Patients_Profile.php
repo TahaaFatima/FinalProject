@@ -10,7 +10,7 @@
                         <div class="li-div-pt">
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
-                                    <a href="<?php echo site_url('Appointment_Listing_Patient')?>">Appointment</a>
+                                    <a href="<?php echo site_url('Patients_Appointment')?>">Appointment</a>
                                 </div>
                             </li>
                         </div>
@@ -52,8 +52,7 @@
                     </div>
                     <div>
                         <label class="col-form-label" for="Gender">Gender</label>
-                        <input class="form-radio" type="radio" name="Gender" value="female" readonly>Female
-                        <input class="form-radio" type="radio" name="Gender" value="male" readonly>Male
+                        <input class="form-control" type="number" name="Gender" value="<?php echo $patients_info->gender;  ?>" readonly>
                     </div>
                     <div>
                         <label class="col-form-label" for="Phone_Number">Phone Number</label>

@@ -14,6 +14,11 @@
             window.scrollTo(0, 1);
         }
     </script>
+    <!-- tabs files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+
+    
     <!-- Custom Theme files -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="<?php echo base_url(); ?>assets/css/style.css " type="text/css" rel="stylesheet" media="all">
@@ -32,5 +37,5 @@
     <!-- online-fonts -->
 	<link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet"><!-- //online-fonts -->
-    <link href="<?php echo base_url(); ?>assets/css/mycss.css?v1-" rel='stylesheet' type='text/css' />
+    <link href="<?php echo base_url(); ?>assets/css/mycss.css" rel='stylesheet' type='text/css' />
 </head>

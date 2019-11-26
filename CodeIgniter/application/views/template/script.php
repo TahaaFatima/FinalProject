@@ -1,10 +1,14 @@
 <!-- js -->
 <script src="<?php echo base_url(); ?>assets/js/jquery-2.2.3.min.js"></script>
 <!-- //js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/minimal-slider.js"></script>
 <!-- flexSlider (for testimonials) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+<!-- Tabs -->
+
 <!-- Time Picker -->
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 <!-- Date Picker -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script>

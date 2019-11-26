@@ -27,9 +27,6 @@
                                 <a class="dropdown-item" href="<?php echo site_url('/For_Patient'); ?>">For Patients</a>
                             </div>
                         </li>
-                        <li class="nav-item mr-3 mt-lg-0 mt-3">
-                            <a class="nav-link" href="gallery.html">Gallery</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href=<?php echo site_url('/Contact_Us'); ?>>Contact</a>
                         </li>

@@ -8,6 +8,7 @@
 }
 .navbar-light{
     background:#02646fcf ;
+    padding: 15px 78px 0px;
 }
 .slide-window .slide-wrapper .slide .slide-caption {
     color: #fff;
@@ -705,4 +706,58 @@ ul.ul-pt-app {
 }
 form.search_form {
     padding-right: 22px;
+}
+.link-appointment {
+    display: flex;
+    width: 100%;
+    padding-top: 25px;
+}
+.links-buttons-pt > a {
+    background: #026477;
+    color: white;
+    padding: 11px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.appointment-pt-doc{
+    width: 100%;
+    margin: 0px;
+}
+.my-appointment {
+    margin: 0px 0px 17px 0px;
+}
+ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all {
+    display: flex;
+}
+.div-tab > li {
+    padding: 15px;
+}
+
+.div-tab > li > a {
+    margin: 10px 170px;
+    color: white;
+    padding: 0px 38px;
+ }
+.div-tab > li {
+    background: #02646f;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.prescrition-form-div{
+    width: 100%;
+}
+section.prescription-section {
+    margin: 35px 0px;
+    text-align: center;
+}
+ul.navbar-nav.ml-lg-auto.text-center {
+    width: 85%;
+}
+
+li.nav-item.active.mr-3.mt-lg-0.mt-3 {
+    margin-right: 0px !important; 
+}
+
+.div-tab {
+    margin: 5px 27px 12px 34px;
 }
