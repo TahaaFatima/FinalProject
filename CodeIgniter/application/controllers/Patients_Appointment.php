@@ -8,7 +8,7 @@ class Patients_Appointment extends MY_Controller {
         $this->load->model('appt_booking_model');
         $to_show = [];
         if($this->session->userdata('user_id') !== null ){
-            $to_show['appointment_record.doctors_id'] = $this->session->userdata('user_id'); 
+            $to_show['appointment_record.patient_id'] = $this->session->userdata('user_id'); 
         }
         $join_retrieve[] =  [
             'table_name'=>'doctors_registration',
@@ -19,7 +19,7 @@ class Patients_Appointment extends MY_Controller {
             'column_with'=>'doctors_registration.clinic_id = clinic.clinic_id'
         ];
 
-        $pat_appointment = $this->appt_booking_model->search_join($to_show,$join_retrieve);
+        $pat_appointment = $this->appt_booking_model->search_join($to_show,$join_retrieve); 
         $data['patients_App_data'] = $pat_appointment;
 
         $data['view'] = 'Patients_Appointment';
