@@ -29,11 +29,13 @@
                 <script defer src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
                     <script>
                         $(function () {
-                            
                             $(".rateYo").rateYo({
-                                starWidth: "30px"
+
+                                onSet: function (rating, rateYoInstance) {
+
+                                    $('.hidden-rating').val(rating);
+                                }
                             });
-    
                         });
                     </script>
         <script>

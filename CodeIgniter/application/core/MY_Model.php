@@ -62,8 +62,6 @@
 
         public function inserting(array $data)
         { 
-            //$forError = $this->db->insert('chats',$data);//chat
-
            $forError = $this->db->insert($this->table_name,$data);
             if(!$forError){
                 return $this->db->error();

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -148,5 +147,3 @@ class Book_Appointment extends MY_Controller {
         $this->load->view('Layout',$data);
 	}
 }
-=======
->>>>>>> Stashed changes

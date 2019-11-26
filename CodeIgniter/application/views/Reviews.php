@@ -23,14 +23,12 @@
             <div class="reg-form-div">
                 <form method="post" class="reg-form reg-detail-pt">
                     <div class="form-group">
+                        <input type="hidden" name="hidden-rate" class="hidden-rating">
                         <label class="col-form-label" for="Review">Your Reviews</label>
                         <textarea class="form-control" name="yourReview" cols="10" rows="10"></textarea>
                     </div>
-                    <div class="rating">
-                        <input type="number" name="reviewRates">
-                    </div>
                     <div class="col-20">
-                        <input class="btn btn-danger send" type="submit" name="submit-review" value="send">
+                        <input class="btn btn-danger" type="submit" name="submit-review" value="send">
                     </div>
                 </form>
             </div>

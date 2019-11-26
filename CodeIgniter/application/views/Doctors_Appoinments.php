@@ -13,28 +13,28 @@
                         <div class="li-div-pt">
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
-                                    <a href="<?php echo site_url('Appointment_Listing_Patient')?>">Approve</a>
+                                    <a href="<?php echo site_url('Approve_Appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Approve</a>
                                 </div>
                             </li>
                         </div>
                          <div class="li-div-pt">
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
-                                    <a href="#">Cancel</a>
+                                <a href="<?php echo site_url('Cancel_Appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Cancel</a>
                                 </div>
                             </li>
                         </div>
                          <div class="li-div-pt">
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
-                                    <a href="#">Attend</a>
+                                    <a href="<?php echo site_url('Attended_Appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Attended</a>
                                 </div>
                             </li>
                         </div>
                          <div class="li-div-pt">
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
-                                    <a href="#">Miss</a>
+                                    <a href="<?php echo site_url('Missed_Appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Missed</a>
                                 </div>
                             </li>
                         </div>
@@ -70,7 +70,11 @@
                         <div class="detail-child">
                             <label class="col-form-label" for="Time">Time</label>
                             <input class="form-control" type="text" name="Time-in" value="<?php echo $doctor_app->time_in."  -  ".$doctor_app->time_out ?>" readonly>
-                        </div>    
+                        </div>   
+                        <div class="detail-child">
+                            <label class="col-form-label" for="Status">Status</label>
+                            <input class="form-control" type="text" name="Status" value="<?php echo $doctor_app->appointment_status ?>" readonly>
+                        </div>   
                         <div class="links-appoinment">
                             <div class="doc-11 doc-12-sm">
                                 <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Patients Assessment</a>
