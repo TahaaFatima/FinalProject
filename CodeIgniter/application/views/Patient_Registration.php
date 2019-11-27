@@ -4,6 +4,7 @@
     </div>
     <div class="reg-form-div">
         <form class="reg-form" method="post">
+            
             <div>
                 <label class="col-form-label" for="Name">Name</label>
                 <input class="form-control" type="text" name="Name" value="<?php echo set_value('Name'); ?>">

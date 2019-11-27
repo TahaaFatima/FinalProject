@@ -139,11 +139,9 @@ button.btn.ml-lg-2.w3ls-btn {
     background: whitesmoke;
 
 }
-
 label.col-form-label.radio-label {
     padding: 0px 37px 0px 0px;
 }
-
 input.form-radio {
     /* padding: 0px 0px 0px 0px; */
     margin: 0px 14px 0px 21px;
@@ -164,7 +162,6 @@ input.form-radio {
     width: 59.23%;
     height: 250px;
 }
-
 .top-image {
     text-align: center;
 }
@@ -627,30 +624,24 @@ form.reg-form.login-form {
     background: #f5f5f5;
     margin-bottom: 20px;
 }
-
 .pl-4 {
     padding-top: 5px;
 }
-
 .pl-4 > h2 {
     color: var(--primary-color);
 }
-
 .pl-4 > p {
     font-size: 16px;
     color: var(--primary-color);
 }
-
 ul.grid-list-half.pl-4 {
     padding: 28px 28px;
     /* color: var(--primary-color); */
     margin-left: 97px;
 }
-
 ul.grid-list-half.pl-4 > li> i {
     color: #ffab67;
 }
-
 ul.grid-list-half.pl-4 > li {
     color: var(--primary-color);
 }
@@ -667,7 +658,6 @@ ul.grid-list-half.pl-4 > li {
     background: var(--primary-color);
     margin-right: 15px;
 }
-
 .doc-11.doc-12-sm {
     margin: 18px 24px;
 }
@@ -774,7 +764,6 @@ form.reg-form.form-patient-pro {
     display: flex;
     padding-top:  32px;
 }
-
 .detail-links {
     width: 100%;
     /* display: flex; */

@@ -4,6 +4,13 @@
     </div>
     <div class="reg-form-div">
         <form method="post" class="reg-form">
+        <div>
+            <?php // echo $error;?>
+            <?php echo form_open_multipart('upload/do_upload');?>
+            <input type="file" name="userfile" size="20" />
+            <br /><br />
+            <input type="submit" value="upload" />
+        </div>
         <div class="form-group">
             <label class="col-form-label" for="Name">Name</label>
             <input class="form-control" type="text" name="Name" value="<?php  echo set_value('Name'); ?>">

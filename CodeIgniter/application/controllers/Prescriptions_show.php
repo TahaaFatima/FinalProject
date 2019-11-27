@@ -5,13 +5,20 @@ class Prescriptions_show extends MY_Controller {
 
 	public function index()
 	{
-        $appointment_id  = $this->session->userdata('appointment_id');
-        $where = ['appointment_id' => $appointment_id];
-        $this->load->model('appt_booking_model');
-        $doc_info = $this->appt_booking_model->retrieving($where, false);
-        var_dump($doc_info);die;
+                $this->load->model('Prescriptions_Model');
+                $to_show = [];
+                if(isset($_REQUEST['appt_id']) && !empty($_REQUEST['appt_id'])){
+                    $to_show['prescriptions.appointment_id'] = $_REQUEST['appt_id'];      
+                }
+                $join_retrieve[] =  [
+                        'table_name'=>'appointment_record',
+                        'column_with'=>'appointment_record.appointment_id= prescriptions.appointment_id'
+                ];
+                
+                $doc_appointment = $this->Prescriptions_Model->search_join($to_show,$join_retrieve);
 
-
+                
+                $data['prescription'] = $doc_appointment;
                 $data['view'] = 'Prescriptions_show';
                 $data['page_title'] = 'Prescriptions_show';
                 $this->load->view('Layout',$data);

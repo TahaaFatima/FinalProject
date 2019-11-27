@@ -47,18 +47,22 @@ $(document).ready(function(){
      });
     });
       console.log(SITE_URL)
-     setInterval(function(){
-        li_length = $('.chatbox-listing > li').length;
-        data = {offset:li_length}
-        $.ajax({
-            url:SITE_URL+"/chatbox/get_messages",
-            data:data,
-            success:function(data){
-                $('.chatbox-listing').append(data);
-            }
-        }) 
-     }, 2000);
+      if($('.chatbox-listing > li').length)
+      {
+          setInterval(function(){
+             li_length = $('.chatbox-listing > li').length;
+             data = {offset:li_length}
+             $.ajax({
+                 url:SITE_URL+"/chatbox/get_messages",
+                 data:data,
+                 success:function(data){
+                     $('.chatbox-listing').append(data);
+                 }
+             }) 
+          }, 2000);
 
+
+      }     
 
 // $(document).ready(function(){
 //     $('.send').on('click', function(e){

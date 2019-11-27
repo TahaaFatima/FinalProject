@@ -2,28 +2,28 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Chatbox extends MY_Controller{
-
+        public $doctors_chat_id ;
         function __construct()
         {
             parent::__construct();
-            $this->pt_id = $this->session->userdata('patient_id');
-            //$this->$table_name = 'chats';
-            $this->load->model('Users');
+            $this->load->model('Chat_Model');
+ 
         }
-        function index(){
+        function index($doc_id){
             $data['view'] = 'Chatbox';
             $data['site_title'] = 'Chat Assignment';
             $data['page_title'] = 'Chat -'.$data['site_title'];
+            $data['doc_id']     = $doc_id;
             $this->load->view('layout', $data);
         }
 
         function insert_messages(){
             $msg = [
-                    'patient_id' => 5,
-                    'doctors_id' => 6,
+                    'patient_id' => $this->session->userdata('user_id'),
+                    'doctors_id' => $this->doctors_chat_id,
                     'chats_msg'  => $_REQUEST['msg']
                 ];
-                $this->Users->inserting($msg);
+                $this->Chat_Model->inserting($msg);
                 $data['view'] = 'Chatbox';
                 $this->load->view('layout', $data);
             }
@@ -31,7 +31,8 @@
             function get_messages( ){
                 
                 $offset = $_REQUEST['offset'];
-                $data   = $this->Users->offset_retrieving($offset,5); 
+                $arr = ['patient_id ' => $this->session->userdata('user_id'), 'doctors_id' => $this->doctors_chat_id];
+                $data   = $this->Chat_Model->offset_retrieving($offset,5,$arr); 
                 //var_dump($data);die;
                 $html   = '';
 

@@ -81,8 +81,8 @@
             }
             return $this->db->get()->result();
         }
-        public function offset_retrieving($offset= 0 ,$limit = 100000000000){
-            $arr = ['patient_id ' => 5, 'doctors_id' => 6];
+        public function offset_retrieving($offset= 0 ,$limit = 100000000000,$arr){
+            
             return $this->db->where($arr)->limit($limit,$offset)->get('chats')->result();
         }
         public function reviews(){

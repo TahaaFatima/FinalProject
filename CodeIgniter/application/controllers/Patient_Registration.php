@@ -8,7 +8,8 @@ class Patient_Registration extends MY_Controller {
         parent::__construct();
     }
     public function index(){
-
+        
+       
         $this->load->helper('form');
         $this->load->library('form_validation');
 
@@ -81,3 +82,5 @@ class Patient_Registration extends MY_Controller {
             $this->load->view('layout',$data);
         }
     }
+    
+      
