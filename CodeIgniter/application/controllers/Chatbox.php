@@ -20,20 +20,21 @@
         function insert_messages(){
             $msg = [
                     'patient_id' => $this->session->userdata('user_id'),
-                    'doctors_id' => $this->doctors_chat_id,
+                    'doctors_id' => $_REQUEST['doc_id'],
                     'chats_msg'  => $_REQUEST['msg']
                 ];
                 $this->Chat_Model->inserting($msg);
                 $data['view'] = 'Chatbox';
-                $this->load->view('layout', $data);
+              //  $this->load->view('layout', $data);
             }
             
             function get_messages( ){
                 
                 $offset = $_REQUEST['offset'];
-                $arr = ['patient_id ' => $this->session->userdata('user_id'), 'doctors_id' => $this->doctors_chat_id];
+                $arr = ['patient_id ' => $this->session->userdata('user_id'), 'doctors_id' => $_REQUEST['doc_id']];
                 $data   = $this->Chat_Model->offset_retrieving($offset,5,$arr); 
-                //var_dump($data);die;
+
+               // var_dump($this->db->last_query());die;
                 $html   = '';
 
             foreach($data as $chat_obj){

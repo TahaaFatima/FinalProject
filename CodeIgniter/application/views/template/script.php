@@ -1,7 +1,6 @@
 <!-- js -->
 <script src="<?php echo base_url(); ?>assets/js/jquery-2.2.3.min.js"></script>
 <!-- //js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/minimal-slider.js"></script>
 <!-- flexSlider (for testimonials) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
@@ -32,6 +31,24 @@
                 
                 <script defer src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
                     <script>
+                        $(function () {
+                            $(".rateYo").rateYo({
+
+                                onSet: function (rating, rateYoInstance) {
+
+                                    $('.hidden-rating').val(rating);
+                                }
+                            });
+                        });
+                        $('.fetch-rating').each(function(){
+                            identity = $(this).attr('id');
+                            shading  = $(this).attr('data-rating');
+                            console.log(identity);
+                            $('#'+identity).rateYo({
+                                rating : shading,
+                                readOnly : true
+                            })
+                        })
                         $(function () {
                             $(".rateYo").rateYo({
 

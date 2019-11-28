@@ -5,7 +5,6 @@
     class Search extends MY_Controller{
         public function __construct(){
             parent::__construct();
-            //$this->load->model('Doctor_registration_model');
         }
         public function index(){
                 $to_search = [];
@@ -17,7 +16,6 @@
                         }
                         if(  isset($_REQUEST['Location']) && ($_REQUEST['Location'] != 'none')){
                             $to_search['doctors_registration.area_id'] = $_REQUEST['Location'];
-                            // doctors_registration.area_id = 2 
                         }
                         if(isset($_REQUEST['Price']) &&  ($_REQUEST['Price'] != 'none')){
                             $to_search['doctors_registration.price_id'] = $_REQUEST['Price']; 

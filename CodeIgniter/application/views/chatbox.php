@@ -2,14 +2,14 @@
     <div class="row">
         <div class="col-md-12">
             <h1 class="chat-heading">Chat Window</h1>
-            <div class="chatbox">
+            <div class="chatbox">   
                 <ul class="chatbox-listing">
-                    
                 </ul>
                 <div class="chatarea">
                     <form method="post">
                             <div class="view">
                                 <div class="col-80">
+                                    <input  name="doc_id" class="doc-id" value="<?php echo $doc_id?>" class="chat-message-text" type="hidden"> 
                                     <input class="form-control" name="message" class="chat-message-text" type="text"> 
                                 </div>
                                 <div class="col-20">

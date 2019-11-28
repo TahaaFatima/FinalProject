@@ -27,43 +27,47 @@
 //         })    
 //     },1000)
 // })
-$(document).ready(function(){
-    $( function() {
-        $( "#tabs" ).tabs();
-      } );
-    
-     $('.send').on('click',function(e){
+$(document).ready(function () {
+    $(function () {
+        $("#tabs").tabs();
+    });
+
+    $('.send').on('click', function (e) {
         e.preventDefault();
-         msg = $('input[name=message]').val();
-          
-         data = {msg:msg}; 
+        msg = $('input[name=message]').val();
+        doc_id = $('.doc-id').val();
+
+        data = { msg: msg, doc_id: doc_id };
+        $.ajax({
+            url: SITE_URL + "/chatbox/insert_messages",
+            data: data,
+            success: function (data) {
+                $('input[name=message]').val('')
+            }
+        })
+    });
+
+    console.log(SITE_URL)
+    if ($('.chatarea').length) {
+        setInterval(function () {
+            li_length = $('.chatbox-listing > li').length;
+            doc_id = $('.doc-id').val();
+
+            data = { offset: li_length,
+                        doc_id: doc_id
+            }
             $.ajax({
-                url:SITE_URL+"/chatbox/insert_messages",
-                data:data,
-                success:function(){
-                    $('input[name=message]').val('')
+                url: SITE_URL + "/chatbox/get_messages",
+                data: data,
+                success: function (data) {
+                    $('.chatbox-listing').append(data);
                 }
             })
-     });
-    });
-      console.log(SITE_URL)
-      if($('.chatbox-listing > li').length)
-      {
-          setInterval(function(){
-             li_length = $('.chatbox-listing > li').length;
-             data = {offset:li_length}
-             $.ajax({
-                 url:SITE_URL+"/chatbox/get_messages",
-                 data:data,
-                 success:function(data){
-                     $('.chatbox-listing').append(data);
-                 }
-             }) 
-          }, 2000);
+        }, 2000);
 
 
-      }     
-
+    }
+});
 // $(document).ready(function(){
 //     $('.send').on('click', function(e){
 //         e.preventDefault();
