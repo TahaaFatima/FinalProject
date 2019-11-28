@@ -36,7 +36,8 @@ class Doctors_Registration extends MY_Controller
 
 
         if (isset($_POST['Submit'])) {
-
+            $upload_data = '';
+            $upload = false;
             $validation = [
                 [
                     'field' => 'Name',
@@ -114,9 +115,16 @@ class Doctors_Registration extends MY_Controller
                     'rules' => 'trim|required|matches[Password]'
                 ]
             ];
+            $is_error = false;
             $this->form_validation->set_rules($validation);
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-            if (!$this->form_validation->run()) {
+            if($_FILES['userfile']['error'] != 4){
+                $upload = true;
+                $upload_data = $this->do_upload($is_error);
+            }
+    
+            if (!$this->form_validation->run() || $is_error) {
+                $data['file_error'] = $upload_data;
                 $data['view'] = 'Doctors_Registration';
                 $data['page_title'] = 'Doctors_Registration';
                 return $this->load->view('layout', $data);
@@ -137,8 +145,13 @@ class Doctors_Registration extends MY_Controller
                     'price_id'          => $_POST['Price'],
                     'role_id'           => 1,
                     'email'             => $_POST['Email_Address'],
-                    'password'          => $password
+                    'password'          => $password,
+                    
                 ];
+                if($_FILES['userfile']['error'] != 4){
+                    $upload =   false;
+                    $data['images' ] = $upload_data['file_name'];
+                }
                 $result  = $this->Doctor_registration_model->inserting($data);
                 $this->load->model('Doctor_Timeslot_Model');
                 $time_data = [
@@ -150,27 +163,6 @@ class Doctors_Registration extends MY_Controller
                 redirect('Login');
             }
         }
-
-
         $this->load->view('layout', $data);
-    }
-    function do_upload()
-    {
-        $config['upload_path']          = 'assets/uploads/';
-        $config['allowed_types']        = 'gif|jpg|png|jpeg';
-        $config['max_size']             = 5000;
-        $config['max_width']            = 1024;
-        $config['max_height']           = 768;
-
-        $this->load->library('upload', $config);
-
-        if ( ! $this->upload->do_upload('userfile'))
-        {
-            return $this->upload->display_errors();
-        }
-        else
-        {
-               return $this->upload->data();
-        }
     }
 }

@@ -6,9 +6,10 @@
         <div class="doctors-my-detals">
             <div class="doctors-detail">
             <?php foreach($doctors_info as $info){
+               // var_dump($info);die;
                 ?>
                 <div class="doctors-profile">
-                    <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
+                    <img class="profile-image" src="<?php echo "../assets/uploads/".$info->images?>" alt="doctors-profile">
                 </div>
                 <div class="doctors-name">
                     <p><?php echo $info->full_name; ?></p>

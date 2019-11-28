@@ -4,7 +4,7 @@
             <div class="div-dc-li">
                 <?php foreach($doctors as $doctor){?>
                 <div class="img-doct">
-                    <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
+                    <img class="profile-image" src="<?php echo "../assets/uploads/".$doctor->images?>" alt="doctors-profile">
                 </div>
                 <div class="doc-info">
                     <div class="pl-4">

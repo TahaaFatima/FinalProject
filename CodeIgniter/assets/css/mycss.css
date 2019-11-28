@@ -777,3 +777,7 @@ input.btn.btn-danger.send {
 .col-20 {
     width: calc(100% - 88%);
 }
+.profile-image {
+    width: 223px;
+    height: 194px;
+}

@@ -5,8 +5,7 @@
     <div class="reg-form-div">
         <form enctype="multipart/form-data" method="post" class="reg-form">
             <div>
-                <input type="file" name="userfile" size="20" />
-                <input type="submit" name="upload-profile" value="upload" />
+                <input type="file" name="userfile" size="20" /> 
             </div>
             <div class="form-group">
                 <label class="col-form-label" for="Name">Name</label>

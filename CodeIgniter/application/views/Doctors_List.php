@@ -58,7 +58,7 @@
             <div class="w3-ab-grid text-center">
                 <div class="w3-aicon p-4">
                     <div>
-                        <img class="profile-picture" src="../assets/images/profile_male.jpg" alt="profile-picture">
+                        <img class="profile-image" src="<?php echo "../assets/uploads/".$doctor->images?>" alt="profile-picture">
                     </div>
                     <div class="rating-star">
                         <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['avg(rating)']) ? $ratings[$doctor->doctors_id]['avg(rating)'] : 0 ; ?>" class="fetch-rating rating"></div>
