@@ -5,6 +5,10 @@ class Doctors_List extends MY_Controller {
     function __construct()
     {
         parent::__construct();
+        $login_in = $this->session->userdata('signed_in');
+        if(!$login_in){
+            redirect('Login');
+        }
     }
     function index(){
 
@@ -66,8 +70,8 @@ class Doctors_List extends MY_Controller {
                 $avg_rating[$id_doc] = $__ ;
             }
         
-
-        $this->data['page_title']  = 'Our Doctors';
+        $this->data['site_title']  = 'Revitalize';
+        $this->data['page_title']  = 'Our Doctors - '.$this->data['site_title'];
         $this->data['view']        = 'Doctors_List';
         $this->data['ratings']     = $avg_rating;
         $this->data['areas']       = $area_table;

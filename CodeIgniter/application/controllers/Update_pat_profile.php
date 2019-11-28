@@ -6,6 +6,10 @@ class Update_pat_profile extends MY_Controller {
 	function __construct()
     {
         parent::__construct();
+        $login_in = $this->session->userdata('signed_in');
+        if(!$login_in){
+            redirect('Login');
+        }
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 1) {
@@ -33,9 +37,11 @@ class Update_pat_profile extends MY_Controller {
             $this->Patient_Registration_model->updating($record_pat , $where);
         }
 
-        $this->data['patients_info'] = $pat_info;
-        $this->data['page_title'] = 'Update_pat_profile';
-        $this->data['view'] = 'Update_pat_profile';
+        $this->data['patients_info']    =   $pat_info;
+        $this->data['site_title']       =   'Revitalize';
+        $this->data['page_title']       =   'Edit Patients Profile - '.$this->data['site_title'];
+        $this->data['view']             =   'Update_pat_profile';
+
         $this->load->view('layout',$this->data);
     }
 }

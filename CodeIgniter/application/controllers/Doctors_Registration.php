@@ -123,9 +123,10 @@ class Doctors_Registration extends MY_Controller
             }
     
             if (!$this->form_validation->run() || $is_error) {
-                $this->data['file_error'] = $upload_data;
-                $this->data['view'] = 'Doctors_Registration';
-                $this->data['page_title'] = 'Doctors_Registration';
+                $this->data['file_error']   =   $upload_data;
+                $this->data['view']         =   'Doctors_Registration';
+                $this->data['site_title']   =   'Revitalize';
+                $this->data['page_title']   =   'Doctors Registration - '.$this->data['site_title'];
                 return $this->load->view('layout', $this->data);
             } else {
                 $this->load->model('Doctor_registration_model');

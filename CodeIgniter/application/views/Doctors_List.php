@@ -58,7 +58,22 @@
             <div class="w3-ab-grid text-center">
                 <div class="w3-aicon p-4">
                     <div>
-                        <img class="profile-image" src="<?php echo "../assets/uploads/".$doctor->images?>" alt="profile-picture">
+                        <?php 
+                            if(!empty($doctor->images)){
+                        ?>
+                                <img class="profile-image" src="<?php echo "../assets/uploads/".$doctor->images?>" alt="doctors-profile">
+                        <?php
+                            }elseif(empty($doctor->images) && $doctor->gender == "female"){
+                        ?>
+                            <img class="profile-image" src="../assets/images/doctors-profile.png" alt="doctors-profile">
+                        <?php
+                            }elseif(empty($doctor->images) && $doctor->gender == "male"){
+                        ?>
+                            <img class="profile-image" src="../assets/images/profile-male.jpg" alt="doctors-profile">
+                        <?php        
+                            }
+                        ?>
+                        ?>
                     </div>
                     <div class="rating-star">
                         <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['rating']) ? $ratings[$doctor->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating"></div>

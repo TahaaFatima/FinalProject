@@ -5,8 +5,10 @@ class For_Doctor extends MY_Controller {
 
 	public function index()
 	{
-                $this->data['view'] = 'For_Doctor';
-                $this->data['page_title'] = 'For_Doctor';
+                $this->data['view']         = 'For_Doctor';
+                $this->data['site_title']   = 'Revitalize';
+                $this->data['page_title']   = 'For Doctor - '.$this->data['site_title'];
+               
                 $this->load->view('Layout',$this->data);
 	}
 }

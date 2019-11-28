@@ -2,7 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Prescriptions extends MY_Controller {
-
+    
+    function __construct()
+    {
+        parent::__construct();
+        $login_in = $this->session->userdata('signed_in');
+        if(!$login_in){
+            redirect('Login');
+        }
+    }    
 	public function index()
 	{
         $this->load->helper('form');
@@ -34,8 +42,10 @@ class Prescriptions extends MY_Controller {
             }
         }       
 
-                $this->data['view'] = 'Prescriptions';
-                $this->data['page_title'] = 'Prescriptions';
+                $this->data['view']       = 'Prescriptions';
+                $this->data['site_title'] = 'Revitalize';
+                $this->data['page_title'] = 'Prescriptions - '.$this->data['site_title'];
+                
                 $this->load->view('Layout',$this->data);
 	}
 }

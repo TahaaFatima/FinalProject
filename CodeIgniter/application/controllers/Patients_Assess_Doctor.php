@@ -2,7 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Patients_Assess_Doctor extends MY_Controller {
-
+        function __construct()
+        {
+            parent::__construct();
+            $login_in = $this->session->userdata('signed_in');
+            if(!$login_in){
+                redirect('Login');
+            }
+        }    
 	public function index()
 	{       
         $this->load->model('appt_booking_model');
@@ -21,9 +28,11 @@ class Patients_Assess_Doctor extends MY_Controller {
 
         $doc_appointment = $this->appt_booking_model->search_join($to_show,$join_retrieve);
       
-        $this->data['doctors_App_data'] = $doc_appointment[0];
-        $this->data['view'] = 'Patients_Assess_Doctor';
-        $this->data['page_title'] = 'Patients_Assess_Doctor';
+        $this->data['doctors_App_data'] =    $doc_appointment[0];
+        $this->data['view']             =    'Patients_Assess_Doctor';
+        $this->data['site_title']       =    'Revitalize';
+        $this->data['page_title']       =    'Patients Assessment Form - '.$this->data['site_title'];
+        
         $this->load->view('Layout',$this->data);
 	}
 }

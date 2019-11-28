@@ -54,8 +54,10 @@ class Contact_Us extends MY_Controller {
         //     return redirect(site_url('Client/index/'.$bid_project_id));
         // }
 
-            $this->data['view'] = 'Contact_Us';
-            $this->data['page_title'] = 'Contact_Us';
+            $this->data['view']         = 'Contact_Us';
+            $this->data['site_title']   = 'Revitalize';
+            $this->data['page_title']   = 'Contact Us - '.$this->data['site_title'];
+            
             $this->load->view('Layout',$this->data);
 	}
 }

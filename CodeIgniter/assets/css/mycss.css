@@ -781,3 +781,14 @@ input.btn.btn-danger.send {
     width: 223px;
     height: 194px;
 }
+div#rateYo-20 {
+    margin: 19px 27px;
+}
+ul.chatbox-listing > li {
+    background: #02646f;
+    color: white;
+    margin: 4px 0px;
+    width: 53%;
+    height: 36px;
+    border-radius: 0px 11px;
+}

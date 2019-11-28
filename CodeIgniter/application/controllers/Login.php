@@ -82,8 +82,10 @@ class Login extends MY_Controller
                 }
             }
         }
-        $this->data['page_title'] = 'Login';
-        $this->data['view'] = 'Login';
+        $this->data['site_title']   = 'Revitalize';
+        $this->data['page_title']   = 'Login - '.$this->data['site_title'];
+        $this->data['view']         = 'Login';
+        
         $this->load->view('Layout', $this->data);
     }
 }

@@ -2,18 +2,35 @@
     <div class=" mt-2 bg-white padding">
         <div class="doc-12">
             <div class="div-dc-li">
-                <?php foreach ($doctors as $doctor) { ?>
+                <?php foreach ($doctors as $doctor) {
+  
+                    ?>
                     <div class="img-doct">
-                        <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
+                        <?php 
+                            if(!empty($doctor->images)){
+                        ?>
+                                <img class="profile-image" src="<?php echo "../assets/uploads/".$doctor->images?>" alt="doctors-profile">
+                        <?php
+                            }elseif(empty($doctor->images) && $doctor->gender == "female"){
+                        ?>
+                            <img class="profile-image" src="../assets/images/doctors-profile.png" alt="doctors-profile">
+                        <?php
+                            }elseif(empty($doctor->images) && $doctor->gender == "male"){
+                        ?>
+                            <img class="profile-image" src="../assets/images/profile-male.jpg" alt="doctors-profile">
+                        <?php        
+                            }
+                        ?>
+                        <div class="rating-star">
+                             <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['rating']) ? $ratings[$doctor->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="doc-info">
                         <div class="doct-info">
                             <h2><?php echo $doctor->full_name ?></h2>
                             <p><?php echo $doctor->department ?></p>
                             <p><?php echo $doctor->area ?></p>
-                        </div>
-                    </div>
-                    <div class="doc-info">
-                        <div>
-
                         </div>
                         <div class="doc-3">
                             <ul class="grid-list-half pl-4">

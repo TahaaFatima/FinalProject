@@ -2,7 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Book_Appointment extends MY_Controller {
-
+    function __construct()
+        {   
+            parent::__construct();
+            $login_in = $this->session->userdata('signed_in');
+                if(!$login_in){
+                redirect('Login');
+                }
+ 
+        }
     public function index()
 	{
         $this->load->helper('form');
@@ -139,9 +147,23 @@ class Book_Appointment extends MY_Controller {
                             'column_with'=>'doctors_registration.area_id = area.area_id'];
 
         $doc_joins = $this->Doctor_registration_model->search_join($to_search,$join_retrieve);
-        $this->data['doctors'] = $doc_joins;
-        $this->data['view'] = 'Book_Appointment';
-        $this->data['page_title'] = 'Book Appointment';
+        $this->load->model('Appt_Record');
+        $avg_rating = [];
+
+        foreach($doc_joins as $single_doc){
+            $id_doc = $single_doc->doctors_id;
+            $where  = ['doctors_id'=>$id_doc];
+            $select = 'avg(rating) as rating';
+            
+            $__ = $this->Appt_Record->retrieve_ratings($select,$where);
+            $avg_rating[$id_doc] = $__ ;
+        }
+        
+        $this->data['ratings']       = $avg_rating;
+        $this->data['doctors']       = $doc_joins;
+        $this->data['site_title']    = 'Revitalize';
+        $this->data['view']          = 'Book_Appointment - '.$this->data['site_title'];;
+        $this->data['page_title']    = 'Book Appointment';
         $this->load->view('Layout',$this->data);
 	}
 }

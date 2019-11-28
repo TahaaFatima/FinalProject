@@ -5,16 +5,20 @@
     class Chatbox extends MY_Controller{
         public $doctors_chat_id ;
         function __construct()
-        {
+        {   
             parent::__construct();
             $this->load->model('Chat_Model');
+            $login_in = $this->session->userdata('signed_in');
+                if(!$login_in){
+                redirect('Login');
+                }
  
         }
         function index($doc_id){
-            $this->data['view'] = 'Chatbox';
-            $this->data['site_title'] = 'Chat Assignment';
-            $this->data['page_title'] = 'Chat -'.$this->data['site_title'];
-            $this->data['doc_id']     = $doc_id;
+            $this->data['view']         = 'Chatbox';
+            $this->data['site_title']   = 'Revitalize';
+            $this->data['page_title']   = 'Chat -'.$this->data['site_title'];
+            $this->data['doc_id']       = $doc_id;
             $this->load->view('layout', $this->data);
         }
 

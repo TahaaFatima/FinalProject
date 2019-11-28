@@ -9,7 +9,22 @@
                // var_dump($info);die;
                 ?>
                 <div class="doctors-profile">
-                    <img class="profile-image" src="<?php echo "../assets/uploads/".$info->images?>" alt="doctors-profile">
+                        <?php 
+                            if(!empty($info->images)){
+                        ?>
+                                <img class="profile-image" src="<?php echo "../assets/uploads/".$info->images?>" alt="doctors-profile">
+                        <?php
+                            }elseif(empty($info->images) && $info->gender == "female"){
+                        ?>
+                            <img class="profile-image" src="../assets/images/doctors-profile.png" alt="doctors-profile">
+                        <?php
+                            }elseif(empty($info->images) && $info->gender == "male"){
+                        ?>
+                            <img class="profile-image" src="../assets/images/profile-male.jpg" alt="doctors-profile">
+                        <?php        
+                            }
+                        ?>
+
                 </div>
                 <div class="doctors-name">
                     <p><?php echo $info->full_name; ?></p>

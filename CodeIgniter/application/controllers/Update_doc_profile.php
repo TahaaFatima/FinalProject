@@ -6,6 +6,10 @@ class Update_doc_profile extends MY_Controller {
 	function __construct()
     {
         parent::__construct();
+        $login_in = $this->session->userdata('signed_in');
+        if(!$login_in){
+            redirect('Login');
+        }
     }
     public function index(){
 
@@ -47,13 +51,15 @@ class Update_doc_profile extends MY_Controller {
         $this->load->model('Price_Model');
         $price_table = $this->Price_Model->retrieving();
 
-        $this->data['doctors_info'] = $doc_info;
-        $this->data['areas'] = $area_table;
-        $this->data['departments'] =  $department_table;
-        $this->data['clinic'] = $clinic_table;
-        $this->data['prices'] = $price_table;
-        $this->data['page_title'] = 'Update_doc_Profile';
-        $this->data['view'] = 'Update_doc_Profile';
+        $this->data['doctors_info'] =   $doc_info;
+        $this->data['areas']        =   $area_table;
+        $this->data['departments']  =   $department_table;
+        $this->data['clinic']       =   $clinic_table;
+        $this->data['prices']       =   $price_table;
+        $this->data['site_title']   =   'Revitalize';
+        $this->data['page_title']   =   'Edit Doctors Profile - '.$this->data['site_title'];
+        $this->data['view']         =   'Update_doc_Profile';
+        
         $this->load->view('layout',$this->data);
     }
 }

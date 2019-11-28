@@ -73,8 +73,10 @@ class Patient_Registration extends MY_Controller {
                 }
             }
 
-            $this->data['view'] = 'Patient_Registration';
-            $this->data['page_title'] = 'Patient_Registration';
+            $this->data['view']         =   'Patient_Registration';
+            $this->data['site_title']   =   'Revitalize';
+            $this->data['page_title']   =   'Patients Registration - '.$this->data['site_title'];
+            
             $this->load->view('layout',$this->data);
         }
     }

@@ -2,7 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Doctors_Detail_Pt extends MY_Controller {
-    
+    function __construct()
+    {
+        parent::__construct();
+        $login_in = $this->session->userdata('signed_in');
+        if(!$login_in){
+            redirect('Login');
+        }
+    }
     public function index()
 	{
         $this->load->model('Doctor_registration_model');
@@ -37,9 +44,11 @@ class Doctors_Detail_Pt extends MY_Controller {
 
         $doc_joins = $this->Doctor_registration_model->search_join($to_search,$join_retrieve);
 
-        $this->data['doctors'] = $doc_joins;
-        $this->data['page_title'] = 'Doctor Details';
-        $this->data['view'] = 'Doctors_Detail_Pt';
+        $this->data['doctors']      =   $doc_joins;
+        $this->data['site_title']   =   'Revitalize';
+        $this->data['page_title']   =   'Doctor Details - '.$this->data['site_title'];
+        $this->data['view']         =   'Doctors_Detail_Pt';
+
         $this->load->view('Layout',$this->data);
 	}
 }

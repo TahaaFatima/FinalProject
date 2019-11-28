@@ -5,6 +5,10 @@ class Doctors_Profile extends MY_Controller {
         function __construct()
     {
         parent::__construct();
+        $login_in = $this->session->userdata('signed_in');
+        if(!$login_in){
+            redirect('Login');
+        }
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 2) {
@@ -47,7 +51,8 @@ class Doctors_Profile extends MY_Controller {
         $this->data['doctors_info'] = $doc_info;
         $this->data['ratings']      = $avg_rating;
         $this->data['view']         = 'Doctors_Profile';
-        $this->data['page_title']   = 'Doctors_Profile';
+        $this->data['site_title']   = 'Revitalize';
+        $this->data['page_title']   = 'My Profile - '.$this->data['site_title'];
         $this->load->view('Layout',$this->data);
 	}
 }
