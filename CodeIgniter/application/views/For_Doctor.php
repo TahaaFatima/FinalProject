@@ -10,7 +10,7 @@
                                     <div class="how-it-work-text">
                                         <h3 class="text-wheat font-weight-6 lspace-xs">Step 1</h3>
                                         <h2 class="text-blue font-weight-6 lspace-xs">Publish Your Profile</h2>
-                                        <p class="text-gray para">Expand your digital footprint Takes 5 minutes to publish your profile Let millions of patients find you</p>
+                                        <p class="text-gray para">Expand your digital footprint ,<br> Takes 5 minutes to publish your profile Let millions of patients find you.</p>
                                     </div>
                                 </div>
                             </div>

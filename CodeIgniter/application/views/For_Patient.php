@@ -21,7 +21,7 @@
                                     <div class="how-it-work-text">
                                         <h3 class="text-wheat font-weight-6 lspace-xs">Step 1</h3>
                                         <h2 class="text-blue font-weight-6 lspace-xs">Register your free account</h2>
-                                        <p class="text-gray para">Register your free account at www.revitalize.com. Don’t forget to verify your email address. </p>
+                                        <p class="text-gray para">Register your free account at www.revitalize.com. </p>
                                     </div>
                                 </div>
                             </div>
