@@ -10,7 +10,7 @@ class Doctors_Registration extends MY_Controller
     }
     public function index()
     {
-        $this->load->view('upload_form', array('error' => ' ' ));
+/*         $this->load->view('upload_form', array('error' => ' ' )); */
         $this->load->helper('form');
         $this->load->library('form_validation');
 
@@ -167,7 +167,7 @@ class Doctors_Registration extends MY_Controller
         {
                 $error = array('error' => $this->upload->display_errors());
 
-                $this->load->view('upload_form', $error);
+                $this->load->view('Doctors_Registration', $error);
         }
         else
         {

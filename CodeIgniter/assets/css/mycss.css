@@ -341,13 +341,12 @@ input.form-radio {
     padding: 30px 420px;
 }
 .chatbox {
-    margin: 0px auto;
+    margin: 34px auto;
     width: 50%;
     border: #706e6e 2px solid;
     border-radius: 10px 10px 0px 0px;
     margin-top: 10px;
     height: 87vh;
-    /* position: fixed; */
     bottom: 0;
     right: 50px;
     display: flex;
@@ -358,7 +357,6 @@ input.form-radio {
 
 ul.chatbox-listing {
     overflow-y: scroll;
-    /* position: absolute; */
     list-style: none;
     bottom: 38px;
     left: 0;
@@ -391,7 +389,6 @@ ul.chatbox-listing {
 .chatarea {
     height: 10%;
     width: 100%;
-    /* position: absolute; */
     bottom: 0;
     display: flex;
     padding: 5px;
@@ -411,18 +408,10 @@ input[type="button"] {
     margin-top: 3px;
 }
 .view {
-    width: 100%;
+    width: 178%;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    margin: 0px 0px 11px 0px;
 }
-
-form {
-    width: 100%;
-}
-
-.col-80 {margin: 10px;flex-grow: 1;}
 
 li{
     width: 100%;
@@ -482,7 +471,7 @@ h3{
     margin-right: 214px;
     padding: 0 5px;
 }
-form{
+.form{
     /* color: var(--green); */
     color: black;
     padding: 0;
@@ -497,13 +486,6 @@ form{
     border-color: #02646f;
     width: 100%;
 }
-/* .labelEmail{
-    font-size: x-large;
-}
-.labelPassword{
-    font-size: x-large;
-    padding-right: 50px;
-} */
 /* Tehzeeb */
 
 
@@ -767,4 +749,31 @@ form.reg-form.form-patient-pro {
 .detail-links {
     width: 100%;
     /* display: flex; */
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active{
+    background: #02646f;
+}
+ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all {
+    background: #02646f;
+    padding: 4px;
+}
+div#tabs {
+    text-align: -webkit-center;
+}
+.ui-tabs-anchor{
+    color: white;
+    font-size: 21px;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 8px 212px;
+}
+input.btn.btn-danger.send {
+    padding: 6px 3px;
+    margin-left: 10px;
+}
+.col-80 {
+    width: 88%;
+}
+.col-20 {
+    width: calc(100% - 88%);
 }
