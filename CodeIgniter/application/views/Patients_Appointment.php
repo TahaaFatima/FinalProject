@@ -12,8 +12,10 @@
  
         <div id="tabs-1">
                 <?php
+                $no_record = true;
                 foreach($patients_App_data as $patients_app){
-                    if($patients_app->appointment_date < date('Y-m-d')){
+                    if(strtotime($patients_app->appointment_date) < strtotime(date('Y-m-d'))){
+                        $no_record = false;
                 ?>
                 <div class="my-details my-appointment">
                     <div class="reg-form-div patent-details appointment-pt-doc">
@@ -80,13 +82,18 @@
             
             <?php 
                     }
-            }                                   
+            }
+            if($no_record){
+                echo 'You have no appointments';
+            }                                  
             ?>
         </div>
         <div id="tabs-2">
         <?php 
+                $no_record = true;
                 foreach($patients_App_data as $patients_app){
-                    if($patients_app->appointment_date == date('Y-m-d')){
+                    if(strtotime($patients_app->appointment_date) == strtotime(date('Y-m-d'))){
+                        $no_record = false;
                 ?>
                 <div class="my-details my-appointment">
                     <div class="reg-form-div patent-details appointment-pt-doc">
@@ -153,13 +160,18 @@
             
             <?php 
                     }
-            }                                   
+            }
+            if($no_record){
+                echo 'You have no appointments';
+            }                                  
             ?>
         </div>
         <div id="tabs-3">
         <?php 
+                $no_record = true;
                 foreach($patients_App_data as $patients_app){
-                    if($patients_app->appointment_date > date('Y-m-d')){
+                    if(strtotime($patients_app->appointment_date) > strtotime(date('Y-m-d'))){
+                        $no_record = false;
                 ?>
                 <div class="my-details my-appointment">
                     <div class="reg-form-div patent-details appointment-pt-doc">
@@ -226,6 +238,9 @@
             
             <?php 
                     }
+            } 
+            if($no_record){
+                echo 'You have no appointments';
             }                                   
             ?>
         </div>

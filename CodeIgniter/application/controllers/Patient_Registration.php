@@ -54,11 +54,7 @@ class Patient_Registration extends MY_Controller {
             $this->form_validation->set_rules($validation);
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
             if(isset($_POST['Submit'])){
-                if (!$this->form_validation->run())
-                {
-                
-                }
-                else
+                if ($this->form_validation->run())
                 {
                     $password = password_hash($_POST['Password'],PASSWORD_DEFAULT);
                     $data =[
@@ -77,9 +73,9 @@ class Patient_Registration extends MY_Controller {
                 }
             }
 
-            $data['view'] = 'Patient_Registration';
-            $data['page_title'] = 'Patient_Registration';
-            $this->load->view('layout',$data);
+            $this->data['view'] = 'Patient_Registration';
+            $this->data['page_title'] = 'Patient_Registration';
+            $this->load->view('layout',$this->data);
         }
     }
     

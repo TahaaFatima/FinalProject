@@ -6,7 +6,14 @@ class Update_pat_profile extends MY_Controller {
 	function __construct()
     {
         parent::__construct();
+        $role_id = $this->session->userdata('role_id');
+        if (!empty($role_id)) {
+            if ($role_id == 1) {
+                redirect('Doctors_Profile');
+            }
+        }
     }
+    
     public function index(){
         $patients_id = $this->session->userdata('user_id');
         $where = ['patient_id' => $patients_id];
@@ -15,7 +22,7 @@ class Update_pat_profile extends MY_Controller {
        
         if(isset($_POST['edit'])){
 
-            $data =[
+            $record_pat =[
                 'full_name'         => $_POST['Name'],
                 'age'               => $_POST['Age'],
                 'gender'            => $_POST['Gender'],
@@ -23,12 +30,12 @@ class Update_pat_profile extends MY_Controller {
             ];
             
             $this->load->model('Patient_Registration_model');
-            $this->Patient_Registration_model->updating($data , $where);
+            $this->Patient_Registration_model->updating($record_pat , $where);
         }
 
-        $data['patients_info'] = $pat_info;
-        $data['page_title'] = 'Update_pat_profile';
-        $data['view'] = 'Update_pat_profile';
-        $this->load->view('layout',$data);
+        $this->data['patients_info'] = $pat_info;
+        $this->data['page_title'] = 'Update_pat_profile';
+        $this->data['view'] = 'Update_pat_profile';
+        $this->load->view('layout',$this->data);
     }
 }

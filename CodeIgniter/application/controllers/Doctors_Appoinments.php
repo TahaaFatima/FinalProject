@@ -2,6 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Doctors_Appoinments extends MY_Controller {
+        function __construct()
+    {
+        parent::__construct();
+        $role_id = $this->session->userdata('role_id');
+        if (!empty($role_id)) {
+            if ($role_id == 2) {
+                redirect('Patients_Profile');
+            }
+        }
+    }
 
 	public function index()
 	{       

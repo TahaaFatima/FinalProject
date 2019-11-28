@@ -15,7 +15,7 @@
                     <p><?php echo $info->full_name; ?></p>
                 </div>
                 <div class="doctors-rating">
-                    <div class="rateYo rating"></div>
+                <div id="rateYo-<?php echo $info->doctors_id ?>" data-rating="<?php echo isset($ratings[$info->doctors_id]['rating']) ? $ratings[$info->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating"></div>
                 </div>
                 <div class="doctors-speciality">
                     <p><?php echo $info->department; ?></p>

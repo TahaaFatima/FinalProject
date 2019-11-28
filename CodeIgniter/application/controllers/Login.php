@@ -43,9 +43,9 @@ class Login extends MY_Controller
             $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
             
             if (!$this->form_validation->run()) {
-                $data['page_title'] = 'Login';
-                $data['view'] = 'Login';
-                return $this->load->view('Layout', $data);
+                $this->data['page_title'] = 'Login';
+                $this->data['view'] = 'Login';
+                return $this->load->view('Layout', $this->data);
             } else {
                 $this->load->model('User_Model');
                 $email_address  = $_POST['Email_Address'];
@@ -82,8 +82,8 @@ class Login extends MY_Controller
                 }
             }
         }
-        $data['page_title'] = 'Login';
-        $data['view'] = 'Login';
-        $this->load->view('Layout', $data);
+        $this->data['page_title'] = 'Login';
+        $this->data['view'] = 'Login';
+        $this->load->view('Layout', $this->data);
     }
 }
