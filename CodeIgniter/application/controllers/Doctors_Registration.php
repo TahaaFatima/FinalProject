@@ -33,7 +33,8 @@ class Doctors_Registration extends MY_Controller
         $data['departments'] = $department_table;
         $data['clinic']      = $clinic_table;
         $data['prices']      = $price_table;
-        
+
+
         if (isset($_POST['Submit'])) {
 
             $validation = [
@@ -155,7 +156,7 @@ class Doctors_Registration extends MY_Controller
     }
     function do_upload()
     {
-        $config['upload_path']          = './assets/uploads/';
+        $config['upload_path']          = 'assets/uploads/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $config['max_size']             = 5000;
         $config['max_width']            = 1024;
@@ -165,15 +166,11 @@ class Doctors_Registration extends MY_Controller
 
         if ( ! $this->upload->do_upload('userfile'))
         {
-                $error = array('error' => $this->upload->display_errors());
-
-                $this->load->view('Doctors_Registration', $error);
+            return $this->upload->display_errors();
         }
         else
         {
-                $data = array('upload_data' => $this->upload->data());
-
-                $this->load->view('upload_success', $data);
+               return $this->upload->data();
         }
     }
 }
