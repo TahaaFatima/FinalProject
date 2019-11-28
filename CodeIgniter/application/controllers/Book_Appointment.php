@@ -89,19 +89,19 @@ class Book_Appointment extends MY_Controller {
                 $this->load->helper('other');
                 $date_appt = arrangeDate($_POST['date_of_appt']);
 
-            $data = [
-                    'patient_id'=>$this->session->userdata('user_id'),
-                    'doctors_id'=>$_GET['Doc_id'],
-                    'time_in'=>$_POST['time_from_appt'],
-                    'time_out'=>$_POST['time_to_appt'],
-                    'appointment_date'=>$date_appt,
+            $record_appt = [
+                    'patient_id'        =>$this->session->userdata('user_id'),
+                    'doctors_id'        =>$_GET['Doc_id'],
+                    'time_in'           =>$_POST['time_from_appt'],
+                    'time_out'          =>$_POST['time_to_appt'],
+                    'appointment_date'  =>$date_appt,
                     'appointment_status'=>'Pending'
                     ];
 
             $this->load->model('appt_booking_model');
-            $id_returned = $this->appt_booking_model->inserting($data);
+            $id_returned = $this->appt_booking_model->inserting($record_appt);
 
-            $data = [
+            $record_asses = [
                 'weight'                     => $_POST['Weight'],
                 'previous_ailments'          => $_POST['ailments'],
                 'current_health_concerns'    => $_POST['health_concern'],
@@ -117,10 +117,8 @@ class Book_Appointment extends MY_Controller {
             ];
 
             $this->load->model('Patients_assessment_model');
-            $result  = $this->Patients_assessment_model->inserting($data);
- 
-                 
-                redirect('Doctors_List');
+            $result  = $this->Patients_assessment_model->inserting($record_asses);
+            redirect('Doctors_List');
             }
         }
 
@@ -141,9 +139,9 @@ class Book_Appointment extends MY_Controller {
                             'column_with'=>'doctors_registration.area_id = area.area_id'];
 
         $doc_joins = $this->Doctor_registration_model->search_join($to_search,$join_retrieve);
-        $data['doctors'] = $doc_joins;
-        $data['view'] = 'Book_Appointment';
-        $data['page_title'] = 'Book Appointment';
-        $this->load->view('Layout',$data);
+        $this->data['doctors'] = $doc_joins;
+        $this->data['view'] = 'Book_Appointment';
+        $this->data['page_title'] = 'Book Appointment';
+        $this->load->view('Layout',$this->data);
 	}
 }

@@ -48,23 +48,29 @@ $(document).ready(function () {
     });
 
     console.log(SITE_URL)
-    if ($('.chatarea').length) {
-        setInterval(function () {
+    getChat();
+    function getChat()
+    {
+        if ($('.chatarea').length) {
             li_length = $('.chatbox-listing > li').length;
-            doc_id = $('.doc-id').val();
-
-            data = { offset: li_length,
-                        doc_id: doc_id
-            }
-            $.ajax({
-                url: SITE_URL + "/chatbox/get_messages",
-                data: data,
-                success: function (data) {
-                    $('.chatbox-listing').append(data);
+            
+                
+                doc_id = $('.doc-id').val();
+                data = { offset: li_length,
+                            doc_id: doc_id
                 }
-            })
-        }, 2000);
-
+                $.ajax({
+                    url: SITE_URL + "/chatbox/get_messages",
+                    data: data,
+                    success: function (data) {
+                        $('.chatbox-listing').append(data);
+                        li_length = $('.chatbox-listing > li').length;
+                        getChat();
+                    }
+                }) 
+    
+    
+        }
 
     }
 });

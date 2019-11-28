@@ -34,8 +34,8 @@
                     <ul class="grid-list-half pl-4">
                         <li><i class="fa fa-comment"></i> Patient Reviews</li>
                         <li><i class="fa fa-credit-card green-text"></i><?php echo $doctor->price?></li>
-                        <li><i class="fa fa-circle"></i> Availability</li>
-                        <li><i class="fa fa-circle"></i> Clinic Name</li>
+                        <li><i class="fa fa-circle"></i><?php echo $doctor->time_in?> - <?php echo $doctor->time_out?></li>
+                        <li><i class="fa fa-circle"></i><?php echo $doctor->clinics?></li>
                     </ul>
                 </div>
                 <?php } ?>

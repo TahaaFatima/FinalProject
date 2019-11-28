@@ -23,9 +23,9 @@ class Doctors_Appoinments extends MY_Controller {
 
         $this->session->set_userdata('appointment_id', $doc_appointment->appointment_id);
                         
-        $data['doctors_App_data'] = $doc_appointment;
-        $data['view'] = 'Doctors_Appoinments';
-        $data['page_title'] = 'Doctors_Appoinments';
-        $this->load->view('Layout',$data);
+        $this->data['doctors_App_data'] = $doc_appointment;
+        $this->data['view'] = 'Doctors_Appoinments';
+        $this->data['page_title'] = 'Doctors_Appoinments';
+        $this->load->view('Layout',$this->data);
 	}
 }

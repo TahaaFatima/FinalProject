@@ -27,9 +27,9 @@ class Doctors_Profile extends MY_Controller {
                         
 
         $doc_info = $this->Doctor_registration_model->search_join($where,$join_retrieve);
-        $data['doctors_info'] = $doc_info;
-        $data['view'] = 'Doctors_Profile';
-        $data['page_title'] = 'Doctors_Profile';
-        $this->load->view('Layout',$data);
+        $this->data['doctors_info'] = $doc_info;
+        $this->data['view'] = 'Doctors_Profile';
+        $this->data['page_title'] = 'Doctors_Profile';
+        $this->load->view('Layout',$this->data);
 	}
 }

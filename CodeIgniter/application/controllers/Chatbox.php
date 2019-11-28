@@ -11,11 +11,11 @@
  
         }
         function index($doc_id){
-            $data['view'] = 'Chatbox';
-            $data['site_title'] = 'Chat Assignment';
-            $data['page_title'] = 'Chat -'.$data['site_title'];
-            $data['doc_id']     = $doc_id;
-            $this->load->view('layout', $data);
+            $this->data['view'] = 'Chatbox';
+            $this->data['site_title'] = 'Chat Assignment';
+            $this->data['page_title'] = 'Chat -'.$this->data['site_title'];
+            $this->data['doc_id']     = $doc_id;
+            $this->load->view('layout', $this->data);
         }
 
         function insert_messages(){
@@ -25,21 +25,22 @@
                     'chats_msg'  => $_REQUEST['msg']
                 ];
                 $this->Chat_Model->inserting($msg);
-                $data['view'] = 'Chatbox';
-              //  $this->load->view('layout', $data);
+                $this->data['view'] = 'Chatbox';
             }
             
             function get_messages( ){
                 
                 $offset = $_REQUEST['offset'];
                 $arr = ['patient_id ' => $this->session->userdata('user_id'), 'doctors_id' => $_REQUEST['doc_id']];
-                $data   = $this->Chat_Model->offset_retrieving($offset,5,$arr); 
-
-               // var_dump($this->db->last_query());die;
+                $chat_retrieved   = $this->Chat_Model->offset_retrieving($offset,100000000000,$arr); 
+ 
                 $html   = '';
 
-            foreach($data as $chat_obj){
-                $html .= "<li class='for_del'>".$chat_obj->chats_msg."</li>";
+            foreach($chat_retrieved as $chat_obj){
+                if($chat_obj->chats_msg != "" )
+                {
+                    $html .= "<li class='for_del'>".$chat_obj->chats_msg."</li>";
+               }
             }
             echo $html;
         }

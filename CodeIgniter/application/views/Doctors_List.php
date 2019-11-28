@@ -61,7 +61,7 @@
                         <img class="profile-image" src="<?php echo "../assets/uploads/".$doctor->images?>" alt="profile-picture">
                     </div>
                     <div class="rating-star">
-                        <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['avg(rating)']) ? $ratings[$doctor->doctors_id]['avg(rating)'] : 0 ; ?>" class="fetch-rating rating"></div>
+                        <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['rating']) ? $ratings[$doctor->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating"></div>
                     </div>
                     <div class="padding doc-name">
                         <h3><?php echo $doctor->full_name?></h3>

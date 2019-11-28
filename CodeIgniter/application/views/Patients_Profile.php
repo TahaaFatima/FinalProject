@@ -17,7 +17,7 @@
                         <div class="li-div-pt">
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
-                                    <a href="<?php echo site_url('Book_Appointment')?>">Book Appointment</a>
+                                    <a href="<?php echo site_url('Department')?>">Book Appointment</a>
                                 </div>
                             </li>
                         </div>
@@ -52,7 +52,7 @@
                     </div>
                     <div>
                         <label class="col-form-label" for="Gender">Gender</label>
-                        <input class="form-control" type="number" name="Gender" value="<?php echo $patients_info->gender;  ?>" readonly>
+                        <input class="form-control" type="text" name="Gender" value="<?php echo $patients_info->gender;  ?>" readonly>
                     </div>
                     <div>
                         <label class="col-form-label" for="Phone_Number">Phone Number</label>

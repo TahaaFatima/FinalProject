@@ -1,6 +1,6 @@
 <section class="reg-section">
     <div class="main-heading">
-        <h5 class="modal-title text-center text-dark mb-4">REGISTER NOW</h5>
+        <h5 class="modal-title text-center text-dark mb-4">Update Your Profile</h5>
     </div>
     <div class="reg-form-div">
         <form class="reg-form" method="post">

@@ -63,9 +63,9 @@ class Doctor_Login extends MY_Controller {
             
         }
 
-        $data['view'] = 'Login';
-        $data['page_title'] = 'Login';
-        $this->load->view('Layout', $data);
+        $this->data['view'] = 'Login';
+        $this->data['page_title'] = 'Login';
+        $this->load->view('Layout', $this->data);
     }
 }
 
