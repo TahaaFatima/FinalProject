@@ -25,17 +25,17 @@ class Prescriptions extends MY_Controller {
             {
                 $this->load->model('Prescriptions_Model');
                 
-                $data = [
+                $record_pres = [
                     'prescription'      => $_REQUEST['prescritions'],
                     'appointment_id'    => $_REQUEST['prescription_id'],
                 ];
                 
-                $this->Prescriptions_Model->inserting($data);
+                $this->Prescriptions_Model->inserting($record_pres);
             }
         }       
 
-                $data['view'] = 'Prescriptions';
-                $data['page_title'] = 'Prescriptions';
-                $this->load->view('Layout',$data);
+                $this->data['view'] = 'Prescriptions';
+                $this->data['page_title'] = 'Prescriptions';
+                $this->load->view('Layout',$this->data);
 	}
 }

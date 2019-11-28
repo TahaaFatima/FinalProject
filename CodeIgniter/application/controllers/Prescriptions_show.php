@@ -18,9 +18,9 @@ class Prescriptions_show extends MY_Controller {
                 $doc_appointment = $this->Prescriptions_Model->search_join($to_show,$join_retrieve);
 
                 
-                $data['prescription'] = $doc_appointment;
-                $data['view'] = 'Prescriptions_show';
-                $data['page_title'] = 'Prescriptions_show';
-                $this->load->view('Layout',$data);
+                $this->data['prescription'] = $doc_appointment;
+                $this->data['view'] = 'Prescriptions_show';
+                $this->data['page_title'] = 'Prescriptions_show';
+                $this->load->view('Layout',$this->data);
 	}
 }

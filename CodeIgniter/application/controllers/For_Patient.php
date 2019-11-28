@@ -5,8 +5,8 @@ class For_Patient extends MY_Controller {
 
 	public function index()
 	{
-                $data['view'] = 'For_Patient';
-                $data['page_title'] = 'For_Patient';
-                $this->load->view('Layout',$data);
+                $this->data['view'] = 'For_Patient';
+                $this->data['page_title'] = 'For_Patient';
+                $this->load->view('Layout',$this->data);
 	}
 }

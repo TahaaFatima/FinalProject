@@ -21,9 +21,9 @@ class Patients_Assess_Doctor extends MY_Controller {
 
         $doc_appointment = $this->appt_booking_model->search_join($to_show,$join_retrieve);
       
-        $data['doctors_App_data'] = $doc_appointment[0];
-        $data['view'] = 'Patients_Assess_Doctor';
-        $data['page_title'] = 'Patients_Assess_Doctor';
-        $this->load->view('Layout',$data);
+        $this->data['doctors_App_data'] = $doc_appointment[0];
+        $this->data['view'] = 'Patients_Assess_Doctor';
+        $this->data['page_title'] = 'Patients_Assess_Doctor';
+        $this->load->view('Layout',$this->data);
 	}
 }

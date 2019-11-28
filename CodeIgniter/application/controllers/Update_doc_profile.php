@@ -18,7 +18,7 @@ class Update_doc_profile extends MY_Controller {
 
         if(isset($_POST['Update'])){
             
-                $data =[
+                $record_doc =[
                     'full_name'         => $_POST['Name'],
                     'age'               => $_POST['Age'],
                     'gender'            => $_POST['Gender'],
@@ -32,7 +32,7 @@ class Update_doc_profile extends MY_Controller {
                 ];
  
                 $this->load->model('Doctor_registration_model');
-                $this->Doctor_registration_model->updating ( $data  ,$where );
+                $this->Doctor_registration_model->updating ( $record_doc  ,$where );
             }
 
         $this->load->model('Area_Model');
@@ -47,13 +47,13 @@ class Update_doc_profile extends MY_Controller {
         $this->load->model('Price_Model');
         $price_table = $this->Price_Model->retrieving();
 
-        $data['doctors_info'] = $doc_info;
-        $data['areas'] = $area_table;
-        $data['departments'] =  $department_table;
-        $data['clinic'] = $clinic_table;
-        $data['prices'] = $price_table;
-        $data['page_title'] = 'Update_doc_Profile';
-        $data['view'] = 'Update_doc_Profile';
-        $this->load->view('layout',$data);
+        $this->data['doctors_info'] = $doc_info;
+        $this->data['areas'] = $area_table;
+        $this->data['departments'] =  $department_table;
+        $this->data['clinic'] = $clinic_table;
+        $this->data['prices'] = $price_table;
+        $this->data['page_title'] = 'Update_doc_Profile';
+        $this->data['view'] = 'Update_doc_Profile';
+        $this->load->view('layout',$this->data);
     }
 }

@@ -10,7 +10,6 @@ class Doctors_Registration extends MY_Controller
     }
     public function index()
     {
-/*         $this->load->view('upload_form', array('error' => ' ' )); */
         $this->load->helper('form');
         $this->load->library('form_validation');
 
@@ -27,12 +26,12 @@ class Doctors_Registration extends MY_Controller
         $this->load->model('Price_Model');
         $price_table = $this->Price_Model->retrieving();
 
-        $data['view']        = 'Doctors_Registration';
-        $data['page_title']  = 'Doctors_Registration';
-        $data['areas']       = $area_table;
-        $data['departments'] = $department_table;
-        $data['clinic']      = $clinic_table;
-        $data['prices']      = $price_table;
+        $this->data['view']        = 'Doctors_Registration';
+        $this->data['page_title']  = 'Doctors_Registration';
+        $this->data['areas']       = $area_table;
+        $this->data['departments'] = $department_table;
+        $this->data['clinic']      = $clinic_table;
+        $this->data['prices']      = $price_table;
 
 
         if (isset($_POST['Submit'])) {
@@ -124,10 +123,10 @@ class Doctors_Registration extends MY_Controller
             }
     
             if (!$this->form_validation->run() || $is_error) {
-                $data['file_error'] = $upload_data;
-                $data['view'] = 'Doctors_Registration';
-                $data['page_title'] = 'Doctors_Registration';
-                return $this->load->view('layout', $data);
+                $this->data['file_error'] = $upload_data;
+                $this->data['view'] = 'Doctors_Registration';
+                $this->data['page_title'] = 'Doctors_Registration';
+                return $this->load->view('layout', $this->data);
             } else {
                 $this->load->model('Doctor_registration_model');
                 $password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
@@ -150,7 +149,7 @@ class Doctors_Registration extends MY_Controller
                 ];
                 if($_FILES['userfile']['error'] != 4){
                     $upload =   false;
-                    $data['images' ] = $upload_data['file_name'];
+                    $this->data['images' ] = $upload_data['file_name'];
                 }
                 $result  = $this->Doctor_registration_model->inserting($data);
                 $this->load->model('Doctor_Timeslot_Model');
@@ -163,6 +162,6 @@ class Doctors_Registration extends MY_Controller
                 redirect('Login');
             }
         }
-        $this->load->view('layout', $data);
+        $this->load->view('layout', $this->data);
     }
 }

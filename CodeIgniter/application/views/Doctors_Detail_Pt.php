@@ -32,13 +32,18 @@
                 </div>
                 <div class="doc-3">
                     <ul class="grid-list-half pl-4">
-                        <li><i class="fa fa-comment"></i> Patient Reviews</li>
                         <li><i class="fa fa-credit-card green-text"></i><?php echo $doctor->price?></li>
                         <li><i class="fa fa-circle"></i><?php echo $doctor->time_in?> - <?php echo $doctor->time_out?></li>
                         <li><i class="fa fa-circle"></i><?php echo $doctor->clinics?></li>
                     </ul>
                 </div>
                 <?php } ?>
+            </div>
+            <div class="div-dc-li">
+                <h4>Reviews : </h4>
+                <ul>
+                    <li></li>
+                </ul>
             </div>
         </div>
     </div>
