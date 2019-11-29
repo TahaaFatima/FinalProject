@@ -85,11 +85,14 @@
             
             return $this->db->where($arr)->limit($limit,$offset)->get('chats')->result();
         }
-        public function retrieve_ratings($select = '*', array $where = []){
+        public function retrieve_ratings($select = '*', array $where = [], $multiple = false){
             $this->db->select($select);
             $this->db->from($this->table_name);
             if(count($where) > 0){
                 $this->db->where($where);
+            }
+            if($multiple){
+                return $this->db->get()->result();
             }
             return $this->db->get()->row_array();
         }

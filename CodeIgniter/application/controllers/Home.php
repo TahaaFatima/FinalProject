@@ -5,10 +5,6 @@ class Home extends MY_Controller {
     function __construct()
         {
             parent::__construct();
-            $login_in = $this->session->userdata('signed_in');
-                if(!$login_in){
-                    redirect('Login');
-                }
        }  
 	public function index()
 	{

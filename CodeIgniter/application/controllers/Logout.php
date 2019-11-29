@@ -6,7 +6,7 @@
         function __construct()
         {
             parent::__construct();
-            $login_in = $this->session->userdata('signed_in');
+            $login_in = $this->session->userdata('user_id');
                 if(!$login_in){
                     redirect('Login');
                 }

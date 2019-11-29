@@ -9,7 +9,7 @@
 				<!-- footer grid1 -->
 				<div class="col-lg-4 col-sm-6 fv5-contact margin-foot">
 					<h2 class="mb-4">
-						<a class="navbar-brand text-white" href="index.html">
+						<a class="navbar-brand text-white" href="<?php echo site_url() ?>">
 						Revitalize
 						</a>
 					</h2>

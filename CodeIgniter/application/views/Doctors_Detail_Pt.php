@@ -5,6 +5,10 @@
                 <?php foreach($doctors as $doctor){?>
                 <div class="img-doct">
                     <img class="profile-image" src="<?php echo "../assets/uploads/".$doctor->images?>" alt="doctors-profile">
+                    <div class="doctors-rating">
+                        <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['rating']) ? $ratings[$doctor->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating">
+                        </div>
+                    </div>
                 </div>
                 <div class="doc-info">
                     <div class="pl-4">
@@ -41,8 +45,20 @@
             </div>
             <div class="div-dc-li">
                 <h4>Reviews : </h4>
-                <ul>
-                    <li></li>
+                <ul class="grid-list-half pl-4">
+                    <?php foreach($reviews as $review){
+                        foreach($review as $patient_name => $doc_review)
+                    ?>
+                    <li>
+                        <div>
+                            <p>
+                                <?php echo $patient_name ?> : <?php echo $doc_review ?>
+                            </p>
+                        </div>
+
+                    </li>
+                    <?php
+                    } ?>
                 </ul>
             </div>
         </div>

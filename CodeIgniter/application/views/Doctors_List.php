@@ -73,7 +73,6 @@
                         <?php        
                             }
                         ?>
-                        ?>
                     </div>
                     <div class="rating-star">
                         <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['rating']) ? $ratings[$doctor->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating"></div>
