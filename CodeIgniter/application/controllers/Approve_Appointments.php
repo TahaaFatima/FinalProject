@@ -6,9 +6,9 @@ class Approve_Appointments extends MY_Controller {
         {   
             parent::__construct();
             $login_in = $this->session->userdata('user_id');
-                if(!isset($login_in) || empty($login_in)){
-                    redirect('Login');
-                }
+            if(!isset($login_in) || empty($login_in)){
+                redirect('Login');
+            }
         }
 	public function index()
 	{

@@ -6,13 +6,13 @@
         <div class="doctors-my-detals">
             <div class="doctors-detail">
             <?php foreach($doctors_info as $info){
-               // var_dump($info);die;
-                ?>
+               
+               ?>
                 <div class="doctors-profile">
                         <?php 
-                            if(!empty($info->images)){
+                            if(!empty($info->images)){   
                         ?>
-                                <img class="profile-image" src="<?php echo "../assets/uploads/".$info->images?>" alt="doctors-profile">
+                                <img class="profile-image" src="<?php echo $image_path.$info->images?>" alt="doctors-profile">
                         <?php
                             }elseif(empty($info->images) && $info->gender == "female"){
                         ?>
@@ -24,13 +24,17 @@
                         <?php        
                             }
                         ?>
-
+                </div>
+                <div>
+                    <input id="profile_edit" type="file" name="userfile" size="20" /> 
                 </div>
                 <div class="doctors-name">
                     <p><?php echo $info->full_name; ?></p>
                 </div>
-                <div class="doctors-rating">
-                <div id="rateYo-<?php echo $info->doctors_id ?>" data-rating="<?php echo isset($ratings[$info->doctors_id]['rating']) ? $ratings[$info->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating"></div>
+                <div class="rate">
+                    <div class="doctors-rating">
+                        <div id="rateYo-<?php echo $info->doctors_id ?>" data-rating="<?php echo isset($ratings[$info->doctors_id]['rating']) ? $ratings[$info->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating"></div>
+                    </div>
                 </div>
                 <div class="doctors-speciality">
                     <p><?php echo $info->department; ?></p>

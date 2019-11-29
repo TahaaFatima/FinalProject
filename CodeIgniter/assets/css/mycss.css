@@ -782,7 +782,7 @@ input.btn.btn-danger.send {
     height: 194px;
 }
 div#rateYo-20 {
-    margin: 19px 27px;
+    margin: 19px 27px 0px;
 }
 ul.chatbox-listing > li {
     background: #02646f;
@@ -792,3 +792,42 @@ ul.chatbox-listing > li {
     height: 36px;
     border-radius: 0px 11px;
 }
+.rate {
+    text-align: -webkit-center;
+}         
+
+/* .custom-file-input{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    margin: 0;
+    opacity: 0;
+} */
+/* .custom-file-label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+
+} */
+input#profile_edit {
+    color: #026673;
+    background: #e9ecef;
+    width: 77%;
+    margin: 12px;
+    height: 33px;
+}
+/* .custom-file-label::after {
+    content: "Browse";
+    width: 100%;
+    text-align: center;
+} */

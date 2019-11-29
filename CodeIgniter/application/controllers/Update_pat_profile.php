@@ -6,10 +6,10 @@ class Update_pat_profile extends MY_Controller {
 	function __construct()
     {
         parent::__construct();
-        $login_in = $this->session->userdata('signed_in');
-        if(!$login_in){
-            redirect('Login');
-        }
+        $login_in = $this->session->userdata('user_id');
+            if(!isset($login_in) || empty($login_in)){
+                redirect('Login');
+            }
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 1) {

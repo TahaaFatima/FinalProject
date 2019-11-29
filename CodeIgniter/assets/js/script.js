@@ -74,6 +74,28 @@ $(document).ready(function () {
 
     }
 });
+
+    $('#profile_edit').on('change', function(){
+       var file     =   $(this).prop('files')[0];
+       var formData =   new FormData();
+       formData.append('userfile',file);
+           $.ajax({
+                url         :   SITE_URL+"/Doctors_Profile/image_upload",
+                data        :   formData,
+                type        :   "POST",
+                processData :   false,
+                datatype    :   "JSON",
+                contentType :   false,
+                cache       :   false,
+                success     :   function(){
+    
+                }
+            })
+    })
+
+
+
+
 // $(document).ready(function(){
 //     $('.send').on('click', function(e){
 //         e.preventDefault();

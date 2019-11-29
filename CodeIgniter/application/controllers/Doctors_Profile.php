@@ -16,7 +16,6 @@ class Doctors_Profile extends MY_Controller {
             }
         }
     }
-
 	public function index()
 	{
         $this->load->model('Doctor_registration_model');
@@ -54,5 +53,19 @@ class Doctors_Profile extends MY_Controller {
         $this->data['site_title']   = 'Revitalize';
         $this->data['page_title']   = 'My Profile - '.$this->data['site_title'];
         $this->load->view('Layout',$this->data);
-	}
+    }
+    
+    public function image_upload(){
+        $is_error = false;
+        $upload = $this->do_upload($is_error);
+        if($is_error){
+            $response['status'] = "error";
+            $response['message'] = $upload;
+        }else{
+            $response['status'] = "success";
+            $response['message'] = "Images uploaded";
+        } 
+
+        echo json_encode($response);
+    }
 }

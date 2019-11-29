@@ -61,7 +61,7 @@
                         <?php 
                             if(!empty($doctor->images)){
                         ?>
-                                <img class="profile-image" src="<?php echo "../assets/uploads/".$doctor->images?>" alt="doctors-profile">
+                                <img class="profile-image" src="<?php echo "$image_path.$doctor->images" ?>" alt="doctors-profile">
                         <?php
                             }elseif(empty($doctor->images) && $doctor->gender == "female"){
                         ?>
@@ -74,8 +74,10 @@
                             }
                         ?>
                     </div>
-                    <div class="rating-star">
-                        <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['rating']) ? $ratings[$doctor->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating"></div>
+                    <div class="rate">
+                        <div class="rating-star">
+                            <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['rating']) ? $ratings[$doctor->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating"></div>
+                        </div>
                     </div>
                     <div class="padding doc-name">
                         <h3><?php echo $doctor->full_name?></h3>
