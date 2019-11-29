@@ -353,10 +353,11 @@ input.form-radio {
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-end;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 ul.chatbox-listing {
-    overflow-y: scroll;
     list-style: none;
     bottom: 38px;
     left: 0;
@@ -784,13 +785,24 @@ input.btn.btn-danger.send {
 div#rateYo-20 {
     margin: 19px 27px 0px;
 }
-ul.chatbox-listing > li {
+li.sender {
     background: #02646f;
     color: white;
-    margin: 4px 0px;
-    width: 53%;
+    margin: 4px 0px 4px 65px;
+    width: 88%;
+    text-align: end;
     height: 36px;
-    border-radius: 0px 11px;
+    border-radius: 11px 0px 0px 0px;
+}
+
+li.receiver {
+    background: #5d6667;
+    color: white;
+    margin: 4px 0px 4px 0px;
+    width: 82%;
+    text-align: start;
+    height: 36px;
+    border-radius: 0px 9px 0px 0px;
 }
 .rate {
     text-align: -webkit-center;

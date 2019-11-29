@@ -9,7 +9,7 @@
                     <form method="post">
                             <div class="view">
                                 <div class="col-80">
-                                    <input  name="doc_id" class="doc-id" value="<?php echo $doc_id?>" class="chat-message-text" type="hidden"> 
+                                        <input  name="user_id" class="user-id" value="<?php echo $user_id?>" class="chat-message-text" type="hidden"> 
                                     <input class="form-control" name="message" class="chat-message-text" type="text"> 
                                 </div>
                                 <div class="col-20">

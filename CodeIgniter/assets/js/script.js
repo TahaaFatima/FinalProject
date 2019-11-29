@@ -35,9 +35,9 @@ $(document).ready(function () {
     $('.send').on('click', function (e) {
         e.preventDefault();
         msg = $('input[name=message]').val();
-        doc_id = $('.doc-id').val();
+        user_id = $('.user-id').val();
 
-        data = { msg: msg, doc_id: doc_id };
+        data = { msg: msg, user_id: user_id };
         $.ajax({
             url: SITE_URL + "/chatbox/insert_messages",
             data: data,
@@ -54,11 +54,25 @@ $(document).ready(function () {
         if ($('.chatarea').length) {
             li_length = $('.chatbox-listing > li').length;
             
+            //     if(ROLE_ID == 1){
+            //         pat_id = $('.user-id').val();
+            //         data = { 
+            //             offset: li_length,
+            //             pat_id: pat_id
+            //         }
+            //    // }else if(ROLE_ID == 2){
+            //         doc_id = $('.user-id').val();
+            //         data = { 
+            //             offset: li_length,
+            //             doc_id: doc_id
+            //         }
+            //    // }
+                    user_id = $('.user-id').val();
+                    data = { 
+                        offset: li_length,
+                        user_id: user_id
+                    }
                 
-                doc_id = $('.doc-id').val();
-                data = { offset: li_length,
-                            doc_id: doc_id
-                }
                 $.ajax({
                     url: SITE_URL + "/chatbox/get_messages",
                     data: data,
@@ -87,7 +101,9 @@ $(document).ready(function () {
                 datatype    :   "JSON",
                 contentType :   false,
                 cache       :   false,
-                success     :   function(){
+                success     :   
+                
+                function(){
     
                 }
             })

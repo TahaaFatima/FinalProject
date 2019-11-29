@@ -6,6 +6,7 @@
 	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
     <script>
         SITE_URL = "<?php echo site_url() ?>" ;
+        ROLE_ID  = "<?php echo $this->session->userdata('role_id') ?>";
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
         }, false);

@@ -67,10 +67,12 @@
                                             </div>
                                             <?php
                                         }
-                                            
                                             ?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Patients Assessment</a>
+                                                <a href="<?php echo site_url('Patients_Assess_Doctor') ?>?doc_id= <?php echo $patients_app->doctors_id ?>" >Patients Assessment</a>
+                                            </div>
+                                            <div class="links-buttons-pt">
+                                                <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
                                             </div>
 
                                     </div>        

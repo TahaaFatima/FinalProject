@@ -49,9 +49,6 @@
                     <p><a href="<?php echo site_url('Update_doc_profile'); ?>">Edit</a></p>
                 </div>
                 <div class="doctors-links">
-                    <p><a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $info->doctors_id ?>">Chat</a></p>
-                </div>
-                <div class="doctors-links">
                     <p><a href="<?php echo site_url('Logout'); ?>">Logout</a></p>
                 </div>
             </div>

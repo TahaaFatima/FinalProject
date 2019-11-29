@@ -5,7 +5,7 @@
     <div class="profile-pat">
     <?php 
         foreach($doctors_App_data as $doctor_app){
-      //      var_dump($doctors_App_data);die;
+     //    var_dump($doctor_app);die;
     ?>
         <div class="my-details-links">
             <div class="links-heading">
@@ -28,7 +28,7 @@
                          <div class="li-div-pt">
                             <li class="li-pt">
                                 <div class="li-a-div-pt">
-                                    <a href="<?php echo site_url('Attended_Appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Attended</a>
+                                <a href="<?php echo site_url('Attended_Appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Attended</a>
                                 </div>
                             </li>
                         </div>
@@ -84,6 +84,9 @@
                             </div>
                             <div class="links-pt">
                                 <a href="<?php echo site_url('Prescriptions') ?>?prescription_id=<?php echo $doctor_app->appointment_id?>" >Prescriptions</a>
+                            </div>
+                            <div class="links-pt">
+                                <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $doctor_app->patient_id ?>" >Chat</a>
                             </div>
                         </div>
                     </div>       

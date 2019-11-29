@@ -23,15 +23,6 @@
                         </div>
                         <div class="li-div-pt">
                             <li class="li-pt">
-                                <div class="li-a-div-pt"\
-                                >
-                                    <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $patients_info->patient_id	 ?>">Chat</a>\
-                                </div>
-                            </li>
-                        </div>
-
-                         <div class="li-div-pt">
-                            <li class="li-pt">
                                 <div class="li-a-div-pt">
                                     <a href="<?php echo site_url('Update_pat_profile'); ?>">Edit</a>
                                 </div>

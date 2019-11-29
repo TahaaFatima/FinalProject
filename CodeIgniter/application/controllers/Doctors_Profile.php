@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Doctors_Profile extends MY_Controller {
-        function __construct()
+    function __construct()
     {
         parent::__construct();
         $login_in = $this->session->userdata('user_id');
