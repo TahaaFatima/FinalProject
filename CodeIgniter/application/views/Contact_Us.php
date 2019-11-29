@@ -24,13 +24,13 @@
                     <div>
                         <label class="col-form-label white-color"  for="Email">Email</label>
                         <input class="form-control" type="email" name="Email" >
-                        <?php echo form_error('Age' , '<div class="error">', '</div>'); ?>
+                        <?php echo form_error('Email' , '<div class="error">', '</div>'); ?>
 
                     </div>
                     <div>
                         <label class="col-form-label white-color"  for="Phone">Phone</label>
                         <input class="form-control" type="number" name="Phone" >
-                        <?php echo form_error('Gender' , '<div class="error">', '</div>'); ?>
+                        <?php echo form_error('Phone' , '<div class="error">', '</div>'); ?>
 
                     </div>
                     <div>

@@ -520,9 +520,9 @@ $config['rewrite_short_tags'] = FALSE;
 | Comma-separated:	'10.0.1.200,192.168.5.0/24'
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
-$config['mail_to'] = 'revitalizeconsulnet@gmail.com';
-$config['mail_from'] = 'noreply@revitalize.com';
-$config['proxy_ips'] = '';
+$config['mail_to']          = 'revitalizeconsulnet@gmail.com';
+$config['mail_from']        = 'noreply@revitalize.com';
+$config['proxy_ips']        = '';
 $config['useragent']        = 'PHPMailer';              // Mail engine switcher: 'CodeIgniter' or 'PHPMailer'
 $config['protocol']         = 'smtp';                   // 'mail', 'sendmail', or 'smtp'
 $config['mailpath']         = '/usr/sbin/sendmail';

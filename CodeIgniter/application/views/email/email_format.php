@@ -1,7 +1,12 @@
-<table>
+<table border=1 cellspacing=0 style="text-align:center; margin:20px">
     <thead>
         <tr>
-            <th></th>
+            <th style="background-color:#ffab67" colspan="2">Contact Details</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+            You've received a contact form with the following details
+            </td>
         </tr>
     </thead>
     <tbody>

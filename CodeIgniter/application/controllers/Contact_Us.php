@@ -8,7 +8,6 @@ class Contact_Us extends MY_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        if(!empty($this->session->userdata('user_id'))){
             if(isset($_POST['Submit'])){
                 $validation = [
                     [
@@ -41,12 +40,13 @@ class Contact_Us extends MY_Controller {
                 $this->data['Email_address']  = $_POST['Email'];
                 $this->data['Phone']          = $_POST['Phone'];
                 $this->data['Message']        = $_POST['Message'];
-                $this->data['Page_view']      = 'email_format';
+                $this->data['Page_view']      = 'email_view';
+                $this->data['Page_to_see']    = 'email_format';
 
                 
                 $subject        = 'Contact Us - Message';
 
-                $mailContent = $this->load->view('email/index',$this->data, true);
+                $mailContent = $this->load->view('email/email_layout',$this->data, true);
 
                 $mail_to   = $this->config->item('mail_to') ;
                 $mail_from = $this->config->item('mail_from');
@@ -56,23 +56,6 @@ class Contact_Us extends MY_Controller {
                 
                 // return redirect(site_url('Client/index/'.$bid_project_id));
             }
-            
-
-
-        }else{
-            echo 'Kindly, Sign In';
-        }
-        // if($bid_accepted)
-        // {
-        //     $reciever       = $user_info->email;
-        //     $subject        = 'Project Agreement';
-        //     $data['name']   = $user_info->name;
-        //     $mailContent = $this->load->view('email',$data, true);
-
-        //     $this->sendMail($subject, $mailContent, $reciever);
-            
-        //     return redirect(site_url('Client/index/'.$bid_project_id));
-        // }
 
             $this->data['view']         = 'Contact_Us';
             $this->data['site_title']   = 'Revitalize';
