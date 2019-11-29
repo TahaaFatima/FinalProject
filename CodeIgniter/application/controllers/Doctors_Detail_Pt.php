@@ -65,7 +65,7 @@ class Doctors_Detail_Pt extends MY_Controller {
             }
 
         $this->data['doctors']      =   $doc_joins;
-        $this->data['ratings']     = $avg_rating;
+        $this->data['ratings']      =   $avg_rating;
         $this->data['reviews']      =   $list_review;
         $this->data['site_title']   =   'Revitalize';
         $this->data['page_title']   =   'Doctor Details - '.$this->data['site_title'];

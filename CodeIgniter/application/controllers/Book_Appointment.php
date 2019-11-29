@@ -145,6 +145,14 @@ class Book_Appointment extends MY_Controller {
         $join_retrieve[] = [
                             'table_name'=>'area',
                             'column_with'=>'doctors_registration.area_id = area.area_id'];
+        $join_retrieve[] =  [
+                            'table_name'=>'dr_time_slot',
+                            'column_with'=>'doctors_registration.doctors_id = dr_time_slot.doctors_id'
+                            ];
+        $join_retrieve[] =  [
+                            'table_name'=>'clinic',
+                            'column_with'=>'doctors_registration.clinic_id = clinic.clinic_id'
+                            ];                    
 
         $doc_joins = $this->Doctor_registration_model->search_join($to_search,$join_retrieve);
         $this->load->model('Appt_Record');
@@ -162,8 +170,8 @@ class Book_Appointment extends MY_Controller {
         $this->data['ratings']       = $avg_rating;
         $this->data['doctors']       = $doc_joins;
         $this->data['site_title']    = 'Revitalize';
-        $this->data['view']          = 'Book_Appointment - '.$this->data['site_title'];;
-        $this->data['page_title']    = 'Book Appointment';
+        $this->data['page_title']    = 'Book Appointment -'.$this->data['site_title'];
+        $this->data['view']          = 'Book_Appointment';
         $this->load->view('Layout',$this->data);
 	}
 }

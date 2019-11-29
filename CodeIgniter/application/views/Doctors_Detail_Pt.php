@@ -44,22 +44,31 @@
                 <?php } ?>
             </div>
             <div class="div-dc-li">
-                <h4>Reviews : </h4>
-                <ul class="grid-list-half pl-4">
-                    <?php foreach($reviews as $review){
-                        foreach($review as $patient_name => $doc_review)
-                    ?>
-                    <li>
-                        <div>
-                            <p>
-                                <?php echo $patient_name ?> : <?php echo $doc_review ?>
-                            </p>
-                        </div>
-
-                    </li>
-                    <?php
-                    } ?>
-                </ul>
+                <div class="review-parent">
+                    <div class="Reviews-heading">
+                        <h4>Reviews : </h4>
+                    </div>
+                    <div class="Reviews">
+                        <ul class="Reviews-ul">
+                            <?php foreach($reviews as $review){
+                                foreach($review as $patient_name => $doc_review)
+                            ?>
+                            <li>
+                                <div>
+                                    <p class="patient-name-reviews">
+                                        <?php echo $patient_name ?> 
+                                    </p>
+                                    <p class="patient-reviews">
+                                        <?php echo $doc_review ?>
+                                    </p>
+                                </div>
+        
+                            </li>
+                            <?php
+                            } ?>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

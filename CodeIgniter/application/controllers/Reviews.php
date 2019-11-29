@@ -40,8 +40,8 @@ class Reviews extends MY_Controller{
                     $this->load->model('MyReviews');
                     
                     $review_arr = [
-                        'review'    => $_REQUEST['yourReview'],
-                        'rating'    => $_REQUEST['hidden-rate'],
+                        'review'     => $_REQUEST['yourReview'],
+                        'rating'     => $_REQUEST['hidden-rate'],
                         'doctors_id' => $_REQUEST['doc_rev_id'],
                         'patient_id' => $_REQUEST['pat_rev_id']
                     ];

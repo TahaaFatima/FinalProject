@@ -56,6 +56,21 @@
                         <?php
                             }
                         ?>
+                        <?php 
+                                if($this->session->userdata('role_id') == 1 ){
+                        ?>
+                            <li>
+                                <h3 class="pt-Or-doc">Hi Doctor!!</h3>
+                            </li>
+                        <?php 
+                                }else if($this->session->userdata('role_id') == 2){
+                        ?>  
+                            <li>
+                                <h3 class="pt-Or-doc">Hi Patient!!</h3>
+                            </li>
+                        <?php 
+                            }
+                        ?>
                     </ul>
                 </div>
             </nav>

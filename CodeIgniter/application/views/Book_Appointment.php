@@ -2,52 +2,54 @@
     <div class=" mt-2 bg-white padding">
         <div class="doc-12">
             <div class="div-dc-li">
-                <?php foreach ($doctors as $doctor) {
-  
-                    ?>
-                    <div class="img-doct">
-                        <?php 
-                            if(!empty($doctor->images)){
-                        ?>
-                                <img class="profile-image" src="<?php echo "$image_path.$doctor->images"?>" alt="doctors-profile">
-                        <?php
-                            }elseif(empty($doctor->images) && $doctor->gender == "female"){
-                        ?>
-                            <img class="profile-image" src="../assets/images/doctors-profile.png" alt="doctors-profile">
-                        <?php
-                            }elseif(empty($doctor->images) && $doctor->gender == "male"){
-                        ?>
-                            <img class="profile-image" src="../assets/images/profile-male.jpg" alt="doctors-profile">
-                        <?php        
-                            }
-                        ?>
-                        <div class="rate">
-                            <div class="rating-star">
-                                <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['rating']) ? $ratings[$doctor->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating">
+                <?php foreach($doctors as $doctor){?>
+                    <div class="parent-div-doc">
+                        <div class="img-doct right-div">
+                            <?php 
+                                if(!empty($doctor->images)){
+                            ?>
+                                    <img class="profile-image" src="<?php echo "$image_path.$doctor->images"?>" alt="doctors-profile">
+                            <?php
+                                }elseif(empty($doctor->images) && $doctor->gender == "female"){
+                            ?>
+                                <img class="profile-image" src="../assets/images/doctors-profile.png" alt="doctors-profile">
+                            <?php
+                                }elseif(empty($doctor->images) && $doctor->gender == "male"){
+                            ?>
+                                <img class="profile-image" src="../assets/images/profile-male.jpg" alt="doctors-profile">
+                            <?php        
+                                }
+                            ?>
+                            <div class="rate">
+                                <div class="rating-star">
+                                    <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['rating']) ? $ratings[$doctor->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating">
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>    
+                        <div class="right-div doc-info">
+                            <div class="pl-4">
+                                <h2><?php echo $doctor->full_name?></h2>
+                                <p><?php echo  $doctor->department?></p>
+                                <p><?php echo  $doctor->gender?></p>
+                                <p><?php echo  $doctor->area?></p>
+                                <p><?php echo  $doctor->email?></p>
                             </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="doc-info">
-                        <div class="doct-info">
-                            <h2><?php echo $doctor->full_name ?></h2>
-                            <p><?php echo $doctor->department ?></p>
-                            <p><?php echo $doctor->area ?></p>
                         </div>
                         <div class="doc-3">
                             <ul class="grid-list-half pl-4">
-                                <li><i class="fa fa-credit-card green-text"></i><?php echo $doctor->price ?></li>
-                                <li><i class="fa fa-circle"></i> Availability</li>
-                                <li><i class="fa fa-circle"></i> Clinic Name</li>
+                                <li><i class="fa fa-credit-card green-text"></i><?php echo $doctor->price?></li>
+                                <li><i class="fa fa-circle"></i><?php echo $doctor->time_in?> - <?php echo $doctor->time_out?></li>
+                                <li><i class="fa fa-circle"></i><?php echo $doctor->clinics?></li>
                             </ul>
                         </div>
-                    <?php } ?>
                     </div>
+                <?php } ?>
             </div>
         </div>
-</section>
+    </div>
+</section>            
 <section class="reg-section">
-
     <div class="reg-form-div">
         <div class="reg-form">
             <form class="form-div-appt" method="post">
@@ -93,16 +95,6 @@
                 <div>
                     <label class="col-form-label" for="ailments">Previous Ailments</label>
                     <input class="form-control" type="text" name="ailments">
-                    <!-- <input class="form-check" type="text" name="ailments[]" value="High Blood Pressure"><label for="Ailments">High Blood Pressure</label>
-                <input class="form-check" type="text" name="ailments[]" value="Low Blood Pressure"><label for="Ailments">Low Blood Pressure</label>
-                <input class="form-check" type="text" name="ailments[]" value="Diabetes"><label for="Ailments">Diabetes</label>
-                <input class="form-check" type="text" name="ailments[]" value="Lung Diseases"><label for="Ailments">Lung Diseases</label>
-                <input class="form-check" type="text" name="ailments[]" value="Liver Diseases"><label for="Ailments">Liver Diseases</label>
-                <input class="form-check" type="text" name="ailments[]" value="Asthma"><label for="Ailments">Asthma</label>
-                <input class="form-check" type="text" name="ailments[]" value="Kidney Diseases"><label for="Ailments">Kidney Diseases</label>
-                <input class="form-check" type="text" name="ailments[]" value="Neurological Problems"><label for="Ailments">Neurological Problems</label>
-                <input class="form-check" type="text" name="ailments[]" value="Thyroid"><label for="Ailments">Thyroid</label>
-                <input class="form-check" type="text" name="ailments[]" value="Cancer"><label for="Ailments">Cancer</label> -->
                     <?php echo form_error('ailments', '<div class="error">', '</div>'); ?>
                 </div>
                 <div>
