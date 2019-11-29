@@ -8,39 +8,59 @@ class Contact_Us extends MY_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
-        if(isset($_POST['Submit'])){
-            $validation = [
-                [
-                    'field' => 'Name',
-                    'label' => 'name',
-                    'rules' => 'trim|required'
-                ],
-                [
-                    'field' => 'Age',
-                    'label' => 'age',
-                    'rules' => 'required'
-                ],
-                [
-                    'field' => 'Gender',
-                    'label' => 'gender',
-                    'rules' => 'required'
-                ],
-                [
-                    'field' => 'Message',
-                    'label' => 'Message',
-                    'rules' => 'trim|required'
-                ]
-                ];
+        if(!empty($this->session->userdata('user_id'))){
+            if(isset($_POST['Submit'])){
+                $validation = [
+                    [
+                        'field' => 'Name',
+                        'label' => 'name',
+                        'rules' => 'trim|required'
+                    ],
+                    [
+                        'field' => 'Email',
+                        'label' => 'email',
+                        'rules' => 'trim|required|valid_email'
+                    ],
+                    [
+                        'field' => 'Phone',
+                        'label' => 'Phone',
+                        'rules' => 'required'
+                    ],
+                    [
+                        'field' => 'Message',
+                        'label' => 'Message',
+                        'rules' => 'trim|required'
+                    ]
+                    ];
 
-            $this->form_validation->set_rules($validation);
-            $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-
+                $this->form_validation->set_rules($validation);
+                $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+                }
             if ($this->form_validation->run()) {
+                $this->data['Name']           = $_POST['Name'];
+                $this->data['Email_address']  = $_POST['Email'];
+                $this->data['Phone']          = $_POST['Phone'];
+                $this->data['Message']        = $_POST['Message'];
+                $this->data['Page_view']      = 'email_format';
+
                 
+                $subject        = 'Contact Us - Message';
+
+                $mailContent = $this->load->view('email/index',$this->data, true);
+
+                $mail_to   = $this->config->item('mail_to') ;
+                $mail_from = $this->config->item('mail_from');
+                
+
+                $this->send_mail($subject, $mailContent, $mail_from, 'Revitalize', 'Revitalize', $mail_to);
+                
+                // return redirect(site_url('Client/index/'.$bid_project_id));
             }
             
 
 
+        }else{
+            echo 'Kindly, Sign In';
         }
         // if($bid_accepted)
         // {

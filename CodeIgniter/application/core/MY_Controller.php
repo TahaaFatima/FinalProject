@@ -3,7 +3,7 @@
     
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-//    require 'vendor/autoload.php';
+    require 'vendor/autoload.php';
     class MY_Controller extends CI_Controller{
 
         public function do_upload( &$error )
@@ -31,7 +31,7 @@
                 }
         }
         
-        function send_mail($subject , $email_content , string $receiver, string $sender_email = 'revitalize@gmail.com'){
+        function send_mail($subject , $email_content , string $sender, $sender_name, $receiver_name, string $receiver = 'revitalize@gmail.com'){
 
             // Instantiation and passing `true` enables exceptions
             $mail = new PHPMailer(true);
@@ -45,9 +45,9 @@
             $mail->Port       = $this->config->item('smtp_port');  
 
             //Recipients
-            $mail->setFrom($sender_email, 'Mailer');
+            $mail->setFrom($sender, $sender_name);
 
-            $mail->addAddress($receiver, 'Joe User');     
+            $mail->addAddress($receiver, $receiver_name);     
                       
             $mail->Subject = $subject;
             

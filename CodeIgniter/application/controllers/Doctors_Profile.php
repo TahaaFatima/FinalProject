@@ -6,7 +6,7 @@ class Doctors_Profile extends MY_Controller {
     {
         parent::__construct();
         $login_in = $this->session->userdata('user_id');
-        if(!$login_in){
+        if(!isset($login_in) || empty($login_in)){
             redirect('Login');
         }
         $role_id = $this->session->userdata('role_id');

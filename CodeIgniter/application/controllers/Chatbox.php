@@ -7,11 +7,12 @@
         function __construct()
         {   
             parent::__construct();
-            $this->load->model('Chat_Model');
-            $login_in = $this->session->userdata('signed_in');
-                if(!$login_in){
-                redirect('Login');
+            $login_in = $this->session->userdata('user_id');
+                if(!isset($login_in) || empty($login_in)){
+                    redirect('Login');
                 }
+            $this->load->model('Chat_Model');
+            
  
         }
         function index($doc_id){

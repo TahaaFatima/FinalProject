@@ -46,7 +46,7 @@ class Doctors_Registration extends MY_Controller
                 [
                     'field' => 'Age',
                     'label' => 'age',
-                    'rules' => 'required'
+                    'rules' => 'numeric|required'
                 ],
                 [
                     'field' => 'Gender',
