@@ -43,11 +43,11 @@
                 <label class="col-form-label" for="Location">Location</label>
                 <select class="form-control"  name="Location">
                     <option value="">Choose Area</option>
-                    <?php 
+                    <?php
                         foreach($areas as $area)
                         {    
                     ?>
-                        <option value="<?php echo $area->area_id ?>"><?php echo $area->area ?></option>
+                        <option value="<?php echo $area->area_id ?>" <?php echo (isset($_POST['Location']) && !empty($_POST['Location']) ? ($_POST['Location'] == $area->area ? 'select="selected"' : '') :'') ? '' : '' ?>><?php echo $area->area ?></option>
                     <?php
                         }
                     ?>
