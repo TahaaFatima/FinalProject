@@ -5,6 +5,7 @@
     <div class="reg-form-div">
         <form enctype="multipart/form-data" method="post" class="reg-form">
             <div>
+                <label class="col-form-label" for="Name">Upload Image</label>
                 <input type="file" name="userfile" size="20" /> 
             </div>
             <div class="form-group">
@@ -47,7 +48,7 @@
                         foreach($areas as $area)
                         {    
                     ?>
-                        <option value="<?php echo $area->area_id ?>" <?php echo (isset($_POST['Location']) && !empty($_POST['Location']) ? ($_POST['Location'] == $area->area ? 'select="selected"' : '') :'') ? '' : '' ?>><?php echo $area->area ?></option>
+                        <option value="<?php echo $area->area_id ?>" <?php echo (isset($_POST['Location'] ) && !empty($_POST['Location']) ? ( $_POST['Location'] == $area->area_id ? 'selected="selected"' : '' )    :  '' ) ?> ><?php echo $area->area ?></option>
                     <?php
                         }
                     ?>
@@ -62,7 +63,7 @@
                         foreach($departments as $department)
                             { 
                     ?>
-                            <option value="<?php echo $department->department_id ?>"><?php echo $department->department ?></option>
+                            <option value="<?php echo $department->department_id ?>" <?php echo (isset($_POST['Department'] ) && !empty($_POST['Department']) ? ( $_POST['Department'] == $department->department_id ? 'selected="selected"' : '' )    :  '' ) ?> ><?php echo $department->department ?></option>
                     <?php
                             }
                     ?>
@@ -77,7 +78,8 @@
                         foreach($clinic as $clinics)
                             { 
                     ?>
-                            <option value="<?php echo $clinics->clinic_id ?>"><?php echo $clinics->clinics?></option>
+
+                            <option value="<?php echo $clinics->clinic_id ?>" <?php echo (isset($_POST['Clinic'] ) && !empty($_POST['Clinic']) ? ( $_POST['Clinic'] == $clinics->clinic_id ? 'selected="selected"' : '' )    :  '' ) ?> ><?php echo $clinics->clinics ?></option>
                 <?php
                             }
                     ?>
@@ -93,7 +95,8 @@
                         foreach($prices as $price)
                             { 
                     ?>
-                            <option value="<?php echo $price->price_id ?>" <?php echo(isset($doctors_info->price_id) && $price->price_id == $doctors_info->$price_id ? 'selected = "selected"' : "" ) ?>> <?php echo $price->price ?></option>
+
+                            <option value="<?php echo $price->price_id ?>" <?php echo (isset($_POST['Price'] ) && !empty($_POST['Price']) ? ( $_POST['Price'] == $price->price_id ? 'selected="selected"' : '' )    :'') ?> ><?php echo $price->price ?></option>
                     <?php
                             }
                     ?>

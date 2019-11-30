@@ -101,10 +101,8 @@ $(document).ready(function () {
                 datatype    :   "JSON",
                 contentType :   false,
                 cache       :   false,
-                success     :   
-                
-                function(){
-    
+                success     : function(){
+                    location.reload();
                 }
             })
     })

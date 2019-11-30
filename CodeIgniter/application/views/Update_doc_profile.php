@@ -51,7 +51,7 @@
                     foreach($departments as $department)
                         { 
                 ?>
-                  <option value="<?php echo $department->department_id ?>" <?php echo (isset($_POST['Department'] ) && !empty($_POST['Department']) ? ( $_POST['Department'] == $department->department_id ? 'selected="selected"' : '' )    :  ( $doctors_info->department_id == $department->department_id ? 'selected="selected"' : '' )  ) ?> ><?php echo $department->department ?></option>
+                      <option value="<?php echo $department->department_id ?>" <?php echo (isset($_POST['Department'] ) && !empty($_POST['Department']) ? ( $_POST['Department'] == $department->department_id ? 'selected="selected"' : '' )    :  ( $doctors_info->department_id == $department->department_id ? 'selected="selected"' : '' )  ) ?> ><?php echo $department->department ?></option>
 
             <?php
                         }

@@ -58,10 +58,20 @@ class Doctors_Profile extends MY_Controller {
     public function image_upload(){
         $is_error = false;
         $upload = $this->do_upload($is_error);
-        if($is_error){
+         if($is_error){
             $response['status'] = "error";
             $response['message'] = $upload;
         }else{
+            $doctors_id  = $this->session->userdata('user_id');
+            $where = ['doctors_id' => $doctors_id];
+          
+            $image_update = [
+                'images' => $upload['file_name']
+            ];
+          
+            $this->load->model('Doctor_registration_model');
+            $this->Doctor_registration_model->updating ( $image_update  ,$where );
+
             $response['status'] = "success";
             $response['message'] = "Images uploaded";
         } 

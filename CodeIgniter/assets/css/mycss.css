@@ -3,6 +3,11 @@
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
 }
+.container{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
 .revitalize-logo{
     color: white;
 }
@@ -437,7 +442,7 @@ li{
 }
 h1{
     color: var(--primary-color);
-    padding: 30px 216px 0px 245px;
+    padding: 30px 181px 0px 220px;
     display: inline-block;
 }
 .login-section{
@@ -450,7 +455,7 @@ h1{
 .left-section{
     width: 22.01%;
     display: inline-block;
-    margin-left: 209px;
+    margin-left: 178px;
 }
 .left-div{
     background-color: var(--primary-color);
@@ -473,7 +478,7 @@ h3{
     /* display: inline-block; */
     float: right;
     /* padding-right: 10px; */
-    margin-right: 214px;
+    margin-right: 175px;
     padding: 0 5px;
 }
 .form{
@@ -521,7 +526,7 @@ section.profile-section {
     margin-left: 350px;
 }
 
-fsorm.form-patient-pro {
+.form-patient-pro {
     margin: 0px;
 }
 div.li-a-div-pt > a {
@@ -597,6 +602,7 @@ form.reg-form.login-form {
 }
 .login-link-2{
     padding: 22px 0px 0px;
+    margin-top: 32px;
 }
 .navbar-img{
     width: 35px;
