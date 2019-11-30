@@ -127,7 +127,10 @@ button.btn.ml-lg-2.w3ls-btn {
 .how-it-work-text > h2 {
     padding: 10px 28px 17px 129px;
 }
-
+.head-link {
+    padding: 37px 19px 37px 26px;
+    background: whitesmoke;
+ }
 .how-it-work-text > p {
     width: 100%;
     padding: 9px 13px 11px 129px;
@@ -535,7 +538,7 @@ div.li-a-div-pt > a {
     padding: 11px 30px 11px;
 }
 li.li-pt {
-    width: 91%;
+    width: 245px;
     background: var(--primary-color);
     padding: 10px;
     border-radius: 3px;

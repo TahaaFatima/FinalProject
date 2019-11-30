@@ -4,8 +4,8 @@
     </div>
     <div class="profile-pat">
     <?php 
+        if(isset($doctors_App_data) && !empty($doctors_App_data)){
         foreach($doctors_App_data as $doctor_app){
-     //    var_dump($doctor_app);die;
     ?>
         <div class="my-details-links">
             <div class="links-heading">
@@ -77,7 +77,8 @@
                             <input class="form-control" type="text" name="Status" value="<?php echo $doctor_app->appointment_status ?>" readonly>
                         </div>   
                     </div>       
-                    <div class="detail-links">
+                    <div class="deta
+                    il-links">
                         <div class="links">
                             <div class="links-pt">
                                 <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Patients Assessment</a>
@@ -95,6 +96,16 @@
         </div>
     </div>
     <?php 
-       }                                   
+       } 
+    }
+    else{
+        ?>
+        <div class="detail-div-1">
+            <p>
+                You've no appointments
+            </p>
+        </div>
+        <?php
+    }                                 
     ?>
 </section>

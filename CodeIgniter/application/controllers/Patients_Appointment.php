@@ -10,6 +10,7 @@ class Patients_Appointment extends MY_Controller {
             if(!isset($login_in) || empty($login_in)){
                 redirect('Login');
             }
+            
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 1) {
