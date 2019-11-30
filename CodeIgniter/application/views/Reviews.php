@@ -5,19 +5,23 @@
         </div>
         <div class="doctors-my-detals">
             <div class="doctors-detail">
-           
+                <?php foreach($doc_details as $doc_detail){
+                ?>
                 <div class="doctors-profile">
                     <img src="../assets/images/doctors-profile.png" alt="doctors-profile">
                 </div>
                 <div class="doctors-name">
-                    <p><?php //echo $info->full_name; ?></p>
+                    <p><?php echo $doc_detail->full_name; ?></p>
                 </div>
                 <div class="doctors-rating">
                     <div class="rateYo rating"></div>
                 </div>
                 <div class="doctors-speciality">
-                    <p><?php //echo $info->department; ?></p>
+                    <p><?php echo $doc_detail->department; ?></p>
                 </div>
+                <?php
+                }
+                ?>
                 
             </div>
             <div class="reg-form-div">

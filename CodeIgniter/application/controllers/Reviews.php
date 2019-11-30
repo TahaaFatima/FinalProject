@@ -49,8 +49,18 @@ class Reviews extends MY_Controller{
                     
                     $this->MyReviews->inserting($review_arr);
                 }
-            }
+        }
+                $this->load->model('Doctor_registration_model');
+                $to_search['doctors_registration.doctors_id'] = $_REQUEST['doc_rev_id'];
+                $join_retrieve[] = [
+                            'table_name'=>'department',
+                            'column_with'=>'doctors_registration.department_id = department.department_id']; 
+                $doc_details = $this->Doctor_registration_model->search_join($to_search, $join_retrieve);
+
+                var_dump($doc_details);die;
+
                 $this->data['view']         =   'Reviews';
+                $this->data['doc_details']  =   $doc_details;
                 $this->data['site_title']   =   'Revitalize';
                 $this->data['page_title']   =   'Reviews - '.$this->data['site_title'];
 

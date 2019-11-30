@@ -17,7 +17,13 @@ class Cancel_Appointments extends MY_Controller {
             $to_update = ['appointment_status'=>'Cancelled'];
             $where     = ['appointment_id'=>$_REQUEST['appt_id']];
             $this->appt_booking_model->updating($to_update,$where);
-            redirect('Doctors_Appoinments');
+
+            if($this->session->userdata('role_id') == 1){
+                redirect('Doctors_Appoinments');
+            }
+            if($this->session->userdata('role_id') == 2){
+                redirect('Patients_Appointment');
+            } 
         }
 	}
 }

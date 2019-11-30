@@ -19,8 +19,8 @@
             </div>
             <div class="form-group">
                 <label class="col-form-label" for="Gender">Gender</label>
-                <input class="form-radio" type="radio" name="Gender" value="female"> Female
-                <input class="form-radio" type="radio" name="Gender" value="male"> Male
+                <input class="form-radio" type="radio" name="Gender" value="female" <?php echo isset($_POST['Gender']) && $_POST['Gender'] == "female" ? 'checked="checked"' : ''?>> Female
+                <input class="form-radio" type="radio" name="Gender" value="male" <?php echo isset($_POST['Gender']) && $_POST['Gender'] == "male" ? 'checked="checked"' : ''?>> Male
                 <?php echo form_error('Gender' , '<div class="error">', '</div>'); ?>
             </div>
             <div class="form-group">
@@ -35,8 +35,8 @@
             </div>
             <div class="form-group">
                 <label class="col-form-label" for="Type">Type</label>
-                <input class="form-radio" type="radio" name="Type" value="Medical">Medical 
-                <input class="form-radio" type="radio" name="Type" value="Dental">Dental 
+                <input class="form-radio" type="radio" name="Type" value="Medical" <?php echo isset($_POST['Type']) && $_POST['Type'] == "Medical" ? 'checked="checked"' : ''?>>Medical 
+                <input class="form-radio" type="radio" name="Type" value="Dental" <?php echo isset($_POST['Type']) && $_POST['Type'] == "Dental" ? 'checked="checked"' : ''?>>Dental 
                 <?php echo form_error('Type' , '<div class="error">', '</div>'); ?>
             </div>
             <div class="form-group">

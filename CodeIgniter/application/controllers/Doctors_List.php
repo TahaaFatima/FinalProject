@@ -21,7 +21,7 @@ class Doctors_List extends MY_Controller {
         $clinic_table = $this->Clinic_Model->retrieving();
 
         $to_search = [];
-        if(isset($_REQUEST['submit_search']) ||isset($_REQUEST['departmentSelector']) ){
+        if(isset($_REQUEST['submit_search']) || isset($_REQUEST['departmentSelector']) ){
             $this->load->model('Doctor_registration_model');
             $to_search = [];
             if( isset($_REQUEST['departmentSelector']) && ($_REQUEST['departmentSelector'] != 'none')){

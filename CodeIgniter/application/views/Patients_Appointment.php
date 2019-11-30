@@ -63,7 +63,7 @@
                                         }else{
                                             ?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Cancel</a>
+                                                <a href="<?php echo site_url('Cancel_Appointments')?>?appt_id=<?php echo $patients_app->appointment_id ?>" >Cancel</a>
                                             </div>
                                             <?php
                                         }
@@ -143,7 +143,7 @@
                                         }else{
                                             ?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Cancel</a>
+                                                <a href="<?php echo site_url('Cancel_Appointments')?>?appt_id=<?php echo $patients_app->appointment_id ?>">Cancel</a>
                                             </div>
                                             <?php
                                         }
@@ -151,6 +151,9 @@
                                             ?>
                                             <div class="links-buttons-pt">
                                                 <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Patients Assessment</a>
+                                            </div>
+                                            <div class="links-buttons-pt">
+                                                <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
                                             </div>
 
                                     </div>        
@@ -229,6 +232,9 @@
                                             ?>
                                             <div class="links-buttons-pt">
                                                 <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Patients Assessment</a>
+                                            </div>
+                                            <div class="links-buttons-pt">
+                                                <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
                                             </div>
 
                                     </div>        

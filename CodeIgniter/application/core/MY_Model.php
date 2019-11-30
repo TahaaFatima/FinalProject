@@ -55,7 +55,7 @@
                 if(!$forError){
                     return $this->db->error();
                 }else{
-                    return "Updated";
+                    return true;
                 }
             }
         }

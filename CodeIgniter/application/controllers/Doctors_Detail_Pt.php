@@ -5,10 +5,7 @@ class Doctors_Detail_Pt extends MY_Controller {
     function __construct()
     {
         parent::__construct();
-        $login_in = $this->session->userdata('user_id');
-                if(!isset($login_in) || empty($login_in)){
-                    redirect('Login');
-                }
+        
     }
     public function index()
 	{

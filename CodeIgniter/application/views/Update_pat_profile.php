@@ -2,8 +2,13 @@
     <div class="main-heading">
         <h5 class="modal-title text-center text-dark mb-4">Update Your Profile</h5>
     </div>
+    <span class="updated-profile">
+        <?php echo (isset($_POST['edit'])) ? (isset($updated) && $updated? 'Updated Successfully' : '') : '' ?>
+    </span>
+    
     <div class="reg-form-div">
         <form class="reg-form" method="post">
+            
             <div>
                 <label class="col-form-label" for="Name">Name</label>
                 <input class="form-control" type="text" name="Name" value="<?php echo $patients_info->full_name;  ?>">
@@ -14,8 +19,8 @@
             </div>
             <div>
                 <label class="col-form-label" for="Gender">Gender</label>
-                <input class="form-radio" type="radio" name="Gender" value="female">Female
-                <input class="form-radio" type="radio" name="Gender" value="male">Male
+                <input class="form-radio" type="radio" name="Gender" value="female" <?php echo $patients_info->gender == "female" ? 'checked="checked"' : '' ?>>Female
+                <input class="form-radio" type="radio" name="Gender" value="male" <?php echo $patients_info->gender == "male" ? 'checked="checked"' : ''?>>Male
             </div>
             <div>
                 <label class="col-form-label" for="Phone_Number">Phone Number</label>
