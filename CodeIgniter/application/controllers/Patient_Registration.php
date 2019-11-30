@@ -63,7 +63,7 @@ class Patient_Registration extends MY_Controller {
                         'gender'            => $_POST['Gender'],
                         'phone_number'      => $_POST['Phone_Number'],
                         'email'             => $_POST['Email_Address'],
-                        'role_id'           => 1,
+                        'role_id'           => 2,
                         'password'          => $password
                     ];
 
