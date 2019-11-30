@@ -43,7 +43,7 @@ class Doctor_Login extends MY_Controller {
             if (!$this->form_validation->run())
             {
                 $data['view'] = 'Login';
-                return $this->load->view('Layout', $data);
+                return $this->load->view('layout', $data);
             }else{
                 $this->load->model('User_Model');
                 $this->User_Model->table_name = 'doctors_registration';
@@ -69,7 +69,7 @@ class Doctor_Login extends MY_Controller {
 
         $this->data['view'] = 'Login';
         $this->data['page_title'] = 'Login';
-        $this->load->view('Layout', $this->data);
+        $this->load->view('layout', $this->data);
     }
 }
 

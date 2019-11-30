@@ -9,6 +9,6 @@ class For_Doctor extends MY_Controller {
                 $this->data['site_title']   = 'Revitalize';
                 $this->data['page_title']   = 'For Doctor - '.$this->data['site_title'];
                
-                $this->load->view('Layout',$this->data);
+                $this->load->view('layout',$this->data);
 	}
 }

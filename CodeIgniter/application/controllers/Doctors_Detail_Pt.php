@@ -68,6 +68,6 @@ class Doctors_Detail_Pt extends MY_Controller {
         $this->data['page_title']   =   'Doctor Details - '.$this->data['site_title'];
         $this->data['view']         =   'Doctors_Detail_Pt';
 
-        $this->load->view('Layout',$this->data);
+        $this->load->view('layout',$this->data);
 	}
 }

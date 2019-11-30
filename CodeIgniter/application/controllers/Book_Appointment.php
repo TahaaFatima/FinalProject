@@ -172,6 +172,6 @@ class Book_Appointment extends MY_Controller {
         $this->data['site_title']    = 'Revitalize';
         $this->data['page_title']    = 'Book Appointment -'.$this->data['site_title'];
         $this->data['view']          = 'Book_Appointment';
-        $this->load->view('Layout',$this->data);
+        $this->load->view('layout',$this->data);
 	}
 }

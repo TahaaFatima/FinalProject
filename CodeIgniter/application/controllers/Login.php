@@ -45,7 +45,7 @@ class Login extends MY_Controller
             if (!$this->form_validation->run()) {
                 $this->data['page_title'] = 'Login';
                 $this->data['view'] = 'Login';
-                return $this->load->view('Layout', $this->data);
+                return $this->load->view('layout', $this->data);
             } else {
                 $this->load->model('User_Model');
                 $email_address  = $_POST['Email_Address'];
@@ -86,6 +86,6 @@ class Login extends MY_Controller
         $this->data['page_title']   = 'Login - '.$this->data['site_title'];
         $this->data['view']         = 'Login';
         
-        $this->load->view('Layout', $this->data);
+        $this->load->view('layout', $this->data);
     }
 }

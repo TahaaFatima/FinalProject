@@ -41,6 +41,6 @@ class Patients_Appointment extends MY_Controller {
         $this->data['site_title']   =   'Revitalize';
         $this->data['page_title']   =   'My Appointment - '.$this->data['site_title'];
 
-        $this->load->view('Layout',$this->data);
+        $this->load->view('layout',$this->data);
 	}
 }
