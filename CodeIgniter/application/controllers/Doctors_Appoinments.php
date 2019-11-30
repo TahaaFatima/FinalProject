@@ -34,8 +34,6 @@ class Doctors_Appoinments extends MY_Controller {
         ];
         
         $doc_appointment = $this->appt_booking_model->search_join($to_show,$join_retrieve);
-
-        $this->session->set_userdata('appointment_id', $doc_appointment->appointment_id);
                         
         $this->data['doctors_App_data'] = $doc_appointment;
         $this->data['view']             = 'Doctors_Appoinments';

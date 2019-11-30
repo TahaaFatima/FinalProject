@@ -112,6 +112,21 @@ class Doctors_Registration extends MY_Controller
                     'field' => 'Confirm_Password',
                     'label' => 'confirm password',
                     'rules' => 'trim|required|matches[Password]'
+                ],
+                [
+                    'field' => 'time_form',
+                    'label' => 'Time from',
+                    'rules' => 'trim|required'
+                ],
+                [
+                    'field' => 'time_to',
+                    'label' => 'Time to',
+                    'rules' => 'trim|required'
+                ],
+                [
+                    'field' => 'Confirm_Password',
+                    'label' => 'confirm password',
+                    'rules' => 'trim|required|matches[Password]'
                 ]
             ];
             $is_error = false;
@@ -148,9 +163,10 @@ class Doctors_Registration extends MY_Controller
                     'password'          => $password,
                     
                 ];
-                if($_FILES['userfile']['error'] != 4){
-                    $upload =   false;
-                    $this->data['images' ] = $upload_data['file_name'];
+            //    var_dump($upload);die;
+
+                if($upload){
+                    $data['images' ] = $upload_data['file_name'];
                 }
                 $result  = $this->Doctor_registration_model->inserting($data);
                 $this->load->model('Doctor_Timeslot_Model');

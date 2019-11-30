@@ -3,11 +3,12 @@
     
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-    require 'vendor/autoload.php';
+  //  require 'vendor/autoload.php';
     class MY_Controller extends CI_Controller{
         function __construct(){
             parent::__construct();
-            $this->data['image_path'] = base_url('/assets/uploads');
+            $this->data['image_path'] = base_url('/assets/uploads/');
+         //   var_dump($this->data['image_path']);die;
         }
         public function do_upload( &$error )
         {

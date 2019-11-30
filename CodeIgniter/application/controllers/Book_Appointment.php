@@ -121,7 +121,7 @@ class Book_Appointment extends MY_Controller {
                 'smoke_habits'               => $_POST['Smoke'],
                 'sleeping_hours'             => $_POST['Sleeping'],
                 'medical_history'            => $_POST['other_details'],
-                'appointment_id'             =>  $id_returned,
+                'appointment_id'             => $id_returned,
             ];
 
             $this->load->model('Patients_assessment_model');
@@ -129,7 +129,6 @@ class Book_Appointment extends MY_Controller {
             redirect('Doctors_List');
             }
         }
-
         $this->load->model('Doctor_registration_model');
         $to_search = [];
         if(isset($_GET['Doc_id'])){

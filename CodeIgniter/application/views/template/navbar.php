@@ -38,7 +38,8 @@
                                     Logout</a>
                             </li>
                             <li>
-                                <img class="navbar-img" src="../assets/images/doctors-profile.png" alt="profile">
+                                <a href="<?php echo ($this->session->userdata('role_id') == 1) ? site_url('/Doctors_Profile') : ($this->session->userdata('role_id') == 2) ? site_url('/Patients_Profile') : "" ;?>"><img class="navbar-img" src="../assets/images/doctors-profile.png" alt="profile"></a>
+                                    
                             </li>
 
                         <?php           

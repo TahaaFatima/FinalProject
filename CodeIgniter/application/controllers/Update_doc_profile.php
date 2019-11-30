@@ -37,6 +37,7 @@ class Update_doc_profile extends MY_Controller {
  
                 $this->load->model('Doctor_registration_model');
                 $this->Doctor_registration_model->updating ( $record_doc  ,$where );
+                redirect('Doctors_Profile');
             }
 
         $this->load->model('Area_Model');
@@ -59,7 +60,8 @@ class Update_doc_profile extends MY_Controller {
         $this->data['site_title']   =   'Revitalize';
         $this->data['page_title']   =   'Edit Doctors Profile - '.$this->data['site_title'];
         $this->data['view']         =   'Update_doc_Profile';
-        
+            
         $this->load->view('layout',$this->data);
+
     }
 }

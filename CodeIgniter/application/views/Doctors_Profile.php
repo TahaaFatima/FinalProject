@@ -8,7 +8,7 @@
             <?php foreach($doctors_info as $info){
                
                ?>
-                <div class="doctors-profile">
+                <div class="doctors-profile">   
                         <?php 
                             if(!empty($info->images)){   
                         ?>
