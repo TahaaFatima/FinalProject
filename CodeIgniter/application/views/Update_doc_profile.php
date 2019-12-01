@@ -1,4 +1,5 @@
 <section class="reg-section">
+    <div class="container">
     <div class="main-heading">
         <h5 class="modal-title text-center text-dark mb-4">EDIT PROFILE</h5>
     </div>
@@ -88,5 +89,6 @@
             <input class="form-control button" type="submit" name="Update" value="Update">
         </div>
     </form>
+    </div>
     </div>
 </section>

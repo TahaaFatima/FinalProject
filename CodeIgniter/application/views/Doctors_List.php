@@ -1,4 +1,7 @@
 <div class="container">
+    <div class="main-heading">      
+        <h5 class="modal-title text-center text-dark mb-4">OUR DOCTORS</h5>
+    </div>
     <div class="search-bar">
         <form class="search_form" >
             <select class="form-control form-mine" name="departmentSelector">

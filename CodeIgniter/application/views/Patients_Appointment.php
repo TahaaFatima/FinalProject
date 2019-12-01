@@ -1,5 +1,6 @@
 <section class="profile-section">
-    <div class="main-heading">      
+   <div class="container">
+   <div class="main-heading">      
         <h5 class="modal-title text-center text-dark mb-4">MY APPOINTMENTS</h5>
     </div>
     <div id="tabs">
@@ -248,9 +249,16 @@
                     }
             } 
             if($no_record){
-                echo 'You have no appointments';
+            ?>
+            <div class="no-app-div">
+                <p>
+                    You've no appointments
+                </p>
+            </div>
+            <?php    
             }                                   
             ?>
         </div>
     </div>
+   </div>
 </section>

@@ -8,6 +8,12 @@
     max-width: 1280px;
     margin: 0 auto;
 }
+.sticky{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 999;
+}
 .revitalize-logo{
     color: white;
 }
@@ -126,7 +132,7 @@ button.btn.ml-lg-2.w3ls-btn {
     padding: 10px 28px 17px 129px;
 }
 .head-link {
-    padding: 37px 19px 37px 26px;
+    padding: 37px 19px 39px 26px;
     background: whitesmoke;
  }
 .how-it-work-text > p {
@@ -279,8 +285,11 @@ input.form-radio {
     height: 162px;
 }
 .rating {
-    margin: 0px 87px;
+    margin: 0px 45px;
     margin-top: 16px;
+}
+.profile-doctors-details {
+    padding-top: 39px;
 }
 .selection{
     display: flex;
@@ -596,10 +605,10 @@ form.reg-detail-pt {
 }
 .doctors-links > p > a {
     color: white;
-    padding: 13px 70px;
-    /* background: #e9ecef; */
+    padding: 10px 19px;
     border-radius: 3px;
 }
+
 .doctors-links > p {
     font-size: 20px;
     margin: 10px 35px;
@@ -708,7 +717,7 @@ ul.ul-pt-app {
 }
 form.search_form {
     padding-right: 22px;
-}
+ }
 .link-appointment {
     display: flex;
     width: 100%;
@@ -776,6 +785,19 @@ form.reg-form.form-patient-pro {
 ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all {
     background: #02646f;
     padding: 4px;
+    width: 100%;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active{
+    background: #02646f;
+    width: calc(100% /3);
+}
+li.ui-state-default.ui-corner-top{
+    background: #02646f;
+    width: calc(100% /3);
+}
+li.ui-state-default.ui-corner-top{
+    background: #02646f;
+    width: calc(100% /3);
 }
 div#tabs {
     text-align: -webkit-center;
@@ -785,11 +807,14 @@ div#tabs {
     font-size: 21px;
 }
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-    padding: 8px 212px;
+    padding: 8px 171px;
 }
 input.btn.btn-danger.send {
     padding: 6px 3px;
     margin-left: 10px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a{
+    color: white;
 }
 .col-80 {
     width: 88%;
@@ -901,4 +926,18 @@ i.fas.fa-check {
 }
 .back-groud-blue{
     background: #02646fb3;
+}
+.no-app-div {
+    width: 100%;
+    text-align: center;
+    background: #e9ecef;
+    border: 1px solid #e9ecef;
+    /* color: lavenderblush; */
+    background: #f5f5f5;
+}
+.no-app-div > p {
+    color: #02646f;
+}
+.main-heading {
+    padding-top: 58px;
 }

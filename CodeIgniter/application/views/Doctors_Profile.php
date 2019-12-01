@@ -1,5 +1,6 @@
 <section class="profile-section">
-    <div class="profile-doctors-details">
+  <div class="container">
+  <div class="profile-doctors-details">
         <div class="main-heading">
             <h5 class="modal-title text-center text-dark mb-4">My Profile</h5>
         </div>
@@ -43,7 +44,7 @@
                     <p><?php echo $info->clinics; ?></p>
                 </div>
                 <div class="doctors-links">
-                    <p><a href="<?php echo site_url('Doctors_Appoinments'); ?>">Appointment</a></p>
+                    <p><a class="appointment-links" href="<?php echo site_url('Doctors_Appoinments'); ?>">Appointment</a></p>
                 </div>
                 <div class="doctors-links">
                     <p><a href="<?php echo site_url('Update_doc_profile'); ?>">Edit</a></p>
@@ -103,4 +104,5 @@
             </div>
         </div>
     </div>
+  </div>
 </section>

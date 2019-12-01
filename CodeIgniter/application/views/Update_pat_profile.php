@@ -1,4 +1,5 @@
 <section class="reg-section">
+    <div class="container">
     <div class="main-heading">
         <h5 class="modal-title text-center text-dark mb-4">Update Your Profile</h5>
     </div>
@@ -26,5 +27,6 @@
                 <input class="form-control button" type="submit" name="edit" value="Edit">
             </div>
         </form>    
+    </div>
     </div>
 </section>    
