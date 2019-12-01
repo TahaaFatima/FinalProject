@@ -2,10 +2,6 @@
     <div class="main-heading">
         <h5 class="modal-title text-center text-dark mb-4">Update Your Profile</h5>
     </div>
-    <span class="updated-profile">
-        <?php echo (isset($_POST['edit'])) ? (isset($updated) && $updated? 'Updated Successfully' : '') : '' ?>
-    </span>
-    
     <div class="reg-form-div">
         <form class="reg-form" method="post">
             

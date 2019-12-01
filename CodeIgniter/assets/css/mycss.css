@@ -343,6 +343,21 @@ input.form-radio {
     color: #02646f;
     margin-left: 342px;
 }
+.contact-msg {
+    text-align: center;
+}
+
+span.contact-span {
+    font-size: 23px;
+    color:white;
+    
+}
+
+.contact-msg {
+    border: 1px solid #41646f;
+    border-radius: 3px;
+    background: #29666f85;
+}
 /* Taha */
     
 

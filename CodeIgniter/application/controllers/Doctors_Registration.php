@@ -147,7 +147,7 @@ class Doctors_Registration extends MY_Controller
                 $this->load->model('Doctor_registration_model');
                 $password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
 
-                $data = [
+                $doc_record = [
                     'full_name'         => $_POST['Name'],
                     'age'               => $_POST['Age'],
                     'gender'            => $_POST['Gender'],
@@ -163,19 +163,20 @@ class Doctors_Registration extends MY_Controller
                     'password'          => $password,
                     
                 ];
-            //    var_dump($upload);die;
 
                 if($upload){
-                    $data['images' ] = $upload_data['file_name'];
+                    $doc_record['images' ] = $upload_data['file_name'];
                 }
-                $result  = $this->Doctor_registration_model->inserting($data);
+                $result  = $this->Doctor_registration_model->inserting($doc_record);
                 $this->load->model('Doctor_Timeslot_Model');
                 $time_data = [
                     'doctors_id' => $result,
-                    'time_in' => $_POST['time_form'],
-                    'time_out' => $_POST['time_to']
+                    'time_in'    => $_POST['time_form'],
+                    'time_out'   => $_POST['time_to']
                 ];
                 $this->Doctor_Timeslot_Model->inserting($time_data);
+
+                
                 redirect('Login');
             }
         }

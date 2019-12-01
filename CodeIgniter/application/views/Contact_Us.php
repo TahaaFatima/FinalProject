@@ -16,6 +16,9 @@
         <div class="contact-us-bottom">
             <div class="reg-form-div">
                 <form class="reg-form contact-form" method="post">
+                    <div class="contact-msg">
+                       <span class="contact-span"><?php echo (isset($_POST['Submit']) ? (isset($success_msg) && !empty($success_msg) ? $success_msg : 'Message has not been sent') : '') ?></span>
+                    </div>
                     <div>
                         <label class="col-form-label white-color"  for="Name">Full Name</label>
                         <input class="form-control" type="text" name="Name" >

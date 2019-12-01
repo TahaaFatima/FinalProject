@@ -3,7 +3,7 @@
     
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-  //  require 'vendor/autoload.php';
+    require 'vendor/autoload.php';
     class MY_Controller extends CI_Controller{
         function __construct(){
             parent::__construct();
@@ -59,10 +59,7 @@
             
             if($mail->send()){
 
-                echo 'Message has been sent';
-            }else{
-                echo 'Message has not been sent';
-                echo 'Mail error:' . $mail->ErrorInfo;
+                return 'Message has been sent';
             }
             
        }

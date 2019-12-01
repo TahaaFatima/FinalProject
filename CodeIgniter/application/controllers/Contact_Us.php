@@ -51,9 +51,8 @@ class Contact_Us extends MY_Controller {
                 $mail_from = $this->config->item('mail_from');
                 
 
-                $this->send_mail($subject, $mailContent, $mail_from, 'Revitalize', 'Revitalize', $mail_to);
-                
-                // return redirect(site_url('Client/index/'.$bid_project_id));
+                $success = $this->send_mail($subject, $mailContent, $mail_from, 'Revitalize', 'Revitalize', $mail_to);
+                $this->data['success_msg'] = $success;
             }
 
             $this->data['view']         = 'Contact_Us';

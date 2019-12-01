@@ -36,6 +36,7 @@ class Update_pat_profile extends MY_Controller {
             $this->load->model('Patient_Registration_model');
             $updated = $this->Patient_Registration_model->updating($record_pat , $where);
             $this->data['updated']          =   $updated;
+            redirect('Patients_Profile');
         }
 
         $this->data['patients_info']    =   $pat_info;
