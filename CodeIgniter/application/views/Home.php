@@ -89,7 +89,7 @@
 									<div class="w3-ab-grid text-center">
 										<div class="w3-aicon p-4">
 											<i class="fa fa-stethoscope" aria-hidden="true"></i>
-											<a href="<?php echo site_url('/Doctors_List');?>?departmentSelector=7">
+											<a href="<?php echo site_url('/Doctors_list');?>?departmentSelector=7">
 												<h4 class="my-3 text-capitalize text-white">Neurologist</h4>
 											</a>
 										</div>
@@ -99,7 +99,7 @@
 									<div class="w3-ab-grid text-center">
 										<div class="w3-aicon p-4">
 											<i class="fa fa-wheelchair" aria-hidden="true"></i>
-											<a href="<?php echo site_url('/Doctors_List');?>?departmentSelector=9">
+											<a href="<?php echo site_url('/Doctors_list');?>?departmentSelector=9">
 												<h4 class="my-3 text-capitalize text-white">General Physician</h4>
 											</a>
 										</div>
@@ -109,7 +109,7 @@
 									<div class="w3-ab-grid text-center">
 										<div class="w3-aicon p-4">
 											<i class="fa fa-plus-square" aria-hidden="true"></i>
-											<a href="<?php echo site_url('/Doctors_List');?>?departmentSelector=10">
+											<a href="<?php echo site_url('/Doctors_list');?>?departmentSelector=10">
 												<h4 class="my-3 text-capitalize text-white">Dentist</h4>
 											</a>
 										</div>
@@ -119,7 +119,7 @@
 									<div class="w3-ab-grid text-center">
 										<div class="w3-aicon  p-4">
 											<i class="fa fa-heartbeat" aria-hidden="true"></i>
-											<a href="<?php echo site_url('/Doctors_List');?>?departmentSelector=1">
+											<a href="<?php echo site_url('/Doctors_list');?>?departmentSelector=1">
 												<h4 class="my-3 text-capitalize text-white">Cardiologist </h4>
 											</a>
 										</div>
@@ -129,7 +129,7 @@
 									<div class="w3-ab-grid text-center">
 										<div class="w3-aicon p-4">
 											<i class="fa fa-medkit" aria-hidden="true"></i>
-											<a href="<?php echo site_url('/Doctors_List');?>?departmentSelector=26">
+											<a href="<?php echo site_url('/Doctors_list');?>?departmentSelector=26">
 												<h4 class="my-3 text-capitalize text-white">Infectious Diseases</h4>
 											</a>
 										</div>

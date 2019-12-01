@@ -40,7 +40,7 @@
                             <?php 
                                 if($this->session->userdata('role_id')){
                             ?>
-                                <a href="<?php echo site_url('Book_Appointment') ?>?Doc_id=<?php echo $doctor->doctors_id?>"><i class="fa fa-phone"></i> Book Appointment</a>											 
+                                <a href="<?php echo site_url('Book_appointment') ?>?Doc_id=<?php echo $doctor->doctors_id?>"><i class="fa fa-phone"></i> Book Appointment</a>											 
                             <?php
                                 }else{
                             ?>

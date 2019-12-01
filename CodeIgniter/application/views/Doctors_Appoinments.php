@@ -15,28 +15,28 @@
                             <div class="li-div-pt">
                                 <li class="li-pt">
                                     <div class="li-a-div-pt">
-                                        <a href="<?php echo site_url('Approve_Appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Approve</a>
+                                        <a href="<?php echo site_url('Approve_appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Approve</a>
                                     </div>
                                 </li>
                             </div>
                             <div class="li-div-pt">
                                 <li class="li-pt">
                                     <div class="li-a-div-pt">
-                                    <a href="<?php echo site_url('Cancel_Appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Cancel</a>
+                                    <a href="<?php echo site_url('Cancel_appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Cancel</a>
                                     </div>
                                 </li>
                             </div>
                             <div class="li-div-pt">
                                 <li class="li-pt">
                                     <div class="li-a-div-pt">
-                                    <a href="<?php echo site_url('Attended_Appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Attended</a>
+                                    <a href="<?php echo site_url('Attended_appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Attended</a>
                                     </div>
                                 </li>
                             </div>
                             <div class="li-div-pt">
                                 <li class="li-pt">
                                     <div class="li-a-div-pt">
-                                        <a href="<?php echo site_url('Missed_Appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Missed</a>
+                                        <a href="<?php echo site_url('Missed_appointments')?>?appt_id=<?php echo $doctor_app->appointment_id ?>">Missed</a>
                                     </div>
                                 </li>
                             </div>
