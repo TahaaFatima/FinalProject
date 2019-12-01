@@ -1,28 +1,28 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Doctors_List extends MY_Controller {
+class Doctors_list extends MY_Controller {
     function __construct()
     {
         parent::__construct();
     }
     function index(){
 
-        $this->load->model('Area_Model');
-        $area_table = $this->Area_Model->retrieving();
+        $this->load->model('area_model');
+        $area_table = $this->area_model->retrieving();
          
-        $this->load->model('Department_Model');
-        $department_table = $this->Department_Model->retrieving();
+        $this->load->model('department_model');
+        $department_table = $this->department_model->retrieving();
 
-        $this->load->model('Price_Model');
-        $price_table = $this->Price_Model->retrieving();
+        $this->load->model('price_model');
+        $price_table = $this->price_model->retrieving();
 
-        $this->load->model('Clinic_Model');
-        $clinic_table = $this->Clinic_Model->retrieving();
+        $this->load->model('clinic_model');
+        $clinic_table = $this->clinic_model->retrieving();
 
         $to_search = [];
         if(isset($_REQUEST['submit_search']) || isset($_REQUEST['departmentSelector']) ){
-            $this->load->model('Doctor_registration_model');
+            $this->load->model('doctor_registration_model');
             $to_search = [];
             if( isset($_REQUEST['departmentSelector']) && ($_REQUEST['departmentSelector'] != 'none')){
                 $to_search['doctors_registration.department_id'] = $_REQUEST['departmentSelector']; 
@@ -53,8 +53,8 @@ class Doctors_List extends MY_Controller {
                             'table_name'=>'dr_time_slot',
                             'column_with'=>'doctors_registration.doctors_id = dr_time_slot.doctors_id'];
 
-            $doc_joins = $this->Doctor_registration_model->search_join($to_search,$join_retrieve);
-            $this->load->model('Appt_Record');
+            $doc_joins = $this->doctor_registration_model->search_join($to_search,$join_retrieve);
+            $this->load->model('appt_record');
             $avg_rating = [];
 
             foreach($doc_joins as $single_doc){
@@ -62,13 +62,13 @@ class Doctors_List extends MY_Controller {
                 $where  = ['doctors_id'=>$id_doc];
                 $select = 'avg(rating) as rating';
                 
-                $__ = $this->Appt_Record->retrieve_ratings($select,$where);
+                $__ = $this->appt_record->retrieve_ratings($select,$where);
                 $avg_rating[$id_doc] = $__ ;
             }
         
         $this->data['site_title']  = 'Revitalize';
         $this->data['page_title']  = 'Our Doctors - '.$this->data['site_title'];
-        $this->data['view']        = 'Doctors_List';
+        $this->data['view']        = 'doctors_list';
         $this->data['ratings']     = $avg_rating;
         $this->data['areas']       = $area_table;
         $this->data['departments'] = $department_table;

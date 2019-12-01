@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Doctors_Profile extends MY_Controller {
+class Doctors_profile extends MY_Controller {
     function __construct()
     {
         parent::__construct();
@@ -12,13 +12,13 @@ class Doctors_Profile extends MY_Controller {
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 2) {
-                redirect('Patients_Profile');
+                redirect('Patients_profile');
             }
         }
     }
 	public function index()
 	{
-        $this->load->model('Doctor_registration_model');
+        $this->load->model('doctor_registration_model');
         $doctors_id  = $this->session->userdata('user_id');
         $where = ['doctors_registration.doctors_id' => $doctors_id];
         $join_retrieve[] = [
@@ -37,19 +37,19 @@ class Doctors_Profile extends MY_Controller {
                         'table_name'=>'clinic',
                         'column_with'=>'doctors_registration.clinic_id = clinic.clinic_id'
                         ];
-        $doc_info = $this->Doctor_registration_model->search_join($where,$join_retrieve);
-        $this->load->model('Appt_Record');
+        $doc_info = $this->doctor_registration_model->search_join($where,$join_retrieve);
+        $this->load->model('appt_record');
         $avg_rating = [];
         $id_doc = $doctors_id;
         $where  = ['doctors_id'=>$id_doc];
         $select = 'avg(rating) as rating';
         
-        $__ = $this->Appt_Record->retrieve_ratings($select,$where);
+        $__ = $this->appt_record->retrieve_ratings($select,$where);
         $avg_rating[$id_doc] = $__ ;
         
         $this->data['doctors_info'] = $doc_info;
         $this->data['ratings']      = $avg_rating;
-        $this->data['view']         = 'Doctors_Profile';
+        $this->data['view']         = 'doctors_profile';
         $this->data['site_title']   = 'Revitalize';
         $this->data['page_title']   = 'My Profile - '.$this->data['site_title'];
         $this->load->view('layout',$this->data);
@@ -69,8 +69,8 @@ class Doctors_Profile extends MY_Controller {
                 'images' => $upload['file_name']
             ];
           
-            $this->load->model('Doctor_registration_model');
-            $this->Doctor_registration_model->updating ( $image_update  ,$where );
+            $this->load->model('doctor_registration_model');
+            $this->doctor_registration_model->updating ( $image_update  ,$where );
 
             $response['status'] = "success";
             $response['message'] = "Images uploaded";

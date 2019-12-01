@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Contact_Us extends MY_Controller {
+class Contact_us extends MY_Controller {
 
 	public function index()
 	{
@@ -36,11 +36,12 @@ class Contact_Us extends MY_Controller {
                 $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
                 }
             if ($this->form_validation->run()) {
-                $this->data['Name']           = $_POST['Name'];
-                $this->data['Email_address']  = $_POST['Email'];
-                $this->data['Phone']          = $_POST['Phone'];
-                $this->data['Message']        = $_POST['Message']; 
-                $this->data['Page_view']      = 'email_format';
+                $this->data['Name']                    = $_POST['Name'];
+                $this->data['Email_address']           = $_POST['Email'];
+                $this->data['Phone']                   = $_POST['Phone'];
+                $this->data['Message']                 = $_POST['Message']; 
+                $this->data['Page_view']               = 'email_format';
+                $this->data['receiver_name_mail']      = 'Administrator';
 
                 
                 $subject        = 'Contact Us - Message';
@@ -55,7 +56,7 @@ class Contact_Us extends MY_Controller {
                 $this->data['success_msg'] = $success;
             }
 
-            $this->data['view']         = 'Contact_Us';
+            $this->data['view']         = 'contact_us';
             $this->data['site_title']   = 'Revitalize';
             $this->data['page_title']   = 'Contact Us - '.$this->data['site_title'];
             

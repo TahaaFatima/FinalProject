@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class MyReviews extends MY_Model
+class myreviews extends MY_Model
 {
     function __construct()
     {

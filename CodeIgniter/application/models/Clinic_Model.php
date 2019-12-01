@@ -2,7 +2,7 @@
 
     defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Clinic_Model extends MY_Model{
+    class clinic_model extends MY_Model{
         function __construct()
         {
             parent::__construct();

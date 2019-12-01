@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Cancel_Appointments extends MY_Controller {
+class Cancel_appointments extends MY_Controller {
     function __construct()
         {   
             parent::__construct();
@@ -19,10 +19,10 @@ class Cancel_Appointments extends MY_Controller {
             $this->appt_booking_model->updating($to_update,$where);
 
             if($this->session->userdata('role_id') == 1){
-                redirect('Doctors_Appoinments');
+                redirect('Doctors_appoinments');
             }
             if($this->session->userdata('role_id') == 2){
-                redirect('Patients_Appointment');
+                redirect('Patients_appointment');
             } 
         }
 	}

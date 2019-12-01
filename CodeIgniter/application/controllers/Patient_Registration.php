@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Patient_Registration extends MY_Controller {
+class Patient_registration extends MY_Controller {
 
 	function __construct()
     {
@@ -67,13 +67,13 @@ class Patient_Registration extends MY_Controller {
                         'password'          => $password
                     ];
 
-                    $this->load->model('Patient_registration_model');
-                    $result  = $this->Patient_registration_model->inserting($data);
+                    $this->load->model('patient_registration_model');
+                    $result  = $this->patient_registration_model->inserting($data);
                     redirect('Login'); 
                 }
             }
 
-            $this->data['view']         =   'Patient_Registration';
+            $this->data['view']         =   'patient_registration';
             $this->data['site_title']   =   'Revitalize';
             $this->data['page_title']   =   'Patients Registration - '.$this->data['site_title'];
             

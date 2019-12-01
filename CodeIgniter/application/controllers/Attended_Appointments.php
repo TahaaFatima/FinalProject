@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Attended_Appointments extends MY_Controller {
+class Attended_appointments extends MY_Controller {
     function __construct()
         {   
             parent::__construct();
@@ -17,7 +17,7 @@ class Attended_Appointments extends MY_Controller {
             $to_update = ['appointment_status'=>'Attended'];
             $where     = ['appointment_id'=>$_REQUEST['appt_id']];
             $this->appt_booking_model->updating($to_update,$where);
-            redirect('Doctors_Appoinments');
+            redirect('Doctors_appoinments ');
         }
 	}
 }

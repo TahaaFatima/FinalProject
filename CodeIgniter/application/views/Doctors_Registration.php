@@ -3,7 +3,7 @@
         <h5 class="modal-title text-center text-dark mb-4">REGISTER NOW</h5>
     </div>
     <div class="reg-form-div">
-        <form enctype="multipart/form-data" method="post" class="reg-form">
+        <form autocomplete= "off" enctype="multipart/form-data" method="post" class="reg-form">
             <div>
                 <label class="col-form-label" for="Name">Upload Image</label>
                 <input type="file" name="userfile" size="20" /> 

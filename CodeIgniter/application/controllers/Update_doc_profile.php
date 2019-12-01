@@ -15,8 +15,8 @@ class Update_doc_profile extends MY_Controller {
 
         $doctors_id  = $this->session->userdata('user_id');
         $where = ['doctors_id' => $doctors_id];
-        $this->load->model('Doctor_registration_model');
-        $doc_info = $this->Doctor_registration_model->retrieving($where, false);
+        $this->load->model('doctor_registration_model');
+        $doc_info = $this->doctor_registration_model->retrieving($where, false);
 
 
 
@@ -35,22 +35,22 @@ class Update_doc_profile extends MY_Controller {
                     'price_id'          => $_POST['Price'],
                 ];
  
-                $this->load->model('Doctor_registration_model');
-                $this->Doctor_registration_model->updating ( $record_doc  ,$where );
-                redirect('Doctors_Profile');
+                $this->load->model('doctor_registration_model');
+                $this->doctor_registration_model->updating ( $record_doc  ,$where );
+                redirect('Doctors_profile');
             }
 
-        $this->load->model('Area_Model');
-        $area_table = $this->Area_Model->retrieving();
+        $this->load->model('area_model');
+        $area_table = $this->area_model->retrieving();
             
-        $this->load->model('Department_Model');
-        $department_table = $this->Department_Model->retrieving();
+        $this->load->model('department_model');
+        $department_table = $this->department_model->retrieving();
 
-        $this->load->model('Clinic_Model');
-        $clinic_table = $this->Clinic_Model->retrieving();
+        $this->load->model('clinic_model');
+        $clinic_table = $this->clinic_model->retrieving();
 
-        $this->load->model('Price_Model');
-        $price_table = $this->Price_Model->retrieving();
+        $this->load->model('price_model');
+        $price_table = $this->price_model->retrieving();
 
         $this->data['doctors_info'] =   $doc_info;
         $this->data['areas']        =   $area_table;
@@ -59,7 +59,7 @@ class Update_doc_profile extends MY_Controller {
         $this->data['prices']       =   $price_table;
         $this->data['site_title']   =   'Revitalize';
         $this->data['page_title']   =   'Edit Doctors Profile - '.$this->data['site_title'];
-        $this->data['view']         =   'Update_doc_Profile';
+        $this->data['view']         =   'update_doc_profile';
             
         $this->load->view('layout',$this->data);
 

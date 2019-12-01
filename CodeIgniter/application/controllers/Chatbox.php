@@ -11,10 +11,10 @@
             if(!isset($login_in) || empty($login_in)){
                 redirect('Login');
             }
-            $this->load->model('Chat_Model');
+            $this->load->model('chat_model');
         }
         function index($user_id = "" ){
-            $this->data['view']         = 'Chatbox';
+            $this->data['view']         = 'chatbox';
             $this->data['site_title']   = 'Revitalize';
             $this->data['page_title']   = 'Chat - '.$this->data['site_title'];
             $this->data['user_id']       = $user_id;
@@ -38,8 +38,8 @@
             }
             $arr['chats_msg'] =  $_REQUEST['msg'];
                     
-                $this->Chat_Model->inserting($arr);
-                $this->data['view'] = 'Chatbox';
+                $this->chat_model->inserting($arr);
+                $this->data['view'] = 'chatbox';
             }
             
             function get_messages( ){
@@ -58,7 +58,7 @@
                     ];
                 }
 
-                $chat_retrieved   = $this->Chat_Model->offset_retrieving($offset,100000000000,$arr); 
+                $chat_retrieved   = $this->chat_model->offset_retrieving($offset,100000000000,$arr); 
  
                 $html   = '';
 

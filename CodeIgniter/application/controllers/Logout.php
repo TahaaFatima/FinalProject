@@ -15,7 +15,7 @@
         public function index(){
             $this->data['site_title']   =   'Revitalize';
             $this->data['page_title']   =   'Logout - '.$this->data['site_title'];
-            $this->data['view']         =   'Logout';
+            $this->data['view']         =   'logout';
             $this->load->view('layout', $this->data);
             if(!empty($this->session->userdata('role_id'))){
                 $this->session->unset_userdata('role_id');

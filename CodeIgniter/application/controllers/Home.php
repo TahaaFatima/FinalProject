@@ -9,7 +9,7 @@ class Home extends MY_Controller {
 	public function index()
 	{
                 $this->data['modal']        = true;
-                $this->data['view']         = 'Home';
+                $this->data['view']         = 'home';
                 $this->data['site_title']   = 'Revitalize';
                 $this->data['page_title']   = 'Home - '.$this->data['site_title'];
                 $this->load->view('layout',$this->data);

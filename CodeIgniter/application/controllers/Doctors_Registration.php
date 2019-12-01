@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Doctors_Registration extends MY_Controller
+class Doctors_registration extends MY_Controller
 {
 
     function __construct()
@@ -14,20 +14,21 @@ class Doctors_Registration extends MY_Controller
         $this->load->library('form_validation');
 
         
-        $this->load->model('Area_Model');
-        $area_table = $this->Area_Model->retrieving();
+        $this->load->model('area_model');
+        $area_table = $this->area_model->retrieving();
 
-        $this->load->model('Department_Model');
-        $department_table = $this->Department_Model->retrieving();
+        $this->load->model('department_model');
+        $department_table = $this->department_model->retrieving();
 
-        $this->load->model('Clinic_Model');
-        $clinic_table = $this->Clinic_Model->retrieving();
+        $this->load->model('clinic_model');
+        $clinic_table = $this->clinic_model->retrieving();
 
-        $this->load->model('Price_Model');
-        $price_table = $this->Price_Model->retrieving();
+        $this->load->model('price_model');
+        $price_table = $this->price_model->retrieving();
 
-        $this->data['view']        = 'Doctors_Registration';
-        $this->data['page_title']  = 'Doctors_Registration';
+        $this->data['view']        = 'doctors_registration';
+        $this->data['site_title']  = 'Revitalize';
+        $this->data['page_title']  = 'Doctors Registration - '.$this->data['site_title']   = 'Revitalize';
         $this->data['areas']       = $area_table;
         $this->data['departments'] = $department_table;
         $this->data['clinic']      = $clinic_table;
@@ -139,12 +140,12 @@ class Doctors_Registration extends MY_Controller
     
             if (!$this->form_validation->run() || $is_error) {
                 $this->data['file_error']   =   $upload_data;
-                $this->data['view']         =   'Doctors_Registration';
+                $this->data['view']         =   'doctors_registration';
                 $this->data['site_title']   =   'Revitalize';
                 $this->data['page_title']   =   'Doctors Registration - '.$this->data['site_title'];
                 return $this->load->view('layout', $this->data);
             } else {
-                $this->load->model('Doctor_registration_model');
+                $this->load->model('doctor_registration_model');
                 $password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
 
                 $doc_record = [
@@ -167,15 +168,27 @@ class Doctors_Registration extends MY_Controller
                 if($upload){
                     $doc_record['images' ] = $upload_data['file_name'];
                 }
-                $result  = $this->Doctor_registration_model->inserting($doc_record);
-                $this->load->model('Doctor_Timeslot_Model');
+                $result  = $this->doctor_registration_model->inserting($doc_record);
+                $for_email   = $this->doctor_registration_model->retrieving(['doctors_id' => $result], false);
+                $email = $for_email->email;
+                $name  = $for_email->full_name;
+                $this->load->model('doctor_timeslot_model');
                 $time_data = [
                     'doctors_id' => $result,
                     'time_in'    => $_POST['time_form'],
                     'time_out'   => $_POST['time_to']
                 ];
-                $this->Doctor_Timeslot_Model->inserting($time_data);
+                $this->doctor_timeslot_model->inserting($time_data);
 
+                $this->data['Page_view']      = 'email_confirmation';
+                $this->data['receiver_name_mail']      = $name;
+
+                $subject        = 'Account Confirmation';
+                $mailContent = $this->load->view('email/email_layout',$this->data, true);
+                $mail_to   = $email ;
+                $mail_from = $this->config->item('mail_from');
+
+                $success = $this->send_mail($subject, $mailContent, $mail_from, 'Revitalize', $name, $mail_to);
                 
                 redirect('Login');
             }

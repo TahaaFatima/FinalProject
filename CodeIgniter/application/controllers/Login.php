@@ -9,9 +9,9 @@ class Login extends MY_Controller
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 1) {
-                redirect('Doctors_Profile');
+                redirect('Doctors_profile');
             } elseif ($role_id == 2) {
-                redirect('Patients_Profile');
+                redirect('Patients_profile');
             }
         }
     }
@@ -44,7 +44,7 @@ class Login extends MY_Controller
             
             if (!$this->form_validation->run()) {
                 $this->data['page_title'] = 'Login';
-                $this->data['view'] = 'Login';
+                $this->data['view'] = 'login';
                 return $this->load->view('layout', $this->data);
             } else {
                 $this->load->model('User_Model');
@@ -84,7 +84,7 @@ class Login extends MY_Controller
         }
         $this->data['site_title']   = 'Revitalize';
         $this->data['page_title']   = 'Login - '.$this->data['site_title'];
-        $this->data['view']         = 'Login';
+        $this->data['view']         = 'login';
         
         $this->load->view('layout', $this->data);
     }

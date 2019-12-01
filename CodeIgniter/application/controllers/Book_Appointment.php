@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Book_Appointment extends MY_Controller {
+class Book_appointment extends MY_Controller {
     function __construct()
         {   
             parent::__construct();
@@ -124,12 +124,12 @@ class Book_Appointment extends MY_Controller {
                 'appointment_id'             => $id_returned,
             ];
 
-            $this->load->model('Patients_assessment_model');
-            $result  = $this->Patients_assessment_model->inserting($record_asses);
-            redirect('Doctors_List');
+            $this->load->model('patients_assessment_model');
+            $result  = $this->patients_assessment_model->inserting($record_asses);
+            redirect('Patients_appointment');
             }
         }
-        $this->load->model('Doctor_registration_model');
+        $this->load->model('doctor_registration_model');
         $to_search = [];
         if(isset($_GET['Doc_id'])){
             $to_search['doctors_registration.doctors_id'] = $_GET['Doc_id'];
@@ -153,8 +153,8 @@ class Book_Appointment extends MY_Controller {
                             'column_with'=>'doctors_registration.clinic_id = clinic.clinic_id'
                             ];                    
 
-        $doc_joins = $this->Doctor_registration_model->search_join($to_search,$join_retrieve);
-        $this->load->model('Appt_Record');
+        $doc_joins = $this->doctor_registration_model->search_join($to_search,$join_retrieve);
+        $this->load->model('appt_record');
         $avg_rating = [];
 
         foreach($doc_joins as $single_doc){
@@ -162,7 +162,7 @@ class Book_Appointment extends MY_Controller {
             $where  = ['doctors_id'=>$id_doc];
             $select = 'avg(rating) as rating';
             
-            $__ = $this->Appt_Record->retrieve_ratings($select,$where);
+            $__ = $this->appt_record->retrieve_ratings($select,$where);
             $avg_rating[$id_doc] = $__ ;
         }
         
@@ -170,7 +170,7 @@ class Book_Appointment extends MY_Controller {
         $this->data['doctors']       = $doc_joins;
         $this->data['site_title']    = 'Revitalize';
         $this->data['page_title']    = 'Book Appointment -'.$this->data['site_title'];
-        $this->data['view']          = 'Book_Appointment';
+        $this->data['view']          = 'book_appointment';
         $this->load->view('layout',$this->data);
 	}
 }

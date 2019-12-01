@@ -31,18 +31,18 @@ class Prescriptions extends MY_Controller {
             
             if ($this->form_validation->run())
             {
-                $this->load->model('Prescriptions_Model');
+                $this->load->model('prescriptions_model');
                 
                 $record_pres = [
                     'prescription'      => $_REQUEST['prescritions'],
                     'appointment_id'    => $_REQUEST['prescription_id'],
                 ];
                 
-                $this->Prescriptions_Model->inserting($record_pres);
+                $this->prescriptions_model->inserting($record_pres);
             }
         }       
 
-                $this->data['view']       = 'Prescriptions';
+                $this->data['view']       = 'prescriptions';
                 $this->data['site_title'] = 'Revitalize';
                 $this->data['page_title'] = 'Prescriptions - '.$this->data['site_title'];
                 

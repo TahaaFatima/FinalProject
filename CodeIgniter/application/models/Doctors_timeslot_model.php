@@ -2,7 +2,7 @@
 
     defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Doctors_timeslot_model extends MY_Model{
+    class doctors_timeslot_model extends MY_Model{
         function __construct()
         {
             parent::__construct();

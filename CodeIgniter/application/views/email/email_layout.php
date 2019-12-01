@@ -14,7 +14,7 @@
         <th>REVITALIZE</th>
       </tr>
       <tr style="border:none;">
-        <td style="padding:5px;border:none;text-align:center;">Hello, Administrator</td>
+        <td style="padding:5px;border:none;text-align:center;">Hello, <?php $receiver_name_mail?></td>
       </tr>
     </thead>
     <tbody style=" background-color: white;">

@@ -12,7 +12,7 @@ class Prescriptions_show extends MY_Controller {
     }    
 	public function index()
 	{
-                $this->load->model('Prescriptions_Model');
+                $this->load->model('prescriptions_model');
                 $to_show = [];
                 if(isset($_REQUEST['appt_id']) && !empty($_REQUEST['appt_id'])){
                     $to_show['prescriptions.appointment_id'] = $_REQUEST['appt_id'];      
@@ -22,11 +22,11 @@ class Prescriptions_show extends MY_Controller {
                         'column_with'=>'appointment_record.appointment_id= prescriptions.appointment_id'
                 ];
                 
-                $doc_appointment = $this->Prescriptions_Model->search_join($to_show,$join_retrieve);
+                $doc_appointment = $this->prescriptions_model->search_join($to_show,$join_retrieve);
 
                 
                 $this->data['prescription'] = $doc_appointment;
-                $this->data['view']         = 'Prescriptions_show';
+                $this->data['view']         = 'prescriptions_show';
                 $this->data['site_title']   = 'Revitalize';
                 $this->data['page_title']   = 'Prescriptions - '.$this->data['site_title'];
                 

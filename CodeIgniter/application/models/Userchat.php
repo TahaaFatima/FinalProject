@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Userchat extends MY_Model
+class userchat extends MY_Model
 {
     function add_message($message, $nickname, $guid)
     {

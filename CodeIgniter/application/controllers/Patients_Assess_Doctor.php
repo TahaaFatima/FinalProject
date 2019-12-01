@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Patients_Assess_Doctor extends MY_Controller {
+class Patients_assess_doctor extends MY_Controller {
         function __construct()
         {
             parent::__construct();
@@ -29,7 +29,7 @@ class Patients_Assess_Doctor extends MY_Controller {
         $doc_appointment = $this->appt_booking_model->search_join($to_show,$join_retrieve);
       
         $this->data['doctors_App_data'] =    $doc_appointment[0];
-        $this->data['view']             =    'Patients_Assess_Doctor';
+        $this->data['view']             =    'patients_assess_doctor';
         $this->data['site_title']       =    'Revitalize';
         $this->data['page_title']       =    'Patients Assessment Form - '.$this->data['site_title'];
         
