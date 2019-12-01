@@ -13,6 +13,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <header>
             
             <?php include_once('navbar.php'); ?>
-            <?php include_once('slider.php'); ?>
+          
 
         </header>

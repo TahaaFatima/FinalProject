@@ -1,4 +1,36 @@
-		<!--about-->
+ <!-- main image slider container -->
+ <div class="slide-window">
+            <div class="slide-wrapper" style="width:300%;">
+                <div class="slide">
+                    <div class="slide-caption text-center">
+                       <h3 class="text-uppercase">A range of programs for women’s <span>healthcare</span></h3>
+                    </div>
+                </div>
+                <div class="slide slide2">
+                    <div class="slide-caption text-center">
+                        <h3 class="text-uppercase">Individual approach to <span>Each Patient </span></h3>
+                    </div>
+                </div>
+                <div class="slide slide3">
+                    <div class="slide-caption text-center">
+                        <h3 class="text-uppercase">Committed to excellence <span>Medical Clinic</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-controller">
+                <div class="slide-control-left">
+                    <div class="slide-control-line"></div>
+                    <div class="slide-control-line"></div>
+                </div>
+                <div class="slide-control-right">
+                    <div class="slide-control-line"></div>
+                    <div class="slide-control-line"></div>
+                </div>
+            </div>
+        </div>
+        <!-- main image slider container -->
+    <!-- end of main image slider container -->
+<!--about-->
 	<div class="about">
 	<div class="abt-layer">
 		<div class="container">
@@ -10,15 +42,30 @@
 						<div class="stats_inner">
 							<div class="steps-of-app">
 								<ul class="steps-ul">
-									<div class="li-div-step">
-										<li>Search for doctors by specialty, hospital</li>
-									</div>
-									<div class="li-div-step">	
-										<li>Select based on Experience & Fee </li>
-									</div>
-									<div class="li-div-step">
-										<li>Book a Confirmed Appointment</li>
-									</div>
+									<li class="li-div-step">
+										<div class="li-step-div">
+											<span>
+												<i class="fas fa-check"></i>
+												Search for doctors by specialty, hospital
+											</span>
+										</div>
+									</li>	
+									<li class="li-div-step">
+										<div class="li-step-div">
+											<span>
+												<i class="fas fa-check"></i>
+												Select based on Experience & Fee 
+											</span>
+										</div>
+									</li>	
+									<li class="li-div-step">
+										<div class="li-step-div">
+											<span>
+												<i class="fas fa-check"></i>
+												Book a Confirmed Appointment
+											</span>
+										</div>
+									</li>	
 								</ul>
 							</div>
 						</div>
@@ -105,54 +152,56 @@
 
 	<!-- testimonials -->
 	<section class="section-whyRaD ng-scope set-div">
-      <div class="row mx-0">
-          <div class="col-sm-6 p-0 sec-img hidden-xs"></div>
-          <div class="col-sm-6 sec-text">
-              <div class="p-40 ">
-                  <h3 class="w3l-sub">Why Revitalize?</h3>
-                  <div class="iconlist-2 mt-3">
-                      <div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
-                      <div class="text">
-							<p class="sub-title">
-								We offer comfortable and convenient 24/7 healthcare
+		<div class="container">
+			<div class="row mx-0">
+			<div class="col-sm-6 p-0 sec-img hidden-xs"></div>
+			<div class="col-sm-6 sec-text">
+				<div class="p-40 ">
+					<h3 class="w3l-sub">Why Revitalize?</h3>
+					<div class="iconlist-2 mt-3">
+						<div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+						<div class="text">
+								<p class="sub-title">
+									We offer comfortable and convenient 24/7 healthcare
+								</p>
+							</div>
+					</div>
+					<!--end item-->
+					
+					<div class="iconlist-2 mt-3">
+						<div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+						<div class="text">
+								<p>
+									We save time  - No waiting room, no road travel
+								</p>	  
+							</div>
+					</div>
+					<!--end item-->
+					
+					<div class="iconlist-2 mt-3">
+						<div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+						<div class="text">
+							<p>
+									We offer a wide variety of doctors to choose from
 							</p>
-						</div>
-                  </div>
-                  <!--end item-->
-                  
-                  <div class="iconlist-2 mt-3">
-                      <div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
-                      <div class="text">
-							<p>
-								We save time  - No waiting room, no road travel
-							</p>	  
-						</div>
-                  </div>
-                  <!--end item-->
-                  
-                  <div class="iconlist-2 mt-3">
-                      <div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
-                      <div class="text">
-						  <p>
-								We offer a wide variety of doctors to choose from
-						  </p>
-						</div>
-                  </div>
-                  <!--end item-->
+							</div>
+					</div>
+					<!--end item-->
 
-                  <div class="iconlist-2 mt-3">
-                          <div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
-                          <div class="text">
-							<p>
-								Revitalize comes with consultaions, EMR, appointment booking, homecare and prescriptions
-							</p>	
-						  </div>  
-                      </div>
-                      <!--end item-->
-                  <div class="clearfix"></div>
-              </div>
-          </div>
-      </div>
+					<div class="iconlist-2 mt-3">
+							<div class="icon dark"><i class="fa text-awesome fa-check" aria-hidden="true"></i></div>
+							<div class="text">
+								<p>
+									Revitalize comes with consultaions, EMR, appointment booking, homecare and prescriptions
+								</p>	
+							</div>  
+						</div>
+						<!--end item-->
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	  </div>
   </section>
 	<!-- //testimonials -->
 

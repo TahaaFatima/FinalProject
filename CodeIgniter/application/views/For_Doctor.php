@@ -1,6 +1,7 @@
 <body>
         <section class="parallax-5 sec-how-it-work ng-scope">
-                <div class="container-fluid nopadding">
+            <div class="container-fluid nopadding back-groud-white">
+                <div class="container">
                     <div class="parallax-overlay overlay-1">
                             <div class="row animate wow fadeInRight animated" data-wow-delay="500ms" data-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInRight;">
                                 <div class="col-md-6 text-center">
@@ -16,9 +17,11 @@
                             </div>
                     </div>
                 </div>
-            </section>
-            <section class="parallax-2 sec-how-it-work ng-scope">
-                <div class="container-fluid nopadding">
+            </div>    
+        </section>
+        <section class="parallax-2 sec-how-it-work ng-scope">
+            <div class="container-fluid nopadding back-groud-blue">
+                <div class="container">
                     <div class="parallax-overlay overlay-1">
                             <div class="row animate wow fadeInRight animated" data-wow-delay="500ms" data-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInRight;">
                                 <div class="bg-color">
@@ -34,9 +37,11 @@
                             </div>
                     </div>
                 </div>
-            </section>
-            <section class="parallax-3 sec-how-it-work ng-scope">
-                <div class="container-fluid nopadding">
+            </div>
+        </section>
+        <section class="parallax-3 sec-how-it-work ng-scope">
+            <div class="container-fluid nopadding back-groud-white">
+                <div class="container">
                     <div class="parallax-overlay overlay-1">
                             <div class="row animate wow fadeInRight animated" data-wow-delay="500ms" data-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 500ms; animation-name: fadeInRight;">
                                 <div class=" col-md-6 text-center">
@@ -52,7 +57,8 @@
                             </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 </body>
 </html>
         
