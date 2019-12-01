@@ -465,17 +465,17 @@ li{
 .login-body{
     background-image: url(../images/login-bg.jpg);
 }
-h1{
+.login-heading{
     color: var(--primary-color);
-    padding: 30px 181px 0px 220px;
+    padding-top: 30px;
     display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 .login-section{
     width: 100%;
     height: auto;
-    /* margin-top: 100px; */
     padding: 112px 3px;
-    background: #000000a8;
 }
 .left-section{
     width: 22.01%;
@@ -486,7 +486,6 @@ h1{
     background-color: var(--primary-color);
     height: 200px;
 }
-
 h3{
     font-size: 20px;
     text-align: center;
@@ -500,14 +499,11 @@ h3{
     width: 49.59%;
     background-color: var(--secondary-color);
     height: 400px;
-    /* display: inline-block; */
     float: right;
-    /* padding-right: 10px; */
-    margin-right: 175px;
+    margin-right: 166px;
     padding: 0 5px;
 }
 .form{
-    /* color: var(--green); */
     color: black;
     padding: 0;
     width: 100%;
@@ -947,4 +943,7 @@ i.fas.fa-check {
 }
 .main-heading {
     padding-top: 58px;
+}
+.login-bg {
+    background: #000000a8;
 }

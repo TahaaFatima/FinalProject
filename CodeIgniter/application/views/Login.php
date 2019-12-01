@@ -1,9 +1,9 @@
-<body class="login-body">
-    <div>
+    <div class="login-body">
         <div class="login-bg">
            <div class="container">
            <div class="login-section">
-                    <div class="left-section">
+                <div class="container">
+                <div class="left-section">
                         <div class="left-div">
                             <div class="select-options">
                                 <div class="icon-heading">
@@ -26,7 +26,7 @@
                         </div>
                 </div>
                     <div class="right-section">
-                        <h1>Login Here</h1>
+                        <h1 class="login-heading">Login Here</h1>
                         <!-- <div class="form-div"> -->
                             <form class="reg-form login-form" method="post">
                                 <div class="fields-div">
@@ -59,12 +59,10 @@
                             </form>
                         <!-- </div> -->
                     </div>
-                
+                </div>
             </div>
            </div>
         </div>
     </div>
 
     </div>
-</body>
-</html>
