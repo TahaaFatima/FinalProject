@@ -4,72 +4,18 @@
 <script src="<?php echo base_url(); ?>assets/js/minimal-slider.js"></script>
 <!-- flexSlider (for testimonials) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
-<!-- Tabs -->
-
 <!-- Time Picker -->
-
 <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 <!-- Date Picker -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script>
 <!-- Calendar -->
 <script src="https://kit.fontawesome.com/200033bf0c.js" crossorigin="anonymous"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery-ui.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('input.datepicker').datepicker({
-                });
-            });
-            $(document).ready(function(){
-                $('input.timepicker').timepicker({});
-            });
-            $(document).ready(function(){
-                $('input.timepicker-appointment').timepicker({});
-            });
-        </script>
       
 				<!-- //Calendar -->
                 
-                <script defer src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
-                    <script>
-                        $(function () {
-                            $(".rateYo").rateYo({
+<script defer src="<?php echo base_url(); ?>assets/js/jquery.flexslider.js"></script>
 
-                                onSet: function (rating, rateYoInstance) {
-
-                                    $('.hidden-rating').val(rating);
-                                }
-                            });
-                        });
-                        $('.fetch-rating').each(function(){
-                            identity = $(this).attr('id');
-                            shading  = $(this).attr('data-rating');
-                            console.log(identity);
-                            $('#'+identity).rateYo({
-                                rating : shading,
-                                readOnly : true
-                            })
-                        })
-                        $(function () {
-                            $(".rateYo").rateYo({
-
-                                onSet: function (rating, rateYoInstance) {
-
-                                    $('.hidden-rating').val(rating);
-                                }
-                            });
-                        });
-                    </script>
-        <script>
-		$(window).load(function () {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				start: function (slider) {
-					$('body').removeClass('loading');
-				}
-			});
-		});
-	</script>
-	<!-- //flexSlider (for testimonials) -->
     
     <!-- script for password match -->
     <script>

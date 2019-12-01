@@ -1,3 +1,123 @@
+$(window).on('load', function () {
+    $('.flexslider').flexslider({
+        animation: "slide",
+        start: function (slider) {
+            $('body').removeClass('loading');
+        }
+    });
+});
+
+$(document).ready(function () {
+    
+    // JQUERY UI TABS
+    $("#tabs").tabs();
+
+    // JQUERY UI DATEPICKER
+    $('input.datepicker').datepicker({});
+    
+    // JQUERY UI TIMEPICKER
+    $('input.timepicker').timepicker({});
+    
+    $('input.timepicker-appointment').timepicker({});
+    
+    // RATEYO - RATING STARS
+    $(".rateYo").rateYo({
+
+        onSet: function (rating, rateYoInstance) {
+
+            $('.hidden-rating').val(rating);
+        }
+    });
+
+    $('.fetch-rating').each(function(){
+        identity = $(this).attr('id');
+        shading  = $(this).attr('data-rating');
+        console.log(identity);
+        $('#'+identity).rateYo({
+            rating : shading,
+            readOnly : true
+        })
+    })
+
+    // CHATBOX
+    $('.send').on('click', function (e) {
+        e.preventDefault();
+        msg = $('input[name=message]').val();
+        user_id = $('.user-id').val();
+
+        data = { msg: msg, user_id: user_id };
+        $.ajax({
+            url: SITE_URL + "/chatbox/insert_messages",
+            data: data,
+            success: function (data) {
+                $('input[name=message]').val('')
+            }
+        })
+    });
+
+    console.log(SITE_URL)
+    getChat();
+    function getChat()
+    {
+        if ($('.chatarea').length) {
+            li_length = $('.chatbox-listing > li').length;
+            user_id = $('.user-id').val();
+            data = { 
+                offset: li_length,
+                user_id: user_id
+            }
+                
+            $.ajax({
+                url: SITE_URL + "/chatbox/get_messages",
+                data: data,
+                success: function (data) {
+                    $('.chatbox-listing').append(data);
+                    li_length = $('.chatbox-listing > li').length;
+                    getChat();
+                }
+            }) 
+        }
+    }
+});
+
+    // PROFILE PICTURE UPDATE
+    $('#profile_edit').on('change', function(){
+       var file     =   $(this).prop('files')[0];
+       var formData =   new FormData();
+       formData.append('userfile',file);
+        $.ajax({
+            url         :   SITE_URL+"/Doctors_Profile/image_upload",
+            data        :   formData,
+            type        :   "POST",
+            processData :   false,
+            datatype    :   "JSON",
+            contentType :   false,
+            cache       :   false,
+            success     : function(){
+                location.reload();
+            }
+        })
+    })
+
+
+
+
+// $(document).ready(function(){
+//     $('.send').on('click', function(e){
+//         e.preventDefault();
+//         reviews = $('input[name=yourReview]').val();
+
+//         data = {reviews:reviews};
+//         $.ajax({
+//             url:SITE_URL+"/Reviews/insertReviews",
+//             data:data,
+//             success:function(){
+//                 $('input[name=yourReview]').val('')
+//             }
+//         })
+//     })
+// })
+
 // $(document).ready(function(){
 //     $('.search_form').on('submit',function(e){
 //         e.preventDefault();
@@ -27,33 +147,8 @@
 //         })    
 //     },1000)
 // })
-$(document).ready(function () {
-    $(function () {
-        $("#tabs").tabs();
-    });
 
-    $('.send').on('click', function (e) {
-        e.preventDefault();
-        msg = $('input[name=message]').val();
-        user_id = $('.user-id').val();
-
-        data = { msg: msg, user_id: user_id };
-        $.ajax({
-            url: SITE_URL + "/chatbox/insert_messages",
-            data: data,
-            success: function (data) {
-                $('input[name=message]').val('')
-            }
-        })
-    });
-
-    console.log(SITE_URL)
-    getChat();
-    function getChat()
-    {
-        if ($('.chatarea').length) {
-            li_length = $('.chatbox-listing > li').length;
-            
+ //CHATBOX
             //     if(ROLE_ID == 1){
             //         pat_id = $('.user-id').val();
             //         data = { 
@@ -67,61 +162,3 @@ $(document).ready(function () {
             //             doc_id: doc_id
             //         }
             //    // }
-                    user_id = $('.user-id').val();
-                    data = { 
-                        offset: li_length,
-                        user_id: user_id
-                    }
-                
-                $.ajax({
-                    url: SITE_URL + "/chatbox/get_messages",
-                    data: data,
-                    success: function (data) {
-                        $('.chatbox-listing').append(data);
-                        li_length = $('.chatbox-listing > li').length;
-                        getChat();
-                    }
-                }) 
-    
-    
-        }
-
-    }
-});
-
-    $('#profile_edit').on('change', function(){
-       var file     =   $(this).prop('files')[0];
-       var formData =   new FormData();
-       formData.append('userfile',file);
-           $.ajax({
-                url         :   SITE_URL+"/Doctors_Profile/image_upload",
-                data        :   formData,
-                type        :   "POST",
-                processData :   false,
-                datatype    :   "JSON",
-                contentType :   false,
-                cache       :   false,
-                success     : function(){
-                    location.reload();
-                }
-            })
-    })
-
-
-
-
-// $(document).ready(function(){
-//     $('.send').on('click', function(e){
-//         e.preventDefault();
-//         reviews = $('input[name=yourReview]').val();
-
-//         data = {reviews:reviews};
-//         $.ajax({
-//             url:SITE_URL+"/Reviews/insertReviews",
-//             data:data,
-//             success:function(){
-//                 $('input[name=yourReview]').val('')
-//             }
-//         })
-//     })
-// })
