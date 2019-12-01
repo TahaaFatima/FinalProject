@@ -16,7 +16,7 @@
                 foreach($patients_App_data as $patients_app){
                     if(strtotime($patients_app->appointment_date) < strtotime(date('Y-m-d'))){
                         $no_record = false;
-                ?>
+                        ?>
                 <div class="my-details my-appointment">
                     <div class="reg-form-div patent-details appointment-pt-doc">
                         <form class="reg-form form-patient-pro" method="post">
@@ -57,46 +57,46 @@
                                                 <a href="<?php echo site_url('Reviews') ?>?doc_rev_id=<?php echo $patients_app->doctors_id?>&pat_rev_id=<?php echo $patients_app->patient_id?>" >Review</a>
                                             </div>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Prescriptions_show') ?>" >Prescriptions</a>
+                                                <a href="<?php echo site_url('Prescriptions_show') ?>?appt_id=<?php echo $patients_app->appointment_id?>" >Prescriptions</a>
                                             </div>
-                                        <?php 
+                                            <?php 
                                         }else{
                                             ?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Cancel_Appointments')?>?appt_id=<?php echo $patients_app->appointment_id ?>" >Cancel</a>
+                                                <a href="<?php echo site_url('Cancel_appointments')?>?appt_id=<?php echo $patients_app->appointment_id ?>" >Cancel</a>
                                             </div>
                                             <?php
                                         }
-                                            ?>
+                                        ?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Patients_Assess_Doctor') ?>?doc_id= <?php echo $patients_app->doctors_id ?>" >Patients Assessment</a>
+                                                <a href="<?php echo site_url('Patients_assess_doctor') ?>?appt_id= <?php echo $patients_app->appointment_id ?>" >Patients Assessment</a>
                                             </div>
                                             <div class="links-buttons-pt">
                                                 <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
                                             </div>
-
-                                    </div>        
-                                </div>    
-                            </div>              
-                        </form>
+                                            
+                                        </div>        
+                                    </div>    
+                                </div>              
+                            </form>
+                        </div>
                     </div>
-                </div>
-            
-            <?php 
+                    
+                    <?php 
                     }
-            }
-            if($no_record){
-                echo 'You have no appointments';
-            }                                  
-            ?>
+                }
+                if($no_record){
+                    echo 'You have no appointments';
+                }                                  
+                ?>
         </div>
         <div id="tabs-2">
-        <?php 
+            <?php 
                 $no_record = true;
                 foreach($patients_App_data as $patients_app){
                     if(strtotime($patients_app->appointment_date) == strtotime(date('Y-m-d'))){
                         $no_record = false;
-                ?>
+                        ?>
                 <div class="my-details my-appointment">
                     <div class="reg-form-div patent-details appointment-pt-doc">
                         <form class="reg-form form-patient-pro" method="post">
@@ -137,47 +137,47 @@
                                                 <a href="<?php echo site_url('Reviews') ?>?doc_rev_id=<?php echo $patients_app->doctors_id?>&pat_rev_id=<?php echo $patients_app->patient_id?>" >Review</a>
                                             </div>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Prescriptions_show') ?>" >Prescriptions</a>
+                                            <a href="<?php echo site_url('Prescriptions_show') ?>?appt_id=<?php echo $patients_app->appointment_id?>" >Prescriptions</a>
                                             </div>
-                                        <?php 
+                                            <?php 
                                         }else{
                                             ?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Cancel_Appointments')?>?appt_id=<?php echo $patients_app->appointment_id ?>">Cancel</a>
+                                                <a href="<?php echo site_url('Cancel_appointments')?>?appt_id=<?php echo $patients_app->appointment_id ?>">Cancel</a>
                                             </div>
                                             <?php
                                         }
-                                            
-                                            ?>
+                                        
+                                        ?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Patients Assessment</a>
+                                            <a href="<?php echo site_url('Patients_assess_doctor') ?>?appt_id=<?php echo $patients_app->appointment_id ?>" >Patients Assessment</a>
                                             </div>
                                             <div class="links-buttons-pt">
                                                 <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
                                             </div>
-
-                                    </div>        
-                                </div>    
+                                            
+                                        </div>        
+                                    </div>    
                             </div>              
                         </form>
                     </div>
                 </div>
-            
-            <?php 
+                
+                <?php 
                     }
-            }
-            if($no_record){
-                echo 'You have no appointments';
-            }                                  
-            ?>
+                }
+                if($no_record){
+                    echo 'You have no appointments';
+                }                                  
+                ?>
         </div>
         <div id="tabs-3">
-        <?php 
+            <?php 
                 $no_record = true;
                 foreach($patients_App_data as $patients_app){
                     if(strtotime($patients_app->appointment_date) > strtotime(date('Y-m-d'))){
                         $no_record = false;
-                ?>
+                        ?>
                 <div class="my-details my-appointment">
                     <div class="reg-form-div patent-details appointment-pt-doc">
                         <form class="reg-form form-patient-pro" method="post">
@@ -218,20 +218,20 @@
                                                 <a href="<?php echo site_url('Reviews') ?>?doc_rev_id=<?php echo $patients_app->doctors_id?>&pat_rev_id=<?php echo $patients_app->patient_id?>" >Review</a>
                                             </div>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Prescriptions_show') ?>" >Prescriptions</a>
+                                            <a href="<?php echo site_url('Prescriptions_show') ?>?appt_id=<?php echo $patients_app->appointment_id?>" >Prescriptions</a>
                                             </div>
                                         <?php 
                                         }else{
                                             ?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Cancel</a>
+                                            <a href="<?php echo site_url('Cancel_appointments')?>?appt_id=<?php echo $patients_app->appointment_id ?>">Cancel</a>
                                             </div>
                                             <?php
                                         }
                                             
                                             ?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Patients_Assess_Doctor') ?>" >Patients Assessment</a>
+                                            <a href="<?php echo site_url('Patients_assess_doctor') ?>?appt_id=<?php echo $patients_app->appointment_id ?>" >Patients Assessment</a>
                                             </div>
                                             <div class="links-buttons-pt">
                                                 <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>

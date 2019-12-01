@@ -12,21 +12,13 @@ class Patients_assess_doctor extends MY_Controller {
         }    
 	public function index()
 	{       
-        $this->load->model('appt_booking_model');
-        $to_show = [];
-        if($this->session->userdata('user_id') !== null ){
-            $to_show['appointment_record.doctors_id'] = $this->session->userdata('user_id'); 
+        $this->load->model('patients_assessment_model');
+        $where = [];
+        if(isset($_REQUEST['appt_id']) && !empty($_REQUEST['appt_id'])){
+            $where['patient_assessment.appointment_id'] = $_REQUEST['appt_id'];
         }
-        $join_retrieve[] =  [
-                'table_name'=>'patients_registration',
-                'column_with'=>'appointment_record.patient_id= patients_registration.patient_id'
-        ];
-        $join_retrieve[] =  [
-                'table_name'=>'patient_assessment',
-                'column_with'=>'appointment_record.appointment_id= patient_assessment.appointment_id'
-        ];
 
-        $doc_appointment = $this->appt_booking_model->search_join($to_show,$join_retrieve);
+        $doc_appointment = $this->patients_assessment_model->retrieving($where);
       
         $this->data['doctors_App_data'] =    $doc_appointment[0];
         $this->data['view']             =    'patients_assess_doctor';
