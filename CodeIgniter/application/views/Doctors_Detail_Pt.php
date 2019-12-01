@@ -1,10 +1,27 @@
 <section class="doc-det-pt-section">
+    <div class="container">
     <div class=" mt-2 bg-white padding">
         <div class="doc-12">
             <div class="div-dc-li">
                 <?php foreach($doctors as $doctor){?>
                 <div class="img-doct">
-                    <img class="profile-image" src="<?php echo "../assets/uploads/".$doctor->images?>" alt="doctors-profile">
+                <div>
+                        <?php 
+                            if(!empty($doctor->images)){
+                        ?>
+                                <img class="profile-image" src="<?php echo "$image_path.$doctor->images" ?>" alt="doctors-profile">
+                        <?php
+                            }elseif(empty($doctor->images) && $doctor->gender == "female"){
+                        ?>
+                            <img class="profile-image" src="../assets/images/doctors-profile.png" alt="doctors-profile">
+                        <?php
+                            }elseif(empty($doctor->images) && $doctor->gender == "male"){
+                        ?>
+                            <img class="profile-image" src="../assets/images/profile-male.jpg" alt="doctors-profile">
+                        <?php        
+                            }
+                        ?>
+                    </div>
                     <div class="doctors-rating">
                         <div id="rateYo-<?php echo $doctor->doctors_id ?>" data-rating="<?php echo isset($ratings[$doctor->doctors_id]['rating']) ? $ratings[$doctor->doctors_id]['rating'] : 0 ; ?>" class="fetch-rating rating">
                         </div>
@@ -18,7 +35,7 @@
                         <p><?php echo $doctor->area?></p>
                         <p><?php echo $doctor->email?></p>
                     </div>
-                    <div class="appointmnet">
+                    <div class="appointmnet appointment">
                         <div class="doc-11 doc-12-sm">        
                             <?php 
                                 if($this->session->userdata('role_id')){
@@ -71,5 +88,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>

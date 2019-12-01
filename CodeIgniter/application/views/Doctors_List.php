@@ -52,7 +52,6 @@
             <input type="submit" name="submit_search" class="form-control submit_search" value="Search">
         </form>
     </div>
-    
     <div class="row py-lg-5">
         <?php
             foreach($doctors as $doctor){

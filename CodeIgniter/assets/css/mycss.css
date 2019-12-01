@@ -636,7 +636,7 @@ form.reg-form.login-form {
 }
 .div-dc-li {
     display: flex;
-    width: 50%;
+    width: 65%;
     margin-left: 22%;
     padding: 21px 24px 19px 23px;
     background: #f5f5f5;
@@ -654,6 +654,7 @@ form.reg-form.login-form {
 }
 ul.grid-list-half.pl-4 > li> i {
     color: #ffab67;
+    padding-right: 10px;
 }
 ul.grid-list-half.pl-4 > li {
     color: var(--primary-color);
@@ -704,6 +705,12 @@ label.col-form-label {
 }
 .li-pt-app{
     width: 50%;
+}
+.appointment {
+    width: 119%;
+}
+.doc-12 {
+    padding-top: 100px;
 }
 ul.ul-pt-app {
     margin: 14%;
