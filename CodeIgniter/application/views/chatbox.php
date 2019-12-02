@@ -10,10 +10,10 @@
                             <div class="view">
                                 <div class="col-80">
                                         <input  name="user_id" class="user-id" value="<?php echo $user_id?>" class="chat-message-text" type="hidden"> 
-                                    <input class="form-control" name="message" class="chat-message-text" type="text"> 
+                                    <input class="form-control msg-area" name="message" class="chat-message-text" type="text"> 
                                 </div>
                                 <div class="col-20">
-                                    <input class="btn btn-danger send" type="button" name="send" value="send">
+                                    <input class="btn btn chat-send" type="button" name="send" value="send">
                                 </div>
                             </div>
                     </form>
