@@ -1,4 +1,4 @@
-
+    
 <?php
     defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -14,11 +14,41 @@
             $this->load->model('chat_model');
         }
         function index($user_id = "" ){
-            $this->data['view']         = 'chatbox';
-            $this->data['site_title']   = 'Revitalize';
-            $this->data['page_title']   = 'Chat - '.$this->data['site_title'];
-            $this->data['user_id']       = $user_id;
-             $this->load->view('layout', $this->data);
+
+            if($this->session->userdata('role_id') == 1){
+                $patients_id  = $user_id;
+                $where = ['patient_id' => $patients_id];
+                $this->load->model('patient_registration_model');
+                $pat_info = $this->patient_registration_model->retrieving($where, false);
+                $this->data['patients_details']     =   $pat_info;
+            } else if($this->session->userdata('role_id') == 2){
+                $this->load->model('doctor_registration_model');
+                $doctors_id  = $user_id;
+                $where = ['doctors_registration.doctors_id' => $doctors_id];
+                $join_retrieve[] = [
+                                'table_name'=>'price',
+                                'column_with'=>'doctors_registration.price_id = price.price_id'
+                                ];
+                $join_retrieve[] = [
+                                'table_name'=>'department',
+                                'column_with'=>'doctors_registration.department_id = department.department_id'
+                                ];
+                $join_retrieve[] = [
+                                'table_name'=>'area',
+                                'column_with'=>'doctors_registration.area_id = area.area_id'
+                                ];
+                $join_retrieve[] = [
+                                'table_name'=>'clinic',
+                                'column_with'=>'doctors_registration.clinic_id = clinic.clinic_id'
+                                ];
+                $doc_info = $this->doctor_registration_model->search_join($where,$join_retrieve);
+                $this->data['doctors_details']      =   $doc_info;
+            }
+            $this->data['view']                 = 'chatbox';
+            $this->data['site_title']           =   'Revitalize';
+            $this->data['page_title']           =   'Chat - '.$this->data['site_title'];
+            $this->data['user_id']              =   $user_id;
+            $this->load->view('layout', $this->data);
         }
 
         function insert_messages(){
@@ -63,7 +93,6 @@
                 $html   = '';
 
             foreach($chat_retrieved as $chat_obj){
-           //     var_dump($chat_obj);die;
                 if($chat_obj->chats_msg != "" )
                 {   
 
@@ -72,7 +101,7 @@
                             $html .= "<li class='for_del sender'>".$chat_obj->chats_msg."</li>";
                             
                         }else{
-                            $html .= "<li class='for_del'>".$chat_obj->chats_msg."</li>";
+                            $html .= "<li class='for_del' receiver>".$chat_obj->chats_msg."</li>";
 
                         }
                     }else if($this->session->userdata('role_id') == 2){

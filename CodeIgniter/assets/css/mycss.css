@@ -612,16 +612,16 @@ section.profile-section {
 }
 .profile-pat {
     display: flex;
+    width: 100%;
+    margin-top: 22px;
 }
 .my-details {
-    width: 60%;
+    width: 100%;
 }
-
 .my-details-links {
-    width: 24%;
-    margin-left: 350px;
+    width: 40%;
+    margin-left: 295px;
 }
-
 .form-patient-pro {
     margin: 0px;
 }
@@ -639,7 +639,7 @@ li.li-pt {
     text-align: center;
 }
 .links-heading {
-    padding: 31px 0px 9px 29px;
+    padding: 14px 19px 4px 26px;
     background: whitesmoke;
 }
 .doctors-my-detals {
@@ -770,7 +770,7 @@ label.col-form-label {
     display: flex;
 }
 .patent-details {
-    width: 66%;
+    width: 100%;
     margin: 0px;
 }
 .detail-child {

@@ -1,4 +1,3 @@
-
 $(window).on('load', function () {
     $('.flexslider').flexslider({
         animation: "slide",
@@ -59,8 +58,12 @@ $(document).ready(function () {
         $.ajax({
             url: SITE_URL + "/chatbox/insert_messages",
             data: data,
+            beforeSend: function() {
+                $("#loading-image").show();
+             },
             success: function (data) {
-                $('input[name=message]').val('')
+                $('input[name=message]').val('');
+                $("#loading-image").hide();
             }
         })
     });

@@ -63,7 +63,7 @@
                         <?php 
                             if(!empty($doctor->images)){
                         ?>
-                                <img class="profile-image" src="<?php echo "$image_path.$doctor->images" ?>" alt="doctors-profile">
+                                <img class="profile-image" src="<?php echo "$image_path$doctor->images" ?>" alt="doctors-profile">
                         <?php
                             }elseif(empty($doctor->images) && $doctor->gender == "female"){
                         ?>
