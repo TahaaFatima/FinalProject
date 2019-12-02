@@ -69,7 +69,7 @@ class Patient_registration extends MY_Controller {
 
                     $this->load->model('patient_registration_model');
                     $result  = $this->patient_registration_model->inserting($data);
-                    redirect('Login'); 
+                    redirect('login'); 
                 }
             }
 

@@ -7,7 +7,7 @@ class Cancel_appointments extends MY_Controller {
             parent::__construct();
             $login_in = $this->session->userdata('user_id');
             if(!isset($login_in) || empty($login_in)){
-                redirect('Login');
+                redirect('login');
             }
         }
 	public function index()
@@ -19,10 +19,10 @@ class Cancel_appointments extends MY_Controller {
             $this->appt_booking_model->updating($to_update,$where);
 
             if($this->session->userdata('role_id') == 1){
-                redirect('Doctors_appointments');
+                redirect('doctors-appointments');
             }
             if($this->session->userdata('role_id') == 2){
-                redirect('Patients_appointment');
+                redirect('patients-appointment');
             } 
         }
 	}

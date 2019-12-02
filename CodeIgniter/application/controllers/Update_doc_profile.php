@@ -8,12 +8,12 @@ class Update_doc_profile extends MY_Controller {
         parent::__construct();
         $login_in = $this->session->userdata('user_id');
         if(!isset($login_in) || empty($login_in)){
-            redirect('Login');
+            redirect('login');
         }
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 2) {
-                redirect('Patients_profile');
+                redirect('patients-profile');
             }
         }
     }
@@ -43,7 +43,7 @@ class Update_doc_profile extends MY_Controller {
  
                 $this->load->model('doctor_registration_model');
                 $this->doctor_registration_model->updating ( $record_doc  ,$where );
-                redirect('Doctors_profile');
+                redirect('doctors-profile');
             }
 
         $this->load->model('area_model');

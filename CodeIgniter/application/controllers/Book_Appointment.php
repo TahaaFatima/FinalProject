@@ -7,7 +7,7 @@ class Book_appointment extends MY_Controller {
             parent::__construct();
             $login_in = $this->session->userdata('user_id');
             if(!isset($login_in) || empty($login_in)){
-                redirect('Login');
+                redirect('login');
             }
  
         }
@@ -126,7 +126,7 @@ class Book_appointment extends MY_Controller {
 
             $this->load->model('patients_assessment_model');
             $result  = $this->patients_assessment_model->inserting($record_asses);
-            redirect('Patients_appointment');
+            redirect('patients-appointment');
             }
         }
         $this->load->model('doctor_registration_model');
@@ -162,8 +162,8 @@ class Book_appointment extends MY_Controller {
             $where  = ['doctors_id'=>$id_doc];
             $select = 'avg(rating) as rating';
             
-            $__ = $this->appt_record->retrieve_ratings($select,$where);
-            $avg_rating[$id_doc] = $__ ;
+            $rating_val = $this->appt_record->retrieve_ratings($select,$where);
+            $avg_rating[$id_doc] = $rating_val ;
         }
         
         $this->data['ratings']       = $avg_rating;
