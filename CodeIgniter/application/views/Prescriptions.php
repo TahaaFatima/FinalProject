@@ -6,7 +6,7 @@
                     <h5 class="modal-title text-center text-dark mb-4">Prescriptions</h5>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" name="prescritions" cols="10" rows="10"></textarea>
+                    <textarea class="form-control" name="prescriptions" cols="10" rows="10"></textarea>
                 </div>
                 <div class="col-20">
                     <input class="btn btn-danger" type="submit" name="submit-prescrition" value="send">

@@ -10,6 +10,12 @@ class Update_doc_profile extends MY_Controller {
         if(!isset($login_in) || empty($login_in)){
             redirect('Login');
         }
+        $role_id = $this->session->userdata('role_id');
+        if (!empty($role_id)) {
+            if ($role_id == 2) {
+                redirect('Patients_profile');
+            }
+        }
     }
     public function index(){
 

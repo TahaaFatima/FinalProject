@@ -365,6 +365,12 @@ span.contact-span {
     border-radius: 3px;
     background: #29666f85;
 }
+.edit-pres{
+    text-align: left;
+}
+.edit-pres > a{
+    padding: 12px 55px !important;
+}
 /* Taha */
     
 

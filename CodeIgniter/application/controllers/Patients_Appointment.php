@@ -37,7 +37,7 @@ class Patients_appointment extends MY_Controller {
 
         $pat_appointment = $this->appt_booking_model->search_join($to_show,$join_retrieve); 
 
-        $this->data['patients_App_data'] = $pat_appointment;
+        $this->data['patients_App_data'] =   $pat_appointment;
         $this->data['view']              =   'patients_appointment';
         $this->data['site_title']        =   'Revitalize';
         $this->data['page_title']        =   'My Appointment - '.$this->data['site_title'];

@@ -12,19 +12,19 @@ class Patients_assess_doctor extends MY_Controller {
         }    
 	public function index()
 	{       
-        $this->load->model('patients_assessment_model');
-        $where = [];
-        if(isset($_REQUEST['appt_id']) && !empty($_REQUEST['appt_id'])){
-            $where['patient_assessment.appointment_id'] = $_REQUEST['appt_id'];
-        }
+                $this->load->model('patients_assessment_model');
+                $where = [];
+                if(isset($_REQUEST['appt_id']) && !empty($_REQUEST['appt_id'])){
+                $where['patient_assessment.appointment_id'] = $_REQUEST['appt_id'];
+                }
 
-        $doc_appointment = $this->patients_assessment_model->retrieving($where);
-      
-        $this->data['doctors_App_data'] =    $doc_appointment[0];
-        $this->data['view']             =    'patients_assess_doctor';
-        $this->data['site_title']       =    'Revitalize';
-        $this->data['page_title']       =    'Patients Assessment Form - '.$this->data['site_title'];
+                $doc_appointment = $this->patients_assessment_model->retrieving($where);
         
-        $this->load->view('layout',$this->data);
+                $this->data['doctors_App_data'] =    $doc_appointment[0];
+                $this->data['view']             =    'patients_assess_doctor';
+                $this->data['site_title']       =    'Revitalize';
+                $this->data['page_title']       =    'Patients Assessment Form - '.$this->data['site_title'];
+                
+                $this->load->view('layout',$this->data);
 	}
 }

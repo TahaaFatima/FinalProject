@@ -19,7 +19,7 @@ class Cancel_appointments extends MY_Controller {
             $this->appt_booking_model->updating($to_update,$where);
 
             if($this->session->userdata('role_id') == 1){
-                redirect('Doctors_appoinments');
+                redirect('Doctors_appointments');
             }
             if($this->session->userdata('role_id') == 2){
                 redirect('Patients_appointment');

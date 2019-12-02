@@ -21,8 +21,8 @@ class Prescriptions extends MY_Controller {
             
             $validation = [
                 [
-                    'field' => 'prescritions',
-                    'label' => 'Prescritions',
+                    'field' => 'prescriptions',
+                    'label' => 'prescriptions',
                     'rules' => 'trim|required'
                 ]
             ];
@@ -34,11 +34,11 @@ class Prescriptions extends MY_Controller {
                 $this->load->model('prescriptions_model');
                 
                 $record_pres = [
-                    'prescription'      => $_REQUEST['prescritions'],
-                    'appointment_id'    => $_REQUEST['prescription_id'],
+                    'prescription'      => $_REQUEST['prescriptions'],
+                    'appointment_id'    => $this->session->userdata('appt_id')
                 ];
-                
                 $this->prescriptions_model->inserting($record_pres);
+                redirect('Doctors_appointments');
             }
         }       
 
