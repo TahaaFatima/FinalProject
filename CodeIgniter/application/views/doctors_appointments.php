@@ -82,13 +82,13 @@
                         il-links">
                             <div class="links">
                                 <div class="links-pt">
-                                    <a href="<?php echo site_url('Patients_Assess_Doctor') ?>?appt_id=<?php echo $doctor_app->appointment_id ?>" >Patients Assessment</a>
+                                    <a href="<?php echo site_url('assessment') ?>?appt_id=<?php echo $doctor_app->appointment_id ?>" >Patients Assessment</a>
                                 </div>
                                 <div class="links-pt">
-                                    <a href="<?php echo site_url('Prescriptions_show') ?>?appt_id=<?php echo $doctor_app->appointment_id?>" >Prescriptions</a>
+                                    <a href="<?php echo site_url('prescriptions-show') ?>?appt_id=<?php echo $doctor_app->appointment_id?>" >Prescriptions</a>
                                 </div>
                                 <div class="links-pt">
-                                    <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $doctor_app->patient_id ?>" >Chat</a>
+                                    <a href="<?php echo site_url('chatbox'); ?>/<?php echo $doctor_app->patient_id ?>" >Chat</a>
                                 </div>
                             </div>
                         </div>       

@@ -78,7 +78,7 @@
                     <input class="form-control button" type="submit" name="assess_submit" value="Submit">
                 </div>
                 <div class="login-link">
-                    <span class="login-span">Already on Revitalize ? </span><a href="<?php echo site_url('Login') ?>">Log in</a>
+                    <span class="login-span">Already on Revitalize ? </span><a href="<?php echo site_url('login') ?>">Log in</a>
                 </div>
             </form>    
         </div>

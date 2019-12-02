@@ -169,7 +169,7 @@
                                 <?php
                                 } else {
                                     ?>
-                                    <a href="<?php echo site_url('Login') ?>"><i class="fa fa-phone"></i> Book Appointment</a>
+                                    <a href="<?php echo site_url('login') ?>"><i class="fa fa-phone"></i> Book Appointment</a>
                                 <?php
                                 }
                                 ?>

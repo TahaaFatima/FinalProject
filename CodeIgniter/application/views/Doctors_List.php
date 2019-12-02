@@ -106,18 +106,18 @@
                             <?php 
                                 if($this->session->userdata('role_id')){
                             ?>
-                                <a class="b-appt" href="<?php echo site_url('Book_Appointment')?>?Doc_id=<?php echo $doctor->doctors_id?>"><i class="list-pg fa fa-phone"></i> Book Appointment</a>											 
+                                <a class="b-appt" href="<?php echo site_url('book-appointment')?>?Doc_id=<?php echo $doctor->doctors_id?>"><i class="list-pg fa fa-phone"></i> Book Appointment</a>											 
                             <?php
                                 }else{
                             ?>
-                                <a class="b-appt" href="<?php echo site_url('Login')?>"><i class="list-pg fa fa-phone"></i> Book Appointment</a>
+                                <a class="b-appt" href="<?php echo site_url('login')?>"><i class="list-pg fa fa-phone"></i> Book Appointment</a>
                             <?php
                                 }
                             ?>                   								
                         </div>
                     </div>
                         <div class="to-view-doc">
-                            <a class="b-appt" href="<?php echo site_url('Doctors_detail_pt')?>?Doc_id=<?php echo $doctor->doctors_id?>">View Doctor</a>
+                            <a class="b-appt" href="<?php echo site_url('doctors-details')?>?Doc_id=<?php echo $doctor->doctors_id?>">View Doctor</a>
                         </div>
                     </div>
                 </div>

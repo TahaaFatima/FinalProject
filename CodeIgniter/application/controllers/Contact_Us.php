@@ -41,7 +41,7 @@ class Contact_us extends MY_Controller {
                 $this->data['Phone']                   = $_POST['Phone'];
                 $this->data['Message']                 = $_POST['Message']; 
                 $this->data['Page_view']               = 'email_format';
-                $this->data['receiver_name_mail']      = 'Administrator';
+                $this->data['receiver_name_mail']      = 'Administrator'; 
 
                 
                 $subject        = 'Contact Us - Message';

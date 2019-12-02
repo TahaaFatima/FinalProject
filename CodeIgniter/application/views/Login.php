@@ -54,7 +54,7 @@
                                     <input class="form-control button" type="submit" value="Submit" name="submit_login">
                                 </div>
                                 <div class="login-link login-link-2">
-                                    <span class="login-span">New on Revitalize ? </span><a href="<?php echo site_url('Login') ?> " data-toggle="modal" data-toggle="modal" data-target="#exampleModal" >Registration</a>
+                                    <span data-toggle="modal" data-toggle="modal" data-target="#exampleModal" class="login-span">New on Revitalize ? Register </span>
                                 </div>
                             </form>
                         <!-- </div> -->

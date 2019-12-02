@@ -143,7 +143,7 @@ button.btn.ml-lg-2.w3ls-btn {
     padding: 42px 0px;
 }
 .reg-form {
-    padding: 22px 20px;
+    padding: 22px 49px;
     width: 100%;
     margin: 0% 33%;
     display: inline-block;
@@ -195,11 +195,10 @@ input.form-radio {
     position: absolute;
     z-index: 999;
     padding: 64px 0;
-    width: 27.7%;
-    /* width: 41.5%; */
+    width: 59.35%;
     background: #02646fad;
     text-align: center;
-    margin: 0px 251px;
+    margin: 0px 305px;
 }
 .contact-parentdiv {
     background: #ffffffa3;
@@ -362,7 +361,7 @@ span.contact-span {
 }
 
 .contact-msg {
-    /* border: 1px solid #41646f; */
+    border: 1px solid #41646f;
     border-radius: 3px;
     background: #29666f85;
 }

@@ -44,13 +44,13 @@
                     <p><?php echo $info->clinics; ?></p>
                 </div>
                 <div class="doctors-links">
-                    <p><a class="appointment-links" href="<?php echo site_url('Doctors-appointments'); ?>">Appointment</a></p>
+                    <p><a class="appointment-links" href="<?php echo site_url('doctors-appointments'); ?>">Appointment</a></p>
                 </div>
                 <div class="doctors-links">
-                    <p><a href="<?php echo site_url('Update_doc_profile'); ?>">Edit</a></p>
+                    <p><a href="<?php echo site_url('update-doctor'); ?>">Edit</a></p>
                 </div>
                 <div class="doctors-links">
-                    <p><a href="<?php echo site_url('Logout'); ?>">Logout</a></p>
+                    <p><a href="<?php echo site_url('logout'); ?>">Logout</a></p>
                 </div>
             </div>
             <div class="reg-form-div">
