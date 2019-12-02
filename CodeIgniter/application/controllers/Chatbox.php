@@ -9,7 +9,7 @@
             parent::__construct();
             $login_in = $this->session->userdata('user_id');
             if(!isset($login_in) || empty($login_in)){
-                redirect('Login');
+                redirect('login');
             }
             $this->load->model('chat_model');
         }

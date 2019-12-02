@@ -1,18 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Doctors_appoinments extends MY_Controller {
+class Doctors_appointments extends MY_Controller {
         function __construct()
     {
         parent::__construct();
         $login_in = $this->session->userdata('user_id');
         if(!isset($login_in) || empty($login_in)){
-            redirect('Login');
+            redirect('login');
         }
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 2) {
-                redirect('Patients_profile');
+                redirect('patients-profile');
             }
         }
     }
@@ -36,7 +36,7 @@ class Doctors_appoinments extends MY_Controller {
         $doc_appointment = $this->appt_booking_model->search_join($to_show,$join_retrieve);
                         
         $this->data['doctors_App_data'] = $doc_appointment;
-        $this->data['view']             = 'doctors_appoinments';
+        $this->data['view']             = 'doctors_appointments';
         $this->data['site_title']       = 'Revitalize';
         $this->data['page_title']       = 'My Appoinments - '.$this->data['site_title'];
         

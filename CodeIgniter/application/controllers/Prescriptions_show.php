@@ -7,29 +7,25 @@ class Prescriptions_show extends MY_Controller {
         parent::__construct();
         $login_in = $this->session->userdata('user_id');
         if(!isset($login_in) || empty($login_in)){
-            redirect('Login');
+            redirect('login');
         }
     }    
 	public function index()
 	{
-                $this->load->model('prescriptions_model');
-                $to_show = [];
-                if(isset($_REQUEST['appt_id']) && !empty($_REQUEST['appt_id'])){
-                    $to_show['prescriptions.appointment_id'] = $_REQUEST['appt_id'];      
-                }
-                $join_retrieve[] =  [
-                        'table_name'=>'appointment_record',
-                        'column_with'=>'appointment_record.appointment_id= prescriptions.appointment_id'
-                ];
-                
-                $doc_appointment = $this->prescriptions_model->search_join($to_show,$join_retrieve);
-
-                
-                $this->data['prescription'] = $doc_appointment;
-                $this->data['view']         = 'prescriptions_show';
-                $this->data['site_title']   = 'Revitalize';
-                $this->data['page_title']   = 'Prescriptions - '.$this->data['site_title'];
-                
-                $this->load->view('layout',$this->data);
+        $this->load->model('prescriptions_model');
+        if(isset($_REQUEST['appt_id']) && !empty($_REQUEST['appt_id'])){
+            $where = ['appointment_id' => $_REQUEST['appt_id']]; 
+            $doc_appointment = $this->prescriptions_model->retrieving($where);     
+        }elseif($this->session->userdata('appointment_id') !== null){
+            $where = ['appointment_id' => $this->session->userdata('appointment_id')]; 
+            $doc_appointment = $this->prescriptions_model->retrieving($where);
+        }
+        
+        $this->data['prescription'] = $doc_appointment;
+        $this->data['view']         = 'prescriptions_show';
+        $this->data['site_title']   = 'Revitalize';
+        $this->data['page_title']   = 'Prescriptions - '.$this->data['site_title'];
+        
+        $this->load->view('layout',$this->data);
 	}
 }

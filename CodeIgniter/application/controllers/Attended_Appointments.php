@@ -7,7 +7,7 @@ class Attended_appointments extends MY_Controller {
             parent::__construct();
             $login_in = $this->session->userdata('user_id');
             if(!isset($login_in) || empty($login_in)){
-                redirect('Login');
+                redirect('login');
             }
         }
 	public function index()
@@ -17,7 +17,8 @@ class Attended_appointments extends MY_Controller {
             $to_update = ['appointment_status'=>'Attended'];
             $where     = ['appointment_id'=>$_REQUEST['appt_id']];
             $this->appt_booking_model->updating($to_update,$where);
-            redirect('Doctors_appoinments ');
+            $this->session->set_userdata('appt_id',$_REQUEST['appt_id']);
+            redirect('prescriptions');
         }
 	}
 }

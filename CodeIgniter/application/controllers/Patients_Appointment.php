@@ -8,13 +8,13 @@ class Patients_appointment extends MY_Controller {
         parent::__construct();
         $login_in = $this->session->userdata('user_id');
             if(!isset($login_in) || empty($login_in)){
-                redirect('Login');
+                redirect('login');
             }
             
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 1) {
-                redirect('Doctors_profile');
+                redirect('doctors-profile');
             }
         }
     }
@@ -37,7 +37,7 @@ class Patients_appointment extends MY_Controller {
 
         $pat_appointment = $this->appt_booking_model->search_join($to_show,$join_retrieve); 
 
-        $this->data['patients_App_data'] = $pat_appointment;
+        $this->data['patients_App_data'] =   $pat_appointment;
         $this->data['view']              =   'patients_appointment';
         $this->data['site_title']        =   'Revitalize';
         $this->data['page_title']        =   'My Appointment - '.$this->data['site_title'];

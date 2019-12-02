@@ -190,7 +190,7 @@ class Doctors_registration extends MY_Controller
 
                 $success = $this->send_mail($subject, $mailContent, $mail_from, 'Revitalize', $name, $mail_to);
                 
-                redirect('Login');
+                redirect('login');
             }
         }
         $this->load->view('layout', $this->data);

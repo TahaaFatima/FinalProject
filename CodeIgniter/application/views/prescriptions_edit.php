@@ -8,13 +8,11 @@
                     <h5 class="modal-title text-center text-dark mb-4">Prescriptions</h5>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" name="prescritions" cols="10" rows="10" readonly><?php echo $prescriptions->prescription ?></textarea>
+                    <textarea class="form-control" name="prescriptions" cols="10" rows="10"><?php echo $prescriptions->prescription ?></textarea>
                 </div>
-                <?php if($this->session->userdata('role_id') == 1){?>
-                <div class="links-pt edit-pres">
-                    <a href="<?php echo site_url('Prescriptions_edit') ?>?appt_id=<?php echo $prescriptions->appointment_id?>" >Edit</a>
+                <div class="col-20">
+                    <input class="btn btn-danger" type="submit" name="edit-prescrition" value="Edit">
                 </div>
-                <?php } ?>
             </form>
             <?php
                 }
