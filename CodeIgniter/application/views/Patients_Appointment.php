@@ -55,10 +55,10 @@
                                     <div class="link-appointment">
                                         <?php if($patients_app->appointment_status == 'Attended'){?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Reviews') ?>?doc_rev_id=<?php echo $patients_app->doctors_id?>&pat_rev_id=<?php echo $patients_app->patient_id?>" >Review</a>
+                                                <a href="<?php echo site_url('reviews') ?>?doc_rev_id=<?php echo $patients_app->doctors_id?>&pat_rev_id=<?php echo $patients_app->patient_id?>" >Review</a>
                                             </div>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Prescriptions_show') ?>?appt_id=<?php echo $patients_app->appointment_id?>" >Prescriptions</a>
+                                                <a href="<?php echo site_url('prescriptions-show') ?>?appt_id=<?php echo $patients_app->appointment_id?>" >Prescriptions</a>
                                             </div>
                                             <?php 
                                         }else{
@@ -70,10 +70,10 @@
                                         }
                                         ?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Patients_assess_doctor') ?>?appt_id= <?php echo $patients_app->appointment_id ?>" >Patients Assessment</a>
+                                                <a href="<?php echo site_url('assessment') ?>?appt_id= <?php echo $patients_app->appointment_id ?>" >Patients Assessment</a>
                                             </div>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
+                                                <a href="<?php echo site_url('chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
                                             </div>
                                             
                                         </div>        
@@ -135,10 +135,10 @@
                                     <div class="link-appointment">
                                         <?php if($patients_app->appointment_status == 'Attended'){?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Reviews') ?>?doc_rev_id=<?php echo $patients_app->doctors_id?>&pat_rev_id=<?php echo $patients_app->patient_id?>" >Review</a>
+                                                <a href="<?php echo site_url('reviews') ?>?doc_rev_id=<?php echo $patients_app->doctors_id?>&pat_rev_id=<?php echo $patients_app->patient_id?>" >Review</a>
                                             </div>
                                             <div class="links-buttons-pt">
-                                            <a href="<?php echo site_url('Prescriptions_show') ?>?appt_id=<?php echo $patients_app->appointment_id?>" >Prescriptions</a>
+                                            <a href="<?php echo site_url('prescriptions-show') ?>?appt_id=<?php echo $patients_app->appointment_id?>" >Prescriptions</a>
                                             </div>
                                             <?php 
                                         }else{
@@ -151,10 +151,10 @@
                                         
                                         ?>
                                             <div class="links-buttons-pt">
-                                            <a href="<?php echo site_url('Patients_assess_doctor') ?>?appt_id=<?php echo $patients_app->appointment_id ?>" >Patients Assessment</a>
+                                            <a href="<?php echo site_url('assessment') ?>?appt_id=<?php echo $patients_app->appointment_id ?>" >Patients Assessment</a>
                                             </div>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
+                                                <a href="<?php echo site_url('chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
                                             </div>
                                             
                                         </div>        
@@ -216,10 +216,10 @@
                                     <div class="link-appointment">
                                         <?php if($patients_app->appointment_status == 'Attended'){?>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Reviews') ?>?doc_rev_id=<?php echo $patients_app->doctors_id?>&pat_rev_id=<?php echo $patients_app->patient_id?>" >Review</a>
+                                                <a href="<?php echo site_url('reviews') ?>?doc_rev_id=<?php echo $patients_app->doctors_id?>&pat_rev_id=<?php echo $patients_app->patient_id?>" >Review</a>
                                             </div>
                                             <div class="links-buttons-pt">
-                                            <a href="<?php echo site_url('Prescriptions_show') ?>?appt_id=<?php echo $patients_app->appointment_id?>" >Prescriptions</a>
+                                            <a href="<?php echo site_url('prescriptions-show') ?>?appt_id=<?php echo $patients_app->appointment_id?>" >Prescriptions</a>
                                             </div>
                                         <?php 
                                         }else{
@@ -232,10 +232,10 @@
                                             
                                             ?>
                                             <div class="links-buttons-pt">
-                                            <a href="<?php echo site_url('Patients_assess_doctor') ?>?appt_id=<?php echo $patients_app->appointment_id ?>" >Patients Assessment</a>
+                                            <a href="<?php echo site_url('assessment') ?>?appt_id=<?php echo $patients_app->appointment_id ?>" >Patients Assessment</a>
                                             </div>
                                             <div class="links-buttons-pt">
-                                                <a href="<?php echo site_url('Chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
+                                                <a href="<?php echo site_url('chatbox'); ?>/index/<?php echo $patients_app->doctors_id ?>" >Chat</a>
                                             </div>
 
                                     </div>        

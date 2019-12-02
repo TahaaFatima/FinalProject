@@ -108,9 +108,12 @@
                     <label class="col-form-label" for="Time_Picker">Select Your Available Time:</label>
                     <div class="time-slots-div">
                         <label class="col-form-label" for="Time_Picker">From</label>
-                        <input class="form-control time-slot timepicker" type="text" name="time_form" >
+                        <input class="form-control time-slot timepicker time-form" type="text" name="time_form" >
+                        <?php echo form_error('time_form' , '<div class="error">', '</div>'); ?>
                         <label class="col-form-label" for="Time_Picker"> To</label>
-                        <input class="form-control time-slot timepicker" type="text" name="time_to">
+                        <input class="form-control time-slot timepicker time-to" type="text" name="time_to">
+                        <?php echo form_error('time_to' , '<div class="error">', '</div>'); ?>
+
                     </div>
                 </div>
                 <div class="form-group">
@@ -120,12 +123,12 @@
                 </div>
                 <div class="form-group">
                     <label class="col-form-label" for="Password">Password</label>
-                    <input class="form-control" type="password" name="Password" value="<?php echo set_value('Password'); ?>">
+                    <input class="form-control" type="password" name="Password">
                     <?php echo form_error('Password' , '<div class="error">', '</div>'); ?>
                 </div>
                 <div class="form-group">
                     <label class="col-form-label" for="Confirm_Password">Confirm Password</label>
-                    <input class="form-control" type="password" name="Confirm_Password" value="<?php echo set_value('Confirm_Password'); ?>">
+                    <input class="form-control" type="password" name="Confirm_Password">
                     <?php echo form_error('Confirm_Password' , '<div class="error">', '</div>'); ?>
                 </div>
                 <div class="button-submit">

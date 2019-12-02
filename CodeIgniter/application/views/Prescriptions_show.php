@@ -12,7 +12,7 @@
                 </div>
                 <?php if($this->session->userdata('role_id') == 1){?>
                 <div class="links-pt edit-pres">
-                    <a href="<?php echo site_url('Prescriptions_edit') ?>?appt_id=<?php echo $prescriptions->appointment_id?>" >Edit</a>
+                    <a href="<?php echo site_url('prescriptions-edit') ?>?appt_id=<?php echo $prescriptions->appointment_id?>" >Edit</a>
                 </div>
                 <?php } ?>
             </form>

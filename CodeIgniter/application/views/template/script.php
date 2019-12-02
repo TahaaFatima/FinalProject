@@ -8,6 +8,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 <!-- Date Picker -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script>
+<!-- Form Validation -->
+<script src="//https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js
+"></script>
 <!-- Calendar -->
 <script src="https://kit.fontawesome.com/200033bf0c.js" crossorigin="anonymous"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery-ui.js"></script>

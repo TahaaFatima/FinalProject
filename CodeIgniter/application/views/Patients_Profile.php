@@ -11,25 +11,25 @@
 
                                 <li class="li-div-pt li-pt">
                                     <div class="li-a-div-pt">
-                                        <a href="<?php echo site_url('Patients_appointment')?>">Appointment</a>
+                                        <a href="<?php echo site_url('patients-appointment')?>">Appointment</a>
                                     </div>
                                 </li>
 
                                 <li class="li-div-pt li-pt app-book-li">
                                     <div class="li-a-div-pt">
-                                        <a href="<?php echo site_url('Department')?>">Book Appointment</a>
+                                        <a href="<?php echo site_url('department')?>">Book Appointment</a>
                                     </div>
                                 </li>
 
                                 <li class="li-div-pt li-pt">
                                     <div class="li-a-div-pt">
-                                        <a href="<?php echo site_url('Update_pat_profile'); ?>">Edit</a>
+                                        <a href="<?php echo site_url('update-profile'); ?>">Edit</a>
                                     </div>
                                 </li>
 
                                 <li class="li-div-pt li-pt">
                                     <div class="li-a-div-pt">
-                                        <a href="<?php echo site_url('Logout'); ?>">Logout</a>
+                                        <a href="<?php echo site_url('logout'); ?>">Logout</a>
                                     </div>
                                 </li>
                         </ul>

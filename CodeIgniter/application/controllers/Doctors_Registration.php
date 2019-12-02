@@ -139,6 +139,7 @@ class Doctors_registration extends MY_Controller
             }
     
             if (!$this->form_validation->run() || $is_error) {
+
                 $this->data['file_error']   =   $upload_data;
                 $this->data['view']         =   'doctors_registration';
                 $this->data['site_title']   =   'Revitalize';
