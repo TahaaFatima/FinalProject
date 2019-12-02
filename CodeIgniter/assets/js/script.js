@@ -52,20 +52,19 @@ $(document).ready(function () {
     $('.send').on('click', function (e) {
         e.preventDefault();
         msg = $('input[name=message]').val();
-        user_id = $('.user-id').val();
-
-        data = { msg: msg, user_id: user_id };
-        $.ajax({
-            url: SITE_URL + "/chatbox/insert_messages",
-            data: data,
-            beforeSend: function() {
-                $("#loading-image").show();
-             },
-            success: function (data) {
-                $('input[name=message]').val('');
-                $("#loading-image").hide();
-            }
-        })
+        if(msg == ""){
+            user_id = $('.user-id').val();
+            $('form input[type="send"]').prop("disabled", true);
+            data = { msg: msg, user_id: user_id };
+            $.ajax({
+                url: SITE_URL + "/chatbox/insert_messages",
+                data: data,
+                success: function (data) {
+                    $('input[name=message]').val('');
+                    $('form input[type="send"]').prop("disabled", false);
+                }
+            })   
+        }
     });
 
     console.log(SITE_URL)
@@ -95,9 +94,11 @@ $(document).ready(function () {
 
     // PROFILE PICTURE UPDATE
     $('#profile_edit').on('change', function(){
-       var file     =   $(this).prop('files')[0];
-       var formData =   new FormData();
-       formData.append('userfile',file);
+        $(".loader").addClass('loader-flex');
+
+        var file     =   $(this).prop('files')[0];
+        var formData =   new FormData();
+        formData.append('userfile',file);
         $.ajax({
             url         :   SITE_URL+"/Doctors_Profile/image_upload",
             data        :   formData,
@@ -108,6 +109,8 @@ $(document).ready(function () {
             cache       :   false,
             success     : function(){
                 location.reload();
+                $(".loader").removeClass('loader-flex');
+
             }
         })
     })

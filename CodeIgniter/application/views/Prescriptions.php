@@ -8,10 +8,15 @@
                 <div class="form-group">
                     <textarea class="form-control" name="prescriptions" cols="10" rows="10"></textarea>
                 </div>
-                <div class="col-20">
-                    <input class="btn btn-danger" type="submit" name="submit-prescrition" value="send">
-                </div>
-            </form>
+                <div class="head-pris">
+                    <div class="col-20">
+                        <input class="btn btn-danger" type="submit" name="submit-prescrition" value="send">
+                    </div>
+                    <div class="right">
+                        <a class="back btn btn-danger" href="<?php echo site_url('doctors-appointments') ?>">Back</a>
+                    </div>
+                </div> 
+           </form>
         </div>
     </div>
 </section>

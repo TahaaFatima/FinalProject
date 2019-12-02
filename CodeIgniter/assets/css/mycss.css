@@ -194,11 +194,11 @@ input.form-radio {
 .contact-us-head {
     position: absolute;
     z-index: 999;
-    padding: 64px 0;
-    width: 59.35%;
+    padding: 64px 218px 65px 201px;
+    /* width: 59.35%; */
     background: #02646fad;
     text-align: center;
-    margin: 0px 305px;
+    margin: 0px 296px 0px 256px;
 }
 .contact-parentdiv {
     background: #ffffffa3;
@@ -1026,3 +1026,28 @@ i.fas.fa-check {
 .login-bg {
     background: #000000a8;
 }
+.loader{
+    display: none ;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    
+}
+.loader-flex{
+    display:flex;
+}
+a.back {
+    width: 10%;
+    margin-left: 642px;
+}
+.head-pris {
+    display: flex;
+}
+

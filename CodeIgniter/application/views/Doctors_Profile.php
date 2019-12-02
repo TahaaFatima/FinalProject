@@ -26,6 +26,9 @@
                             }
                         ?>
                 </div>
+                <div class="loader">
+                    <img id="loading-image" src="../assets/images/loader.gif">
+                </div>
                 <div>
                     <input id="profile_edit" type="file" name="userfile" size="20" /> 
                 </div>

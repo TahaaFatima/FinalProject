@@ -9,6 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <?php include_once('head.php'); ?>
 
 <body>
+
         <!-- header -->
         <header>
             
