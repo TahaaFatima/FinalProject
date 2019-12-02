@@ -17,7 +17,7 @@ class Missed_appointments extends MY_Controller {
             $to_update = ['appointment_status'=>'Missed'];
             $where     = ['appointment_id'=>$_REQUEST['appt_id']];
             $this->appt_booking_model->updating($to_update,$where);
-            redirect('doctors_appointments ');
+            redirect('doctors-appointments ');
         }
 	}
 }

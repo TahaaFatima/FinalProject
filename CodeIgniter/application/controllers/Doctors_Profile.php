@@ -12,7 +12,7 @@ class Doctors_profile extends MY_Controller {
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 2) {
-                redirect('patients_profile');
+                redirect('patients-profile');
             }
         }
     }

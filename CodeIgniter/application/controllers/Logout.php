@@ -7,9 +7,9 @@
         {
             parent::__construct();
             $login_in = $this->session->userdata('user_id');
-                if(!$login_in){
-                    redirect('login');
-                }
+            if(!isset($login_in) || empty($login_in)){
+            redirect('login');
+        }
        }  
 
         public function index(){

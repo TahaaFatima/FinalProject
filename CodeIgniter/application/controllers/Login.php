@@ -9,9 +9,9 @@ class Login extends MY_Controller
         $role_id = $this->session->userdata('role_id');
         if (!empty($role_id)) {
             if ($role_id == 1) {
-                redirect('doctors_profile');
+                redirect('doctors-profile');
             } elseif ($role_id == 2) {
-                redirect('patients_profile');
+                redirect('patients-profile');
             }
         }
     }
@@ -70,9 +70,9 @@ class Login extends MY_Controller
                         $this->session->set_flashdata('signed_in', 'Sign In Successful');
                         $this->session->set_userdata('emailAddress', $email_address);
                         if ($data_set->role_id == 1) {
-                            return redirect('doctors_profile');
+                            return redirect('doctors-profile');
                         } else if ($data_set->role_id == 2) {
-                            return redirect('patients_profile');
+                            return redirect('patients-profile');
                         }
                     } else {
                         $this->session->set_flashdata('incorrectPassword', 'Incorrect Password');
